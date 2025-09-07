@@ -1,0 +1,4 @@
+[35m[1mConsolidate compiler generated dependencies of target corn_row_detector[0m
+[ 33%] Built target pcl_learning
+[ 66%] Built target centerline_extract
+[ 83%] [32mBuilding CXX object CMakeFiles/corn_row_detector.dir/src/corn_row_detector.cpp.o[0m

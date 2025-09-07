@@ -1,0 +1,25 @@
+[0.021s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.234s] [35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
+[0.234s] [ 22%] Built target pcl_learning
+[0.252s] [ 44%] Built target centerline_extract
+[0.330s] [ 55%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o[0m
+[0.343s] [ 66%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o[0m
+[9.957s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:[m[K In member function ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > CornRowDetector::temporal_smoothing(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)[m[K’:
+[9.958s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:177:32:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[9.958s]   177 |     while ([01;35m[Kpath_buffer_.size() > time_window_size_[m[K) {
+[9.958s]       |            [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[19.030s] [ 77%] [32m[1mLinking CXX executable cornfield_navigation_node[0m
+[21.652s] /usr/bin/ld: CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o: in function `CornRowDetector::point_cloud_callback(std::shared_ptr<sensor_msgs::msg::PointCloud2_<std::allocator<void> > >)':
+[21.652s] corn_row_detector.cpp:(.text+0x1083): undefined reference to `CornRowDetector::preprocess_cloud(std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >)'
+[21.652s] /usr/bin/ld: corn_row_detector.cpp:(.text+0x10f0): undefined reference to `CornRowDetector::cluster_plants(std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >)'
+[21.653s] /usr/bin/ld: corn_row_detector.cpp:(.text+0x1143): undefined reference to `CornRowDetector::group_into_rows(std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >, std::allocator<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > > > const&)'
+[21.654s] /usr/bin/ld: CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o: in function `CornRowDetector::compute_center_line(std::vector<std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >, std::allocator<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > > >, std::allocator<std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >, std::allocator<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > > > > > const&)':
+[21.654s] corn_row_detector.cpp:(.text+0x23da): undefined reference to `CornRowDetector::get_all_points(std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >, std::allocator<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > > > const&)'
+[21.654s] /usr/bin/ld: corn_row_detector.cpp:(.text+0x23fa): undefined reference to `CornRowDetector::get_all_points(std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >, std::allocator<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > > > const&)'
+[21.655s] /usr/bin/ld: corn_row_detector.cpp:(.text+0x250a): undefined reference to `CornRowDetector::find_nearby_point(std::vector<pcl::PointXYZ, std::allocator<pcl::PointXYZ> > const&, float)'
+[21.655s] /usr/bin/ld: corn_row_detector.cpp:(.text+0x2545): undefined reference to `CornRowDetector::find_nearby_point(std::vector<pcl::PointXYZ, std::allocator<pcl::PointXYZ> > const&, float)'
+[21.742s] collect2: error: ld returned 1 exit status
+[21.744s] gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:386：cornfield_navigation_node] 错误 1
+[21.744s] gmake[1]: *** [CMakeFiles/Makefile2:193：CMakeFiles/cornfield_navigation_node.dir/all] 错误 2
+[21.745s] gmake: *** [Makefile:146：all] 错误 2
+[21.751s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8

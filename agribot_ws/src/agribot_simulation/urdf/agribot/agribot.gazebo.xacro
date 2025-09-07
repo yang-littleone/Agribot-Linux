@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <!-- Gazebo-specific configurations for agribot -->
+
+    <!-- Define the robot's friction properties -->
+    <gazebo reference="base_link">
+        <mu1>0.8</mu1>
+        <mu2>0.8</mu2>
+    </gazebo>
+
+    <gazebo reference="lf_wheel_link">
+        <mu1>1</mu1>
+        <mu2>1</mu2>
+        <kp>100000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>1.0</maxVel>
+    </gazebo>
+
+    <gazebo reference="rf_wheel_link">
+        <mu1>1</mu1>
+        <mu2>1</mu2>
+        <kp>100000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>1.0</maxVel>
+    </gazebo>
+
+    <gazebo reference="lb_wheel_link">
+        <mu1>1</mu1>
+        <mu2>1</mu2>
+        <kp>100000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>1.0</maxVel>
+    </gazebo>
+
+    <gazebo reference="rb_wheel_link">
+        <mu1>1</mu1>
+        <mu2>1</mu2>
+        <kp>100000.0</kp>
+        <kd>1.0</kd>
+        <minDepth>0.001</minDepth>
+        <maxVel>1.0</maxVel>
+    </gazebo>
+
+    <!-- Define colors for Gazebo -->
+    <gazebo reference="base_link">
+        <material>Gazebo/Blue</material>
+    </gazebo>
+
+    <gazebo reference="lf_wheel_link">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <gazebo reference="rf_wheel_link">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <gazebo reference="lb_wheel_link">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <gazebo reference="rb_wheel_link">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <gazebo reference="laser_link">
+        <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="controller_link">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <gazebo reference="camera_link">
+        <material>Gazebo/White</material>
+    </gazebo>
+
+    <!-- ROS2 Control plugin -->
+    <!-- <gazebo>
+        <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
+            <parameters>$(find xkaibot_description)/config/xkaibot_ros2_controller.yaml</parameters>
+            <ros>
+                <remapping>/xkaibot_diff_drive_controller/cmd_vel_unstamped:=/cmd_vel</remapping>
+                <remapping>/xkaibot_diff_drive_controller/odom:=/odom</remapping>
+            </ros>
+        </plugin>
+    </gazebo>
+ -->
+    <!-- Skid steer drive plugin as an alternative to diff drive -->
+    <!-- Uncomment this section if you want to use skid steer instead of diff drive -->
+    <!--
+    <gazebo>
+        <plugin name="skid_steer_drive" filename="libgazebo_ros_skid_steer_drive.so">
+            <ros>
+                <namespace>/</namespace>
+                <remapping>cmd_vel:=cmd_vel</remapping>
+                <remapping>odom:=odom</remapping>
+            </ros>
+            <update_rate>100.0</update_rate>
+            <left_front_joint>lf_wheel_joint</left_front_joint>
+            <right_front_joint>rf_wheel_joint</right_front_joint>
+            <left_rear_joint>lb_wheel_joint</left_rear_joint>
+            <right_rear_joint>rb_wheel_joint</right_rear_joint>
+            <wheel_separation>0.18</wheel_separation>
+            <wheel_diameter>0.064</wheel_diameter>
+            <max_wheel_torque>20</max_wheel_torque>
+            <max_wheel_acceleration>1.0</max_wheel_acceleration>
+            <command_topic>cmd_vel</command_topic>
+            <odometry_topic>odom</odometry_topic>
+            <odometry_frame>odom</odometry_frame>
+            <robot_base_frame>base_link</robot_base_frame>
+        </plugin>
+    </gazebo>
+    -->
+
+</robot>

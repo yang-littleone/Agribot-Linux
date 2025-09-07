@@ -1,0 +1,853 @@
+[0.000000] (-) TimerEvent: {}
+[0.000333] (agribot_simulation) JobQueued: {'identifier': 'agribot_simulation', 'dependencies': OrderedDict()}
+[0.000467] (centerline_extraction) JobQueued: {'identifier': 'centerline_extraction', 'dependencies': OrderedDict()}
+[0.000485] (livox_ros_driver2) JobQueued: {'identifier': 'livox_ros_driver2', 'dependencies': OrderedDict()}
+[0.000500] (ros2_livox_simulation) JobQueued: {'identifier': 'ros2_livox_simulation', 'dependencies': OrderedDict([('livox_ros_driver2', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2')])}
+[0.000517] (livox_ros_driver2) JobStarted: {'identifier': 'livox_ros_driver2'}
+[0.004269] (agribot_simulation) JobStarted: {'identifier': 'agribot_simulation'}
+[0.006817] (centerline_extraction) JobStarted: {'identifier': 'centerline_extraction'}
+[0.010533] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'cmake'}
+[0.011380] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'build'}
+[0.012083] (livox_ros_driver2) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2', '--', '-j8', '-l8'], 'cwd': '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1490'), ('SYSTEMD_EXEC_PID', '1747'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8885'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:14656'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/1720,unix/xkai-Ubuntun:/tmp/.ICE-unix/1720'), ('INVOCATION_ID', 'c48dae71c35d408ea0a291c069f33498'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d146962135.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.014606] (agribot_simulation) JobProgress: {'identifier': 'agribot_simulation', 'progress': 'cmake'}
+[0.015064] (agribot_simulation) JobProgress: {'identifier': 'agribot_simulation', 'progress': 'build'}
+[0.015382] (agribot_simulation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xkai/agribot/agribot_ws/build/agribot_simulation', '--', '-j8', '-l8'], 'cwd': '/home/xkai/agribot/agribot_ws/build/agribot_simulation', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1490'), ('SYSTEMD_EXEC_PID', '1747'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8885'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:14656'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/1720,unix/xkai-Ubuntun:/tmp/.ICE-unix/1720'), ('INVOCATION_ID', 'c48dae71c35d408ea0a291c069f33498'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d146962135.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xkai/agribot/agribot_ws/build/agribot_simulation'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.018618] (centerline_extraction) JobProgress: {'identifier': 'centerline_extraction', 'progress': 'cmake'}
+[0.019920] (centerline_extraction) JobProgress: {'identifier': 'centerline_extraction', 'progress': 'build'}
+[0.020842] (centerline_extraction) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xkai/agribot/agribot_ws/build/centerline_extraction', '--', '-j8', '-l8'], 'cwd': '/home/xkai/agribot/agribot_ws/build/centerline_extraction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1490'), ('SYSTEMD_EXEC_PID', '1747'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8885'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:14656'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/1720,unix/xkai-Ubuntun:/tmp/.ICE-unix/1720'), ('INVOCATION_ID', 'c48dae71c35d408ea0a291c069f33498'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d146962135.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xkai/agribot/agribot_ws/build/centerline_extraction'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.046640] (centerline_extraction) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.050951] (agribot_simulation) CommandEnded: {'returncode': 0}
+[0.052010] (agribot_simulation) JobProgress: {'identifier': 'agribot_simulation', 'progress': 'install'}
+[0.059652] (agribot_simulation) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/xkai/agribot/agribot_ws/build/agribot_simulation'], 'cwd': '/home/xkai/agribot/agribot_ws/build/agribot_simulation', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1490'), ('SYSTEMD_EXEC_PID', '1747'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8885'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:14656'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/1720,unix/xkai-Ubuntun:/tmp/.ICE-unix/1720'), ('INVOCATION_ID', 'c48dae71c35d408ea0a291c069f33498'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d146962135.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xkai/agribot/agribot_ws/build/agribot_simulation'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.064891] (livox_ros_driver2) StdoutLine: {'line': b'[  7%] Built target livox_interfaces2__rosidl_generator_c\n'}
+[0.065304] (livox_ros_driver2) StdoutLine: {'line': b'[  8%] Built target livox_interfaces2__cpp\n'}
+[0.068127] (agribot_simulation) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.068345] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/launch\n'}
+[0.068460] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/launch/gazebo_sim.launch.py\n'}
+[0.069937] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/launch/display_robot.launch.py\n'}
+[0.072320] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf\n'}
+[0.074328] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf\n'}
+[0.074464] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_mec_dl_robot.urdf\n'}
+[0.074566] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_4wd_dl_robot.urdf\n'}
+[0.074658] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_tank_moveit.urdf\n'}
+[0.074749] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_mec_bs_robot.urdf\n'}
+[0.074852] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_mec_dl_robot.urdf\n'}
+[0.074945] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/four_wheel_diff_dl_robot.urdf\n'}
+[0.075037] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_mec_robot.urdf\n'}
+[0.075127] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_4wd_dl_robot.urdf\n'}
+[0.085186] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_akm_bs_robot.urdf\n'}
+[0.085305] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_mec_dl_robot.urdf\n'}
+[0.085412] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_4wd_robot.urdf\n'}
+[0.085505] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_diff_robot.urdf\n'}
+[0.090422] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_akm_robot.urdf\n'}
+[0.091751] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_akm_robot.urdf\n'}
+[0.091896] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_four_wheel_diff_dl_robot.urdf\n'}
+[0.092001] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_4wd_bs_robot.urdf\n'}
+[0.092099] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_omni_robot.urdf\n'}
+[0.092190] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/four_wheel_diff_bs_robot.urdf\n'}
+[0.092281] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/brushless_senior_diff.urdf\n'}
+[0.092369] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_mec_robot.urdf\n'}
+[0.092464] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_4wd_bs_robot.urdf\n'}
+[0.092548] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_4wd_dl_robot.urdf\n'}
+[0.092627] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_omni_robot.urdf\n'}
+[0.092710] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_omni_robot.urdf\n'}
+[0.092804] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_diff_robot.urdf\n'}
+[0.092895] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_mec_moveit.urdf\n'}
+[0.092981] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_4wd_bs_robot.urdf\n'}
+[0.093244] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_mec_bs_robot.urdf\n'}
+[0.093344] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_akm_dl_robot.urdf\n'}
+[0.093816] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mec_EightDrive_robot.urdf\n'}
+[0.093928] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_four_wheel_diff_bs_robot.urdf\n'}
+[0.094022] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes\n'}
+[0.094114] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/wheels\n'}
+[0.094209] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/wheels/right_tire.stl\n'}
+[0.094298] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/wheels/left_tire.stl\n'}
+[0.094385] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes\n'}
+[0.094477] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/controller_link.STL\n'}
+[0.094711] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/rb_wheel_link.STL\n'}
+[0.095172] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/lb_wheel_link.STL\n'}
+[0.095278] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/camera_link.STL\n'}
+[0.095374] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/rf_wheel_link.STL\n'}
+[0.095465] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/lf_wheel_link.STL\n'}
+[0.095555] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/base_link.STL\n'}
+[0.095643] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/laser.STL\n'}
+[0.095729] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/bases\n'}
+[0.095830] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/bases/waffle_pi_base.stl\n'}
+[0.095923] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/bases/burger_base.stl\n'}
+[0.096011] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/bases/waffle_base.stl\n'}
+[0.096097] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors\n'}
+[0.096189] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/lds.stl\n'}
+[0.096277] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/astra.dae\n'}
+[0.096363] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/r200.jpg\n'}
+[0.096450] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/r200.dae\n'}
+[0.096536] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/astra.jpg\n'}
+[0.096623] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/first_robot.urdf\n'}
+[0.096709] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot\n'}
+[0.096800] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/mini_4wd_robot.urdf.xacro\n'}
+[0.096896] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/mini_4wd_robot.urdf\n'}
+[0.096994] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/plugins\n'}
+[0.097081] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/plugins/gazebo_sensor_plugin.xacro\n'}
+[0.097168] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/plugins/gazebo_control_plugin.xacro\n'}
+[0.097253] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.ros2_control.xacro\n'}
+[0.097342] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/sensors\n'}
+[0.097424] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/sensors/imu.urdf.xacro\n'}
+[0.097502] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.gazebo.xacro\n'}
+[0.097587] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.urdf.xacro\n'}
+[0.097680] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config\n'}
+[0.097773] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/diaplay_robot_model.rviz\n'}
+[0.097878] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/agribot_ros2_controller.yaml\n'}
+[0.097966] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world\n'}
+[0.098054] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/room\n'}
+[0.098140] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/room/model.config\n'}
+[0.098226] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/room/model.sdf\n'}
+[0.098314] (livox_ros_driver2) StdoutLine: {'line': b'[ 12%] Built target livox_ros_driver2_node\n'}
+[0.098416] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens.world\n'}
+[0.098508] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/agri_room.world\n'}
+[0.098594] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/custom_room.world\n'}
+[0.098691] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/ament_index/resource_index/package_run_dependencies/agribot_simulation\n'}
+[0.104573] (-) TimerEvent: {}
+[0.104965] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/ament_index/resource_index/parent_prefix_path/agribot_simulation\n'}
+[0.105111] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/ament_prefix_path.sh\n'}
+[0.105216] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/ament_prefix_path.dsv\n'}
+[0.105326] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/path.sh\n'}
+[0.107388] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/path.dsv\n'}
+[0.107509] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/local_setup.bash\n'}
+[0.107604] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/local_setup.sh\n'}
+[0.107697] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/local_setup.zsh\n'}
+[0.107803] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/local_setup.dsv\n'}
+[0.108011] (agribot_simulation) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.dsv\n'}
+[0.108103] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/ament_index/resource_index/packages/agribot_simulation\n'}
+[0.108203] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/cmake/agribot_simulationConfig.cmake\n'}
+[0.108537] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/cmake/agribot_simulationConfig-version.cmake\n'}
+[0.108648] (agribot_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.xml\n'}
+[0.109862] (agribot_simulation) CommandEnded: {'returncode': 0}
+[0.111474] (livox_ros_driver2) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_livox_ros_driver2\n'}
+[0.111660] (livox_ros_driver2) StdoutLine: {'line': b'[ 19%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_c\n'}
+[0.111770] (livox_ros_driver2) StdoutLine: {'line': b'[ 26%] Built target livox_interfaces2__rosidl_typesupport_introspection_cpp\n'}
+[0.111883] (livox_ros_driver2) StdoutLine: {'line': b'[ 33%] Built target livox_interfaces2__rosidl_typesupport_introspection_c\n'}
+[0.111984] (livox_ros_driver2) StdoutLine: {'line': b'[ 40%] Built target livox_interfaces2__rosidl_typesupport_c\n'}
+[0.112083] (livox_ros_driver2) StdoutLine: {'line': b'[ 47%] Built target livox_interfaces2__rosidl_typesupport_cpp\n'}
+[0.112181] (livox_ros_driver2) StdoutLine: {'line': b'[ 54%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_cpp\n'}
+[0.122755] (agribot_simulation) JobEnded: {'identifier': 'agribot_simulation', 'rc': 0}
+[0.133127] (livox_ros_driver2) StdoutLine: {'line': b'[ 54%] Built target livox_interfaces2\n'}
+[0.154387] (livox_ros_driver2) StdoutLine: {'line': b'[ 56%] Built target livox_interfaces2__py\n'}
+[0.169946] (livox_ros_driver2) StdoutLine: {'line': b'[ 84%] Built target livox_ros_driver2\n'}
+[0.177606] (livox_ros_driver2) StdoutLine: {'line': b'[ 89%] Built target livox_interfaces2__rosidl_generator_py\n'}
+[0.201661] (livox_ros_driver2) StdoutLine: {'line': b'[ 92%] Built target livox_ros_driver2__rosidl_typesupport_c__pyext\n'}
+[0.201884] (livox_ros_driver2) StdoutLine: {'line': b'[ 96%] Built target livox_ros_driver2__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.204673] (-) TimerEvent: {}
+[0.205299] (livox_ros_driver2) StdoutLine: {'line': b'[100%] Built target livox_ros_driver2__rosidl_typesupport_introspection_c__pyext\n'}
+[0.219215] (centerline_extraction) StdoutLine: {'line': b'-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.243904] (centerline_extraction) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.246460] (centerline_extraction) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.252049] (centerline_extraction) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.260833] (centerline_extraction) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.271655] (centerline_extraction) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.300987] (centerline_extraction) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.302222] (centerline_extraction) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.304746] (-) TimerEvent: {}
+[0.356662] (livox_ros_driver2) StdoutLine: {'line': b'running egg_info\n'}
+[0.357561] (livox_ros_driver2) StdoutLine: {'line': b'writing livox_ros_driver2.egg-info/PKG-INFO\n'}
+[0.357789] (livox_ros_driver2) StdoutLine: {'line': b'writing dependency_links to livox_ros_driver2.egg-info/dependency_links.txt\n'}
+[0.357982] (livox_ros_driver2) StdoutLine: {'line': b'writing top-level names to livox_ros_driver2.egg-info/top_level.txt\n'}
+[0.360056] (livox_ros_driver2) StdoutLine: {'line': b"reading manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'\n"}
+[0.360750] (livox_ros_driver2) StdoutLine: {'line': b"writing manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'\n"}
+[0.388723] (centerline_extraction) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.389690] (livox_ros_driver2) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_livox_ros_driver2_egg\n'}
+[0.399120] (livox_ros_driver2) CommandEnded: {'returncode': 0}
+[0.399723] (livox_ros_driver2) JobProgress: {'identifier': 'livox_ros_driver2', 'progress': 'install'}
+[0.400174] (livox_ros_driver2) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2'], 'cwd': '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1490'), ('SYSTEMD_EXEC_PID', '1747'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8885'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:14656'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/1720,unix/xkai-Ubuntun:/tmp/.ICE-unix/1720'), ('INVOCATION_ID', 'c48dae71c35d408ea0a291c069f33498'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d146962135.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.404838] (-) TimerEvent: {}
+[0.407433] (livox_ros_driver2) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.407712] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/rosidl_interfaces/livox_ros_driver2\n'}
+[0.407940] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[0.408033] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[0.408117] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[0.408200] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__functions.h\n'}
+[0.408296] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__struct.h\n'}
+[0.408410] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__functions.c\n'}
+[0.408526] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.h\n'}
+[0.408605] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__struct.h\n'}
+[0.408680] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.h\n'}
+[0.408754] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__functions.h\n'}
+[0.408867] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__functions.c\n'}
+[0.408999] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_point.h\n'}
+[0.409080] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.409156] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_msg.h\n'}
+[0.409232] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.sh\n'}
+[0.409309] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.dsv\n'}
+[0.409385] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_generator_c.so\n'}
+[0.409460] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[0.409539] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[0.409703] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[0.409786] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_c.h\n'}
+[0.409872] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_c.h\n'}
+[0.409944] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.410021] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_c.so\n'}
+[0.410097] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[0.410172] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[0.410277] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.410353] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[0.410427] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.c\n'}
+[0.410501] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_c.h\n'}
+[0.410576] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.c\n'}
+[0.410653] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_c.h\n'}
+[0.410729] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_c.so\n'}
+[0.411070] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_c.so\n'}
+[0.411227] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[0.411443] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[0.411595] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.411679] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_point.hpp\n'}
+[0.411757] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[0.411890] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.hpp\n'}
+[0.411970] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__traits.hpp\n'}
+[0.412050] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__traits.hpp\n'}
+[0.412126] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__builder.hpp\n'}
+[0.412203] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__builder.hpp\n'}
+[0.412284] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.hpp\n'}
+[0.412358] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__struct.hpp\n'}
+[0.412435] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__struct.hpp\n'}
+[0.412513] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_msg.hpp\n'}
+[0.412585] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[0.412656] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[0.412728] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[0.412838] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.412974] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/dds_fastrtps\n'}
+[0.413048] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.413121] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.413192] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.413264] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2\n'}
+[0.413335] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg\n'}
+[0.413406] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail\n'}
+[0.413477] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.413548] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.413619] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.cpp\n'}
+[0.413690] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.cpp\n'}
+[0.413761] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_cpp.so\n'}
+[0.413845] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_cpp.so\n'}
+[0.413923] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.sh\n'}
+[0.414005] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.dsv\n'}
+[0.414079] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info\n'}
+[0.414152] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.414343] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.414422] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.414496] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.414569] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2\n'}
+[0.414642] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/__init__.py\n'}
+[0.414716] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.414806] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.414884] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.414957] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.415031] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_c.c\n'}
+[0.415104] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.415177] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/liblivox_interfaces2__rosidl_generator_py.so\n'}
+[0.415249] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg\n'}
+[0.415322] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/__init__.py\n'}
+[0.415395] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg.py\n'}
+[0.415467] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point_s.c\n'}
+[0.415545] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point.py\n'}
+[0.415620] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg_s.c\n'}
+[0.443255] (livox_ros_driver2) StdoutLine: {'line': b"Listing '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2'...\n"}
+[0.443402] (livox_ros_driver2) StdoutLine: {'line': b"Listing '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg'...\n"}
+[0.448980] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.449312] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.449496] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.449702] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_interfaces2__rosidl_generator_py.so\n'}
+[0.449902] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.idl\n'}
+[0.450054] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.idl\n'}
+[0.450171] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.msg\n'}
+[0.450332] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.msg\n'}
+[0.450433] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node\n'}
+[0.450579] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2.so\n'}
+[0.450760] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config\n'}
+[0.450921] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json\n'}
+[0.451036] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/mixed_HAP_MID360_config.json\n'}
+[0.451195] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS1.rviz\n'}
+[0.451347] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/HAP_config.json\n'}
+[0.451478] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS2.rviz\n'}
+[0.451609] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2\n'}
+[0.451739] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_HAP_launch.py\n'}
+[0.451872] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py\n'}
+[0.451975] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_MID360_launch.py\n'}
+[0.452091] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_mixed.py\n'}
+[0.452205] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_HAP_launch.py\n'}
+[0.452334] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/package_run_dependencies/livox_ros_driver2\n'}
+[0.452461] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/parent_prefix_path/livox_ros_driver2\n'}
+[0.452574] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.sh\n'}
+[0.452688] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.dsv\n'}
+[0.452818] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.sh\n'}
+[0.452938] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.dsv\n'}
+[0.453050] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.bash\n'}
+[0.453165] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.sh\n'}
+[0.453300] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.zsh\n'}
+[0.453418] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.dsv\n'}
+[0.453534] (livox_ros_driver2) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv\n'}
+[0.453661] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/packages/livox_ros_driver2\n'}
+[0.453795] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport.cmake\n'}
+[0.453929] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.454067] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.454191] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.454332] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.454446] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.454531] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport.cmake\n'}
+[0.454615] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.454698] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cppExport.cmake\n'}
+[0.454787] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.454883] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.454962] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.455037] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.455115] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport.cmake\n'}
+[0.455192] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.455270] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport.cmake\n'}
+[0.455345] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.455417] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2\n'}
+[0.455490] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake-extras.cmake\n'}
+[0.455568] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.455644] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.455720] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.455802] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.456079] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.456232] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.456299] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake\n'}
+[0.456363] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config-version.cmake\n'}
+[0.457187] (livox_ros_driver2) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.xml\n'}
+[0.457281] (livox_ros_driver2) CommandEnded: {'returncode': 0}
+[0.457524] (centerline_extraction) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.471300] (livox_ros_driver2) JobEnded: {'identifier': 'livox_ros_driver2', 'rc': 0}
+[0.472287] (ros2_livox_simulation) JobStarted: {'identifier': 'ros2_livox_simulation'}
+[0.477322] (ros2_livox_simulation) JobProgress: {'identifier': 'ros2_livox_simulation', 'progress': 'cmake'}
+[0.478292] (ros2_livox_simulation) JobProgress: {'identifier': 'ros2_livox_simulation', 'progress': 'build'}
+[0.478945] (ros2_livox_simulation) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation', '--', '-j8', '-l8'], 'cwd': '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1490'), ('SYSTEMD_EXEC_PID', '1747'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8885'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:14656'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/1720,unix/xkai-Ubuntun:/tmp/.ICE-unix/1720'), ('INVOCATION_ID', 'c48dae71c35d408ea0a291c069f33498'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d146962135.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[0.500716] (centerline_extraction) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.504936] (-) TimerEvent: {}
+[0.524431] (centerline_extraction) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.550268] (centerline_extraction) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[0.555226] (ros2_livox_simulation) StdoutLine: {'line': b'[100%] Built target ros2_livox\n'}
+[0.564033] (ros2_livox_simulation) CommandEnded: {'returncode': 0}
+[0.564610] (ros2_livox_simulation) JobProgress: {'identifier': 'ros2_livox_simulation', 'progress': 'install'}
+[0.565173] (ros2_livox_simulation) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation'], 'cwd': '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1490'), ('SYSTEMD_EXEC_PID', '1747'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '8885'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:14656'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/1720,unix/xkai-Ubuntun:/tmp/.ICE-unix/1720'), ('INVOCATION_ID', 'c48dae71c35d408ea0a291c069f33498'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-d146962135.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble')]), 'shell': False}
+[0.571724] (ros2_livox_simulation) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.571982] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include\n'}
+[0.572065] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include/ros2_livox\n'}
+[0.572120] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include/ros2_livox/livox_ode_multiray_shape.h\n'}
+[0.572178] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include/ros2_livox/csv_reader.hpp\n'}
+[0.572232] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include/ros2_livox/livox_points_plugin.h\n'}
+[0.572285] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes\n'}
+[0.572341] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes/livox_mid-360-90x.dae\n'}
+[0.572400] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes/mid-360-asm.stl\n'}
+[0.572514] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes/livox_mid360.dae\n'}
+[0.572576] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes/livox_mid40.dae\n'}
+[0.572665] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib/libros2_livox.so\n'}
+[0.572835] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/library_path.sh\n'}
+[0.572997] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/library_path.dsv\n'}
+[0.573070] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid40.csv\n'}
+[0.573138] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid70.csv\n'}
+[0.573212] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid360.csv\n'}
+[0.573299] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/tele.csv\n'}
+[0.573366] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/horizon.csv\n'}
+[0.573488] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/HAP.csv\n'}
+[0.573561] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/avia.csv\n'}
+[0.573629] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/mid40.xacro\n'}
+[0.573695] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/mid70.xacro\n'}
+[0.573760] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/mid360.xacro\n'}
+[0.573863] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/tele.xacro\n'}
+[0.573914] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/horizon.xacro\n'}
+[0.573985] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/HAP.xacro\n'}
+[0.574040] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/avia.xacro\n'}
+[0.574089] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/mid360-copy.xacro\n'}
+[0.574137] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ament_index/resource_index/package_run_dependencies/ros2_livox_simulation\n'}
+[0.574186] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ament_index/resource_index/parent_prefix_path/ros2_livox_simulation\n'}
+[0.574235] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/ament_prefix_path.sh\n'}
+[0.574283] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/ament_prefix_path.dsv\n'}
+[0.574331] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/path.sh\n'}
+[0.574379] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/path.dsv\n'}
+[0.574450] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/local_setup.bash\n'}
+[0.574528] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/local_setup.sh\n'}
+[0.574642] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/local_setup.zsh\n'}
+[0.574930] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/local_setup.dsv\n'}
+[0.575094] (ros2_livox_simulation) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.dsv\n'}
+[0.575331] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ament_index/resource_index/packages/ros2_livox_simulation\n'}
+[0.575395] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.575457] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/cmake/ros2_livox_simulationConfig.cmake\n'}
+[0.575519] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/cmake/ros2_livox_simulationConfig-version.cmake\n'}
+[0.575580] (ros2_livox_simulation) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.xml\n'}
+[0.575640] (ros2_livox_simulation) CommandEnded: {'returncode': 0}
+[0.587299] (centerline_extraction) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.589596] (ros2_livox_simulation) JobEnded: {'identifier': 'ros2_livox_simulation', 'rc': 0}
+[0.605020] (-) TimerEvent: {}
+[0.618239] (centerline_extraction) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[0.705120] (-) TimerEvent: {}
+[0.805421] (-) TimerEvent: {}
+[0.879204] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[0.885978] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[0.905508] (-) TimerEvent: {}
+[1.005799] (-) TimerEvent: {}
+[1.012010] (centerline_extraction) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[1.016918] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[1.022028] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[1.105891] (-) TimerEvent: {}
+[1.151606] (centerline_extraction) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[1.205967] (-) TimerEvent: {}
+[1.276533] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[1.306066] (-) TimerEvent: {}
+[1.406333] (-) TimerEvent: {}
+[1.428555] (centerline_extraction) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[1.490438] (centerline_extraction) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[1.490676] (centerline_extraction) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[1.490792] (centerline_extraction) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[1.491137] (centerline_extraction) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[1.491772] (centerline_extraction) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[1.491899] (centerline_extraction) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[1.492106] (centerline_extraction) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[1.492670] (centerline_extraction) StdoutLine: {'line': b'-- Configuring done\n'}
+[1.506480] (-) TimerEvent: {}
+[1.585918] (centerline_extraction) StdoutLine: {'line': b'-- Generating done\n'}
+[1.604585] (centerline_extraction) StdoutLine: {'line': b'-- Build files have been written to: /home/xkai/agribot/agribot_ws/build/centerline_extraction\n'}
+[1.606496] (-) TimerEvent: {}
+[1.633301] (centerline_extraction) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target pcl_learning\x1b[0m\n'}
+[1.642428] (centerline_extraction) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/centerline_extract.dir/src/centerline_extract.cpp.o\x1b[0m\n'}
+[1.654335] (centerline_extraction) StdoutLine: {'line': b'[ 75%] Built target pcl_learning\n'}
+[1.706590] (-) TimerEvent: {}
+[1.806837] (-) TimerEvent: {}
+[1.907120] (-) TimerEvent: {}
+[2.007393] (-) TimerEvent: {}
+[2.107750] (-) TimerEvent: {}
+[2.208035] (-) TimerEvent: {}
+[2.308371] (-) TimerEvent: {}
+[2.408657] (-) TimerEvent: {}
+[2.508953] (-) TimerEvent: {}
+[2.609241] (-) TimerEvent: {}
+[2.709525] (-) TimerEvent: {}
+[2.809809] (-) TimerEvent: {}
+[2.910082] (-) TimerEvent: {}
+[3.010358] (-) TimerEvent: {}
+[3.110571] (-) TimerEvent: {}
+[3.210821] (-) TimerEvent: {}
+[3.311035] (-) TimerEvent: {}
+[3.411249] (-) TimerEvent: {}
+[3.511519] (-) TimerEvent: {}
+[3.611731] (-) TimerEvent: {}
+[3.711955] (-) TimerEvent: {}
+[3.812181] (-) TimerEvent: {}
+[3.912394] (-) TimerEvent: {}
+[4.012611] (-) TimerEvent: {}
+[4.112844] (-) TimerEvent: {}
+[4.213060] (-) TimerEvent: {}
+[4.313281] (-) TimerEvent: {}
+[4.413499] (-) TimerEvent: {}
+[4.513747] (-) TimerEvent: {}
+[4.614004] (-) TimerEvent: {}
+[4.714223] (-) TimerEvent: {}
+[4.814447] (-) TimerEvent: {}
+[4.914671] (-) TimerEvent: {}
+[5.014913] (-) TimerEvent: {}
+[5.115150] (-) TimerEvent: {}
+[5.215472] (-) TimerEvent: {}
+[5.315700] (-) TimerEvent: {}
+[5.415952] (-) TimerEvent: {}
+[5.516277] (-) TimerEvent: {}
+[5.616537] (-) TimerEvent: {}
+[5.716762] (-) TimerEvent: {}
+[5.817008] (-) TimerEvent: {}
+[5.917225] (-) TimerEvent: {}
+[6.017442] (-) TimerEvent: {}
+[6.117664] (-) TimerEvent: {}
+[6.217894] (-) TimerEvent: {}
+[6.318113] (-) TimerEvent: {}
+[6.418337] (-) TimerEvent: {}
+[6.518557] (-) TimerEvent: {}
+[6.618806] (-) TimerEvent: {}
+[6.719029] (-) TimerEvent: {}
+[6.819264] (-) TimerEvent: {}
+[6.919535] (-) TimerEvent: {}
+[7.019772] (-) TimerEvent: {}
+[7.119991] (-) TimerEvent: {}
+[7.220206] (-) TimerEvent: {}
+[7.320418] (-) TimerEvent: {}
+[7.420642] (-) TimerEvent: {}
+[7.520824] (-) TimerEvent: {}
+[7.621039] (-) TimerEvent: {}
+[7.721256] (-) TimerEvent: {}
+[7.821567] (-) TimerEvent: {}
+[7.921823] (-) TimerEvent: {}
+[8.022045] (-) TimerEvent: {}
+[8.122259] (-) TimerEvent: {}
+[8.222479] (-) TimerEvent: {}
+[8.322728] (-) TimerEvent: {}
+[8.422956] (-) TimerEvent: {}
+[8.523172] (-) TimerEvent: {}
+[8.623388] (-) TimerEvent: {}
+[8.723604] (-) TimerEvent: {}
+[8.734330] (centerline_extraction) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable centerline_extract\x1b[0m\n'}
+[8.823710] (-) TimerEvent: {}
+[8.923963] (-) TimerEvent: {}
+[9.024195] (-) TimerEvent: {}
+[9.124479] (-) TimerEvent: {}
+[9.224763] (-) TimerEvent: {}
+[9.325033] (-) TimerEvent: {}
+[9.425307] (-) TimerEvent: {}
+[9.525581] (-) TimerEvent: {}
+[9.625833] (-) TimerEvent: {}
+[9.726102] (-) TimerEvent: {}
+[9.826372] (-) TimerEvent: {}
+[9.926638] (-) TimerEvent: {}
+[10.026914] (-) TimerEvent: {}
+[10.127187] (-) TimerEvent: {}
+[10.227451] (-) TimerEvent: {}
+[10.327719] (-) TimerEvent: {}
+[10.428019] (-) TimerEvent: {}
+[10.528288] (-) TimerEvent: {}
+[10.628549] (-) TimerEvent: {}
+[10.728819] (-) TimerEvent: {}
+[10.829076] (-) TimerEvent: {}
+[10.929341] (-) TimerEvent: {}
+[11.029610] (-) TimerEvent: {}
+[11.129829] (-) TimerEvent: {}
+[11.230097] (-) TimerEvent: {}
+[11.330367] (-) TimerEvent: {}
+[11.430651] (-) TimerEvent: {}
+[11.530931] (-) TimerEvent: {}
+[11.631212] (-) TimerEvent: {}
+[11.731478] (-) TimerEvent: {}
+[11.831746] (-) TimerEvent: {}
+[11.932019] (-) TimerEvent: {}
+[12.032287] (-) TimerEvent: {}
+[12.132576] (-) TimerEvent: {}
+[12.232801] (-) TimerEvent: {}
+[12.333023] (-) TimerEvent: {}
+[12.433238] (-) TimerEvent: {}
+[12.533450] (-) TimerEvent: {}
+[12.633668] (-) TimerEvent: {}
+[12.733887] (-) TimerEvent: {}
+[12.834114] (-) TimerEvent: {}
+[12.934332] (-) TimerEvent: {}
+[13.034570] (-) TimerEvent: {}
+[13.134840] (-) TimerEvent: {}
+[13.235125] (-) TimerEvent: {}
+[13.335410] (-) TimerEvent: {}
+[13.435695] (-) TimerEvent: {}
+[13.535984] (-) TimerEvent: {}
+[13.636256] (-) TimerEvent: {}
+[13.736486] (-) TimerEvent: {}
+[13.836703] (-) TimerEvent: {}
+[13.936925] (-) TimerEvent: {}
+[14.037213] (-) TimerEvent: {}
+[14.137472] (-) TimerEvent: {}
+[14.237687] (-) TimerEvent: {}
+[14.337932] (-) TimerEvent: {}
+[14.438187] (-) TimerEvent: {}
+[14.538439] (-) TimerEvent: {}
+[14.638684] (-) TimerEvent: {}
+[14.738939] (-) TimerEvent: {}
+[14.839182] (-) TimerEvent: {}
+[14.939429] (-) TimerEvent: {}
+[15.039668] (-) TimerEvent: {}
+[15.139916] (-) TimerEvent: {}
+[15.240154] (-) TimerEvent: {}
+[15.340398] (-) TimerEvent: {}
+[15.440633] (-) TimerEvent: {}
+[15.540872] (-) TimerEvent: {}
+[15.641109] (-) TimerEvent: {}
+[15.741349] (-) TimerEvent: {}
+[15.841582] (-) TimerEvent: {}
+[15.941819] (-) TimerEvent: {}
+[16.042052] (-) TimerEvent: {}
+[16.142289] (-) TimerEvent: {}
+[16.242525] (-) TimerEvent: {}
+[16.342763] (-) TimerEvent: {}
+[16.443009] (-) TimerEvent: {}
+[16.543251] (-) TimerEvent: {}
+[16.643490] (-) TimerEvent: {}
+[16.743728] (-) TimerEvent: {}
+[16.843979] (-) TimerEvent: {}
+[16.944219] (-) TimerEvent: {}
+[17.044459] (-) TimerEvent: {}
+[17.144697] (-) TimerEvent: {}
+[17.244943] (-) TimerEvent: {}
+[17.345200] (-) TimerEvent: {}
+[17.445440] (-) TimerEvent: {}
+[17.545680] (-) TimerEvent: {}
+[17.645924] (-) TimerEvent: {}
+[17.746162] (-) TimerEvent: {}
+[17.846398] (-) TimerEvent: {}
+[17.946638] (-) TimerEvent: {}
+[18.046919] (-) TimerEvent: {}
+[18.147184] (-) TimerEvent: {}
+[18.247420] (-) TimerEvent: {}
+[18.347657] (-) TimerEvent: {}
+[18.447896] (-) TimerEvent: {}
+[18.548164] (-) TimerEvent: {}
+[18.648419] (-) TimerEvent: {}
+[18.748656] (-) TimerEvent: {}
+[18.848916] (-) TimerEvent: {}
+[18.949157] (-) TimerEvent: {}
+[19.049418] (-) TimerEvent: {}
+[19.149656] (-) TimerEvent: {}
+[19.249901] (-) TimerEvent: {}
+[19.350138] (-) TimerEvent: {}
+[19.450377] (-) TimerEvent: {}
+[19.550619] (-) TimerEvent: {}
+[19.650858] (-) TimerEvent: {}
+[19.751101] (-) TimerEvent: {}
+[19.851336] (-) TimerEvent: {}
+[19.951577] (-) TimerEvent: {}
+[20.051839] (-) TimerEvent: {}
+[20.152077] (-) TimerEvent: {}
+[20.252319] (-) TimerEvent: {}
+[20.352571] (-) TimerEvent: {}
+[20.452809] (-) TimerEvent: {}
+[20.553049] (-) TimerEvent: {}
+[20.653286] (-) TimerEvent: {}
+[20.753520] (-) TimerEvent: {}
+[20.853785] (-) TimerEvent: {}
+[20.954025] (-) TimerEvent: {}
+[21.054263] (-) TimerEvent: {}
+[21.154502] (-) TimerEvent: {}
+[21.254743] (-) TimerEvent: {}
+[21.354983] (-) TimerEvent: {}
+[21.455217] (-) TimerEvent: {}
+[21.555457] (-) TimerEvent: {}
+[21.655693] (-) TimerEvent: {}
+[21.755953] (-) TimerEvent: {}
+[21.856195] (-) TimerEvent: {}
+[21.956442] (-) TimerEvent: {}
+[22.056679] (-) TimerEvent: {}
+[22.156924] (-) TimerEvent: {}
+[22.257193] (-) TimerEvent: {}
+[22.357430] (-) TimerEvent: {}
+[22.457690] (-) TimerEvent: {}
+[22.557922] (-) TimerEvent: {}
+[22.658137] (-) TimerEvent: {}
+[22.758373] (-) TimerEvent: {}
+[22.858586] (-) TimerEvent: {}
+[22.958824] (-) TimerEvent: {}
+[23.059043] (-) TimerEvent: {}
+[23.159256] (-) TimerEvent: {}
+[23.259463] (-) TimerEvent: {}
+[23.359673] (-) TimerEvent: {}
+[23.459919] (-) TimerEvent: {}
+[23.560140] (-) TimerEvent: {}
+[23.660349] (-) TimerEvent: {}
+[23.760559] (-) TimerEvent: {}
+[23.860795] (-) TimerEvent: {}
+[23.961010] (-) TimerEvent: {}
+[24.061228] (-) TimerEvent: {}
+[24.161448] (-) TimerEvent: {}
+[24.261666] (-) TimerEvent: {}
+[24.361918] (-) TimerEvent: {}
+[24.462168] (-) TimerEvent: {}
+[24.562382] (-) TimerEvent: {}
+[24.662596] (-) TimerEvent: {}
+[24.762813] (-) TimerEvent: {}
+[24.863026] (-) TimerEvent: {}
+[24.963278] (-) TimerEvent: {}
+[25.063489] (-) TimerEvent: {}
+[25.163701] (-) TimerEvent: {}
+[25.263918] (-) TimerEvent: {}
+[25.364138] (-) TimerEvent: {}
+[25.464352] (-) TimerEvent: {}
+[25.564572] (-) TimerEvent: {}
+[25.664801] (-) TimerEvent: {}
+[25.765025] (-) TimerEvent: {}
+[25.865245] (-) TimerEvent: {}
+[25.965465] (-) TimerEvent: {}
+[26.065681] (-) TimerEvent: {}
+[26.165904] (-) TimerEvent: {}
+[26.266118] (-) TimerEvent: {}
+[26.366353] (-) TimerEvent: {}
+[26.466563] (-) TimerEvent: {}
+[26.566813] (-) TimerEvent: {}
+[26.667024] (-) TimerEvent: {}
+[26.767237] (-) TimerEvent: {}
+[26.867451] (-) TimerEvent: {}
+[26.967663] (-) TimerEvent: {}
+[27.067880] (-) TimerEvent: {}
+[27.168088] (-) TimerEvent: {}
+[27.268305] (-) TimerEvent: {}
+[27.368510] (-) TimerEvent: {}
+[27.468764] (-) TimerEvent: {}
+[27.568985] (-) TimerEvent: {}
+[27.669208] (-) TimerEvent: {}
+[27.769419] (-) TimerEvent: {}
+[27.869630] (-) TimerEvent: {}
+[27.969842] (-) TimerEvent: {}
+[28.070057] (-) TimerEvent: {}
+[28.170270] (-) TimerEvent: {}
+[28.270508] (-) TimerEvent: {}
+[28.370721] (-) TimerEvent: {}
+[28.470960] (-) TimerEvent: {}
+[28.571203] (-) TimerEvent: {}
+[28.671414] (-) TimerEvent: {}
+[28.771630] (-) TimerEvent: {}
+[28.871846] (-) TimerEvent: {}
+[28.972057] (-) TimerEvent: {}
+[29.072268] (-) TimerEvent: {}
+[29.172480] (-) TimerEvent: {}
+[29.272691] (-) TimerEvent: {}
+[29.372913] (-) TimerEvent: {}
+[29.473130] (-) TimerEvent: {}
+[29.573344] (-) TimerEvent: {}
+[29.673560] (-) TimerEvent: {}
+[29.773773] (-) TimerEvent: {}
+[29.873997] (-) TimerEvent: {}
+[29.974228] (-) TimerEvent: {}
+[30.074480] (-) TimerEvent: {}
+[30.174737] (-) TimerEvent: {}
+[30.274980] (-) TimerEvent: {}
+[30.375219] (-) TimerEvent: {}
+[30.475436] (-) TimerEvent: {}
+[30.575649] (-) TimerEvent: {}
+[30.675874] (-) TimerEvent: {}
+[30.776117] (-) TimerEvent: {}
+[30.876329] (-) TimerEvent: {}
+[30.976545] (-) TimerEvent: {}
+[31.076757] (-) TimerEvent: {}
+[31.176985] (-) TimerEvent: {}
+[31.277211] (-) TimerEvent: {}
+[31.377438] (-) TimerEvent: {}
+[31.477671] (-) TimerEvent: {}
+[31.577890] (-) TimerEvent: {}
+[31.678108] (-) TimerEvent: {}
+[31.778346] (-) TimerEvent: {}
+[31.878566] (-) TimerEvent: {}
+[31.978785] (-) TimerEvent: {}
+[32.079035] (-) TimerEvent: {}
+[32.179255] (-) TimerEvent: {}
+[32.279493] (-) TimerEvent: {}
+[32.379744] (-) TimerEvent: {}
+[32.479970] (-) TimerEvent: {}
+[32.580185] (-) TimerEvent: {}
+[32.680396] (-) TimerEvent: {}
+[32.780639] (-) TimerEvent: {}
+[32.880882] (-) TimerEvent: {}
+[32.981095] (-) TimerEvent: {}
+[33.081310] (-) TimerEvent: {}
+[33.181558] (-) TimerEvent: {}
+[33.281803] (-) TimerEvent: {}
+[33.382039] (-) TimerEvent: {}
+[33.482277] (-) TimerEvent: {}
+[33.582513] (-) TimerEvent: {}
+[33.682756] (-) TimerEvent: {}
+[33.783045] (-) TimerEvent: {}
+[33.883318] (-) TimerEvent: {}
+[33.983600] (-) TimerEvent: {}
+[34.083834] (-) TimerEvent: {}
+[34.184101] (-) TimerEvent: {}
+[34.284394] (-) TimerEvent: {}
+[34.384626] (-) TimerEvent: {}
+[34.484838] (-) TimerEvent: {}
+[34.585096] (-) TimerEvent: {}
+[34.685305] (-) TimerEvent: {}
+[34.785528] (-) TimerEvent: {}
+[34.885820] (-) TimerEvent: {}
+[34.986104] (-) TimerEvent: {}
+[35.086376] (-) TimerEvent: {}
+[35.186603] (-) TimerEvent: {}
+[35.286822] (-) TimerEvent: {}
+[35.387058] (-) TimerEvent: {}
+[35.487326] (-) TimerEvent: {}
+[35.587599] (-) TimerEvent: {}
+[35.687825] (-) TimerEvent: {}
+[35.788038] (-) TimerEvent: {}
+[35.888251] (-) TimerEvent: {}
+[35.988459] (-) TimerEvent: {}
+[36.088675] (-) TimerEvent: {}
+[36.188905] (-) TimerEvent: {}
+[36.289136] (-) TimerEvent: {}
+[36.389366] (-) TimerEvent: {}
+[36.489611] (-) TimerEvent: {}
+[36.589830] (-) TimerEvent: {}
+[36.690059] (-) TimerEvent: {}
+[36.790316] (-) TimerEvent: {}
+[36.890553] (-) TimerEvent: {}
+[36.990787] (-) TimerEvent: {}
+[37.091005] (-) TimerEvent: {}
+[37.191221] (-) TimerEvent: {}
+[37.291446] (-) TimerEvent: {}
+[37.391703] (-) TimerEvent: {}
+[37.491928] (-) TimerEvent: {}
+[37.592155] (-) TimerEvent: {}
+[37.692369] (-) TimerEvent: {}
+[37.792598] (-) TimerEvent: {}
+[37.892828] (-) TimerEvent: {}
+[37.993041] (-) TimerEvent: {}
+[38.093254] (-) TimerEvent: {}
+[38.193475] (-) TimerEvent: {}
+[38.293700] (-) TimerEvent: {}
+[38.393922] (-) TimerEvent: {}
+[38.494138] (-) TimerEvent: {}
+[38.594351] (-) TimerEvent: {}
+[38.694562] (-) TimerEvent: {}
+[38.794798] (-) TimerEvent: {}
+[38.895037] (-) TimerEvent: {}
+[38.995278] (-) TimerEvent: {}
+[39.095508] (-) TimerEvent: {}
+[39.195730] (-) TimerEvent: {}
+[39.295990] (-) TimerEvent: {}
+[39.396239] (-) TimerEvent: {}
+[39.496481] (-) TimerEvent: {}
+[39.596720] (-) TimerEvent: {}
+[39.696969] (-) TimerEvent: {}
+[39.797208] (-) TimerEvent: {}
+[39.897444] (-) TimerEvent: {}
+[39.997701] (-) TimerEvent: {}
+[40.097965] (-) TimerEvent: {}
+[40.198242] (-) TimerEvent: {}
+[40.298503] (-) TimerEvent: {}
+[40.398725] (-) TimerEvent: {}
+[40.498946] (-) TimerEvent: {}
+[40.599157] (-) TimerEvent: {}
+[40.699374] (-) TimerEvent: {}
+[40.799601] (-) TimerEvent: {}
+[40.899843] (-) TimerEvent: {}
+[41.000054] (-) TimerEvent: {}
+[41.100265] (-) TimerEvent: {}
+[41.200491] (-) TimerEvent: {}
+[41.300714] (-) TimerEvent: {}
+[41.400948] (-) TimerEvent: {}
+[41.501163] (-) TimerEvent: {}
+[41.601408] (-) TimerEvent: {}
+[41.701650] (-) TimerEvent: {}
+[41.801873] (-) TimerEvent: {}
+[41.902156] (-) TimerEvent: {}
+[42.002417] (-) TimerEvent: {}
+[42.102677] (-) TimerEvent: {}
+[42.202940] (-) TimerEvent: {}
+[42.303201] (-) TimerEvent: {}
+[42.403463] (-) TimerEvent: {}
+[42.503723] (-) TimerEvent: {}
+[42.603988] (-) TimerEvent: {}
+[42.704249] (-) TimerEvent: {}
+[42.804508] (-) TimerEvent: {}
+[42.904768] (-) TimerEvent: {}
+[43.005032] (-) TimerEvent: {}
+[43.105290] (-) TimerEvent: {}
+[43.205548] (-) TimerEvent: {}
+[43.305818] (-) TimerEvent: {}
+[43.406077] (-) TimerEvent: {}
+[43.506341] (-) TimerEvent: {}
+[43.606599] (-) TimerEvent: {}
+[43.706857] (-) TimerEvent: {}
+[43.807118] (-) TimerEvent: {}
+[43.907377] (-) TimerEvent: {}
+[44.007639] (-) TimerEvent: {}
+[44.107902] (-) TimerEvent: {}
+[44.208162] (-) TimerEvent: {}
+[44.308409] (-) TimerEvent: {}
+[44.408630] (-) TimerEvent: {}
+[44.508898] (-) TimerEvent: {}
+[44.609158] (-) TimerEvent: {}
+[44.709417] (-) TimerEvent: {}
+[44.809699] (-) TimerEvent: {}
+[44.909970] (-) TimerEvent: {}
+[45.010226] (-) TimerEvent: {}
+[45.091006] (centerline_extraction) StderrLine: {'line': b"/usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':\n"}
+[45.091158] (centerline_extraction) StderrLine: {'line': b"(.text+0x1b): undefined reference to `main'\n"}
+[45.097765] (centerline_extraction) StderrLine: {'line': b'collect2: error: ld returned 1 exit status\n'}
+[45.098974] (centerline_extraction) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/centerline_extract.dir/build.make:307\xef\xbc\x9acenterline_extract] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[45.099137] (centerline_extraction) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:165\xef\xbc\x9aCMakeFiles/centerline_extract.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[45.099313] (centerline_extraction) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[45.100996] (centerline_extraction) CommandEnded: {'returncode': 2}
+[45.110365] (-) TimerEvent: {}
+[45.122965] (centerline_extraction) JobEnded: {'identifier': 'centerline_extraction', 'rc': 2}
+[45.133477] (-) EventReactorShutdown: {}

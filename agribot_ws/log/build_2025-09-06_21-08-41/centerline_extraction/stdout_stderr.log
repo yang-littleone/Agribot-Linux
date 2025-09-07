@@ -1,0 +1,22 @@
+[35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
+[ 22%] Built target pcl_learning
+[ 44%] Built target centerline_extract
+[ 55%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o[0m
+In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:1[m[K:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector.hpp:1:[m[K [01;31m[Kerror: [m[Kunterminated #ifndef
+    1 | #ifndef CORN_ROW_DETECTOR_HPP
+      | 
+In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/main.cpp:2[m[K:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector.hpp:1:[m[K [01;31m[Kerror: [m[Kunterminated #ifndef
+    1 | #ifndef CORN_ROW_DETECTOR_HPP
+      | 
+gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:118：CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:[m[K In member function ‘[01m[Kvoid CornRowDetector::point_cloud_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:55:10:[m[K [01;31m[Kerror: [m[K‘[01m[KfromROSMsg[m[K’ is not a member of ‘[01m[Kpcl[m[K’
+   55 |     pcl::[01;31m[KfromROSMsg[m[K(*msg, *cloud);
+      |          [01;31m[K^~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:76：CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:193：CMakeFiles/cornfield_navigation_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

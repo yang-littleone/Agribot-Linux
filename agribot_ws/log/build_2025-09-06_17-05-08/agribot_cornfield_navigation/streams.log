@@ -1,0 +1,135 @@
+[0.024s] Invoking command in '/home/xkai/agribot/agribot_ws/build/agribot_cornfield_navigation': /usr/bin/cmake /home/xkai/agribot/agribot_ws/src/agribot_cornfield_navigation -DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/agribot_cornfield_navigation
+[0.171s] -- The C compiler identification is GNU 11.4.0
+[0.265s] -- The CXX compiler identification is GNU 11.4.0
+[0.280s] -- Detecting C compiler ABI info
+[0.371s] -- Detecting C compiler ABI info - done
+[0.384s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.385s] -- Detecting C compile features
+[0.386s] -- Detecting C compile features - done
+[0.392s] -- Detecting CXX compiler ABI info
+[0.488s] -- Detecting CXX compiler ABI info - done
+[0.499s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.499s] -- Detecting CXX compile features
+[0.501s] -- Detecting CXX compile features - done
+[0.510s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.741s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.884s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.943s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.955s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.966s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.998s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.026s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.094s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.097s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[1.209s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[1.247s] -- Found FastRTPS: /opt/ros/humble/include  
+[1.300s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.311s] -- Looking for pthread.h
+[1.409s] -- Looking for pthread.h - found
+[1.410s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.494s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.495s] -- Found Threads: TRUE  
+[1.561s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.591s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.612s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[1.660s] -- Checking for module 'eigen3'
+[1.673s] --   Found eigen3, version 3.4.0
+[1.700s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[1.700s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.732s] -- Checking for module 'flann'
+[1.745s] --   Found flann, version 1.9.1
+[1.779s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[1.779s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[2.780s] -- Checking for module 'libusb-1.0'
+[2.794s] --   Found libusb-1.0, version 1.0.25
+[2.828s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[2.829s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.892s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.110s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[3.118s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.125s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.276s] -- Found Qhull version 8.0.2
+[3.426s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.583s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[3.584s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[3.585s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[3.587s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[3.588s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[3.590s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[3.590s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[3.591s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[3.592s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[3.593s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[3.595s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[3.596s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[3.597s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[3.598s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[3.599s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[3.601s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[3.602s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[3.603s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[3.605s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[3.606s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[3.607s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[3.608s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[3.608s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[3.609s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[3.610s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[3.612s] [33mCMake Warning (dev) at CMakeLists.txt:16 (find_package):
+[3.612s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[3.612s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[3.612s]   command to set the policy and suppress this warning.
+[3.612s] 
+[3.612s]   CMake variable PCL_ROOT is set to:
+[3.612s] 
+[3.613s]     /usr
+[3.613s] 
+[3.613s]   For compatibility, CMake is ignoring the variable.
+[3.613s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[3.613s] [0m
+[3.623s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[3.637s] -- Found tf2_geometry_msgs: 0.25.16 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[3.655s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[3.658s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[3.658s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[3.790s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[3.844s] Error parsing '/home/xkai/agribot/agribot_ws/src/agribot_cornfield_navigation/package.xml':
+[3.898s] Traceback (most recent call last):
+[3.898s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 610, in parse_package_string
+[3.898s]     root = dom.parseString(data)
+[3.898s]   File "/usr/lib/python3.10/xml/dom/minidom.py", line 2000, in parseString
+[3.899s]     return expatbuilder.parseString(string)
+[3.899s]   File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 925, in parseString
+[3.899s]     return builder.parseString(string)
+[3.899s]   File "/usr/lib/python3.10/xml/dom/expatbuilder.py", line 223, in parseString
+[3.899s]     parser.Parse(string, True)
+[3.899s] xml.parsers.expat.ExpatError: mismatched tag: line 33, column 2
+[3.900s] 
+[3.900s] During handling of the above exception, another exception occurred:
+[3.900s] 
+[3.900s] Traceback (most recent call last):
+[3.900s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 150, in <module>
+[3.900s]     main()
+[3.900s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 53, in main
+[3.900s]     raise e
+[3.900s]   File "/opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py", line 49, in main
+[3.900s]     package = parse_package_string(
+[3.900s]   File "/usr/lib/python3/dist-packages/catkin_pkg/package.py", line 612, in parse_package_string
+[3.901s]     raise InvalidPackage('The manifest contains invalid XML:\n%s' % ex, filename)
+[3.901s] catkin_pkg.package.InvalidPackage: Error(s) in package '/home/xkai/agribot/agribot_ws/src/agribot_cornfield_navigation/package.xml':
+[3.901s] The manifest contains invalid XML:
+[3.901s] mismatched tag: line 33, column 2
+[3.917s] [31mCMake Error at /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:95 (message):
+[3.917s]   execute_process(/usr/bin/python3
+[3.917s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/package_xml_2_cmake.py
+[3.917s]   /home/xkai/agribot/agribot_ws/src/agribot_cornfield_navigation/package.xml
+[3.917s]   /home/xkai/agribot/agribot_ws/build/agribot_cornfield_navigation/ament_cmake_core/package.cmake)
+[3.917s]   returned error code 1
+[3.917s] Call Stack (most recent call first):
+[3.917s]   /opt/ros/humble/share/ament_cmake_core/cmake/core/ament_package_xml.cmake:49 (_ament_package_xml)
+[3.917s]   /opt/ros/humble/share/ament_lint_auto/cmake/ament_lint_auto_find_test_dependencies.cmake:31 (ament_package_xml)
+[3.917s]   CMakeLists.txt:41 (ament_lint_auto_find_test_dependencies)
+[3.917s] 
+[3.917s] [0m
+[3.917s] -- Configuring incomplete, errors occurred!
+[3.917s] See also "/home/xkai/agribot/agribot_ws/build/agribot_cornfield_navigation/CMakeFiles/CMakeOutput.log".

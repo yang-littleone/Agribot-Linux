@@ -1,0 +1,29 @@
+In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:3[m[K:
+[01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+   35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+      |  [01;35m[K^~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/pure_pursuit_controller.hpp:4[m[K,
+                 from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:1[m[K:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:[m[K In member function ‘[01m[Kvoid PurePursuitController::center_line_callback(nav_msgs::msg::Path_<std::allocator<void> >::SharedPtr)[m[K’:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:56:38:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+   56 |     RCLCPP_DEBUG(this->get_logger(), [01;35m[K"收到中心线，包含%d个点"[m[K, [32m[Kcenter_line_.poses.size()[m[K);
+      |                                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                       [32m[K|[m[K
+      |                                                                                       [32m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type {aka long unsigned int}[m[K
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:56:56:[m[K [01;36m[Knote: [m[Kformat string is defined here
+   56 |     RCLCPP_DEBUG(this->get_logger(), "收到中心线，包含[01;36m[K%d[m[K个点", center_line_.poses.size());
+      |                                                       [01;36m[K~^[m[K
+      |                                                        [01;36m[K|[m[K
+      |                                                        [01;36m[Kint[m[K
+      |                                                       [32m[K%ld[m[K

@@ -1,0 +1,43 @@
+[35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
+[ 22%] Built target pcl_learning
+[ 44%] Built target centerline_extract
+[ 55%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o[0m
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::PointStamped PurePursuitController::findLookaheadPoint()[m[K’:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:156:32:[m[K [01;31m[Kerror: [m[K‘[01m[Klookahead_distance_base_[m[K’ was not declared in this scope; did you mean ‘[01m[Klookahead_distance_max_[m[K’?
+  156 |     double dynamic_lookahead = [01;31m[Klookahead_distance_base_[m[K;
+      |                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                [32m[Klookahead_distance_max_[m[K
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:172:35:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kgeometry_msgs::msg::PointStamped[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::PointStamped_<std::allocator<void> >[m[K’} and ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’)
+  172 |                 lookahead_point = [01;31m[Kpose[m[K;
+      |                                   [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point_stamped.hpp:7[m[K,
+                 from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/pure_pursuit_controller.hpp:8[m[K,
+                 from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:38:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PointStamped_<std::allocator<void> >& geometry_msgs::msg::PointStamped_<std::allocator<void> >::operator=(const geometry_msgs::msg::PointStamped_<std::allocator<void> >&)[m[K’
+   38 | struct [01;36m[KPointStamped_[m[K
+      |        [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:38:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ to ‘[01m[Kconst geometry_msgs::msg::PointStamped_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:38:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PointStamped_<std::allocator<void> >& geometry_msgs::msg::PointStamped_<std::allocator<void> >::operator=(geometry_msgs::msg::PointStamped_<std::allocator<void> >&&)[m[K’
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:38:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kconst geometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’ to ‘[01m[Kgeometry_msgs::msg::PointStamped_<std::allocator<void> >&&[m[K’
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:197:47:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator=[m[K’ (operand types are ‘[01m[Kgeometry_msgs::msg::PointStamped[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::PointStamped_<std::allocator<void> >[m[K’} and ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >, geometry_msgs::msg::PoseStamped_<std::allocator<void> > >::value_type[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’})
+  197 |     lookahead_point = center_line_.poses.back([01;31m[K)[m[K;
+      |                                               [01;31m[K^[m[K
+In file included from [01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/point_stamped.hpp:7[m[K,
+                 from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/pure_pursuit_controller.hpp:8[m[K,
+                 from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:1[m[K:
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:38:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PointStamped_<std::allocator<void> >& geometry_msgs::msg::PointStamped_<std::allocator<void> >::operator=(const geometry_msgs::msg::PointStamped_<std::allocator<void> >&)[m[K’
+   38 | struct [01;36m[KPointStamped_[m[K
+      |        [01;36m[K^~~~~~~~~~~~~[m[K
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:38:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >, geometry_msgs::msg::PoseStamped_<std::allocator<void> > >::value_type[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’} to ‘[01m[Kconst geometry_msgs::msg::PointStamped_<std::allocator<void> >&[m[K’
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:38:8:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kgeometry_msgs::msg::PointStamped_<std::allocator<void> >& geometry_msgs::msg::PointStamped_<std::allocator<void> >::operator=(geometry_msgs::msg::PointStamped_<std::allocator<void> >&&)[m[K’
+[01m[K/opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__struct.hpp:38:8:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[K__gnu_cxx::__alloc_traits<std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > >, geometry_msgs::msg::PoseStamped_<std::allocator<void> > >::value_type[m[K’ {aka ‘[01m[Kgeometry_msgs::msg::PoseStamped_<std::allocator<void> >[m[K’} to ‘[01m[Kgeometry_msgs::msg::PointStamped_<std::allocator<void> >&&[m[K’
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:[m[K In member function ‘[01m[Kdouble PurePursuitController::calculateLateralError(const PointStamped&)[m[K’:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:202:93:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Klookahead_point[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  202 |  PurePursuitController::calculateLateralError([01;35m[Kconst geometry_msgs::msg::PointStamped& lookahead_point[m[K)
+      |                                               [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:90：CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[1]: *** [CMakeFiles/Makefile2:193：CMakeFiles/cornfield_navigation_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

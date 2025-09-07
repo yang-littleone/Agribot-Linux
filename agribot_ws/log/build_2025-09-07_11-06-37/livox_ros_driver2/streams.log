@@ -1,0 +1,5 @@
+[0.012s] Invoking command in '/home/xkai/桌面/agri/agribot-ubuntun-lenovo-732de959f03a2f9cd7af57135099cd38489e2856/agribot_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/桌面/agri/agribot-ubuntun-lenovo-732de959f03a2f9cd7af57135099cd38489e2856/agribot_ws/build/livox_ros_driver2 -- -j8 -l8
+[0.021s] [0mCMake Error: The current CMakeCache.txt directory /home/xkai/桌面/agri/agribot-ubuntun-lenovo-732de959f03a2f9cd7af57135099cd38489e2856/agribot_ws/build/livox_ros_driver2/CMakeCache.txt is different than the directory /home/xkai/agribot/agribot_ws/build/livox_ros_driver2 where CMakeCache.txt was created. This may result in binaries being created in the wrong place. If you are not sure, reedit the CMakeCache.txt[0m
+[0.032s] [0mCMake Error: The source directory "/home/xkai/agribot/agribot_ws/src/livox_ros_driver2" does not exist.
+[0.032s] Specify --help for usage, or press the help button on the CMake GUI.[0m
+[0.033s] gmake: *** [Makefile:1423：cmake_check_build_system] 错误 1

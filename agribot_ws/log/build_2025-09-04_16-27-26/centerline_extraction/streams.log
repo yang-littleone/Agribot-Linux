@@ -1,0 +1,46 @@
+[0.015s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.040s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.212s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.237s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.239s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.245s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.254s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.265s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.294s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.295s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.382s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.450s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.494s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.517s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.543s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[0.580s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.611s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.872s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.879s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.005s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.010s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.015s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.148s] -- Found Qhull version 8.0.2
+[1.269s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.421s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.483s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.484s] -- Configured cppcheck include dirs: 
+[1.484s] -- Configured cppcheck exclude dirs and/or files: 
+[1.484s] -- Added test 'lint_cmake' to check CMake code style
+[1.485s] -- Added test 'uncrustify' to check C / C++ code style
+[1.485s] -- Configured uncrustify additional arguments: 
+[1.485s] -- Added test 'xmllint' to check XML markup files
+[1.486s] -- Configuring done
+[1.579s] -- Generating done
+[1.597s] -- Build files have been written to: /home/xkai/agribot/agribot_ws/build/centerline_extraction
+[1.626s] [35m[1mConsolidate compiler generated dependencies of target pcl_learning[0m
+[1.635s] [ 25%] [32mBuilding CXX object CMakeFiles/centerline_extract.dir/src/centerline_extract.cpp.o[0m
+[1.647s] [ 75%] Built target pcl_learning
+[8.727s] [100%] [32m[1mLinking CXX executable centerline_extract[0m
+[45.084s] /usr/bin/ld: /usr/lib/gcc/x86_64-linux-gnu/11/../../../x86_64-linux-gnu/Scrt1.o: in function `_start':
+[45.084s] (.text+0x1b): undefined reference to `main'
+[45.091s] collect2: error: ld returned 1 exit status
+[45.092s] gmake[2]: *** [CMakeFiles/centerline_extract.dir/build.make:307：centerline_extract] 错误 1
+[45.092s] gmake[1]: *** [CMakeFiles/Makefile2:165：CMakeFiles/centerline_extract.dir/all] 错误 2
+[45.092s] gmake: *** [Makefile:146：all] 错误 2
+[45.094s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8

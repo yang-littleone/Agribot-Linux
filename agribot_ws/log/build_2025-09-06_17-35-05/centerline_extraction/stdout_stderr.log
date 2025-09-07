@@ -1,0 +1,19 @@
+[35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
+[ 22%] Built target centerline_extract
+[ 44%] Built target pcl_learning
+[ 55%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o[0m
+[ 66%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o[0m
+[ 77%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/obstacle_detector.cpp.o[0m
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kpure_pursuit_controller.hpp: 没有那个文件或目录
+    1 | #include [01;31m[K"pure_pursuit_controller.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:90：CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/obstacle_detector.cpp:1:10:[m[K [01;31m[Kfatal error: [m[Kobstacle_detector.hpp: 没有那个文件或目录
+    1 | #include [01;31m[K"obstacle_detector.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:104：CMakeFiles/cornfield_navigation_node.dir/src/obstacle_detector.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:193：CMakeFiles/cornfield_navigation_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

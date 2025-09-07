@@ -1,0 +1,3 @@
+[35m[1mConsolidate compiler generated dependencies of target centerline_extract[0m
+[ 50%] Built target pcl_learning
+[ 75%] [32mBuilding CXX object CMakeFiles/centerline_extract.dir/src/centerline_extract.cpp.o[0m

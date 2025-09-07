@@ -1,0 +1,12 @@
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/uninstall.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/centerline_extraction_uninstall.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/pcl_learning.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/centerline_extract.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/cornfield_navigation_node.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/test.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/edit_cache.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/rebuild_cache.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/list_install_components.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/install.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/install/local.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/install/strip.dir

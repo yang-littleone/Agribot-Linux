@@ -1,0 +1,13 @@
+[33mCMake Warning:
+  Manually-specified variables were not used by the project:
+
+    HUMBLE_ROS
+    ROS_EDITION
+
+[0m
+[31mCMake Error at cmake_install.cmake:66 (file):
+  file INSTALL cannot find
+  "/home/xkai/agribot/agribot_ws/src/centerline_extraction/config": No such
+  file or directory.
+
+[0m
