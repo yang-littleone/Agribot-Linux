@@ -13,6 +13,7 @@
 
 #include "centerline_extraction/corn_row_detector.hpp"
 
+/* 直线拟合初代版本 */
 CornRowDetector::CornRowDetector() : Node("corn_row_detector")
 {
     // 订阅点云数据

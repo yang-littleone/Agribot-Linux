@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-408dc85de257cf82bd11.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "centerline_extraction",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "centerline_extract::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-centerline_extract-c0cd3b0c4af09253512e.json",
+					"name" : "centerline_extract",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "centerline_extraction_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-centerline_extraction_uninstall-c24e1f29dc8d6b4f25a6.json",
+					"name" : "centerline_extraction_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cornfield_navigation_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cornfield_navigation_node-497da3c9e9dd360d762e.json",
+					"name" : "cornfield_navigation_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pcl_learning::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pcl_learning-c0080d7a86d3950887a4.json",
+					"name" : "pcl_learning",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-4c4d4edf21a98b37dddc.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/xkai/agribot/agribot_ws/build/centerline_extraction",
+		"source" : "/home/xkai/agribot/agribot_ws/src/centerline_extraction"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

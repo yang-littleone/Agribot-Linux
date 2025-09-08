@@ -19,10 +19,10 @@ PurePursuitController::PurePursuitController() : Node("pure_pursuit_controller")
         "/cmd_vel", 10);  // 非stamped指令
     
     // 初始化参数（与配置文件中的wheel_separation匹配）
-    this->declare_parameter("lookahead_distance", 0.2);    // 适配小车尺寸（轮距0.18m）
+    this->declare_parameter("lookahead_distance", 0.206);    // 适配小车尺寸（轮距0.18m）
     this->declare_parameter("max_linear_speed", 0.3);      // 低速启动
     this->declare_parameter("min_linear_speed", 0.05);
-    this->declare_parameter("max_angular_speed", 1.5);     // 提高转向灵敏度
+    this->declare_parameter("max_angular_speed", 2.0);     // 提高转向灵敏度
     this->declare_parameter("wheel_base", 0.206);           // 与配置中的wheel_separation一致
     this->declare_parameter("kp_lateral", 0.5);            // 增强转向纠正
     this->declare_parameter("debug_mode", false);          // 调试模式

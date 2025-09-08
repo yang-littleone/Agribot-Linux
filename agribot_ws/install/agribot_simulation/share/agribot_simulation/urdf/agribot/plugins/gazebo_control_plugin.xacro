@@ -1,15 +1,1 @@
-<?xml version="1.0"?>
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
-    <xacro:macro name="gazebo_control_plugin">
-        <gazebo>
-            <!-- 使用gazebo_ros2_control插件来控制四轮驱动机器人 -->
-            <plugin filename="libgazebo_ros2_control.so" name="gazebo_ros2_control">
-                <parameters>$(find xkaibot_description)/config/xkaibot_ros2_controller.yaml</parameters>
-                <ros>
-                    <remapping>/agribot_diff_drive_controller/cmd_vel_unstamped:=/cmd_vel</remapping>
-                    <remapping>/agribot_diff_drive_controller/odom:=/odom</remapping>
-                </ros>
-            </plugin>
-        </gazebo>
-   </xacro:macro>
-</robot>
+/home/xkai/agribot/agribot_ws/src/agribot_simulation/urdf/agribot/plugins/gazebo_control_plugin.xacro

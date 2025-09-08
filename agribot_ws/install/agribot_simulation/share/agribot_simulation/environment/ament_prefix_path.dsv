@@ -1,1 +1,1 @@
-prepend-non-duplicate;AMENT_PREFIX_PATH;
+/home/xkai/agribot/agribot_ws/build/agribot_simulation/ament_cmake_environment_hooks/ament_prefix_path.dsv

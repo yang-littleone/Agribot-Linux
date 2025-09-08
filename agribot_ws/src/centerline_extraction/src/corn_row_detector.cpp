@@ -11,19 +11,21 @@
 #include <algorithm>
 #include <numeric>
 
+/* 直线拟合 ，效果还可以，带参数平滑*/
+
 // 构造函数实现
 // 构造函数实现
 CornRowDetector::CornRowDetector() : Node("corn_row_detector")
 {
     // 初始化订阅者和发布者
     point_cloud_sub_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-        "/mid360_PointCloud2", 10,
+        "/Laser_map", 10,
         std::bind(&CornRowDetector::point_cloud_callback, this, std::placeholders::_1));
     
     center_line_pub_ = this->create_publisher<nav_msgs::msg::Path>("/corn_row_center", 10);
     
     // 声明并获取参数 - 修复类型歧义问题
-    this->declare_parameter("cluster_tolerance", 0.3f);
+    this->declare_parameter("cluster_tolerance", 0.4f);
     this->declare_parameter("min_cluster_size", 10);
     this->declare_parameter("max_cluster_size", 200);
     this->declare_parameter("row_distance_threshold", 0.5f);
@@ -35,8 +37,8 @@ CornRowDetector::CornRowDetector() : Node("corn_row_detector")
     // 平滑参数（使用int避免无符号类型歧义）
     this->declare_parameter("time_window_size", 8);  // 改为int类型避免歧义
     this->declare_parameter("spatial_smooth_weight", 0.7f);
-    this->declare_parameter("max_jump_distance", 0.1f);
-    this->declare_parameter("outlier_std_threshold", 1.0f);
+    this->declare_parameter("max_jump_distance", 0.5f);
+    this->declare_parameter("outlier_std_threshold", 1.5f);
     this->declare_parameter("spline_segments", 8);
     
     // 获取参数

@@ -74,7 +74,7 @@ namespace gazebo
         // PointCloud2 publisher
         cloud2_pub = node_->create_publisher<sensor_msgs::msg::PointCloud2>(curr_scan_topic + "_PointCloud2", 100);
         // CustomMsg publisher
-        custom_pub = node_->create_publisher<livox_ros_driver2::msg::CustomMsg>(curr_scan_topic, 100);
+        custom_pub = node_->create_publisher<livox_ros_driver2::msg::CustomMsg>("/livox/lidar", 100);
 
         scanPub = node->Advertise<msgs::LaserScanStamped>(curr_scan_topic+"laserscan", 100);
 

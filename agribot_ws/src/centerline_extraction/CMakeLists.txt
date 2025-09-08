@@ -75,6 +75,7 @@ ament_target_dependencies(cornfield_navigation_node
   tf2_geometry_msgs
   PCL
   pcl_conversions
+  visualization_msgs
 )
 target_link_libraries(cornfield_navigation_node
   ${PCL_LIBRARIES}

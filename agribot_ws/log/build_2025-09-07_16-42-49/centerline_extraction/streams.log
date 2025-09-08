@@ -1,0 +1,96 @@
+[0.017s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.047s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.208s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.247s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.251s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.258s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.272s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.287s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.333s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.335s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.433s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.501s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.544s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.573s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.605s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[0.649s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.695s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[1.095s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.103s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.232s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.237s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.242s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.361s] -- Found Qhull version 8.0.2
+[1.487s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.630s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[1.635s] -- Found tf2_geometry_msgs: 0.25.16 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.640s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.642s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.762s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.827s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.828s] -- Configured cppcheck include dirs: /home/xkai/agribot/agribot_ws/src/centerline_extraction/include
+[1.828s] -- Configured cppcheck exclude dirs and/or files: 
+[1.829s] -- Added test 'lint_cmake' to check CMake code style
+[1.830s] -- Added test 'uncrustify' to check C / C++ code style
+[1.830s] -- Configured uncrustify additional arguments: 
+[1.830s] -- Added test 'xmllint' to check XML markup files
+[1.832s] -- Configuring done
+[1.894s] -- Generating done
+[1.916s] -- Build files have been written to: /home/xkai/agribot/agribot_ws/build/centerline_extraction
+[1.944s] [35m[1mConsolidate compiler generated dependencies of target pcl_learning[0m
+[1.945s] [35m[1mConsolidate compiler generated dependencies of target centerline_extract[0m
+[1.949s] [35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
+[1.966s] [ 44%] Built target centerline_extract
+[1.966s] [ 44%] Built target pcl_learning
+[1.988s] [ 55%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o[0m
+[1.990s] [ 66%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o[0m
+[1.990s] [ 77%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o[0m
+[1.991s] [ 88%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/obstacle_detector.cpp.o[0m
+[2.398s] In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:3[m[K:
+[2.400s] [01m[K/opt/ros/humble/include/tf2_geometry_msgs/tf2_geometry_msgs/tf2_geometry_msgs.h:35:2:[m[K [01;35m[Kwarning: [m[K#warning This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+[2.400s]    35 | #[01;35m[Kwarning[m[K This header is obsolete, please include tf2_geometry_msgs/tf2_geometry_msgs.hpp instead
+[2.400s]       |  [01;35m[K^~~~~~~[m[K
+[4.975s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[4.976s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[4.976s]                  from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/pure_pursuit_controller.hpp:4[m[K,
+[4.976s]                  from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:1[m[K:
+[4.976s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:[m[K In member function ‘[01m[Kvoid PurePursuitController::center_line_callback(nav_msgs::msg::Path_<std::allocator<void> >::SharedPtr)[m[K’:
+[4.977s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:52:38:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%d[m[K’ expects argument of type ‘[01m[Kint[m[K’, but argument 5 has type ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[4.977s]    52 |     RCLCPP_DEBUG(this->get_logger(), [01;35m[K"收到中心线，含%d个点"[m[K, [32m[Kcenter_line_.poses.size()[m[K);
+[4.977s]       |                                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K  [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.977s]       |                                                                                     [32m[K|[m[K
+[4.977s]       |                                                                                     [32m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >::size_type {aka long unsigned int}[m[K
+[4.977s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pure_pursuit_controller.cpp:52:54:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[4.977s]    52 |     RCLCPP_DEBUG(this->get_logger(), "收到中心线，含[01;36m[K%d[m[K个点", center_line_.poses.size());
+[4.977s]       |                                                     [01;36m[K~^[m[K
+[4.977s]       |                                                      [01;36m[K|[m[K
+[4.977s]       |                                                      [01;36m[Kint[m[K
+[4.977s]       |                                                     [32m[K%ld[m[K
+[9.058s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:[m[K In member function ‘[01m[Kvoid CornRowDetector::point_cloud_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[9.058s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:93:5:[m[K [01;31m[Kerror: [m[K‘[01m[Kpublish_visualization_markers[m[K’ was not declared in this scope; did you mean ‘[01m[Kpublish_visualization_markerss[m[K’?
+[9.058s]    93 |     [01;31m[Kpublish_visualization_markers[m[K(left_points, right_points, smoothed_path, msg->header);  // 发布可视化标记
+[9.058s]       |     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[9.058s]       |     [32m[Kpublish_visualization_markerss[m[K
+[9.058s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:[m[K At global scope:
+[9.058s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:97:6:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kvoid CornRowDetector::publish_visualization_markers(const std::vector<pcl::PointXYZ>&, const std::vector<pcl::PointXYZ>&, const Path&, const Header&)[m[K’
+[9.059s]    97 | void [01;31m[KCornRowDetector[m[K::publish_visualization_markers(
+[9.059s]       |      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[9.059s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:97:6:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kvoid CornRowDetector::publish_visualization_markers(const std::vector<pcl::PointXYZ>&, const std::vector<pcl::PointXYZ>&, const Path&, const Header&)[m[K’
+[9.059s] In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:1[m[K:
+[9.059s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector.hpp:14:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CornRowDetector[m[K’ defined here
+[9.059s]    14 | class [01;36m[KCornRowDetector[m[K : public rclcpp::Node
+[9.059s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[12.545s] gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:76：CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o] 错误 1
+[12.545s] gmake[2]: *** 正在等待未完成的任务....
+[14.043s] gmake[1]: *** [CMakeFiles/Makefile2:193：CMakeFiles/cornfield_navigation_node.dir/all] 错误 2
+[14.043s] gmake: *** [Makefile:146：all] 错误 2
+[14.052s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8

@@ -1,1 +1,1 @@
-prepend-non-duplicate-if-exists;PATH;bin
+/home/xkai/agribot/agribot_ws/build/agribot_simulation/ament_cmake_environment_hooks/path.dsv

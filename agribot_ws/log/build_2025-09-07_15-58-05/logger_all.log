@@ -1,0 +1,347 @@
+[0.092s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.092s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x75c53ea2f9a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x75c53ea2f430>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x75c53ea2f430>>)
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.235s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.235s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/xkai/agribot/agribot_ws'
+[0.235s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.236s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.246s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extensions ['ignore', 'ignore_ament_install']
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extension 'ignore'
+[0.247s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extension 'ignore_ament_install'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extensions ['colcon_pkg']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extension 'colcon_pkg'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extensions ['colcon_meta']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extension 'colcon_meta'
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extensions ['ros']
+[0.248s] Level 1:colcon.colcon_core.package_identification:_identify(src/agribot_simulation) by extension 'ros'
+[0.250s] DEBUG:colcon.colcon_core.package_identification:Package 'src/agribot_simulation' with type 'ros.ament_cmake' and name 'agribot_simulation'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extensions ['ignore', 'ignore_ament_install']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extension 'ignore'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extension 'ignore_ament_install'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extensions ['colcon_pkg']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extension 'colcon_pkg'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extensions ['colcon_meta']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extension 'colcon_meta'
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extensions ['ros']
+[0.250s] Level 1:colcon.colcon_core.package_identification:_identify(src/centerline_extraction) by extension 'ros'
+[0.251s] DEBUG:colcon.colcon_core.package_identification:Package 'src/centerline_extraction' with type 'ros.ament_cmake' and name 'centerline_extraction'
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.251s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extension 'ignore'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extension 'ignore_ament_install'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extensions ['colcon_pkg']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extension 'colcon_pkg'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extensions ['colcon_meta']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extension 'colcon_meta'
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extensions ['ros']
+[0.252s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_laser_simulation_ros2) by extension 'ros'
+[0.253s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_laser_simulation_ros2' with type 'ros.ament_cmake' and name 'ros2_livox_simulation'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ignore', 'ignore_ament_install']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ignore_ament_install'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_pkg']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_pkg'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['colcon_meta']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'colcon_meta'
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extensions ['ros']
+[0.253s] Level 1:colcon.colcon_core.package_identification:_identify(src/livox_ros_driver2) by extension 'ros'
+[0.254s] DEBUG:colcon.colcon_core.package_identification:Package 'src/livox_ros_driver2' with type 'ros.ament_cmake' and name 'livox_ros_driver2'
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.254s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.272s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.272s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.274s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 4 installed packages in /home/xkai/agribot/agribot_ws/install
+[0.275s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 323 installed packages in /opt/ros/humble
+[0.284s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'cmake_target' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'cmake_clean_first' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'cmake_force_configure' from command line to 'False'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'ament_cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.320s] Level 5:colcon.colcon_core.verb:set package 'agribot_simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.320s] DEBUG:colcon.colcon_core.verb:Building package 'agribot_simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xkai/agribot/agribot_ws/build/agribot_simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xkai/agribot/agribot_ws/install/agribot_simulation', 'merge_install': False, 'path': '/home/xkai/agribot/agribot_ws/src/agribot_simulation', 'symlink_install': False, 'test_result_base': None}
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'cmake_args' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'cmake_target' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'cmake_clean_cache' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'cmake_clean_first' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'cmake_force_configure' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'ament_cmake_args' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'catkin_cmake_args' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'centerline_extraction' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.321s] DEBUG:colcon.colcon_core.verb:Building package 'centerline_extraction' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xkai/agribot/agribot_ws/build/centerline_extraction', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xkai/agribot/agribot_ws/install/centerline_extraction', 'merge_install': False, 'path': '/home/xkai/agribot/agribot_ws/src/centerline_extraction', 'symlink_install': False, 'test_result_base': None}
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_args' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target' from command line to 'None'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_cache' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_clean_first' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'cmake_force_configure' from command line to 'False'
+[0.321s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'ament_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'livox_ros_driver2' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.322s] DEBUG:colcon.colcon_core.verb:Building package 'livox_ros_driver2' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2', 'merge_install': False, 'path': '/home/xkai/agribot/agribot_ws/src/livox_ros_driver2', 'symlink_install': False, 'test_result_base': None}
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'cmake_target' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'cmake_clean_cache' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'cmake_clean_first' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'cmake_force_configure' from command line to 'False'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'ament_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'catkin_cmake_args' from command line to 'None'
+[0.322s] Level 5:colcon.colcon_core.verb:set package 'ros2_livox_simulation' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.322s] DEBUG:colcon.colcon_core.verb:Building package 'ros2_livox_simulation' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation', 'merge_install': False, 'path': '/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2', 'symlink_install': False, 'test_result_base': None}
+[0.322s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[0.323s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[0.323s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xkai/agribot/agribot_ws/src/livox_ros_driver2' with build type 'ament_cmake'
+[0.323s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xkai/agribot/agribot_ws/src/livox_ros_driver2'
+[0.325s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.325s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.325s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.328s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xkai/agribot/agribot_ws/src/agribot_simulation' with build type 'ament_cmake'
+[0.328s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xkai/agribot/agribot_ws/src/agribot_simulation'
+[0.328s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.328s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.332s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xkai/agribot/agribot_ws/src/centerline_extraction' with build type 'ament_cmake'
+[0.332s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xkai/agribot/agribot_ws/src/centerline_extraction'
+[0.332s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.332s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.340s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/livox_ros_driver2 -- -j8 -l8
+[0.344s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/agribot_simulation -- -j8 -l8
+[0.348s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.383s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/agribot_simulation -- -j8 -l8
+[0.391s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/agribot_simulation
+[0.414s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(agribot_simulation)
+[0.418s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation' for CMake module files
+[0.422s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation' for CMake config files
+[0.422s] Level 1:colcon.colcon_core.shell:create_environment_hook('agribot_simulation', 'cmake_prefix_path')
+[0.421s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/agribot_simulation
+[0.423s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/hook/cmake_prefix_path.ps1'
+[0.424s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/hook/cmake_prefix_path.dsv'
+[0.425s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/hook/cmake_prefix_path.sh'
+[0.426s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation/bin'
+[0.427s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation/lib/pkgconfig/agribot_simulation.pc'
+[0.427s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation/lib/python3.10/site-packages'
+[0.427s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation/bin'
+[0.428s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.ps1'
+[0.429s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.dsv'
+[0.429s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.sh'
+[0.430s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.bash'
+[0.431s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.zsh'
+[0.433s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/colcon-core/packages/agribot_simulation)
+[0.433s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(agribot_simulation)
+[0.434s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation' for CMake module files
+[0.434s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation' for CMake config files
+[0.434s] Level 1:colcon.colcon_core.shell:create_environment_hook('agribot_simulation', 'cmake_prefix_path')
+[0.435s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/hook/cmake_prefix_path.ps1'
+[0.435s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/hook/cmake_prefix_path.dsv'
+[0.436s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/hook/cmake_prefix_path.sh'
+[0.436s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation/bin'
+[0.436s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation/lib/pkgconfig/agribot_simulation.pc'
+[0.437s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation/lib/python3.10/site-packages'
+[0.437s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/agribot_simulation/bin'
+[0.437s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.ps1'
+[0.438s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.dsv'
+[0.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.sh'
+[0.439s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.bash'
+[0.440s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.zsh'
+[0.440s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/colcon-core/packages/agribot_simulation)
+[0.789s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/livox_ros_driver2 -- -j8 -l8
+[0.790s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/livox_ros_driver2
+[0.844s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[0.844s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2' for CMake module files
+[0.845s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/livox_ros_driver2
+[0.846s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2' for CMake config files
+[0.846s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[0.846s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[0.847s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[0.847s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[0.848s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib'
+[0.848s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[0.849s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[0.849s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[0.850s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[0.850s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/bin'
+[0.850s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[0.851s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/python3.10/site-packages'
+[0.851s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/bin'
+[0.852s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[0.852s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[0.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[0.853s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[0.854s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[0.854s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[0.855s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(livox_ros_driver2)
+[0.855s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2' for CMake module files
+[0.856s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2' for CMake config files
+[0.857s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'cmake_prefix_path')
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.ps1'
+[0.857s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.dsv'
+[0.858s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/cmake_prefix_path.sh'
+[0.859s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib'
+[0.859s] Level 1:colcon.colcon_core.shell:create_environment_hook('livox_ros_driver2', 'ld_library_path_lib')
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.ps1'
+[0.859s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.dsv'
+[0.860s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/hook/ld_library_path_lib.sh'
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/bin'
+[0.860s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/pkgconfig/livox_ros_driver2.pc'
+[0.861s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/python3.10/site-packages'
+[0.861s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/bin'
+[0.862s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.ps1'
+[0.862s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv'
+[0.863s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.sh'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.bash'
+[0.864s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.zsh'
+[0.865s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/colcon-core/packages/livox_ros_driver2)
+[0.865s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2' with build type 'ament_cmake'
+[0.865s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2'
+[0.866s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.866s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[0.879s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation': CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation -- -j8 -l8
+[0.968s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation' returned '0': CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation -- -j8 -l8
+[0.971s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation': CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation
+[0.982s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_livox_simulation)
+[0.983s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation' for CMake module files
+[0.984s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation' for CMake config files
+[0.984s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_livox_simulation', 'cmake_prefix_path')
+[0.984s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/cmake_prefix_path.ps1'
+[0.986s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation' returned '0': CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/cmake_prefix_path.dsv'
+[0.987s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/cmake_prefix_path.sh'
+[0.988s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib'
+[0.988s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_livox_simulation', 'ld_library_path_lib')
+[0.989s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/ld_library_path_lib.ps1'
+[0.989s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/ld_library_path_lib.dsv'
+[0.990s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/ld_library_path_lib.sh'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/bin'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib/pkgconfig/ros2_livox_simulation.pc'
+[0.990s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib/python3.10/site-packages'
+[0.991s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/bin'
+[0.991s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.ps1'
+[0.992s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.dsv'
+[0.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.sh'
+[0.993s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.bash'
+[0.994s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.zsh'
+[0.994s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/colcon-core/packages/ros2_livox_simulation)
+[0.995s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(ros2_livox_simulation)
+[0.995s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation' for CMake module files
+[0.996s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation' for CMake config files
+[0.996s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_livox_simulation', 'cmake_prefix_path')
+[0.997s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/cmake_prefix_path.ps1'
+[0.997s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/cmake_prefix_path.dsv'
+[0.998s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/cmake_prefix_path.sh'
+[0.999s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib'
+[0.999s] Level 1:colcon.colcon_core.shell:create_environment_hook('ros2_livox_simulation', 'ld_library_path_lib')
+[0.999s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/ld_library_path_lib.ps1'
+[1.000s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/ld_library_path_lib.dsv'
+[1.001s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/hook/ld_library_path_lib.sh'
+[1.001s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/bin'
+[1.001s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib/pkgconfig/ros2_livox_simulation.pc'
+[1.002s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib/python3.10/site-packages'
+[1.002s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/bin'
+[1.002s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.ps1'
+[1.003s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.dsv'
+[1.004s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.sh'
+[1.005s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.bash'
+[1.006s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.zsh'
+[1.006s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/colcon-core/packages/ros2_livox_simulation)
+[13.704s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[13.706s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/centerline_extraction
+[13.725s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(centerline_extraction)
+[13.726s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction' for CMake module files
+[13.726s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/centerline_extraction
+[13.726s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction' for CMake config files
+[13.726s] Level 1:colcon.colcon_core.shell:create_environment_hook('centerline_extraction', 'cmake_prefix_path')
+[13.727s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/hook/cmake_prefix_path.ps1'
+[13.727s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/hook/cmake_prefix_path.dsv'
+[13.728s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/hook/cmake_prefix_path.sh'
+[13.728s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib'
+[13.728s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/bin'
+[13.728s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/pkgconfig/centerline_extraction.pc'
+[13.729s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/python3.10/site-packages'
+[13.729s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/bin'
+[13.729s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.ps1'
+[13.729s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.dsv'
+[13.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.sh'
+[13.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.bash'
+[13.730s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.zsh'
+[13.731s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/colcon-core/packages/centerline_extraction)
+[13.731s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(centerline_extraction)
+[13.731s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction' for CMake module files
+[13.732s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction' for CMake config files
+[13.732s] Level 1:colcon.colcon_core.shell:create_environment_hook('centerline_extraction', 'cmake_prefix_path')
+[13.732s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/hook/cmake_prefix_path.ps1'
+[13.732s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/hook/cmake_prefix_path.dsv'
+[13.733s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/hook/cmake_prefix_path.sh'
+[13.733s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib'
+[13.733s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/bin'
+[13.733s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/pkgconfig/centerline_extraction.pc'
+[13.734s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/python3.10/site-packages'
+[13.734s] Level 1:colcon.colcon_core.environment:checking '/home/xkai/agribot/agribot_ws/install/centerline_extraction/bin'
+[13.734s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.ps1'
+[13.735s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.dsv'
+[13.735s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.sh'
+[13.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.bash'
+[13.736s] INFO:colcon.colcon_core.shell:Creating package script '/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.zsh'
+[13.736s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/xkai/agribot/agribot_ws/install/centerline_extraction/share/colcon-core/packages/centerline_extraction)
+[13.737s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[13.737s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[13.737s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[13.737s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[13.742s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[13.743s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[13.743s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[13.756s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[13.756s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xkai/agribot/agribot_ws/install/local_setup.ps1'
+[13.758s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xkai/agribot/agribot_ws/install/_local_setup_util_ps1.py'
+[13.759s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xkai/agribot/agribot_ws/install/setup.ps1'
+[13.761s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xkai/agribot/agribot_ws/install/local_setup.sh'
+[13.762s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/xkai/agribot/agribot_ws/install/_local_setup_util_sh.py'
+[13.763s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xkai/agribot/agribot_ws/install/setup.sh'
+[13.764s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xkai/agribot/agribot_ws/install/local_setup.bash'
+[13.764s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xkai/agribot/agribot_ws/install/setup.bash'
+[13.765s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/xkai/agribot/agribot_ws/install/local_setup.zsh'
+[13.766s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/xkai/agribot/agribot_ws/install/setup.zsh'
