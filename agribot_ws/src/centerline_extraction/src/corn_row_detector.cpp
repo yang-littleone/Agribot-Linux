@@ -122,7 +122,7 @@ pcl::PointCloud<pcl::PointXYZ>::Ptr CornRowDetector::preprocess_cloud(const pcl:
     // 降采样
     pcl::VoxelGrid<pcl::PointXYZ> voxel_grid;
     voxel_grid.setInputCloud(cloud_filtered);
-    voxel_grid.setLeafSize(0.05f, 0.05f, 0.05f);
+    voxel_grid.setLeafSize(0.03f, 0.03f, 0.03f);
     voxel_grid.filter(*cloud_filtered);
 
     return cloud_filtered;

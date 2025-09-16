@@ -1,0 +1,4 @@
+Invoking command in '/home/xkai/agribot/agribot_ws/build/fast_lio': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/fast_lio -- -j8 -l8
+Invoked command in '/home/xkai/agribot/agribot_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/fast_lio -- -j8 -l8
+Invoking command in '/home/xkai/agribot/agribot_ws/build/fast_lio': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/fast_lio
+Invoked command in '/home/xkai/agribot/agribot_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/fast_lio

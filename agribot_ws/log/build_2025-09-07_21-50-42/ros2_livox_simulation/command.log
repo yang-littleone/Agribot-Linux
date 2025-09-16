@@ -1,1 +1,0 @@
-Invoking command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake /home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2 -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation

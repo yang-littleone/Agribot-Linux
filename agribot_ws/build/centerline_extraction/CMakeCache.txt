@@ -317,6 +317,9 @@ GLEW_INCLUDE_DIR:PATH=/usr/include
 //glew library
 GLEW_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libGLEW.so
 
+//No help, variable specified on the command line.
+HUMBLE_ROS:UNINITIALIZED=humble
+
 //Path to a file.
 JPEG_INCLUDE_DIR:PATH=/usr/include
 
@@ -678,6 +681,9 @@ Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 
 //The directory containing a CMake configuration file for Qt5.
 Qt5_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5
+
+//No help, variable specified on the command line.
+ROS_EDITION:UNINITIALIZED=ROS2
 
 //Name of the computer/site where compile is being run
 SITE:STRING=xkai-Ubuntun

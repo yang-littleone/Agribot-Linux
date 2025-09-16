@@ -48,7 +48,7 @@ public:
         // 先创建发布者和订阅者
         fillter_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("filtered_points", 10);
         cloud_sub_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
-            "/mid360_PointCloud2", 10, std::bind(&CenterLineExtract::cloud_callback, this, std::placeholders::_1));
+            "/Laser_map", 10, std::bind(&CenterLineExtract::cloud_callback, this, std::placeholders::_1));
         RCLCPP_INFO(this->get_logger(), "PCL Filter Learning Node Started");
     }
 

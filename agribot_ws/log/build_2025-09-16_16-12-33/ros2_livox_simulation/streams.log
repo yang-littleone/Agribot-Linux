@@ -1,0 +1,274 @@
+[0.007s] Invoking command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation': AMENT_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2 -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble -DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation
+[0.054s] -- The C compiler identification is GNU 11.4.0
+[0.103s] -- The CXX compiler identification is GNU 11.4.0
+[0.109s] -- Detecting C compiler ABI info
+[0.167s] -- Detecting C compiler ABI info - done
+[0.175s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.175s] -- Detecting C compile features
+[0.175s] -- Detecting C compile features - done
+[0.179s] -- Detecting CXX compiler ABI info
+[0.248s] -- Detecting CXX compiler ABI info - done
+[0.256s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.256s] -- Detecting CXX compile features
+[0.256s] -- Detecting CXX compile features - done
+[0.258s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.404s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.538s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.613s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.615s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.628s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.647s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.678s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.745s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.748s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.843s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.880s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.930s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.940s] -- Looking for pthread.h
+[1.004s] -- Looking for pthread.h - found
+[1.004s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.075s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[1.077s] -- Found Threads: TRUE  
+[1.154s] -- Found gazebo_dev: 3.9.0 (/opt/ros/humble/share/gazebo_dev/cmake)
+[1.162s] -- Found PkgConfig: /usr/bin/pkg-config (found version "0.29.2") 
+[1.163s] -- Checking for module 'bullet>=2.82'
+[1.176s] --   Found bullet, version 3.05
+[1.307s] -- Found fcl: /usr/include (found suitable version "0.7.0", minimum required is "0.5.0") 
+[1.363s] -- Found assimp: /usr/include (found version "5.2.0") 
+[1.387s] -- Found DART: /usr/include (Required is at least version "6.6") found components: dart 
+[1.427s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.40.0") found components: thread system filesystem program_options regex iostreams date_time 
+[1.446s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.12.4") 
+[1.451s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.458s] -- Searching for dependencies of ignition-math6
+[1.460s] -- Looking for OGRE...
+[1.460s] -- OGRE_PREFIX_WATCH changed.
+[1.467s] -- Checking for module 'OGRE'
+[1.480s] --   Found OGRE, version 1.9.0
+[1.510s] -- Found Ogre Ghadamon (1.9.0)
+[1.522s] -- Found OGRE: optimized;/usr/lib/x86_64-linux-gnu/libOgreMain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreMain.so
+[1.534s] -- Looking for OGRE_Paging...
+[1.546s] -- Found OGRE_Paging: optimized;/usr/lib/x86_64-linux-gnu/libOgrePaging.so;debug;/usr/lib/x86_64-linux-gnu/libOgrePaging.so
+[1.546s] -- Looking for OGRE_Terrain...
+[1.559s] -- Found OGRE_Terrain: optimized;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so;debug;/usr/lib/x86_64-linux-gnu/libOgreTerrain.so
+[1.559s] -- Looking for OGRE_Property...
+[1.568s] -- Found OGRE_Property: optimized;/usr/lib/x86_64-linux-gnu/libOgreProperty.so;debug;/usr/lib/x86_64-linux-gnu/libOgreProperty.so
+[1.568s] -- Looking for OGRE_RTShaderSystem...
+[1.578s] -- Found OGRE_RTShaderSystem: optimized;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so;debug;/usr/lib/x86_64-linux-gnu/libOgreRTShaderSystem.so
+[1.578s] -- Looking for OGRE_Volume...
+[1.589s] -- Found OGRE_Volume: optimized;/usr/lib/x86_64-linux-gnu/libOgreVolume.so;debug;/usr/lib/x86_64-linux-gnu/libOgreVolume.so
+[1.589s] -- Looking for OGRE_Overlay...
+[1.596s] -- Found OGRE_Overlay: optimized;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so;debug;/usr/lib/x86_64-linux-gnu/libOgreOverlay.so
+[1.737s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.739s] -- Looking for ignition-transport8 -- found version 8.2.1
+[1.739s] -- Searching for dependencies of ignition-transport8
+[1.760s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found suitable version "3.12.4", minimum required is "3") 
+[1.770s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[1.774s] -- Checking for module 'libzmq >= 4'
+[1.788s] --   Found libzmq , version 4.3.4
+[1.826s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[1.832s] -- Checking for module 'uuid'
+[1.845s] --   Found uuid, version 2.37.2
+[1.889s] -- Found UUID: TRUE  
+[1.891s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.892s] -- Searching for dependencies of ignition-msgs5
+[1.914s] -- Looking for ignition-math6 -- found version 6.15.1
+[1.920s] -- Checking for module 'tinyxml2'
+[1.937s] --   Found tinyxml2, version 9.0.0
+[1.982s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[1.984s] -- Looking for ignition-common3 -- found version 3.14.0
+[1.985s] -- Searching for dependencies of ignition-common3
+[1.985s] -- Looking for dlfcn.h - found
+[1.987s] -- Looking for libdl - found
+[1.989s] -- Found DL: TRUE  
+[2.004s] -- Found tinyobjloader: /usr/lib/x86_64-linux-gnu/cmake/tinyobjloader/tinyobjloader-config.cmake (found version "2.0.0") 
+[2.005s] -- Searching for <ignition-common3> component [graphics]
+[2.007s] -- Looking for ignition-common3-graphics -- found version 3.14.0
+[2.008s] -- Searching for dependencies of ignition-common3-graphics
+[2.008s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.011s] -- Looking for ignition-fuel_tools4 -- found version 4.4.0
+[2.012s] -- Searching for dependencies of ignition-fuel_tools4
+[2.110s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "7.81.0")  
+[2.120s] -- Checking for module 'jsoncpp'
+[2.135s] --   Found jsoncpp, version 1.9.5
+[2.175s] -- Found JSONCPP: TRUE  
+[2.183s] -- Checking for module 'libzip'
+[2.195s] --   Found libzip, version 1.7.3
+[2.231s] -- Found ZIP: TRUE  
+[2.231s] -- Looking for ignition-common3 -- found version 3.14.0
+[2.232s] -- Looking for ignition-math6 -- found version 6.15.1
+[2.232s] -- Looking for ignition-msgs5 -- found version 5.8.1
+[2.236s] -- Gazebo version: 11.10
+[2.236s] -- Checking for module 'tbb'
+[2.250s] --   Found tbb, version 2021.5.0
+[2.288s] -- Found gazebo_ros: 3.9.0 (/opt/ros/humble/share/gazebo_ros/cmake)
+[2.294s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[2.342s] -- Found tf2_ros: 0.25.16 (/opt/ros/humble/share/tf2_ros/cmake)
+[2.484s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[2.496s] -- Found livox_ros_driver2: 1.0.0 (/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake)
+[2.562s] -- Checking for module 'eigen3'
+[2.577s] --   Found eigen3, version 3.4.0
+[2.622s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[2.622s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.653s] -- Checking for module 'flann'
+[2.673s] --   Found flann, version 1.9.1
+[2.737s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[2.738s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[3.647s] -- Checking for module 'libusb-1.0'
+[3.661s] --   Found libusb-1.0, version 1.0.25
+[3.693s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[3.694s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.742s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.876s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[3.882s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[3.887s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[4.010s] -- Found Qhull version 8.0.2
+[4.134s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.254s] -- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  
+[4.254s] -- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  
+[4.255s] -- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  
+[4.256s] -- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  
+[4.257s] -- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  
+[4.257s] -- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  
+[4.258s] -- Found PCL_2D: /usr/include/pcl-1.12  
+[4.258s] -- Found PCL_GEOMETRY: /usr/include/pcl-1.12  
+[4.260s] -- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  
+[4.261s] -- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  
+[4.262s] -- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  
+[4.263s] -- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  
+[4.264s] -- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  
+[4.265s] -- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  
+[4.265s] -- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  
+[4.266s] -- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  
+[4.267s] -- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  
+[4.268s] -- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  
+[4.269s] -- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  
+[4.270s] -- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  
+[4.271s] -- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  
+[4.271s] -- Found PCL_MODELER: /usr/include/pcl-1.12  
+[4.272s] -- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  
+[4.273s] -- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  
+[4.274s] -- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  
+[4.288s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: chrono 
+[4.294s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[4.485s] -- Added test 'copyright' to check source files copyright and LICENSE
+[4.487s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[4.488s] -- Configured cppcheck include dirs: /home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/include
+[4.488s] -- Configured cppcheck exclude dirs and/or files: 
+[4.489s] -- Added test 'cpplint' to check C / C++ code against the Google style
+[4.489s] -- Configured cpplint exclude dirs and/or files: 
+[4.490s] -- Added test 'lint_cmake' to check CMake code style
+[4.491s] -- Added test 'uncrustify' to check C / C++ code style
+[4.491s] -- Configured uncrustify additional arguments: 
+[4.492s] -- Added test 'xmllint' to check XML markup files
+[4.494s] -- Configuring done
+[4.516s] -- Generating done
+[4.518s] [33mCMake Warning:
+[4.518s]   Manually-specified variables were not used by the project:
+[4.518s] 
+[4.518s]     HUMBLE_ROS
+[4.518s]     ROS_EDITION
+[4.518s] 
+[4.518s] [0m
+[4.523s] -- Build files have been written to: /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation
+[4.541s] Invoked command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation' returned '0': AMENT_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake /home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2 -DROS_EDITION=ROS2 -DHUMBLE_ROS=humble -DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation
+[4.542s] Invoking command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation': AMENT_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation -- -j8 -l8
+[4.586s] [ 33%] [32mBuilding CXX object CMakeFiles/ros2_livox.dir/src/livox_ode_multiray_shape.cpp.o[0m
+[4.586s] [ 66%] [32mBuilding CXX object CMakeFiles/ros2_livox.dir/src/livox_points_plugin.cpp.o[0m
+[7.058s] In file included from [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/include/ros2_livox/livox_points_plugin.h:14[m[K,
+[7.058s]                  from [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_points_plugin.cpp:12[m[K:
+[7.058s] [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/point_cloud_conversion.hpp:47:6:[m[K [01;35m[Kwarning: [m[K#warning POINT_CLOUD_DEPRECATION_MESSAGE [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wcpp-Wcpp]8;;[m[K]
+[7.058s]    47 | #    [01;35m[Kwarning[m[K POINT_CLOUD_DEPRECATION_MESSAGE
+[7.058s]       |      [01;35m[K^~~~~~~[m[K
+[10.437s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:[m[K In member function ‘[01m[Kvirtual void gazebo::physics::LivoxOdeMultiRayShape::Init()[m[K’:
+[10.437s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:191:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KyawAngle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[10.437s]   191 |     double [01;35m[KyawAngle[m[K, pitchAngle;
+[10.437s]       |            [01;35m[K^~~~~~~~[m[K
+[10.437s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:191:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[KpitchAngle[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[10.437s]   191 |     double yawAngle, [01;35m[KpitchAngle[m[K;
+[10.437s]       |                      [01;35m[K^~~~~~~~~~[m[K
+[10.437s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:193:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KyDiff[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[10.437s]   193 |     double [01;35m[KyDiff[m[K;
+[10.437s]       |            [01;35m[K^~~~~[m[K
+[10.437s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:195:9:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KhorzSamples[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[10.437s]   195 |     int [01;35m[KhorzSamples[m[K = 1;
+[10.437s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[10.438s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:198:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KpDiff[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[10.438s]   198 |     double [01;35m[KpDiff[m[K = 0;
+[10.438s]       |            [01;35m[K^~~~~[m[K
+[10.438s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:199:9:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KvertSamples[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[10.438s]   199 |     int [01;35m[KvertSamples[m[K = 1;
+[10.438s]       |         [01;35m[K^~~~~~~~~~~[m[K
+[10.438s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:203:12:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KminRange[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[10.438s]   203 |     double [01;35m[KminRange[m[K, maxRange;
+[10.438s]       |            [01;35m[K^~~~~~~~[m[K
+[10.438s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_ode_multiray_shape.cpp:203:22:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[KmaxRange[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+[10.438s]   203 |     double minRange, [01;35m[KmaxRange[m[K;
+[10.438s]       |                      [01;35m[K^~~~~~~~[m[K
+[13.995s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_points_plugin.cpp:[m[K In member function ‘[01m[Kvirtual void gazebo::LivoxPointsPlugin::OnNewLaserScans()[m[K’:
+[13.995s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_points_plugin.cpp:214:22:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[13.995s]   214 |         sensor_msgs::[01;35m[KconvertPointCloudToPointCloud2[m[K(cloud, cloud2);
+[13.995s]       |                      [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.995s] In file included from [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/include/ros2_livox/livox_points_plugin.h:14[m[K,
+[13.995s]                  from [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_points_plugin.cpp:12[m[K:
+[13.995s] [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/point_cloud_conversion.hpp:81:20:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.995s]    81 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+[13.995s]       |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[13.995s] [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_points_plugin.cpp:214:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kbool sensor_msgs::convertPointCloudToPointCloud2(const PointCloud&, sensor_msgs::msg::PointCloud2&)[m[K’ is deprecated: PointCloud is deprecated as of Foxy in favor of sensor_msgs/PointCloud2. [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wdeprecated-declarations-Wdeprecated-declarations]8;;[m[K]
+[13.995s]   214 |         [01;35m[Ksensor_msgs::convertPointCloudToPointCloud2(cloud, cloud2)[m[K;
+[13.995s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~[m[K
+[13.995s] In file included from [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/include/ros2_livox/livox_points_plugin.h:14[m[K,
+[13.995s]                  from [01m[K/home/xkai/agribot/agribot_ws/src/livox_laser_simulation_ros2/src/livox_points_plugin.cpp:12[m[K:
+[13.995s] [01m[K/opt/ros/humble/include/sensor_msgs/sensor_msgs/point_cloud_conversion.hpp:81:20:[m[K [01;36m[Knote: [m[Kdeclared here
+[13.995s]    81 | static inline bool [01;36m[KconvertPointCloudToPointCloud2[m[K(
+[13.996s]       |                    [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[18.762s] [100%] [32m[1mLinking CXX shared library libros2_livox.so[0m
+[19.587s] [100%] Built target ros2_livox
+[19.596s] Invoked command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation' returned '0': AMENT_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation -- -j8 -l8
+[19.598s] Invoking command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation': AMENT_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation
+[19.604s] -- Install configuration: ""
+[19.604s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include
+[19.604s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include/ros2_livox
+[19.604s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include/ros2_livox/livox_ode_multiray_shape.h
+[19.604s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include/ros2_livox/csv_reader.hpp
+[19.604s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/include/ros2_livox/livox_points_plugin.h
+[19.604s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes
+[19.604s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes/livox_mid-360-90x.dae
+[19.633s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes/mid-360-asm.stl
+[19.641s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes/livox_mid360.dae
+[19.647s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/meshes/livox_mid40.dae
+[19.648s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib/libros2_livox.so
+[19.651s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib/libros2_livox.so" to ""
+[19.651s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/library_path.sh
+[19.651s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/library_path.dsv
+[19.651s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid40.csv
+[19.659s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid70.csv
+[19.667s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid360.csv
+[19.676s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/tele.csv
+[19.697s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/horizon.csv
+[19.717s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/HAP.csv
+[19.731s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/avia.csv
+[19.752s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/mid40.xacro
+[19.752s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/mid70.xacro
+[19.752s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/mid360.xacro
+[19.752s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/tele.xacro
+[19.752s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/horizon.xacro
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/HAP.xacro
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/avia.xacro
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/urdf/mid360-copy.xacro
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ament_index/resource_index/package_run_dependencies/ros2_livox_simulation
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ament_index/resource_index/parent_prefix_path/ros2_livox_simulation
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/ament_prefix_path.sh
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/ament_prefix_path.dsv
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/path.sh
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/environment/path.dsv
+[19.753s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/local_setup.bash
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/local_setup.sh
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/local_setup.zsh
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/local_setup.dsv
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.dsv
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ament_index/resource_index/packages/ros2_livox_simulation
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/cmake/ament_cmake_export_libraries-extras.cmake
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/cmake/ros2_livox_simulationConfig.cmake
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/cmake/ros2_livox_simulationConfig-version.cmake
+[19.754s] -- Installing: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/package.xml
+[19.756s] Invoked command in '/home/xkai/agribot/agribot_ws/build/ros2_livox_simulation' returned '0': AMENT_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/ros2_livox_simulation

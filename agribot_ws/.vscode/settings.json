@@ -1,5 +1,5 @@
 {
-    "cmake.sourceDirectory": "/home/xk/agribot_ros2/agribot_ws/src/agribot_simulation",
+    "cmake.sourceDirectory": "/home/xkai/agribot/agribot_ws/src/FAST_LIO",
     "files.associations": {
         "cctype": "cpp",
         "clocale": "cpp",

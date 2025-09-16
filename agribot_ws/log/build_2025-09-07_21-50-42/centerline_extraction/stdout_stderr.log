@@ -1,9 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target pcl_learning[0m
-[35m[1mConsolidate compiler generated dependencies of target centerline_extract[0m
-[35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
-[ 11%] [32m[1mLinking CXX executable pcl_learning[0m
-[ 22%] [32m[1mLinking CXX executable centerline_extract[0m
-[ 33%] [32m[1mLinking CXX executable cornfield_navigation_node[0m
-[ 44%] Built target pcl_learning
-[ 55%] Built target centerline_extract
-[100%] Built target cornfield_navigation_node

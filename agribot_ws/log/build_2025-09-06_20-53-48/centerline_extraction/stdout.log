@@ -1,5 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
-[ 22%] Built target pcl_learning
-[ 44%] Built target centerline_extract
-[ 55%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o[0m
-[ 66%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o[0m

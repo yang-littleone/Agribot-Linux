@@ -1,7 +1,0 @@
-[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:[m[K In member function ‘[01m[Knav_msgs::msg::Path CornRowDetector::smooth_path(const Path&)[m[K’:
-[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:111:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<nav_msgs::msg::Path_<std::allocator<void> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
-  111 |     if ([01;35m[Kpath_buffer_.size() > path_buffer_size_[m[K)
-      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
-[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:115:29:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kstd::deque<nav_msgs::msg::Path_<std::allocator<void> > >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
-  115 |     if ([01;35m[Kpath_buffer_.size() < path_buffer_size_[m[K)
-      |         [01;35m[K~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K

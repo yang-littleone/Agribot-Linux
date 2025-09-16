@@ -1,4 +1,0 @@
-[ 33%] Built target centerline_extract
-[ 50%] [32mBuilding CXX object CMakeFiles/corn_row_detector.dir/src/corn_row_detector.cpp.o[0m
-[ 83%] Built target pcl_learning
-[100%] [32m[1mLinking CXX executable corn_row_detector[0m
