@@ -1,0 +1,19 @@
+[0.038s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.165s] [35m[1mConsolidate compiler generated dependencies of target corn_row_detector_projection[0m
+[0.195s] [ 18%] Built target centerline_extract
+[0.206s] [ 36%] Built target pcl_learning
+[0.296s] [ 45%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m
+[0.321s] [ 90%] Built target cornfield_navigation_node
+[14.885s] [100%] [32m[1mLinking CXX executable corn_row_detector_projection[0m
+[16.110s] [100%] Built target corn_row_detector_projection
+[16.121s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[16.122s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/centerline_extraction
+[16.129s] -- Install configuration: ""
+[16.130s] -- Installing: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/corn_row_detector_projection
+[16.132s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/corn_row_detector_projection" to ""
+[16.132s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include
+[16.132s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction
+[16.133s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector_projection.hpp
+[16.133s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pid_controller.hpp
+[16.133s] -- Installing: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.dsv
+[16.136s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/centerline_extraction

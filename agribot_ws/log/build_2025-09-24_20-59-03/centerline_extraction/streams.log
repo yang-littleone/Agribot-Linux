@@ -1,0 +1,23 @@
+[0.021s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.096s] [  9%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m
+[0.133s] [ 27%] Built target centerline_extract
+[0.155s] [ 45%] Built target pcl_learning
+[0.166s] [ 90%] Built target cornfield_navigation_node
+[5.085s] In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:3[m[K:
+[5.085s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector_projection.hpp:19:23:[m[K [01;31m[Kerror: [m[K‘[01m[Knav_msgs[m[K’ was not declared in this scope
+[5.085s]    19 |     rclcpp::Publisher<[01;31m[Knav_msgs[m[K::msg::Path>::SharedPtr center_line_pub_;
+[5.085s]       |                       [01;31m[K^~~~~~~~[m[K
+[5.085s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector_projection.hpp:19:42:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[5.085s]    19 |     rclcpp::Publisher<nav_msgs::msg::Path[01;31m[K>[m[K::SharedPtr center_line_pub_;
+[5.086s]       |                                          [01;31m[K^[m[K
+[5.086s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector_projection.hpp:19:45:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+[5.086s]    19 |     rclcpp::Publisher<nav_msgs::msg::Path>::[01;31m[KSharedPtr[m[K center_line_pub_;
+[5.086s]       |                                             [01;31m[K^~~~~~~~~[m[K
+[5.086s]       |                                                      [32m[K;[m[K
+[5.095s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector_projection.hpp:19:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kcenter_line_pub_[m[K’ does not name a type
+[5.095s]    19 |     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr [01;31m[Kcenter_line_pub_[m[K;
+[5.095s]       |                                                       [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[8.393s] gmake[2]: *** [CMakeFiles/corn_row_detector_projection.dir/build.make:76：CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o] 错误 1
+[8.393s] gmake[1]: *** [CMakeFiles/Makefile2:195：CMakeFiles/corn_row_detector_projection.dir/all] 错误 2
+[8.393s] gmake: *** [Makefile:146：all] 错误 2
+[8.395s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8

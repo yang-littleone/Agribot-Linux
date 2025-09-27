@@ -1,0 +1,8 @@
+In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:3[m[K:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector_projection.hpp:6:10:[m[K [01;31m[Kfatal error: [m[Knav_msgs/msg/path.hpp: 没有那个文件或目录
+    6 | #include [01;31m[K"nav_msgs/msg/path.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/corn_row_detector_projection.dir/build.make:76：CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:195：CMakeFiles/corn_row_detector_projection.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

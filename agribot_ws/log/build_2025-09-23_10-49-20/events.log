@@ -1,0 +1,393 @@
+[0.000000] (-) TimerEvent: {}
+[0.000342] (-) JobUnselected: {'identifier': 'agribot_simulation'}
+[0.000469] (-) JobUnselected: {'identifier': 'fast_lio'}
+[0.000639] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.000705] (-) JobUnselected: {'identifier': 'ros2_livox_simulation'}
+[0.000778] (centerline_extraction) JobQueued: {'identifier': 'centerline_extraction', 'dependencies': OrderedDict()}
+[0.000873] (centerline_extraction) JobStarted: {'identifier': 'centerline_extraction'}
+[0.005900] (centerline_extraction) JobProgress: {'identifier': 'centerline_extraction', 'progress': 'cmake'}
+[0.006267] (centerline_extraction) Command: {'cmd': ['/usr/bin/cmake', '/home/xkai/agribot/agribot_ws/src/centerline_extraction', '-DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/centerline_extraction'], 'cwd': '/home/xkai/agribot/agribot_ws/build/centerline_extraction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/xkai/agribot/agribot_ws'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1764'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '2072'), ('BUNDLED_DEBUGPY_PATH', '/home/xkai/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '30125'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:12132'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/xkai/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts:/home/xkai/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/2045,unix/xkai-Ubuntun:/tmp/.ICE-unix/2045'), ('INVOCATION_ID', 'e82e253b57b64371addd8e8a724745bb'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/xkai/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-09296b5d94286d7e.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/xkai/.config/Code/User/workspaceStorage/4f460029b3977623e33d177504d4bdbd/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-c6627966af.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/xkai/agribot/agribot_ws/build/centerline_extraction'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.055457] (centerline_extraction) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.099811] (-) TimerEvent: {}
+[0.100267] (centerline_extraction) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.107243] (centerline_extraction) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.158923] (centerline_extraction) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.166021] (centerline_extraction) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.166681] (centerline_extraction) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.167212] (centerline_extraction) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.170788] (centerline_extraction) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.199912] (-) TimerEvent: {}
+[0.229991] (centerline_extraction) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.236669] (centerline_extraction) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.236860] (centerline_extraction) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.237269] (centerline_extraction) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.239849] (centerline_extraction) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.299989] (-) TimerEvent: {}
+[0.360857] (centerline_extraction) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.400085] (-) TimerEvent: {}
+[0.440912] (centerline_extraction) StdoutLine: {'line': b'-- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)\n'}
+[0.473015] (centerline_extraction) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.476823] (centerline_extraction) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.483717] (centerline_extraction) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.493947] (centerline_extraction) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.500124] (-) TimerEvent: {}
+[0.511510] (centerline_extraction) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.547351] (centerline_extraction) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[0.549362] (centerline_extraction) StdoutLine: {'line': b'-- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)\n'}
+[0.600217] (-) TimerEvent: {}
+[0.612393] (centerline_extraction) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  \n'}
+[0.636872] (centerline_extraction) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/humble/include  \n'}
+[0.668756] (centerline_extraction) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[0.675056] (centerline_extraction) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[0.700316] (-) TimerEvent: {}
+[0.727954] (centerline_extraction) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[0.728538] (centerline_extraction) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[0.783444] (centerline_extraction) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success\n'}
+[0.784208] (centerline_extraction) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[0.800394] (-) TimerEvent: {}
+[0.834112] (centerline_extraction) StdoutLine: {'line': b'-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)\n'}
+[0.862578] (centerline_extraction) StdoutLine: {'line': b'-- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)\n'}
+[0.878254] (centerline_extraction) StdoutLine: {'line': b'-- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)\n'}
+[0.900484] (-) TimerEvent: {}
+[0.906608] (centerline_extraction) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[0.915801] (centerline_extraction) StdoutLine: {'line': b'--   Found eigen3, version 3.4.0\n'}
+[0.937220] (centerline_extraction) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") \n'}
+[0.937443] (centerline_extraction) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[0.952922] (centerline_extraction) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization \n'}
+[0.965592] (centerline_extraction) StdoutLine: {'line': b"-- Checking for module 'flann'\n"}
+[0.974744] (centerline_extraction) StdoutLine: {'line': b'--   Found flann, version 1.9.1\n'}
+[1.000585] (-) TimerEvent: {}
+[1.001276] (centerline_extraction) StdoutLine: {'line': b'-- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  \n'}
+[1.001476] (centerline_extraction) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[1.036563] (centerline_extraction) StdoutLine: {'line': b'-- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  \n'}
+[1.041133] (centerline_extraction) StdoutLine: {'line': b'-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX \n'}
+[1.100668] (-) TimerEvent: {}
+[1.146353] (centerline_extraction) StdoutLine: {'line': b'-- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") \n'}
+[1.146547] (centerline_extraction) StdoutLine: {'line': b'-- Found MPI: TRUE (found version "3.1") found components: C \n'}
+[1.148553] (centerline_extraction) StdoutLine: {'line': b'-- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") \n'}
+[1.155340] (centerline_extraction) StdoutLine: {'line': b'-- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") \n'}
+[1.169127] (centerline_extraction) StdoutLine: {'line': b'-- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37") \n'}
+[1.182011] (centerline_extraction) StdoutLine: {'line': b'-- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") \n'}
+[1.200755] (-) TimerEvent: {}
+[1.248526] (centerline_extraction) StdoutLine: {'line': b'-- Found X11: /usr/include   \n'}
+[1.248800] (centerline_extraction) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so\n'}
+[1.300842] (-) TimerEvent: {}
+[1.304633] (centerline_extraction) StdoutLine: {'line': b'-- Looking for XOpenDisplay in /usr/lib/x86_64-linux-gnu/libX11.so;/usr/lib/x86_64-linux-gnu/libXext.so - found\n'}
+[1.304824] (centerline_extraction) StdoutLine: {'line': b'-- Looking for gethostbyname\n'}
+[1.355565] (centerline_extraction) StdoutLine: {'line': b'-- Looking for gethostbyname - found\n'}
+[1.355748] (centerline_extraction) StdoutLine: {'line': b'-- Looking for connect\n'}
+[1.400945] (-) TimerEvent: {}
+[1.406147] (centerline_extraction) StdoutLine: {'line': b'-- Looking for connect - found\n'}
+[1.406374] (centerline_extraction) StdoutLine: {'line': b'-- Looking for remove\n'}
+[1.455799] (centerline_extraction) StdoutLine: {'line': b'-- Looking for remove - found\n'}
+[1.455958] (centerline_extraction) StdoutLine: {'line': b'-- Looking for shmat\n'}
+[1.501036] (-) TimerEvent: {}
+[1.506756] (centerline_extraction) StdoutLine: {'line': b'-- Looking for shmat - found\n'}
+[1.506995] (centerline_extraction) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE\n'}
+[1.560917] (centerline_extraction) StdoutLine: {'line': b'-- Looking for IceConnectionNumber in ICE - found\n'}
+[1.601143] (-) TimerEvent: {}
+[1.644313] (centerline_extraction) StdoutLine: {'line': b'-- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.4.7") \n'}
+[1.645764] (centerline_extraction) StdoutLine: {'line': b'-- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  \n'}
+[1.647845] (centerline_extraction) StdoutLine: {'line': b'-- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.3") \n'}
+[1.649495] (centerline_extraction) StdoutLine: {'line': b'-- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.2.5") \n'}
+[1.658713] (centerline_extraction) StdoutLine: {'line': b'-- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") \n'}
+[1.663222] (centerline_extraction) StdoutLine: {'line': b'-- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.3.0")  \n'}
+[1.666526] (centerline_extraction) StdoutLine: {'line': b'-- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.11.1") \n'}
+[1.671001] (centerline_extraction) StdoutLine: {'line': b'-- Found utf8cpp: /usr/include/utf8cpp  \n'}
+[1.701226] (-) TimerEvent: {}
+[1.728736] (centerline_extraction) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[1.738425] (centerline_extraction) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.25\n'}
+[1.762238] (centerline_extraction) StdoutLine: {'line': b'-- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  \n'}
+[1.763068] (centerline_extraction) StdoutLine: {'line': b'-- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") \n'}
+[1.763244] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[1.801088] (centerline_extraction) StdoutLine: {'line': b'-- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") \n'}
+[1.801263] (-) TimerEvent: {}
+[1.801405] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[1.801537] (centerline_extraction) StderrLine: {'line': b'\x1b[0m** WARNING ** io features related to pcap will be disabled\x1b[0m\n'}
+[1.901355] (-) TimerEvent: {}
+[1.926835] (centerline_extraction) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[1.932501] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[1.937259] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.001446] (-) TimerEvent: {}
+[2.054909] (centerline_extraction) StdoutLine: {'line': b'-- Found Qhull version 8.0.2\n'}
+[2.101539] (-) TimerEvent: {}
+[2.176712] (centerline_extraction) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.201625] (-) TimerEvent: {}
+[2.296015] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_COMMON\n'}
+[2.297122] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_COMMON: /usr/lib/x86_64-linux-gnu/libpcl_common.so  \n'}
+[2.297430] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_KDTREE\n'}
+[2.298643] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_KDTREE: /usr/lib/x86_64-linux-gnu/libpcl_kdtree.so  \n'}
+[2.298861] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_OCTREE\n'}
+[2.299551] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_OCTREE: /usr/lib/x86_64-linux-gnu/libpcl_octree.so  \n'}
+[2.299707] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_SEARCH\n'}
+[2.300449] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_SEARCH: /usr/lib/x86_64-linux-gnu/libpcl_search.so  \n'}
+[2.300791] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_SAMPLE_CONSENSUS\n'}
+[2.301552] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_SAMPLE_CONSENSUS: /usr/lib/x86_64-linux-gnu/libpcl_sample_consensus.so  \n'}
+[2.301669] (-) TimerEvent: {}
+[2.301808] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_FILTERS\n'}
+[2.302534] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_FILTERS: /usr/lib/x86_64-linux-gnu/libpcl_filters.so  \n'}
+[2.302703] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_2D\n'}
+[2.302907] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_2D: /usr/include/pcl-1.12  \n'}
+[2.303066] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_GEOMETRY\n'}
+[2.303290] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_GEOMETRY: /usr/include/pcl-1.12  \n'}
+[2.303429] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_IO\n'}
+[2.304105] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_IO: /usr/lib/x86_64-linux-gnu/libpcl_io.so  \n'}
+[2.304333] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_FEATURES\n'}
+[2.305020] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_FEATURES: /usr/lib/x86_64-linux-gnu/libpcl_features.so  \n'}
+[2.305269] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_ML\n'}
+[2.305940] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_ML: /usr/lib/x86_64-linux-gnu/libpcl_ml.so  \n'}
+[2.306100] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_SEGMENTATION\n'}
+[2.306778] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_SEGMENTATION: /usr/lib/x86_64-linux-gnu/libpcl_segmentation.so  \n'}
+[2.307030] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_VISUALIZATION\n'}
+[2.308101] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_VISUALIZATION: /usr/lib/x86_64-linux-gnu/libpcl_visualization.so  \n'}
+[2.308450] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_SURFACE\n'}
+[2.309822] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_SURFACE: /usr/lib/x86_64-linux-gnu/libpcl_surface.so  \n'}
+[2.310093] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_REGISTRATION\n'}
+[2.311103] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_REGISTRATION: /usr/lib/x86_64-linux-gnu/libpcl_registration.so  \n'}
+[2.311428] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_KEYPOINTS\n'}
+[2.312340] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_KEYPOINTS: /usr/lib/x86_64-linux-gnu/libpcl_keypoints.so  \n'}
+[2.312631] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_TRACKING\n'}
+[2.313651] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_TRACKING: /usr/lib/x86_64-linux-gnu/libpcl_tracking.so  \n'}
+[2.313894] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_RECOGNITION\n'}
+[2.314879] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_RECOGNITION: /usr/lib/x86_64-linux-gnu/libpcl_recognition.so  \n'}
+[2.315301] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_STEREO\n'}
+[2.316221] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_STEREO: /usr/lib/x86_64-linux-gnu/libpcl_stereo.so  \n'}
+[2.316421] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_APPS\n'}
+[2.317426] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_APPS: /usr/lib/x86_64-linux-gnu/libpcl_apps.so  \n'}
+[2.318250] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_IN_HAND_SCANNER\n'}
+[2.318721] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_IN_HAND_SCANNER: /usr/include/pcl-1.12  \n'}
+[2.318849] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_MODELER\n'}
+[2.318976] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_MODELER: /usr/include/pcl-1.12  \n'}
+[2.319105] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_POINT_CLOUD_EDITOR\n'}
+[2.319395] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_POINT_CLOUD_EDITOR: /usr/include/pcl-1.12  \n'}
+[2.319523] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_OUTOFCORE\n'}
+[2.320380] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_OUTOFCORE: /usr/lib/x86_64-linux-gnu/libpcl_outofcore.so  \n'}
+[2.320593] (centerline_extraction) StdoutLine: {'line': b'-- looking for PCL_PEOPLE\n'}
+[2.321269] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL_PEOPLE: /usr/lib/x86_64-linux-gnu/libpcl_people.so  \n'}
+[2.321949] (centerline_extraction) StdoutLine: {'line': b'-- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL  \n'}
+[2.322992] (centerline_extraction) StdoutLine: {'line': b'-- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)\n'}
+[2.351175] (centerline_extraction) StdoutLine: {'line': b'-- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)\n'}
+[2.359224] (centerline_extraction) StdoutLine: {'line': b'-- Found tf2_geometry_msgs: 0.25.16 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)\n'}
+[2.369295] (centerline_extraction) StdoutLine: {'line': b'-- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)\n'}
+[2.370450] (centerline_extraction) StdoutLine: {'line': b'-- Found Eigen3: TRUE (found version "3.4.0") \n'}
+[2.370645] (centerline_extraction) StdoutLine: {'line': b'-- Ensuring Eigen3 include directory is part of orocos-kdl CMake target\n'}
+[2.401758] (-) TimerEvent: {}
+[2.470117] (centerline_extraction) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)\n'}
+[2.501836] (-) TimerEvent: {}
+[2.536957] (centerline_extraction) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[2.537632] (centerline_extraction) StdoutLine: {'line': b'-- Configured cppcheck include dirs: /home/xkai/agribot/agribot_ws/src/centerline_extraction/include\n'}
+[2.537794] (centerline_extraction) StdoutLine: {'line': b'-- Configured cppcheck exclude dirs and/or files: \n'}
+[2.538702] (centerline_extraction) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[2.539933] (centerline_extraction) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[2.540033] (centerline_extraction) StdoutLine: {'line': b'-- Configured uncrustify additional arguments: \n'}
+[2.540521] (centerline_extraction) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[2.541606] (centerline_extraction) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.601928] (-) TimerEvent: {}
+[2.606673] (centerline_extraction) StdoutLine: {'line': b'-- Generating done\n'}
+[2.629656] (centerline_extraction) StdoutLine: {'line': b'-- Build files have been written to: /home/xkai/agribot/agribot_ws/build/centerline_extraction\n'}
+[2.645042] (centerline_extraction) CommandEnded: {'returncode': 0}
+[2.645939] (centerline_extraction) JobProgress: {'identifier': 'centerline_extraction', 'progress': 'build'}
+[2.646677] (centerline_extraction) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xkai/agribot/agribot_ws/build/centerline_extraction', '--', '-j8', '-l8'], 'cwd': '/home/xkai/agribot/agribot_ws/build/centerline_extraction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('PYTHON_BASIC_REPL', '1'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('XDG_SESSION_TYPE', 'x11'), ('GIT_ASKPASS', '/usr/share/code/resources/app/extensions/git/dist/askpass.sh'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('OLDPWD', '/home/xkai/agribot/agribot_ws'), ('TERM_PROGRAM_VERSION', '1.103.2'), ('DESKTOP_SESSION', 'ubuntu'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('VSCODE_GIT_ASKPASS_MAIN', '/usr/share/code/resources/app/extensions/git/dist/askpass-main.js'), ('VSCODE_GIT_ASKPASS_NODE', '/usr/share/code/code'), ('MANAGERPID', '1764'), ('PYDEVD_DISABLE_FILE_VALIDATION', '1'), ('SYSTEMD_EXEC_PID', '2072'), ('BUNDLED_DEBUGPY_PATH', '/home/xkai/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/libs/debugpy'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '30125'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:12132'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'xkai'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/xkai/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/bundled/scripts/noConfigScripts:/home/xkai/.config/Code/User/globalStorage/github.copilot-chat/debugCommand'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/2045,unix/xkai-Ubuntun:/tmp/.ICE-unix/2045'), ('INVOCATION_ID', 'e82e253b57b64371addd8e8a724745bb'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('VSCODE_DEBUGPY_ADAPTER_ENDPOINTS', '/home/xkai/.vscode/extensions/ms-python.debugpy-2025.10.0-linux-x64/.noConfigDebugAdapterEndpoints/endpoint-09296b5d94286d7e.txt'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'Unity'), ('PYTHONSTARTUP', '/home/xkai/.config/Code/User/workspaceStorage/4f460029b3977623e33d177504d4bdbd/ms-python.python/pythonrc.py'), ('XMODIFIERS', '@im=fcitx'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('VSCODE_GIT_IPC_HANDLE', '/run/user/1000/vscode-git-c6627966af.sock'), ('TERM_PROGRAM', 'vscode'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('ORIGINAL_XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('VSCODE_GIT_ASKPASS_EXTRA_ARGS', ''), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/xkai/agribot/agribot_ws/build/centerline_extraction'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[2.680726] (centerline_extraction) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target centerline_extract\x1b[0m\n'}
+[2.684880] (centerline_extraction) StdoutLine: {'line': b'\x1b[35m\x1b[1mConsolidate compiler generated dependencies of target centerline_extraction\x1b[0m\n'}
+[2.700583] (centerline_extraction) StdoutLine: {'line': b'[ 10%] \x1b[32mBuilding CXX object CMakeFiles/centerline_extract.dir/src/centerline_extract.cpp.o\x1b[0m\n'}
+[2.702017] (-) TimerEvent: {}
+[2.720679] (centerline_extraction) StdoutLine: {'line': b'[ 20%] \x1b[32mBuilding CXX object CMakeFiles/centerline_extraction.dir/src/corn_row_detector1.cpp.o\x1b[0m\n'}
+[2.721316] (centerline_extraction) StdoutLine: {'line': b'[ 30%] \x1b[32mBuilding CXX object CMakeFiles/centerline_extraction.dir/src/pid_controller.cpp.o\x1b[0m\n'}
+[2.802109] (-) TimerEvent: {}
+[2.902370] (-) TimerEvent: {}
+[3.002623] (-) TimerEvent: {}
+[3.102879] (-) TimerEvent: {}
+[3.203127] (-) TimerEvent: {}
+[3.303370] (-) TimerEvent: {}
+[3.403594] (-) TimerEvent: {}
+[3.503866] (-) TimerEvent: {}
+[3.604137] (-) TimerEvent: {}
+[3.704412] (-) TimerEvent: {}
+[3.804678] (-) TimerEvent: {}
+[3.904947] (-) TimerEvent: {}
+[4.005230] (-) TimerEvent: {}
+[4.105493] (-) TimerEvent: {}
+[4.167893] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/centerline_extract.cpp:15:10:\x1b[m\x1b[K \x1b[01;31m\x1b[Kfatal error: \x1b[m\x1b[Kvisualization_msgs/msg/marker_array.hpp: \xe6\xb2\xa1\xe6\x9c\x89\xe9\x82\xa3\xe4\xb8\xaa\xe6\x96\x87\xe4\xbb\xb6\xe6\x88\x96\xe7\x9b\xae\xe5\xbd\x95\n'}
+[4.168121] (centerline_extraction) StderrLine: {'line': b'   15 | #include \x1b[01;31m\x1b[K<visualization_msgs/msg/marker_array.hpp>\x1b[m\x1b[K\n'}
+[4.168223] (centerline_extraction) StderrLine: {'line': b'      |          \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[4.168303] (centerline_extraction) StderrLine: {'line': b'compilation terminated.\n'}
+[4.181018] (centerline_extraction) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/centerline_extract.dir/build.make:76\xef\xbc\x9aCMakeFiles/centerline_extract.dir/src/centerline_extract.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[4.181306] (centerline_extraction) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:167\xef\xbc\x9aCMakeFiles/centerline_extract.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[4.181386] (centerline_extraction) StderrLine: {'line': b'gmake[1]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[4.205582] (-) TimerEvent: {}
+[4.305837] (-) TimerEvent: {}
+[4.406138] (-) TimerEvent: {}
+[4.506438] (-) TimerEvent: {}
+[4.606733] (-) TimerEvent: {}
+[4.707033] (-) TimerEvent: {}
+[4.807346] (-) TimerEvent: {}
+[4.907906] (-) TimerEvent: {}
+[5.008307] (-) TimerEvent: {}
+[5.108643] (-) TimerEvent: {}
+[5.208906] (-) TimerEvent: {}
+[5.309136] (-) TimerEvent: {}
+[5.327877] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kgeometry_msgs::msg::Twist PIDController::calculate_control_command()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[5.328130] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller.cpp:246:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused variable \xe2\x80\x98\x1b[01m\x1b[Klinear_error_diff\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable\x07-Wunused-variable\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[5.328266] (centerline_extraction) StderrLine: {'line': b'  246 |     double \x1b[01;35m\x1b[Klinear_error_diff\x1b[m\x1b[K = (cross_track_error - last_cross_track_error_) / dt;\n'}
+[5.328371] (centerline_extraction) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[5.409242] (-) TimerEvent: {}
+[5.509544] (-) TimerEvent: {}
+[5.609840] (-) TimerEvent: {}
+[5.710142] (-) TimerEvent: {}
+[5.810470] (-) TimerEvent: {}
+[5.910725] (-) TimerEvent: {}
+[6.010959] (-) TimerEvent: {}
+[6.111192] (-) TimerEvent: {}
+[6.211428] (-) TimerEvent: {}
+[6.311788] (-) TimerEvent: {}
+[6.412094] (-) TimerEvent: {}
+[6.512419] (-) TimerEvent: {}
+[6.612748] (-) TimerEvent: {}
+[6.713049] (-) TimerEvent: {}
+[6.813348] (-) TimerEvent: {}
+[6.913644] (-) TimerEvent: {}
+[7.013931] (-) TimerEvent: {}
+[7.114226] (-) TimerEvent: {}
+[7.214578] (-) TimerEvent: {}
+[7.314871] (-) TimerEvent: {}
+[7.415211] (-) TimerEvent: {}
+[7.515432] (-) TimerEvent: {}
+[7.615662] (-) TimerEvent: {}
+[7.715893] (-) TimerEvent: {}
+[7.816126] (-) TimerEvent: {}
+[7.916357] (-) TimerEvent: {}
+[8.016589] (-) TimerEvent: {}
+[8.116829] (-) TimerEvent: {}
+[8.217063] (-) TimerEvent: {}
+[8.317344] (-) TimerEvent: {}
+[8.321347] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[KCornRowDetector::CornRowDetector()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.321499] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:45:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfit_distance_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.321569] (centerline_extraction) StderrLine: {'line': b'   45 |     this->get_parameter("fit_distance", \x1b[01;31m\x1b[Kfit_distance_\x1b[m\x1b[K);\n'}
+[8.321630] (centerline_extraction) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.341180] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:46:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktemporal_window_size_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktime_window_size_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.341342] (centerline_extraction) StderrLine: {'line': b'   46 |     this->get_parameter("temporal_window_size", \x1b[01;31m\x1b[Ktemporal_window_size_\x1b[m\x1b[K);\n'}
+[8.341408] (centerline_extraction) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.341466] (centerline_extraction) StderrLine: {'line': b'      |                                                 \x1b[32m\x1b[Ktime_window_size_\x1b[m\x1b[K\n'}
+[8.362798] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kvoid CornRowDetector::point_cloud_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.362953] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:84:41:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ksmooth_path\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ksmoothed_path\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.363022] (centerline_extraction) StderrLine: {'line': b'   84 |     nav_msgs::msg::Path smoothed_path = \x1b[01;31m\x1b[Ksmooth_path\x1b[m\x1b[K(raw_path);\n'}
+[8.363089] (centerline_extraction) StderrLine: {'line': b'      |                                         \x1b[01;31m\x1b[K^~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.363151] (centerline_extraction) StderrLine: {'line': b'      |                                         \x1b[32m\x1b[Ksmoothed_path\x1b[m\x1b[K\n'}
+[8.390357] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:\x1b[m\x1b[K At global scope:\n'}
+[8.390554] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:224:18:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLineParam\x1b[m\x1b[K\xe2\x80\x99 in \xe2\x80\x98\x1b[01m\x1b[Kclass CornRowDetector\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[8.390658] (centerline_extraction) StderrLine: {'line': b'  224 | CornRowDetector::\x1b[01;31m\x1b[KLineParam\x1b[m\x1b[K CornRowDetector::fit_linear(const std::vector<pcl::PointXYZ>& points)\n'}
+[8.390758] (centerline_extraction) StderrLine: {'line': b'      |                  \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[8.394375] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:250:44:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLineParam\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[8.394616] (centerline_extraction) StderrLine: {'line': b'  250 | float CornRowDetector::evaluate_line(const \x1b[01;31m\x1b[KLineParam\x1b[m\x1b[K& line, float x)\n'}
+[8.394716] (centerline_extraction) StderrLine: {'line': b'      |                                            \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[8.394806] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:250:7:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Kfloat CornRowDetector::evaluate_line(const int&, float)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.394906] (centerline_extraction) StderrLine: {'line': b'  250 | float \x1b[01;31m\x1b[KCornRowDetector\x1b[m\x1b[K::evaluate_line(const LineParam& line, float x)\n'}
+[8.394993] (centerline_extraction) StderrLine: {'line': b'      |       \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.395086] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:250:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Kfloat CornRowDetector::evaluate_line(const int&, float)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.395181] (centerline_extraction) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:1\x1b[m\x1b[K:\n'}
+[8.395272] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass CornRowDetector\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[8.395361] (centerline_extraction) StderrLine: {'line': b'   12 | class \x1b[01;36m\x1b[KCornRowDetector\x1b[m\x1b[K : public rclcpp::Node\n'}
+[8.395446] (centerline_extraction) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.411289] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Knav_msgs::msg::Path CornRowDetector::compute_center_line(const std::vector<std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > > >&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.411489] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:275:31:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kfit_distance_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.411592] (centerline_extraction) StderrLine: {'line': b'  275 |     float max_x = current_x + \x1b[01;31m\x1b[Kfit_distance_\x1b[m\x1b[K;  // \xe5\x89\x8d\xe6\x96\xb92\xe7\xb1\xb3\n'}
+[8.411682] (centerline_extraction) StderrLine: {'line': b'      |                               \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.417450] (-) TimerEvent: {}
+[8.421982] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:293:5:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KLineParam\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.422188] (centerline_extraction) StderrLine: {'line': b'  293 |     \x1b[01;31m\x1b[KLineParam\x1b[m\x1b[K left_line = fit_linear(left_cropped);\n'}
+[8.422288] (centerline_extraction) StderrLine: {'line': b'      |     \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[8.422376] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:294:14:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kexpected \xe2\x80\x98\x1b[01m\x1b[K;\x1b[m\x1b[K\xe2\x80\x99 before \xe2\x80\x98\x1b[01m\x1b[Kright_line\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.422478] (centerline_extraction) StderrLine: {'line': b'  294 |     LineParam\x1b[01;31m\x1b[K \x1b[m\x1b[K\x1b[32m\x1b[Kright_line\x1b[m\x1b[K = fit_linear(right_cropped);\n'}
+[8.422566] (centerline_extraction) StderrLine: {'line': b'      |              \x1b[01;31m\x1b[K^\x1b[m\x1b[K\x1b[32m\x1b[K~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.422652] (centerline_extraction) StderrLine: {'line': b'      |              \x1b[32m\x1b[K;\x1b[m\x1b[K\n'}
+[8.430451] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:302:38:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kleft_line\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgetline\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.430683] (centerline_extraction) StderrLine: {'line': b'  302 |         float y_left = evaluate_line(\x1b[01;31m\x1b[Kleft_line\x1b[m\x1b[K, x);\n'}
+[8.430782] (centerline_extraction) StderrLine: {'line': b'      |                                      \x1b[01;31m\x1b[K^~~~~~~~~\x1b[m\x1b[K\n'}
+[8.430848] (centerline_extraction) StderrLine: {'line': b'      |                                      \x1b[32m\x1b[Kgetline\x1b[m\x1b[K\n'}
+[8.448042] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:302:24:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kevaluate_line\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope\n'}
+[8.448245] (centerline_extraction) StderrLine: {'line': b'  302 |         float y_left = \x1b[01;31m\x1b[Kevaluate_line\x1b[m\x1b[K(left_line, x);\n'}
+[8.448351] (centerline_extraction) StderrLine: {'line': b'      |                        \x1b[01;31m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.457118] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:303:39:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kright_line\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Kgetline\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.457277] (centerline_extraction) StderrLine: {'line': b'  303 |         float y_right = evaluate_line(\x1b[01;31m\x1b[Kright_line\x1b[m\x1b[K, x);\n'}
+[8.457375] (centerline_extraction) StderrLine: {'line': b'      |                                       \x1b[01;31m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.457465] (centerline_extraction) StderrLine: {'line': b'      |                                       \x1b[32m\x1b[Kgetline\x1b[m\x1b[K\n'}
+[8.457751] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:\x1b[m\x1b[K At global scope:\n'}
+[8.457872] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:330:21:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kno declaration matches \xe2\x80\x98\x1b[01m\x1b[Knav_msgs::msg::Path CornRowDetector::smooth_path(const Path&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.457972] (centerline_extraction) StderrLine: {'line': b'  330 | nav_msgs::msg::Path \x1b[01;31m\x1b[KCornRowDetector\x1b[m\x1b[K::smooth_path(const nav_msgs::msg::Path& raw_path)\n'}
+[8.458065] (centerline_extraction) StderrLine: {'line': b'      |                     \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.458276] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:330:21:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[Kno functions named \xe2\x80\x98\x1b[01m\x1b[Knav_msgs::msg::Path CornRowDetector::smooth_path(const Path&)\x1b[m\x1b[K\xe2\x80\x99\n'}
+[8.458426] (centerline_extraction) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:1\x1b[m\x1b[K:\n'}
+[8.458533] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector.hpp:12:7:\x1b[m\x1b[K \x1b[01;36m\x1b[Knote: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kclass CornRowDetector\x1b[m\x1b[K\xe2\x80\x99 defined here\n'}
+[8.458631] (centerline_extraction) StderrLine: {'line': b'   12 | class \x1b[01;36m\x1b[KCornRowDetector\x1b[m\x1b[K : public rclcpp::Node\n'}
+[8.458728] (centerline_extraction) StderrLine: {'line': b'      |       \x1b[01;36m\x1b[K^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.477372] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > CornRowDetector::temporal_smoothing(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[8.477585] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:380:52:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktemporal_window_size_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktime_window_size_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.477697] (centerline_extraction) StderrLine: {'line': b'  380 |     while (static_cast<int>(path_buffer_.size()) > \x1b[01;31m\x1b[Ktemporal_window_size_\x1b[m\x1b[K) {\n'}
+[8.477790] (centerline_extraction) StderrLine: {'line': b'      |                                                    \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.477880] (centerline_extraction) StderrLine: {'line': b'      |                                                    \x1b[32m\x1b[Ktime_window_size_\x1b[m\x1b[K\n'}
+[8.495205] (centerline_extraction) StderrLine: {'line': b'\x1b[01m\x1b[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:386:49:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Ktemporal_window_size_\x1b[m\x1b[K\xe2\x80\x99 was not declared in this scope; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktime_window_size_\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[8.495419] (centerline_extraction) StderrLine: {'line': b'  386 |     if (static_cast<int>(path_buffer_.size()) < \x1b[01;31m\x1b[Ktemporal_window_size_\x1b[m\x1b[K) {\n'}
+[8.495537] (centerline_extraction) StderrLine: {'line': b'      |                                                 \x1b[01;31m\x1b[K^~~~~~~~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[8.495626] (centerline_extraction) StderrLine: {'line': b'      |                                                 \x1b[32m\x1b[Ktime_window_size_\x1b[m\x1b[K\n'}
+[8.517554] (-) TimerEvent: {}
+[8.617875] (-) TimerEvent: {}
+[8.718125] (-) TimerEvent: {}
+[8.818383] (-) TimerEvent: {}
+[8.918628] (-) TimerEvent: {}
+[9.018874] (-) TimerEvent: {}
+[9.119119] (-) TimerEvent: {}
+[9.219386] (-) TimerEvent: {}
+[9.319612] (-) TimerEvent: {}
+[9.419861] (-) TimerEvent: {}
+[9.520160] (-) TimerEvent: {}
+[9.620452] (-) TimerEvent: {}
+[9.720740] (-) TimerEvent: {}
+[9.821028] (-) TimerEvent: {}
+[9.921322] (-) TimerEvent: {}
+[10.021598] (-) TimerEvent: {}
+[10.121893] (-) TimerEvent: {}
+[10.222123] (-) TimerEvent: {}
+[10.322365] (-) TimerEvent: {}
+[10.422610] (-) TimerEvent: {}
+[10.522862] (-) TimerEvent: {}
+[10.623135] (-) TimerEvent: {}
+[10.723393] (-) TimerEvent: {}
+[10.823640] (-) TimerEvent: {}
+[10.923878] (-) TimerEvent: {}
+[11.024121] (-) TimerEvent: {}
+[11.124345] (-) TimerEvent: {}
+[11.224583] (-) TimerEvent: {}
+[11.324808] (-) TimerEvent: {}
+[11.425094] (-) TimerEvent: {}
+[11.525338] (-) TimerEvent: {}
+[11.572712] (centerline_extraction) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/centerline_extraction.dir/build.make:90\xef\xbc\x9aCMakeFiles/centerline_extraction.dir/src/corn_row_detector1.cpp.o] \xe9\x94\x99\xe8\xaf\xaf 1\n'}
+[11.572867] (centerline_extraction) StderrLine: {'line': b'gmake[2]: *** \xe6\xad\xa3\xe5\x9c\xa8\xe7\xad\x89\xe5\xbe\x85\xe6\x9c\xaa\xe5\xae\x8c\xe6\x88\x90\xe7\x9a\x84\xe4\xbb\xbb\xe5\x8a\xa1....\n'}
+[11.625423] (-) TimerEvent: {}
+[11.725645] (-) TimerEvent: {}
+[11.825867] (-) TimerEvent: {}
+[11.926092] (-) TimerEvent: {}
+[12.026310] (-) TimerEvent: {}
+[12.126533] (-) TimerEvent: {}
+[12.226754] (-) TimerEvent: {}
+[12.326972] (-) TimerEvent: {}
+[12.427207] (-) TimerEvent: {}
+[12.527438] (-) TimerEvent: {}
+[12.627669] (-) TimerEvent: {}
+[12.727888] (-) TimerEvent: {}
+[12.828146] (-) TimerEvent: {}
+[12.928446] (-) TimerEvent: {}
+[13.028758] (-) TimerEvent: {}
+[13.129050] (-) TimerEvent: {}
+[13.229294] (-) TimerEvent: {}
+[13.329556] (-) TimerEvent: {}
+[13.429798] (-) TimerEvent: {}
+[13.530039] (-) TimerEvent: {}
+[13.630275] (-) TimerEvent: {}
+[13.730509] (-) TimerEvent: {}
+[13.830732] (-) TimerEvent: {}
+[13.886205] (centerline_extraction) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:141\xef\xbc\x9aCMakeFiles/centerline_extraction.dir/all] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[13.886380] (centerline_extraction) StderrLine: {'line': b'gmake: *** [Makefile:146\xef\xbc\x9aall] \xe9\x94\x99\xe8\xaf\xaf 2\n'}
+[13.888206] (centerline_extraction) CommandEnded: {'returncode': 2}
+[13.899833] (centerline_extraction) JobEnded: {'identifier': 'centerline_extraction', 'rc': 2}
+[13.910334] (-) EventReactorShutdown: {}

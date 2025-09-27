@@ -310,9 +310,6 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
-# install("TARGETS" "pcl_learning" "centerline_extract" "cornfield_navigation_node" "DESTINATION" "lib/centerline_extraction")
-include("/home/xkai/agribot/agribot_ws/build/centerline_extraction/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
-
 # install(DIRECTORY "include" "DESTINATION" "include/")
 ament_cmake_symlink_install_directory("/home/xkai/agribot/agribot_ws/src/centerline_extraction" DIRECTORY "include" "DESTINATION" "include/")
 

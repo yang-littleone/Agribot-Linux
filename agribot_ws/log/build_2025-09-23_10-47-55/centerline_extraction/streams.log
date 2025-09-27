@@ -1,0 +1,188 @@
+[0.010s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/xkai/agribot/agribot_ws/src/centerline_extraction -DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/centerline_extraction
+[0.032s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.143s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.160s] -- Found rclcpp: 16.0.14 (/opt/ros/humble/share/rclcpp/cmake)
+[0.216s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.218s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.226s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.240s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.255s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.301s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.303s] -- Found rmw_fastrtps_cpp: 6.2.8 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.397s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.462s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.504s] -- Found nav_msgs: 4.9.0 (/opt/ros/humble/share/nav_msgs/cmake)
+[0.526s] -- Found visualization_msgs: 4.9.0 (/opt/ros/humble/share/visualization_msgs/cmake)
+[0.560s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[0.571s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found suitable version "1.74.0", minimum required is "1.65.0") found components: system filesystem date_time iostreams serialization 
+[0.588s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[0.621s] -- Found GLEW: /usr/lib/x86_64-linux-gnu/libGLEW.so  
+[0.623s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL GLX 
+[0.744s] -- Found MPI_C: /usr/lib/x86_64-linux-gnu/libmpi.so (found version "3.1") 
+[0.744s] -- Found MPI: TRUE (found version "3.1") found components: C 
+[0.746s] -- Found JsonCpp: /usr/lib/x86_64-linux-gnu/libjsoncpp.so (found suitable version "1.9.5", minimum required is "0.7.0") 
+[0.753s] -- Found ZLIB: /usr/lib/x86_64-linux-gnu/libz.so (found version "1.2.11") 
+[0.768s] -- Found PNG: /usr/lib/x86_64-linux-gnu/libpng.so (found version "1.6.37") 
+[0.788s] -- Found Eigen3: /usr/include/eigen3 (found version "3.4.0") 
+[0.810s] -- Found X11: /usr/include   
+[0.836s] -- Found EXPAT: /usr/lib/x86_64-linux-gnu/libexpat.so (found version "2.4.7") 
+[0.838s] -- Found double-conversion: /usr/lib/x86_64-linux-gnu/libdouble-conversion.so  
+[0.839s] -- Found LZ4: /usr/lib/x86_64-linux-gnu/liblz4.so (found version "1.9.3") 
+[0.840s] -- Found LZMA: /usr/lib/x86_64-linux-gnu/liblzma.so (found version "5.2.5") 
+[0.851s] -- Found JPEG: /usr/lib/x86_64-linux-gnu/libjpeg.so (found version "80") 
+[0.857s] -- Found TIFF: /usr/lib/x86_64-linux-gnu/libtiff.so (found version "4.3.0")  
+[0.860s] -- Found Freetype: /usr/lib/x86_64-linux-gnu/libfreetype.so (found version "2.11.1") 
+[0.867s] -- Found utf8cpp: /usr/include/utf8cpp  
+[0.897s] -- Found OpenNI: /usr/lib/libOpenNI.so;libusb::libusb (found version "1.5.4.0") 
+[0.897s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[0.902s] -- Found OpenNI2: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb (found version "2.2.0.33") 
+[0.902s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[0.902s] [0m** WARNING ** io features related to pcap will be disabled[0m
+[1.034s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.039s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.044s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[1.165s] -- Found Qhull version 8.0.2
+[1.293s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[1.426s] -- looking for PCL_COMMON
+[1.426s] -- looking for PCL_KDTREE
+[1.427s] -- looking for PCL_OCTREE
+[1.427s] -- looking for PCL_SEARCH
+[1.428s] -- looking for PCL_SAMPLE_CONSENSUS
+[1.428s] -- looking for PCL_FILTERS
+[1.429s] -- looking for PCL_2D
+[1.429s] -- looking for PCL_GEOMETRY
+[1.429s] -- looking for PCL_IO
+[1.430s] -- looking for PCL_FEATURES
+[1.431s] -- looking for PCL_ML
+[1.431s] -- looking for PCL_SEGMENTATION
+[1.432s] -- looking for PCL_VISUALIZATION
+[1.432s] -- looking for PCL_SURFACE
+[1.433s] -- looking for PCL_REGISTRATION
+[1.434s] -- looking for PCL_KEYPOINTS
+[1.434s] -- looking for PCL_TRACKING
+[1.435s] -- looking for PCL_RECOGNITION
+[1.435s] -- looking for PCL_STEREO
+[1.436s] -- looking for PCL_APPS
+[1.436s] -- looking for PCL_IN_HAND_SCANNER
+[1.437s] -- looking for PCL_MODELER
+[1.437s] -- looking for PCL_POINT_CLOUD_EDITOR
+[1.437s] -- looking for PCL_OUTOFCORE
+[1.438s] -- looking for PCL_PEOPLE
+[1.439s] -- Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;Boost::system;Boost::filesystem;Boost::date_time;Boost::iostreams;Boost::serialization;/usr/lib/libOpenNI.so;libusb::libusb;/usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb;VTK::ChartsCore;VTK::CommonColor;VTK::CommonComputationalGeometry;VTK::CommonCore;VTK::CommonDataModel;VTK::CommonExecutionModel;VTK::CommonMath;VTK::CommonMisc;VTK::CommonTransforms;VTK::FiltersCore;VTK::FiltersExtraction;VTK::FiltersGeneral;VTK::FiltersGeometry;VTK::FiltersModeling;VTK::FiltersSources;VTK::ImagingCore;VTK::ImagingSources;VTK::InteractionImage;VTK::InteractionStyle;VTK::InteractionWidgets;VTK::IOCore;VTK::IOGeometry;VTK::IOImage;VTK::IOLegacy;VTK::IOPLY;VTK::RenderingAnnotation;VTK::RenderingCore;VTK::RenderingContext2D;VTK::RenderingLOD;VTK::RenderingFreeType;VTK::ViewsCore;VTK::ViewsContext2D;VTK::RenderingOpenGL2;VTK::GUISupportQt;FLANN::FLANN;QHULL::QHULL  
+[1.443s] -- Found pcl_conversions: 2.4.5 (/opt/ros/humble/share/pcl_conversions/cmake)
+[1.474s] -- Found tf2: 0.25.16 (/opt/ros/humble/share/tf2/cmake)
+[1.479s] -- Found tf2_geometry_msgs: 0.25.16 (/opt/ros/humble/share/tf2_geometry_msgs/cmake)
+[1.485s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[1.487s] -- Found Eigen3: TRUE (found version "3.4.0") 
+[1.487s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[1.598s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.668s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[1.669s] -- Configured cppcheck include dirs: /home/xkai/agribot/agribot_ws/src/centerline_extraction/include
+[1.669s] -- Configured cppcheck exclude dirs and/or files: 
+[1.670s] -- Added test 'lint_cmake' to check CMake code style
+[1.671s] -- Added test 'uncrustify' to check C / C++ code style
+[1.671s] -- Configured uncrustify additional arguments: 
+[1.671s] -- Added test 'xmllint' to check XML markup files
+[1.673s] -- Configuring done
+[1.780s] -- Generating done
+[1.809s] -- Build files have been written to: /home/xkai/agribot/agribot_ws/build/centerline_extraction
+[1.828s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/xkai/agribot/agribot_ws/src/centerline_extraction -DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/centerline_extraction
+[1.831s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[1.865s] [35m[1mConsolidate compiler generated dependencies of target centerline_extract[0m
+[1.876s] [ 30%] [32mBuilding CXX object CMakeFiles/centerline_extraction.dir/src/obstacle_detector.cpp.o[0m
+[1.877s] [ 30%] [32mBuilding CXX object CMakeFiles/centerline_extraction.dir/src/corn_row_detector1.cpp.o[0m
+[1.877s] [ 30%] [32mBuilding CXX object CMakeFiles/centerline_extraction.dir/src/corn_row_detector.cpp.o[0m
+[1.877s] [ 50%] [32mBuilding CXX object CMakeFiles/centerline_extraction.dir/src/pid_controller.cpp.o[0m
+[1.877s] [ 50%] [32mBuilding CXX object CMakeFiles/centerline_extraction.dir/src/pure_pursuit_controller.cpp.o[0m
+[1.892s] [ 60%] [32mBuilding CXX object CMakeFiles/centerline_extract.dir/src/centerline_extract.cpp.o[0m
+[4.290s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/centerline_extract.cpp:15:10:[m[K [01;31m[Kfatal error: [m[Kvisualization_msgs/msg/marker_array.hpp: 没有那个文件或目录
+[4.291s]    15 | #include [01;31m[K<visualization_msgs/msg/marker_array.hpp>[m[K
+[4.291s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[4.291s] compilation terminated.
+[4.302s] gmake[2]: *** [CMakeFiles/centerline_extract.dir/build.make:76：CMakeFiles/centerline_extract.dir/src/centerline_extract.cpp.o] 错误 1
+[4.304s] gmake[1]: *** [CMakeFiles/Makefile2:167：CMakeFiles/centerline_extract.dir/all] 错误 2
+[4.304s] gmake[1]: *** 正在等待未完成的任务....
+[5.723s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller.cpp:[m[K In member function ‘[01m[Kgeometry_msgs::msg::Twist PIDController::calculate_control_command()[m[K’:
+[5.724s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller.cpp:247:12:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klinear_error_diff[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[5.724s]   247 |     double [01;35m[Klinear_error_diff[m[K = (cross_track_error - last_cross_track_error_) / dt;
+[5.724s]       |            [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[9.893s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:[m[K In constructor ‘[01m[KCornRowDetector::CornRowDetector()[m[K’:
+[9.893s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:45:41:[m[K [01;31m[Kerror: [m[K‘[01m[Kfit_distance_[m[K’ was not declared in this scope
+[9.893s]    45 |     this->get_parameter("fit_distance", [01;31m[Kfit_distance_[m[K);
+[9.893s]       |                                         [01;31m[K^~~~~~~~~~~~~[m[K
+[9.929s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:46:49:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemporal_window_size_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktime_window_size_[m[K’?
+[9.929s]    46 |     this->get_parameter("temporal_window_size", [01;31m[Ktemporal_window_size_[m[K);
+[9.929s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[9.930s]       |                                                 [32m[Ktime_window_size_[m[K
+[9.966s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:[m[K In member function ‘[01m[Kvoid CornRowDetector::point_cloud_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)[m[K’:
+[9.966s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:84:41:[m[K [01;31m[Kerror: [m[K‘[01m[Ksmooth_path[m[K’ was not declared in this scope; did you mean ‘[01m[Ksmoothed_path[m[K’?
+[9.966s]    84 |     nav_msgs::msg::Path smoothed_path = [01;31m[Ksmooth_path[m[K(raw_path);
+[9.966s]       |                                         [01;31m[K^~~~~~~~~~~[m[K
+[9.966s]       |                                         [32m[Ksmoothed_path[m[K
+[10.010s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:[m[K At global scope:
+[10.011s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:224:18:[m[K [01;31m[Kerror: [m[K‘[01m[KLineParam[m[K’ in ‘[01m[Kclass CornRowDetector[m[K’ does not name a type
+[10.011s]   224 | CornRowDetector::[01;31m[KLineParam[m[K CornRowDetector::fit_linear(const std::vector<pcl::PointXYZ>& points)
+[10.012s]       |                  [01;31m[K^~~~~~~~~[m[K
+[10.018s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:250:44:[m[K [01;31m[Kerror: [m[K‘[01m[KLineParam[m[K’ does not name a type
+[10.019s]   250 | float CornRowDetector::evaluate_line(const [01;31m[KLineParam[m[K& line, float x)
+[10.019s]       |                                            [01;31m[K^~~~~~~~~[m[K
+[10.020s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:250:7:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Kfloat CornRowDetector::evaluate_line(const int&, float)[m[K’
+[10.021s]   250 | float [01;31m[KCornRowDetector[m[K::evaluate_line(const LineParam& line, float x)
+[10.021s]       |       [01;31m[K^~~~~~~~~~~~~~~[m[K
+[10.021s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:250:7:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Kfloat CornRowDetector::evaluate_line(const int&, float)[m[K’
+[10.021s] In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:1[m[K:
+[10.021s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector.hpp:12:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CornRowDetector[m[K’ defined here
+[10.021s]    12 | class [01;36m[KCornRowDetector[m[K : public rclcpp::Node
+[10.021s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[10.039s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:[m[K In member function ‘[01m[Knav_msgs::msg::Path CornRowDetector::compute_center_line(const std::vector<std::vector<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > > >&)[m[K’:
+[10.039s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:275:31:[m[K [01;31m[Kerror: [m[K‘[01m[Kfit_distance_[m[K’ was not declared in this scope
+[10.039s]   275 |     float max_x = current_x + [01;31m[Kfit_distance_[m[K;  // 前方2米
+[10.040s]       |                               [01;31m[K^~~~~~~~~~~~~[m[K
+[10.050s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:293:5:[m[K [01;31m[Kerror: [m[K‘[01m[KLineParam[m[K’ was not declared in this scope
+[10.051s]   293 |     [01;31m[KLineParam[m[K left_line = fit_linear(left_cropped);
+[10.051s]       |     [01;31m[K^~~~~~~~~[m[K
+[10.052s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:294:14:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kright_line[m[K’
+[10.052s]   294 |     LineParam[01;31m[K [m[K[32m[Kright_line[m[K = fit_linear(right_cropped);
+[10.052s]       |              [01;31m[K^[m[K[32m[K~~~~~~~~~~[m[K
+[10.052s]       |              [32m[K;[m[K
+[10.060s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:302:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kleft_line[m[K’ was not declared in this scope; did you mean ‘[01m[Kgetline[m[K’?
+[10.060s]   302 |         float y_left = evaluate_line([01;31m[Kleft_line[m[K, x);
+[10.060s]       |                                      [01;31m[K^~~~~~~~~[m[K
+[10.060s]       |                                      [32m[Kgetline[m[K
+[10.078s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:302:24:[m[K [01;31m[Kerror: [m[K‘[01m[Kevaluate_line[m[K’ was not declared in this scope
+[10.079s]   302 |         float y_left = [01;31m[Kevaluate_line[m[K(left_line, x);
+[10.079s]       |                        [01;31m[K^~~~~~~~~~~~~[m[K
+[10.089s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:303:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kright_line[m[K’ was not declared in this scope; did you mean ‘[01m[Kgetline[m[K’?
+[10.089s]   303 |         float y_right = evaluate_line([01;31m[Kright_line[m[K, x);
+[10.089s]       |                                       [01;31m[K^~~~~~~~~~[m[K
+[10.089s]       |                                       [32m[Kgetline[m[K
+[10.092s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:[m[K At global scope:
+[10.092s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:330:21:[m[K [01;31m[Kerror: [m[Kno declaration matches ‘[01m[Knav_msgs::msg::Path CornRowDetector::smooth_path(const Path&)[m[K’
+[10.092s]   330 | nav_msgs::msg::Path [01;31m[KCornRowDetector[m[K::smooth_path(const nav_msgs::msg::Path& raw_path)
+[10.092s]       |                     [01;31m[K^~~~~~~~~~~~~~~[m[K
+[10.092s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:330:21:[m[K [01;36m[Knote: [m[Kno functions named ‘[01m[Knav_msgs::msg::Path CornRowDetector::smooth_path(const Path&)[m[K’
+[10.092s] In file included from [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:1[m[K:
+[10.092s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector.hpp:12:7:[m[K [01;36m[Knote: [m[K‘[01m[Kclass CornRowDetector[m[K’ defined here
+[10.093s]    12 | class [01;36m[KCornRowDetector[m[K : public rclcpp::Node
+[10.093s]       |       [01;36m[K^~~~~~~~~~~~~~~[m[K
+[10.119s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:[m[K In member function ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > CornRowDetector::temporal_smoothing(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)[m[K’:
+[10.119s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:380:52:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemporal_window_size_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktime_window_size_[m[K’?
+[10.119s]   380 |     while (static_cast<int>(path_buffer_.size()) > [01;31m[Ktemporal_window_size_[m[K) {
+[10.119s]       |                                                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[10.119s]       |                                                    [32m[Ktime_window_size_[m[K
+[10.140s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector1.cpp:386:49:[m[K [01;31m[Kerror: [m[K‘[01m[Ktemporal_window_size_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktime_window_size_[m[K’?
+[10.140s]   386 |     if (static_cast<int>(path_buffer_.size()) < [01;31m[Ktemporal_window_size_[m[K) {
+[10.140s]       |                                                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[10.140s]       |                                                 [32m[Ktime_window_size_[m[K
+[10.380s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:[m[K In member function ‘[01m[Kstd::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > CornRowDetector::temporal_smoothing(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)[m[K’:
+[10.380s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:361:50:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[10.380s]   361 |     while ([01;35m[Kstatic_cast<int>(path_buffer_.size()) > time_window_size_[m[K) {  // 显式转换为int
+[10.380s]       |            [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[10.381s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:367:47:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Ksize_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+[10.381s]   367 |     if ([01;35m[Kstatic_cast<int>(path_buffer_.size()) < time_window_size_[m[K) {  // 显式转换为int
+[10.381s]       |         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~[m[K
+[15.210s] gmake[2]: *** [CMakeFiles/centerline_extraction.dir/build.make:90：CMakeFiles/centerline_extraction.dir/src/corn_row_detector1.cpp.o] 错误 1
+[15.211s] gmake[2]: *** 正在等待未完成的任务....
+[18.777s] gmake[1]: *** [CMakeFiles/Makefile2:141：CMakeFiles/centerline_extraction.dir/all] 错误 2
+[18.777s] gmake: *** [Makefile:146：all] 错误 2
+[18.780s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8

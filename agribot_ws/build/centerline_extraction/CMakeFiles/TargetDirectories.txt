@@ -2,6 +2,7 @@
 /home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/centerline_extraction_uninstall.dir
 /home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/pcl_learning.dir
 /home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/centerline_extract.dir
+/home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/corn_row_detector_projection.dir
 /home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/cornfield_navigation_node.dir
 /home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/test.dir
 /home/xkai/agribot/agribot_ws/build/centerline_extraction/CMakeFiles/edit_cache.dir

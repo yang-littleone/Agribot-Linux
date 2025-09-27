@@ -51,6 +51,18 @@ target_link_libraries(centerline_extract
   ${PCL_LIBRARIES}
 )
 
+add_executable(corn_row_detector_projection  src/corn_row_detector_projection.cpp)
+ament_target_dependencies(corn_row_detector_projection 
+  rclcpp 
+  nav_msgs
+  sensor_msgs 
+  pcl_conversions 
+  visualization_msgs)
+target_link_libraries(corn_row_detector_projection
+  ${PCL_LIBRARIES}
+)
+
+
 # add_executable(corn_row_detector  src/corn_row_detector.cpp)
 # ament_target_dependencies(corn_row_detector rclcpp sensor_msgs pcl_conversions visualization_msgs nav_msgs)
 # target_link_libraries(corn_row_detector
@@ -82,7 +94,7 @@ target_link_libraries(cornfield_navigation_node
 )
 
 install(TARGETS
-  pcl_learning centerline_extract cornfield_navigation_node
+  pcl_learning centerline_extract cornfield_navigation_node corn_row_detector_projection
   DESTINATION lib/${PROJECT_NAME}
 )
 

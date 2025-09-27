@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-63c8b81d312b13197960.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "centerline_extraction",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "centerline_extract::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-centerline_extract-8e89db10999a30bd1ef5.json",
+					"name" : "centerline_extract",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "centerline_extraction_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-centerline_extraction_uninstall-c24e1f29dc8d6b4f25a6.json",
+					"name" : "centerline_extraction_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "corn_row_detector_projection::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-corn_row_detector_projection-2099d838d5d2a28f98a3.json",
+					"name" : "corn_row_detector_projection",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "cornfield_navigation_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-cornfield_navigation_node-96d0d04e880f9b11ef86.json",
+					"name" : "cornfield_navigation_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "pcl_learning::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-pcl_learning-0b71d8f34b93dfdc7bdb.json",
+					"name" : "pcl_learning",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-4c4d4edf21a98b37dddc.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/xkai/agribot/agribot_ws/build/centerline_extraction",
+		"source" : "/home/xkai/agribot/agribot_ws/src/centerline_extraction"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

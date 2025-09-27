@@ -224,6 +224,19 @@ centerline_extract/fast:
 .PHONY : centerline_extract/fast
 
 #=============================================================================
+# Target rules for targets named corn_row_detector_projection
+
+# Build rule for target.
+corn_row_detector_projection: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 corn_row_detector_projection
+.PHONY : corn_row_detector_projection
+
+# fast build rule for target.
+corn_row_detector_projection/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corn_row_detector_projection.dir/build.make CMakeFiles/corn_row_detector_projection.dir/build
+.PHONY : corn_row_detector_projection/fast
+
+#=============================================================================
 # Target rules for targets named cornfield_navigation_node
 
 # Build rule for target.
@@ -283,6 +296,30 @@ src/corn_row_detector.s: src/corn_row_detector.cpp.s
 src/corn_row_detector.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cornfield_navigation_node.dir/build.make CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.s
 .PHONY : src/corn_row_detector.cpp.s
+
+src/corn_row_detector_projection.o: src/corn_row_detector_projection.cpp.o
+.PHONY : src/corn_row_detector_projection.o
+
+# target to build an object file
+src/corn_row_detector_projection.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corn_row_detector_projection.dir/build.make CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o
+.PHONY : src/corn_row_detector_projection.cpp.o
+
+src/corn_row_detector_projection.i: src/corn_row_detector_projection.cpp.i
+.PHONY : src/corn_row_detector_projection.i
+
+# target to preprocess a source file
+src/corn_row_detector_projection.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corn_row_detector_projection.dir/build.make CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.i
+.PHONY : src/corn_row_detector_projection.cpp.i
+
+src/corn_row_detector_projection.s: src/corn_row_detector_projection.cpp.s
+.PHONY : src/corn_row_detector_projection.s
+
+# target to generate assembly for a file
+src/corn_row_detector_projection.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/corn_row_detector_projection.dir/build.make CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.s
+.PHONY : src/corn_row_detector_projection.cpp.s
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
@@ -396,6 +433,7 @@ help:
 	@echo "... centerline_extraction_uninstall"
 	@echo "... uninstall"
 	@echo "... centerline_extract"
+	@echo "... corn_row_detector_projection"
 	@echo "... cornfield_navigation_node"
 	@echo "... pcl_learning"
 	@echo "... src/centerline_extract.o"
@@ -404,6 +442,9 @@ help:
 	@echo "... src/corn_row_detector.o"
 	@echo "... src/corn_row_detector.i"
 	@echo "... src/corn_row_detector.s"
+	@echo "... src/corn_row_detector_projection.o"
+	@echo "... src/corn_row_detector_projection.i"
+	@echo "... src/corn_row_detector_projection.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

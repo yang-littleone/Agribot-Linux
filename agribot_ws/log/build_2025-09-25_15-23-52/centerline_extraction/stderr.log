@@ -1,0 +1,7 @@
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:[m[K In member function ‘[01m[KPointCloudXYZPtr CornRowDetectorProjection::projection_point_cloud(PointCloudXYZPtr)[m[K’:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:87:1:[m[K [01;35m[Kwarning: [m[Kno return statement in function returning non-void [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreturn-type-Wreturn-type]8;;[m[K]
+   87 | [01;35m[K}[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:84:85:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kinput_cloud[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   84 | PointCloudXYZPtr CornRowDetectorProjection::projection_point_cloud([01;35m[KPointCloudXYZPtr input_cloud[m[K)
+      |                                                                    [01;35m[K~~~~~~~~~~~~~~~~~^~~~~~~~~~~[m[K
