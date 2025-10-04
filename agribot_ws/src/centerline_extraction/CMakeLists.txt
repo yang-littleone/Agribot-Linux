@@ -57,7 +57,9 @@ ament_target_dependencies(corn_row_detector_projection
   nav_msgs
   sensor_msgs 
   pcl_conversions 
-  visualization_msgs)
+  visualization_msgs
+  tf2
+  tf2_geometry_msgs)
 target_link_libraries(corn_row_detector_projection
   ${PCL_LIBRARIES}
 )

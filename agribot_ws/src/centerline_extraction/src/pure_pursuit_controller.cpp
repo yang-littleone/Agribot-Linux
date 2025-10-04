@@ -7,7 +7,7 @@ PurePursuitController::PurePursuitController() : Node("pure_pursuit_controller")
 {
     // 订阅玉米行中心线（路径）
     center_line_sub_ = this->create_subscription<nav_msgs::msg::Path>(
-        "/corn_row_center", 10,
+        "/corn_row_center_line", 10,
         std::bind(&PurePursuitController::center_line_callback, this, std::placeholders::_1));
     
     // 订阅里程计信息（小车位姿）

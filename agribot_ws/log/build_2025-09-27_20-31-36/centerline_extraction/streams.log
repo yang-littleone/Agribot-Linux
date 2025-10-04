@@ -1,0 +1,13 @@
+[0.010s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.070s] [  9%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m
+[0.070s] [ 27%] Built target pcl_learning
+[0.074s] [ 45%] Built target centerline_extract
+[0.090s] [ 90%] Built target cornfield_navigation_node
+[1.431s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:9:10:[m[K [01;31m[Kfatal error: [m[Ktf2_geometry_msgs/tf2_geometry_msgs.hpp: 没有那个文件或目录
+[1.431s]     9 | #include [01;31m[K<tf2_geometry_msgs/tf2_geometry_msgs.hpp>[m[K
+[1.431s]       |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.431s] compilation terminated.
+[1.441s] gmake[2]: *** [CMakeFiles/corn_row_detector_projection.dir/build.make:76：CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o] 错误 1
+[1.441s] gmake[1]: *** [CMakeFiles/Makefile2:195：CMakeFiles/corn_row_detector_projection.dir/all] 错误 2
+[1.442s] gmake: *** [Makefile:146：all] 错误 2
+[1.443s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8

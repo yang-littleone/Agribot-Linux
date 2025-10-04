@@ -8,13 +8,13 @@ int main(int argc, char * argv[])
     rclcpp::init(argc, argv);
     
     // 创建节点
-    auto corn_row_detector = std::make_shared<CornRowDetector>();
+    // auto corn_row_detector = std::make_shared<CornRowDetector>();
     auto controller = std::make_shared<PurePursuitController>();
     auto obstacle_detector = std::make_shared<ObstacleDetector>();
     
     // 组成执行器并运行
     rclcpp::executors::MultiThreadedExecutor executor;
-    executor.add_node(corn_row_detector);
+    // executor.add_node(corn_row_detector);
     executor.add_node(controller);
     executor.add_node(obstacle_detector);
     
