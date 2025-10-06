@@ -75,6 +75,7 @@ add_executable(cornfield_navigation_node
   src/corn_row_detector.cpp
   src/pure_pursuit_controller.cpp
   src/obstacle_detector.cpp
+  src/pid_controller.cpp
   src/main.cpp
 )
 

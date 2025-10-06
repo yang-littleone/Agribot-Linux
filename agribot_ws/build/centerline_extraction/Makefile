@@ -393,6 +393,30 @@ src/pcl_learning.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/pcl_learning.dir/build.make CMakeFiles/pcl_learning.dir/src/pcl_learning.cpp.s
 .PHONY : src/pcl_learning.cpp.s
 
+src/pid_controller.o: src/pid_controller.cpp.o
+.PHONY : src/pid_controller.o
+
+# target to build an object file
+src/pid_controller.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cornfield_navigation_node.dir/build.make CMakeFiles/cornfield_navigation_node.dir/src/pid_controller.cpp.o
+.PHONY : src/pid_controller.cpp.o
+
+src/pid_controller.i: src/pid_controller.cpp.i
+.PHONY : src/pid_controller.i
+
+# target to preprocess a source file
+src/pid_controller.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cornfield_navigation_node.dir/build.make CMakeFiles/cornfield_navigation_node.dir/src/pid_controller.cpp.i
+.PHONY : src/pid_controller.cpp.i
+
+src/pid_controller.s: src/pid_controller.cpp.s
+.PHONY : src/pid_controller.s
+
+# target to generate assembly for a file
+src/pid_controller.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cornfield_navigation_node.dir/build.make CMakeFiles/cornfield_navigation_node.dir/src/pid_controller.cpp.s
+.PHONY : src/pid_controller.cpp.s
+
 src/pure_pursuit_controller.o: src/pure_pursuit_controller.cpp.o
 .PHONY : src/pure_pursuit_controller.o
 
@@ -454,6 +478,9 @@ help:
 	@echo "... src/pcl_learning.o"
 	@echo "... src/pcl_learning.i"
 	@echo "... src/pcl_learning.s"
+	@echo "... src/pid_controller.o"
+	@echo "... src/pid_controller.i"
+	@echo "... src/pid_controller.s"
 	@echo "... src/pure_pursuit_controller.o"
 	@echo "... src/pure_pursuit_controller.i"
 	@echo "... src/pure_pursuit_controller.s"
