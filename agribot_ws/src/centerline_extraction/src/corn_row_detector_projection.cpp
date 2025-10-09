@@ -340,7 +340,7 @@ nav_msgs::msg::Path CornRowDetectorProjection::create_path(float slope, float in
 
     // 1. 生成odom坐标系下的动态路径（当前x到x+5米，同之前的逻辑）
     float x_start = robot_current_x_;
-    float x_end = robot_current_x_ + 5.0;
+    float x_end = robot_current_x_ + 4.0;
     for (float x = x_start; x <= x_end; x += 0.1)
     {
         geometry_msgs::msg::PoseStamped pose_odom;
@@ -355,7 +355,8 @@ nav_msgs::msg::Path CornRowDetectorProjection::create_path(float slope, float in
     // 2. 将路径从odom坐标系转换到base_link坐标系（用于可视化）
     nav_msgs::msg::Path path_base_link;
     path_base_link.header.frame_id = "base_link"; // 小车本体坐标系
-    path_base_link.header.stamp = this->now();
+    // path_base_link.header.stamp = this->now();
+    path_base_link.header.stamp = path_odom.header.stamp;
 
     try
     {

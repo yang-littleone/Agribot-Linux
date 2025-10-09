@@ -176,7 +176,21 @@ geometry_msgs::msg::PointStamped PIDController::find_target_point()
     }
 
     // 如果路径不够长，取最后一个点
-    target_point.point = center_line_.poses.back().pose.position;
+    // target_point.point = center_line_.poses.back().pose.position;
+
+    // 原逻辑：target_point.point = center_line_.poses.back().pose.position;
+    // 新逻辑：若最后一个点落后于小车，强制设为小车前方0.4米（避免目标点在小车后方）
+    auto last_point = center_line_.poses.back().pose.position;
+    if (last_point.x < current_x_)
+    {                                                         // 若中心线最后一个点在小车后方
+        target_point.point.x = current_x_ + target_distance_; // 强制设为前方目标距离米
+        target_point.point.y = current_y_;                    // 临时用小车y坐标（后续会被中心线更新覆盖）
+    }
+    else
+    {
+        target_point.point = last_point; // 正常取最后一个点
+    }
+
     return target_point;
 }
 
