@@ -61,6 +61,7 @@
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/agribot_ros2_controller.yaml
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/diaplay_robot_model.rviz
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/agri_room.world
+/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/corn_leaf_world.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens_angular.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens_angular2.world

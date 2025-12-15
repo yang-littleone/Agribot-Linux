@@ -5,6 +5,16 @@ Stephen Brawner (brawner@gmail.com)
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
   name="mini_4wd_robot">
+  
+  <!-- 添加虚拟根链接以解决KDL警告 -->
+        <link name="base_footprint" />
+        
+        <joint name="base_joint" type="fixed">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <parent link="base_footprint" />
+            <child link="base_link" />
+        </joint>
+
   <link
     name="base_link">
     <inertial>

@@ -1,0 +1,198 @@
+[0.019s] Invoking command in '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/livox_ros_driver2 -- -j8 -l8
+[0.089s] [  7%] Built target livox_interfaces2__rosidl_generator_c
+[0.094s] [  8%] Built target livox_interfaces2__cpp
+[0.097s] [  8%] Built target ament_cmake_python_copy_livox_ros_driver2
+[0.112s] [ 10%] [32m[1mLinking CXX executable livox_ros_driver2_node[0m
+[0.132s] [ 17%] Built target livox_interfaces2__rosidl_typesupport_introspection_c
+[0.138s] [ 24%] Built target livox_interfaces2__rosidl_typesupport_c
+[0.139s] [ 31%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_cpp
+[0.140s] [ 45%] Built target livox_interfaces2__rosidl_typesupport_introspection_cpp
+[0.140s] [ 45%] Built target livox_interfaces2__rosidl_typesupport_fastrtps_c
+[0.166s] [ 52%] Built target livox_interfaces2__rosidl_typesupport_cpp
+[0.195s] [ 52%] Built target livox_interfaces2
+[0.225s] [ 54%] Built target livox_interfaces2__py
+[0.232s] [ 56%] [32m[1mLinking CXX shared library liblivox_ros_driver2.so[0m
+[0.276s] [ 57%] [32mBuilding C object CMakeFiles/livox_interfaces2__rosidl_generator_py.dir/rosidl_generator_py/livox_ros_driver2/msg/_custom_point_s.c.o[0m
+[0.283s] [ 59%] [32mBuilding C object CMakeFiles/livox_interfaces2__rosidl_generator_py.dir/rosidl_generator_py/livox_ros_driver2/msg/_custom_msg_s.c.o[0m
+[0.448s] [ 61%] Built target livox_ros_driver2_node
+[0.497s] running egg_info
+[0.505s] writing livox_ros_driver2.egg-info/PKG-INFO
+[0.505s] writing dependency_links to livox_ros_driver2.egg-info/dependency_links.txt
+[0.505s] writing top-level names to livox_ros_driver2.egg-info/top_level.txt
+[0.510s] reading manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'
+[0.512s] writing manifest file 'livox_ros_driver2.egg-info/SOURCES.txt'
+[0.583s] [ 61%] Built target ament_cmake_python_build_livox_ros_driver2_egg
+[0.636s] [ 63%] [32m[1mLinking C shared library rosidl_generator_py/livox_ros_driver2/liblivox_interfaces2__rosidl_generator_py.so[0m
+[0.697s] [ 63%] Built target livox_interfaces2__rosidl_generator_py
+[0.741s] [ 64%] [32mBuilding C object CMakeFiles/livox_ros_driver2__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[0.748s] [ 66%] [32mBuilding C object CMakeFiles/livox_ros_driver2__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[0.752s] [ 68%] [32mBuilding C object CMakeFiles/livox_ros_driver2__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_c.c.o[0m
+[0.886s] [ 70%] [32m[1mLinking C shared library rosidl_generator_py/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[0.912s] [ 71%] [32m[1mLinking C shared library rosidl_generator_py/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[0.930s] [ 73%] [32m[1mLinking C shared library rosidl_generator_py/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[0.950s] [ 73%] Built target livox_ros_driver2__rosidl_typesupport_introspection_c__pyext
+[0.963s] [ 73%] Built target livox_ros_driver2__rosidl_typesupport_c__pyext
+[0.984s] [ 73%] Built target livox_ros_driver2__rosidl_typesupport_fastrtps_c__pyext
+[1.938s] [100%] Built target livox_ros_driver2
+[1.962s] Invoked command in '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/livox_ros_driver2 -- -j8 -l8
+[1.968s] Invoking command in '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/livox_ros_driver2
+[1.978s] -- Install configuration: ""
+[1.978s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/rosidl_interfaces/livox_ros_driver2
+[1.979s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2
+[1.979s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg
+[1.979s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail
+[1.979s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__functions.h
+[1.979s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__struct.h
+[1.979s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__functions.c
+[1.979s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.h
+[1.979s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__struct.h
+[1.980s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.h
+[1.980s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__functions.h
+[1.980s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__functions.c
+[1.980s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_point.h
+[1.980s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_generator_c__visibility_control.h
+[1.980s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_msg.h
+[1.980s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.sh
+[1.981s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/library_path.dsv
+[1.981s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_generator_c.so
+[1.981s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2
+[1.982s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg
+[1.982s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail
+[1.982s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_c.h
+[1.982s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_c.h
+[1.982s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[1.983s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_c.so
+[1.983s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2
+[1.983s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg
+[1.987s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[1.987s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail
+[1.987s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.c
+[1.987s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_c.h
+[1.987s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.c
+[1.987s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_c.h
+[1.987s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_c.so
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_c.so
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_generator_cpp__visibility_control.hpp
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_point.hpp
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.hpp
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__traits.hpp
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__traits.hpp
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__builder.hpp
+[1.988s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__builder.hpp
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.hpp
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__struct.hpp
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__struct.hpp
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/custom_msg.hpp
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_fastrtps_cpp.hpp
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/dds_fastrtps
+[1.989s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_fastrtps_cpp.so
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__rosidl_typesupport_introspection_cpp.hpp
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__rosidl_typesupport_introspection_cpp.hpp
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_point__type_support.cpp
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/include/livox_ros_driver2/livox_ros_driver2/msg/detail/custom_msg__type_support.cpp
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_introspection_cpp.so
+[1.990s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2__rosidl_typesupport_cpp.so
+[1.991s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.sh
+[1.991s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/pythonpath.dsv
+[1.991s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info
+[1.991s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/SOURCES.txt
+[1.991s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/top_level.txt
+[1.991s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/dependency_links.txt
+[1.991s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2-1.0.0-py3.10.egg-info/PKG-INFO
+[1.991s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2
+[1.991s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/__init__.py
+[1.991s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_fastrtps_c.c
+[1.991s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[1.992s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_introspection_c.c
+[1.992s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[1.992s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/_livox_ros_driver2_s.ep.rosidl_typesupport_c.c
+[1.992s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[1.992s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/liblivox_interfaces2__rosidl_generator_py.so
+[1.992s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg
+[1.992s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/__init__.py
+[1.992s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg.py
+[1.992s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point_s.c
+[1.992s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_point.py
+[1.992s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg/_custom_msg_s.c
+[2.037s] Listing '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2'...
+[2.037s] Listing '/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/msg'...
+[2.045s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.046s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.046s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.047s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.047s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.048s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.048s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_interfaces2__rosidl_generator_py.so
+[2.049s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_interfaces2__rosidl_generator_py.so" to ""
+[2.049s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.idl
+[2.049s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.idl
+[2.049s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.msg
+[2.049s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.msg
+[2.049s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node
+[2.050s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/livox_ros_driver2/livox_ros_driver2_node" to ""
+[2.050s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2.so
+[2.055s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_ros_driver2.so" to ""
+[2.055s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config
+[2.055s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/MID360_config.json
+[2.055s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/mixed_HAP_MID360_config.json
+[2.055s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS1.rviz
+[2.055s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/HAP_config.json
+[2.056s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/config/display_point_cloud_ROS2.rviz
+[2.056s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2
+[2.056s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_HAP_launch.py
+[2.056s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/msg_MID360_launch.py
+[2.056s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_MID360_launch.py
+[2.056s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_mixed.py
+[2.056s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/launch_ROS2/rviz_HAP_launch.py
+[2.056s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/package_run_dependencies/livox_ros_driver2
+[2.057s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/parent_prefix_path/livox_ros_driver2
+[2.057s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.sh
+[2.057s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/ament_prefix_path.dsv
+[2.057s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.sh
+[2.057s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/environment/path.dsv
+[2.057s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.bash
+[2.058s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.sh
+[2.058s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.zsh
+[2.058s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.dsv
+[2.058s] -- Installing: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv
+[2.058s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/packages/livox_ros_driver2
+[2.058s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport.cmake
+[2.058s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport-noconfig.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cExport-noconfig.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cppExport.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[2.059s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport-noconfig.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport-noconfig.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake-extras.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_libraries-extras.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_targets-extras.cmake
+[2.060s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.061s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.061s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config.cmake
+[2.061s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_ros_driver2Config-version.cmake
+[2.062s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.xml
+[2.063s] Invoked command in '/home/xkai/agribot/agribot_ws/build/livox_ros_driver2' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/livox_ros_driver2

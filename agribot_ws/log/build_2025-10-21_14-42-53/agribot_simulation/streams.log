@@ -1,0 +1,102 @@
+[0.015s] Invoking command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/agribot_simulation -- -j8 -l8
+[0.035s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.156s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.165s] -- Found ament_lint_auto: 0.12.14 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[0.237s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.238s] -- Added test 'lint_cmake' to check CMake code style
+[0.238s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.242s] -- Added test 'xmllint' to check XML markup files
+[0.243s] -- Configuring done
+[0.245s] -- Generating done
+[0.247s] -- Build files have been written to: /home/xkai/agribot/agribot_ws/build/agribot_simulation
+[0.266s] Invoked command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/agribot_simulation -- -j8 -l8
+[0.274s] Invoking command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/agribot_simulation
+[0.281s] -- Install configuration: ""
+[0.281s] -- Execute custom install script
+[0.282s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/launch/display_robot.launch.py
+[0.282s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/launch/gazebo_sim.launch.py
+[0.283s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.gazebo.xacro
+[0.283s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.ros2_control.xacro
+[0.283s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.urdf.xacro
+[0.283s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/mini_4wd_robot.urdf
+[0.283s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/mini_4wd_robot.urdf.xacro
+[0.283s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/plugins/gazebo_control_plugin.xacro
+[0.284s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/plugins/gazebo_sensor_plugin.xacro
+[0.284s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/sensors/imu.urdf.xacro
+[0.284s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/first_robot.urdf
+[0.284s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/bases/burger_base.stl
+[0.284s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/bases/waffle_base.stl
+[0.284s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/bases/waffle_pi_base.stl
+[0.284s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/base_link.STL
+[0.285s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/camera_link.STL
+[0.285s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/controller_link.STL
+[0.285s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/laser.STL
+[0.285s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/lb_wheel_link.STL
+[0.285s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/lf_wheel_link.STL
+[0.285s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/rb_wheel_link.STL
+[0.286s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/mini_4wd_robot_meshes/rf_wheel_link.STL
+[0.286s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/astra.dae
+[0.286s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/astra.jpg
+[0.286s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/lds.stl
+[0.286s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/r200.dae
+[0.287s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/r200.jpg
+[0.287s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/wheels/left_tire.stl
+[0.287s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/wheels/right_tire.stl
+[0.287s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/brushless_senior_diff.urdf
+[0.287s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_4wd_bs_robot.urdf
+[0.287s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_4wd_dl_robot.urdf
+[0.287s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_four_wheel_diff_bs_robot.urdf
+[0.287s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_four_wheel_diff_dl_robot.urdf
+[0.288s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_mec_bs_robot.urdf
+[0.288s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_mec_dl_robot.urdf
+[0.288s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/four_wheel_diff_bs_robot.urdf
+[0.288s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/four_wheel_diff_dl_robot.urdf
+[0.288s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mec_EightDrive_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_4wd_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_akm_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_diff_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_mec_moveit.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_mec_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_omni_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/mini_tank_moveit.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_4wd_bs_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_4wd_dl_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_akm_robot.urdf
+[0.289s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_diff_robot.urdf
+[0.290s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_mec_dl_robot.urdf
+[0.290s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_mec_robot.urdf
+[0.290s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/senior_omni_robot.urdf
+[0.290s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_4wd_bs_robot.urdf
+[0.290s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_4wd_dl_robot.urdf
+[0.290s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_akm_bs_robot.urdf
+[0.290s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_akm_dl_robot.urdf
+[0.291s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_mec_bs_robot.urdf
+[0.291s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_mec_dl_robot.urdf
+[0.291s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_omni_robot.urdf
+[0.291s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/agribot_ros2_controller.yaml
+[0.291s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/diaplay_robot_model.rviz
+[0.292s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/agri_room.world
+[0.292s] -- Symlinking: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/corn_leaf_world.world
+[0.299s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens.world
+[0.300s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens_angular.world
+[0.300s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens_angular2.world
+[0.300s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/custom_room.world
+[0.300s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/new.world
+[0.300s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/room/model.config
+[0.300s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/room/model.sdf
+[0.301s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/ament_index/resource_index/package_run_dependencies/agribot_simulation
+[0.301s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/ament_index/resource_index/parent_prefix_path/agribot_simulation
+[0.301s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/ament_prefix_path.sh
+[0.301s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/ament_prefix_path.dsv
+[0.301s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/path.sh
+[0.301s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/path.dsv
+[0.302s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/local_setup.bash
+[0.302s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/local_setup.sh
+[0.302s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/local_setup.zsh
+[0.302s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/local_setup.dsv
+[0.303s] -- Symlinking: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.dsv
+[0.311s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/ament_index/resource_index/packages/agribot_simulation
+[0.311s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/cmake/agribot_simulationConfig.cmake
+[0.311s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/cmake/agribot_simulationConfig-version.cmake
+[0.311s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/package.xml
+[0.313s] Invoked command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/agribot_simulation

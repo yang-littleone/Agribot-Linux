@@ -104,8 +104,7 @@ class CustomMsg(metaclass=Metaclass_CustomMsg):
         if 'rsvd' not in kwargs:
             self.rsvd = numpy.zeros(3, dtype=numpy.uint8)
         else:
-            self.rsvd = numpy.array(kwargs.get('rsvd'), dtype=numpy.uint8)
-            assert self.rsvd.shape == (3, )
+            self.rsvd = kwargs.get('rsvd')
         self.points = kwargs.get('points', [])
 
     def __repr__(self):

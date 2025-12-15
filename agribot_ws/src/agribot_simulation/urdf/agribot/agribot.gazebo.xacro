@@ -10,36 +10,36 @@
     </gazebo>
 
     <gazebo reference="lf_wheel_link">
-        <mu1>1</mu1>
-        <mu2>1</mu2>
-        <kp>100000.0</kp>
+        <mu1>10</mu1>
+        <mu2>10</mu2>
+        <kp>100000000.0</kp>
         <kd>1.0</kd>
         <minDepth>0.001</minDepth>
         <maxVel>1.0</maxVel>
     </gazebo>
 
     <gazebo reference="rf_wheel_link">
-        <mu1>1</mu1>
-        <mu2>1</mu2>
-        <kp>100000.0</kp>
+        <mu1>10</mu1>
+        <mu2>10</mu2>
+        <kp>100000000.0</kp>
         <kd>1.0</kd>
         <minDepth>0.001</minDepth>
         <maxVel>1.0</maxVel>
     </gazebo>
 
     <gazebo reference="lb_wheel_link">
-        <mu1>1</mu1>
-        <mu2>1</mu2>
-        <kp>100000.0</kp>
+        <mu1>10</mu1>
+        <mu2>10</mu2>
+        <kp>100000000.0</kp>
         <kd>1.0</kd>
         <minDepth>0.001</minDepth>
         <maxVel>1.0</maxVel>
     </gazebo>
 
     <gazebo reference="rb_wheel_link">
-        <mu1>1</mu1>
-        <mu2>1</mu2>
-        <kp>100000.0</kp>
+        <mu1>10</mu1>
+        <mu2>10</mu2>
+        <kp>100000000.0</kp>
         <kd>1.0</kd>
         <minDepth>0.001</minDepth>
         <maxVel>1.0</maxVel>
