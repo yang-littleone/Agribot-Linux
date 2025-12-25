@@ -34,6 +34,13 @@ private:
     float z_max_ = 0.5;
     float voxel_size_ = 0.02;
 
+    // 多行场景下选择最内侧行的参数
+    float lateral_cluster_eps_ = 0.2; // 横向聚类阈值（米）
+    int min_cluster_size_ = 10;       // 单个簇的最小点数
+    // 自适应阈值参数：若启用，将根据点列间距的中位 gap 自适应分簇
+    bool adaptive_lateral_threshold_ = false; // 是否启用自适应阈值（median-gap）
+    float gap_multiplier_ = 2.0;              // 中位 gap 的乘数，作为分割阈值的放大因子
+
     // 平滑处理参数
     int time_window_size_ = 5;          // time window size
     float spatial_smooth_weight_ = 0.7; // spatial smooth weight
@@ -58,6 +65,9 @@ private:
 
     // split point cloud to left and right rows
     std::pair<PointCloudXYZPtr, PointCloudXYZPtr> split_left_right_rows(PointCloudXYZPtr input_cloud);
+
+    // extract innermost row from side cloud (when multiple parallel rows exist)
+    PointCloudXYZPtr extract_innermost_row(PointCloudXYZPtr cloud, bool left);
 
     // fit line for point cloud
     std::pair<float, float> fit_line(PointCloudXYZPtr cloud);

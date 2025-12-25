@@ -9,6 +9,8 @@
 #include <tf2/LinearMath/Quaternion.h>
 #include <cmath>
 #include <numeric>
+#include <vector>
+#include <algorithm>
 #include <tf2/LinearMath/Quaternion.h>
 #include "centerline_extraction/corn_row_detector_projection.hpp"
 
@@ -39,6 +41,10 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     this->declare_parameter<int>("time_window_size", 5);
     this->declare_parameter<float>("spatial_smooth_weight", 0.7);
     this->declare_parameter<float>("outlier_threshold", 2.0);
+    this->declare_parameter<float>("lateral_cluster_eps", 0.1);
+    this->declare_parameter<int>("min_cluster_size", 10);
+    this->declare_parameter<bool>("adaptive_lateral_threshold", false);
+    this->declare_parameter<float>("gap_multiplier", 2.0);
 
     // get parameters
     this->get_parameter("z_min", z_min_);
@@ -47,6 +53,10 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     this->get_parameter("time_window_size", time_window_size_);
     this->get_parameter("spatial_smooth_weight", spatial_smooth_weight_);
     this->get_parameter("outlier_threshold", outlier_threshold_);
+    this->get_parameter("lateral_cluster_eps", lateral_cluster_eps_);
+    this->get_parameter("min_cluster_size", min_cluster_size_);
+    this->get_parameter("adaptive_lateral_threshold", adaptive_lateral_threshold_);
+    this->get_parameter("gap_multiplier", gap_multiplier_);
 }
 
 void CornRowDetectorProjection::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
@@ -71,20 +81,36 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     // split point cloud to left and right rows
     auto [left_row_cloud, right_row_cloud] = this->split_left_right_rows(projection_cloud);
 
+    // 从每侧点集合中提取最内侧一行（用于多行场景）
+    PointCloudXYZPtr left_inner = this->extract_innermost_row(left_row_cloud, true);
+    PointCloudXYZPtr right_inner = this->extract_innermost_row(right_row_cloud, false);
+
+    // 如果提取后点数过少，则回退为使用整侧点（保守策略）
+    if (left_inner->size() < static_cast<size_t>(min_cluster_size_))
+    {
+        RCLCPP_WARN(this->get_logger(), "Left inner cluster too small (%ld), falling back to full left cloud", left_inner->size());
+        left_inner = left_row_cloud;
+    }
+    if (right_inner->size() < static_cast<size_t>(min_cluster_size_))
+    {
+        RCLCPP_WARN(this->get_logger(), "Right inner cluster too small (%ld), falling back to full right cloud", right_inner->size());
+        right_inner = right_row_cloud;
+    }
+
     // Check if we have enough points to generate a meaningful center line
     // Only proceed if both sides have sufficient points
-    if (left_row_cloud->size() < 10 || right_row_cloud->size() < 10)
+    if (left_inner->size() < static_cast<size_t>(min_cluster_size_) || right_inner->size() < static_cast<size_t>(min_cluster_size_))
     {
         RCLCPP_WARN(this->get_logger(), "Insufficient points for center line generation. Left points: %ld, Right points: %ld",
-                    left_row_cloud->size(), right_row_cloud->size());
+                    left_inner->size(), right_inner->size());
         // 发布空路径以清空显示
         publish_empty_path(msg->header);
         return;
     }
 
-    // Check if there are plants in front of the robot (x > 0.5)
+    // Check if there are plants in front of the robot (x > 0.5) using the inner rows
     bool has_plants_ahead = false;
-    for (const auto &point : left_row_cloud->points)
+    for (const auto &point : left_inner->points)
     {
         if (point.x > 0.5)
         { // At least 0.5 meters ahead
@@ -95,7 +121,7 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
 
     if (!has_plants_ahead)
     {
-        for (const auto &point : right_row_cloud->points)
+        for (const auto &point : right_inner->points)
         {
             if (point.x > 0.5)
             { // At least 0.5 meters ahead
@@ -108,15 +134,15 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     if (!has_plants_ahead)
     {
         RCLCPP_WARN(this->get_logger(), "No plants detected ahead of the robot. Left points: %ld, Right points: %ld",
-                    left_row_cloud->size(), right_row_cloud->size());
+                    left_inner->size(), right_inner->size());
         // 发布空路径以清空显示
         publish_empty_path(msg->header);
         return;
     }
 
-    // fit lines for both rows
-    auto [left_slope, left_intercept] = this->fit_line(left_row_cloud);
-    auto [right_slope, right_intercept] = this->fit_line(right_row_cloud);
+    // fit lines for both inner rows
+    auto [left_slope, left_intercept] = this->fit_line(left_inner);
+    auto [right_slope, right_intercept] = this->fit_line(right_inner);
 
     // Check if the lines are reasonable (not too steep)
     if (std::abs(left_slope) > 5.0 || std::abs(right_slope) > 5.0)
@@ -151,10 +177,10 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     pcl::toROSMsg(*projection_cloud, output_cloud);
 
     sensor_msgs::msg::PointCloud2 left_output;
-    pcl::toROSMsg(*left_row_cloud, left_output);
+    pcl::toROSMsg(*left_inner, left_output);
 
     sensor_msgs::msg::PointCloud2 right_output;
-    pcl::toROSMsg(*right_row_cloud, right_output);
+    pcl::toROSMsg(*right_inner, right_output);
 
     // publish point clouds
     output_cloud.header = msg->header;
@@ -167,7 +193,7 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     center_line_pub_->publish(smoothed_path);
 
     RCLCPP_INFO(this->get_logger(), "Published center line. Left points: %ld, Right points: %ld, Row separation: %.2f",
-                left_row_cloud->size(), right_row_cloud->size(), row_separation);
+                left_inner->size(), right_inner->size(), row_separation);
 }
 
 // this function will filter and downsample the point cloud
@@ -295,6 +321,211 @@ std::pair<PointCloudXYZPtr, PointCloudXYZPtr> CornRowDetectorProjection::split_l
     right_cloud->is_dense = true;
 
     return std::make_pair(left_cloud, right_cloud);
+}
+
+PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZPtr cloud, bool left)
+{
+    PointCloudXYZPtr result(new PointCloudXYZ());
+    if (cloud->empty())
+    {
+        return result;
+    }
+
+    // Debug: log invocation details
+    RCLCPP_INFO(this->get_logger(), "extract_innermost_row called: side=%s, cloud_size=%zu, lateral_cluster_eps=%.3f, min_cluster_size=%d",
+                left ? "left" : "right", cloud->size(), lateral_cluster_eps_, min_cluster_size_);
+
+    // Collect (y, index) pairs and sort by y
+    std::vector<std::pair<float, size_t>> y_idx;
+    y_idx.reserve(cloud->points.size());
+    for (size_t i = 0; i < cloud->points.size(); ++i)
+    {
+        y_idx.emplace_back(cloud->points[i].y, i);
+    }
+    std::sort(y_idx.begin(), y_idx.end(), [](const auto &a, const auto &b)
+              { return a.first < b.first; });
+
+    // 1D clustering on y coordinate
+    std::vector<std::vector<size_t>> clusters;
+
+    if (adaptive_lateral_threshold_ && y_idx.size() > 1)
+    {
+        // compute gaps between adjacent y
+        std::vector<float> gaps;
+        gaps.reserve(y_idx.size() - 1);
+        for (size_t i = 1; i < y_idx.size(); ++i)
+            gaps.push_back(y_idx[i].first - y_idx[i - 1].first);
+
+        // compute median gap
+        std::vector<float> gaps_sorted = gaps;
+        std::sort(gaps_sorted.begin(), gaps_sorted.end());
+        float median_gap = 0.0f;
+        if (!gaps_sorted.empty())
+        {
+            size_t m = gaps_sorted.size();
+            if (m % 2 == 1)
+                median_gap = gaps_sorted[m / 2];
+            else
+                median_gap = 0.5f * (gaps_sorted[m / 2 - 1] + gaps_sorted[m / 2]);
+        }
+
+        float threshold = std::max(median_gap * gap_multiplier_, lateral_cluster_eps_);
+        RCLCPP_INFO(this->get_logger(), "Adaptive clustering enabled: median_gap=%.4f, gap_multiplier=%.2f, threshold=%.4f", median_gap, gap_multiplier_, threshold);
+
+        // form clusters by splitting at gaps > threshold
+        clusters.emplace_back();
+        clusters.back().push_back(y_idx[0].second);
+        for (size_t i = 1; i < y_idx.size(); ++i)
+        {
+            float gap = y_idx[i].first - y_idx[i - 1].first;
+            if (gap <= threshold)
+            {
+                clusters.back().push_back(y_idx[i].second);
+            }
+            else
+            {
+                clusters.emplace_back();
+                clusters.back().push_back(y_idx[i].second);
+                RCLCPP_DEBUG(this->get_logger(), "Split cluster at index %zu (gap=%.4f > threshold=%.4f)", i, gap, threshold);
+            }
+        }
+    }
+    else
+    {
+        clusters.emplace_back();
+        clusters.back().push_back(y_idx[0].second);
+        for (size_t i = 1; i < y_idx.size(); ++i)
+        {
+            if (std::abs(y_idx[i].first - y_idx[i - 1].first) <= lateral_cluster_eps_)
+            {
+                clusters.back().push_back(y_idx[i].second);
+            }
+            else
+            {
+                clusters.emplace_back();
+                clusters.back().push_back(y_idx[i].second);
+            }
+        }
+        RCLCPP_INFO(this->get_logger(), "Fixed-eps clustering used (eps=%.4f)", lateral_cluster_eps_);
+    }
+
+    // Debug: log cluster count and per-cluster stats
+    RCLCPP_INFO(this->get_logger(), "Found %zu clusters on side=%s", clusters.size(), left ? "left" : "right");
+    for (size_t ci = 0; ci < clusters.size(); ++ci)
+    {
+        float sum_y = 0.0f;
+        for (auto idx : clusters[ci])
+            sum_y += cloud->points[idx].y;
+        float mean_y = sum_y / clusters[ci].size();
+        RCLCPP_INFO(this->get_logger(), "  Cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+    }
+
+    // Choose the cluster that is closest to the robot centerline (innermost)
+    int best_cluster_idx = -1;
+    float best_metric = 0.0f; // for left: smaller mean_y is better; for right: larger mean_y (less negative) is better
+
+    for (size_t ci = 0; ci < clusters.size(); ++ci)
+    {
+        float sum_y = 0.0f;
+        for (auto idx : clusters[ci])
+            sum_y += cloud->points[idx].y;
+        float mean_y = sum_y / clusters[ci].size();
+
+        // ignore clusters that are too small
+        if (clusters[ci].size() < static_cast<size_t>(min_cluster_size_))
+            continue;
+
+        if (left)
+        {
+            if (mean_y <= 0)
+                continue;
+            if (best_cluster_idx == -1 || mean_y < best_metric)
+            {
+                best_metric = mean_y;
+                best_cluster_idx = ci;
+                RCLCPP_INFO(this->get_logger(), "Considered cluster %zu as current best (left): size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+            }
+        }
+        else
+        {
+            if (mean_y >= 0)
+                continue;
+            if (best_cluster_idx == -1 || mean_y > best_metric)
+            {
+                best_metric = mean_y;
+                best_cluster_idx = ci;
+                RCLCPP_INFO(this->get_logger(), "Considered cluster %zu as current best (right): size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+            }
+        }
+    }
+
+    // Fallback: if no cluster meets min size requirement, pick cluster closest to zero with correct sign
+    if (best_cluster_idx == -1)
+    {
+        float best_dist = 1e6;
+        for (size_t ci = 0; ci < clusters.size(); ++ci)
+        {
+            float sum_y = 0.0f;
+            for (auto idx : clusters[ci])
+                sum_y += cloud->points[idx].y;
+            float mean_y = sum_y / clusters[ci].size();
+
+            if (left && mean_y <= 0)
+                continue;
+            if (!left && mean_y >= 0)
+                continue;
+
+            float dist = std::abs(mean_y);
+            if (dist < best_dist)
+            {
+                best_dist = dist;
+                best_cluster_idx = ci;
+                RCLCPP_INFO(this->get_logger(), "Fallback1 selected cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+            }
+        }
+    }
+
+    // Final fallback: any cluster closest to zero (ignore sign) if still not found
+    if (best_cluster_idx == -1)
+    {
+        float best_dist = 1e6;
+        for (size_t ci = 0; ci < clusters.size(); ++ci)
+        {
+            float sum_y = 0.0f;
+            for (auto idx : clusters[ci])
+                sum_y += cloud->points[idx].y;
+            float mean_y = sum_y / clusters[ci].size();
+            float dist = std::abs(mean_y);
+            if (dist < best_dist)
+            {
+                best_dist = dist;
+                best_cluster_idx = ci;
+                RCLCPP_INFO(this->get_logger(), "Final fallback selected cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+            }
+        }
+    }
+
+    if (best_cluster_idx >= 0)
+    {
+        for (auto idx : clusters[best_cluster_idx])
+            result->points.push_back(cloud->points[idx]);
+
+        // Log final selection
+        float sum_y = 0.0f;
+        for (auto idx : clusters[best_cluster_idx])
+            sum_y += cloud->points[idx].y;
+        float mean_y = sum_y / clusters[best_cluster_idx].size();
+        RCLCPP_INFO(this->get_logger(), "Selected cluster %d: size=%zu, mean_y=%.3f", best_cluster_idx, clusters[best_cluster_idx].size(), mean_y);
+    }
+    else
+    {
+        RCLCPP_WARN(this->get_logger(), "No suitable cluster found on side=%s; returning empty result", left ? "left" : "right");
+    }
+
+    result->width = result->points.size();
+    result->height = 1;
+    result->is_dense = true;
+    return result;
 }
 
 std::pair<float, float> CornRowDetectorProjection::fit_line(PointCloudXYZPtr cloud)
