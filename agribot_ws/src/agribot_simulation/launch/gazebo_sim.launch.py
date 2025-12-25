@@ -10,7 +10,7 @@ from ament_index_python.packages import get_package_prefix
 def generate_launch_description():
     # 获取默认的urdf路径
     urdf_package_share_path = get_package_share_directory('agribot_simulation')
-    default_gazebo_world_path = os.path.join(urdf_package_share_path, 'world','new.world')
+    default_gazebo_world_path = os.path.join(urdf_package_share_path, 'world','twoworld.world')
     # 获取默认的rviz配置文件路径
     # default_rviz_config_path = os.path.join(urdf_package_share_path, 'config','xkaibot_model.rviz')
     default_urdf_path = os.path.join(urdf_package_share_path, 'urdf','agribot/agribot.urdf.xacro')

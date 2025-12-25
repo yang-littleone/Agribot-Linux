@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target corn_row_detector_projection[0m
+[  8%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m
+[ 25%] Built target pcl_learning
+[ 41%] Built target centerline_extract
+[ 91%] Built target cornfield_navigation_node
+[100%] [32m[1mLinking CXX executable corn_row_detector_projection[0m
+[100%] Built target corn_row_detector_projection
+-- Install configuration: ""
+-- Installing: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/corn_row_detector_projection
+-- Set runtime path of "/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/corn_row_detector_projection" to ""
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector_projection.hpp
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pid_controller.hpp
+-- Installing: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.dsv

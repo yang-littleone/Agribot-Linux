@@ -1,0 +1,14 @@
+digraph G {
+"odom" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 50.862\nBuffer length: 1.16\nMost recent transform: 639.906\nOldest transform: 638.746\n"];
+"base_link" -> "controller_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "imu_link"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "livox"[label=" Broadcaster: default_authority\nAverage rate: 10000.0\nBuffer length: 0.0\nMost recent transform: 0.0\nOldest transform: 0.0\n"];
+"base_link" -> "lb_wheel_link"[label=" Broadcaster: default_authority\nAverage rate: 20.909\nBuffer length: 1.1\nMost recent transform: 639.866\nOldest transform: 638.766\n"];
+"base_link" -> "lf_wheel_link"[label=" Broadcaster: default_authority\nAverage rate: 20.909\nBuffer length: 1.1\nMost recent transform: 639.866\nOldest transform: 638.766\n"];
+"base_link" -> "rb_wheel_link"[label=" Broadcaster: default_authority\nAverage rate: 20.909\nBuffer length: 1.1\nMost recent transform: 639.866\nOldest transform: 638.766\n"];
+"base_link" -> "rf_wheel_link"[label=" Broadcaster: default_authority\nAverage rate: 20.909\nBuffer length: 1.1\nMost recent transform: 639.866\nOldest transform: 638.766\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1766199298.9224296"[ shape=plaintext ] ;
+}->"odom";
+}

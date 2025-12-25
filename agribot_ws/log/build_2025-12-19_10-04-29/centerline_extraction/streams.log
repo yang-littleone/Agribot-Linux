@@ -1,0 +1,18 @@
+[0.060s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.207s] [35m[1mConsolidate compiler generated dependencies of target corn_row_detector_projection[0m
+[0.274s] [  8%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m
+[0.279s] [ 25%] Built target pcl_learning
+[0.288s] [ 41%] Built target centerline_extract
+[0.297s] [ 91%] Built target cornfield_navigation_node
+[6.961s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:[m[K In member function ‘[01m[Knav_msgs::msg::Path CornRowDetectorProjection::create_path(float, float, const Header&)[m[K’:
+[6.961s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:356:19:[m[K [01;31m[Kerror: [m[K‘[01m[Kceneterline_length_[m[K’ was not declared in this scope
+[6.961s]   356 |     float x_end = [01;31m[Kceneterline_length_[m[K;
+[6.961s]       |                   [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[6.970s] [01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:358:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kpath_step_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpath_history_[m[K’?
+[6.970s]   358 |     for (float x = x_start; x <= x_end; x += [01;31m[Kpath_step_[m[K) {
+[6.970s]       |                                              [01;31m[K^~~~~~~~~~[m[K
+[6.970s]       |                                              [32m[Kpath_history_[m[K
+[10.625s] gmake[2]: *** [CMakeFiles/corn_row_detector_projection.dir/build.make:76：CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o] 错误 1
+[10.625s] gmake[1]: *** [CMakeFiles/Makefile2:195：CMakeFiles/corn_row_detector_projection.dir/all] 错误 2
+[10.625s] gmake: *** [Makefile:146：all] 错误 2
+[10.627s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8

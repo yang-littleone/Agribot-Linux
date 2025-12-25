@@ -30,12 +30,12 @@ PIDController::PIDController() : Node("pid_controller"), has_center_line_(false)
     this->declare_parameter("max_angular_speed", 1.5); // 最大角速度（弧度/秒）
 
     // 横向PID参数
-    this->declare_parameter("lateral_kp", 1.0); // 比例系数
+    this->declare_parameter("lateral_kp", 50.0); // 比例系数
     this->declare_parameter("lateral_ki", 0.0); // 积分系数
     this->declare_parameter("lateral_kd", 0.1); // 微分系数
 
     // 航向PID参数
-    this->declare_parameter("heading_kp", 1.0); // 比例系数
+    this->declare_parameter("heading_kp", 50.0); // 比例系数
     this->declare_parameter("heading_ki", 0.0); // 积分系数
     this->declare_parameter("heading_kd", 0.1); // 微分系数
 

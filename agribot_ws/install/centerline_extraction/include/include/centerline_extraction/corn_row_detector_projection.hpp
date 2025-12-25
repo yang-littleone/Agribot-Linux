@@ -38,7 +38,8 @@ private:
     int time_window_size_ = 5;          // time window size
     float spatial_smooth_weight_ = 0.7; // spatial smooth weight
     float outlier_threshold_ = 2.0;     // outlier threshold
-
+    float ceneterline_length_;
+    float path_step_;
     // record path history
     std::deque<nav_msgs::msg::Path> path_history_;
 

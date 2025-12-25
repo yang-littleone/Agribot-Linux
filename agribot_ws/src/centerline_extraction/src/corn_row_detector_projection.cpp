@@ -199,6 +199,13 @@ PointCloudXYZPtr CornRowDetectorProjection::preprocess_point_cloud(PointCloudXYZ
     pass_y.setFilterLimits(-1.0f, 1.0f);
     pass_y.filter(*filter_cloud);
 
+    // x filter
+    pcl::PassThrough<pcl::PointXYZ> pass_x;
+    pass_x.setInputCloud(filter_cloud);
+    pass_x.setFilterFieldName("x");
+    pass_x.setFilterLimits(0.0f, 2.0f);
+    pass_x.filter(*filter_cloud);
+
     // voxel grid
     // RCLCPP_INFO(this->get_logger(), "Voxel grid");
     pcl::VoxelGrid<pcl::PointXYZ> voxel_grid;
@@ -338,9 +345,35 @@ nav_msgs::msg::Path CornRowDetectorProjection::create_path(float slope, float in
     nav_msgs::msg::Path path_odom; // 存储odom坐标系下的路径（用于控制逻辑）
     path_odom.header = header;     // 原header（如odom坐标系）
 
-    // 1. 生成odom坐标系下的动态路径（当前x到x+5米，同之前的逻辑）
-    float x_start = robot_current_x_;
-    float x_end = robot_current_x_ + 4.0;
+    // 1. 生成odom坐标系下的动态路径（当前x到x+2米，同之前的逻辑）
+    float x_start;
+    float x_end;
+
+    // 在create_path函数中使用TF获取更精确的位置信息
+    try
+    {
+        geometry_msgs::msg::TransformStamped transform = tf_buffer_->lookupTransform(
+            "odom", "base_link", tf2::TimePointZero);
+        x_start = transform.transform.translation.x;
+        x_end = x_start + 2.0;
+        RCLCPP_INFO(this->get_logger(), "TF lookup successful: x_start=%.2f, x_end=%.2f", x_start, x_end);
+    }
+    catch (tf2::TransformException &ex)
+    {
+        // 如果TF获取失败，回退到使用odom数据
+        x_start = robot_current_x_;
+        x_end = robot_current_x_ + 2.0;
+    }
+
+    if (x_end <= x_start)
+    {
+        RCLCPP_WARN(this->get_logger(), "Invalid path range: x_start=%.2f, x_end=%.2f", x_start, x_end);
+        return path_odom;
+    }
+
+    // 计算路径方向角
+    float yaw = std::atan2(slope, 1.0); // 斜率对应的角度
+
     for (float x = x_start; x <= x_end; x += 0.1)
     {
         geometry_msgs::msg::PoseStamped pose_odom;
@@ -348,7 +381,12 @@ nav_msgs::msg::Path CornRowDetectorProjection::create_path(float slope, float in
         pose_odom.pose.position.x = x;
         pose_odom.pose.position.y = slope * x + intercept;
         pose_odom.pose.position.z = 0.0;
-        // 计算朝向（略，同之前）
+
+        // 计算朝向
+        tf2::Quaternion q;
+        q.setRPY(0, 0, yaw);
+        pose_odom.pose.orientation = tf2::toMsg(q);
+
         path_odom.poses.push_back(pose_odom);
     }
 
@@ -356,14 +394,18 @@ nav_msgs::msg::Path CornRowDetectorProjection::create_path(float slope, float in
     nav_msgs::msg::Path path_base_link;
     path_base_link.header.frame_id = "base_link"; // 小车本体坐标系
     // path_base_link.header.stamp = this->now();
-    path_base_link.header.stamp = path_odom.header.stamp;
-
+    // path_base_link.header.stamp = path_odom.header.stamp;
+    // 应该使用当前时间或明确的时间戳
+    path_base_link.header.stamp = this->now();
     try
     {
-        // 获取odom到base_link的变换（小车在odom中的位姿）
+        // // 获取odom到base_link的变换（小车在odom中的位姿）
+        // geometry_msgs::msg::TransformStamped transform = tf_buffer_->lookupTransform(
+        //     "base_link", "odom", tf2::TimePointZero); // 从odom到base_link
+        // 使用与路径消息相同的时间戳进行变换查找
+        rclcpp::Time path_time(header.stamp.sec, header.stamp.nanosec);
         geometry_msgs::msg::TransformStamped transform = tf_buffer_->lookupTransform(
-            "base_link", "odom", tf2::TimePointZero); // 从odom到base_link
-
+            "base_link", header.frame_id, path_time);
         for (const auto &pose_odom : path_odom.poses)
         {
             geometry_msgs::msg::PoseStamped pose_base_link;
