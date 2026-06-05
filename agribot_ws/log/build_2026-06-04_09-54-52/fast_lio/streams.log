@@ -1,0 +1,256 @@
+[0.049s] Invoking command in '/home/xkai/agribot/agribot_ws/build/fast_lio': CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/simple_diff_test:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/fast_lio:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/home/xkai/agribot/agribot_ws/install/fast_lio/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/fast_lio -- -j8 -l8
+[0.127s] [0mCurrent CPU archtecture: x86_64[0m
+[0.145s] [0mProcesser number:  8[0m
+[0.145s] [0mcore for MP: 3[0m
+[0.158s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found version "3.10.12") 
+[0.166s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.487s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.503s] -- Found rclcpp: 16.0.19 (/opt/ros/humble/share/rclcpp/cmake)
+[0.574s] -- Found rosidl_generator_c: 3.1.8 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.583s] -- Found rosidl_adapter: 3.1.8 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.605s] -- Found rosidl_generator_cpp: 3.1.8 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.634s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.668s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.724s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.728s] -- Found rmw_fastrtps_cpp: 6.2.10 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.921s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.099s] -- Found rclcpp_components: 16.0.19 (/opt/ros/humble/share/rclcpp_components/cmake)
+[1.166s] -- Found geometry_msgs: 4.9.1 (/opt/ros/humble/share/geometry_msgs/cmake)
+[1.213s] -- Found nav_msgs: 4.9.1 (/opt/ros/humble/share/nav_msgs/cmake)
+[1.272s] -- Found sensor_msgs: 4.9.1 (/opt/ros/humble/share/sensor_msgs/cmake)
+[1.330s] -- Found std_srvs: 4.9.1 (/opt/ros/humble/share/std_srvs/cmake)
+[1.368s] -- Found visualization_msgs: 4.9.1 (/opt/ros/humble/share/visualization_msgs/cmake)
+[1.442s] -- Found pcl_ros: 2.4.5 (/opt/ros/humble/share/pcl_ros/cmake)
+[1.579s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.684s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[2.484s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.497s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.810s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.830s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.852s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[3.250s] -- Found Qhull version 8.0.2
+[3.740s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[4.133s] -- Found eigen3_cmake_module: 0.1.1 (/opt/ros/humble/share/eigen3_cmake_module/cmake)
+[4.138s] -- Ensuring Eigen3 include directory is part of orocos-kdl CMake target
+[4.279s] -- Found livox_ros_driver2: 1.0.0 (/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake)
+[4.336s] -- Found rosidl_default_generators: 1.2.1 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[4.380s] [33mCMake Warning (dev) at CMakeLists.txt:81 (find_package):
+[4.380s]   Policy CMP0074 is not set: find_package uses <PackageName>_ROOT variables.
+[4.380s]   Run "cmake --help-policy CMP0074" for policy details.  Use the cmake_policy
+[4.380s]   command to set the policy and suppress this warning.
+[4.380s] 
+[4.381s]   CMake variable PCL_ROOT is set to:
+[4.381s] 
+[4.381s]     /usr
+[4.381s] 
+[4.381s]   For compatibility, CMake is ignoring the variable.
+[4.381s] This warning is for project developers.  Use -Wno-dev to suppress it.
+[4.381s] [0m
+[4.403s] [0mEigen:/usr/include/eigen3[0m
+[4.403s] -- PCL: /usr/include/pcl-1.12
+[4.921s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[5.536s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[5.762s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[5.829s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[5.900s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[5.902s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[5.902s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[5.902s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[6.088s] -- Configuring done
+[6.291s] -- Generating done
+[6.349s] -- Build files have been written to: /home/xkai/agribot/agribot_ws/build/fast_lio
+[6.432s] [  2%] Built target fast_lio__rs
+[6.475s] [  2%] Built target ament_cmake_python_symlink_fast_lio
+[6.521s] [  5%] Built target fast_lio__cpp
+[7.108s] running egg_info
+[7.108s] writing fast_lio.egg-info/PKG-INFO
+[7.109s] writing dependency_links to fast_lio.egg-info/dependency_links.txt
+[7.109s] writing top-level names to fast_lio.egg-info/top_level.txt
+[7.117s] reading manifest file 'fast_lio.egg-info/SOURCES.txt'
+[7.119s] writing manifest file 'fast_lio.egg-info/SOURCES.txt'
+[7.169s] [  5%] Built target ament_cmake_python_build_fast_lio_egg
+[7.184s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_cpp[0m
+[7.205s] [  8%] [32mBuilding CXX object CMakeFiles/fast_lio__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/fast_lio/msg/pose6_d__type_support.cpp.o[0m
+[7.670s] [ 11%] [32m[1mLinking CXX shared library libfast_lio__rosidl_typesupport_cpp.so[0m
+[7.736s] [ 13%] Built target fast_lio__rosidl_typesupport_cpp
+[7.756s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_introspection_cpp[0m
+[7.771s] [ 16%] [32mBuilding CXX object CMakeFiles/fast_lio__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/fast_lio/msg/detail/pose6_d__type_support.cpp.o[0m
+[8.418s] [ 19%] [32m[1mLinking CXX shared library libfast_lio__rosidl_typesupport_introspection_cpp.so[0m
+[8.475s] [ 22%] Built target fast_lio__rosidl_typesupport_introspection_cpp
+[8.496s] [35m[1mConsolidate compiler generated dependencies of target fastlio_mapping[0m
+[8.550s] [ 25%] [32mBuilding CXX object CMakeFiles/fastlio_mapping.dir/src/laserMapping.cpp.o[0m
+[15.406s] In file included from [01m[K/usr/include/boost/smart_ptr/detail/sp_thread_sleep.hpp:22[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/smart_ptr/detail/yield_k.hpp:23[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/smart_ptr/detail/spinlock_gcc_atomic.hpp:14[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/smart_ptr/detail/spinlock.hpp:42[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/smart_ptr/detail/spinlock_pool.hpp:25[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/smart_ptr/shared_ptr.hpp:29[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/shared_ptr.hpp:17[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/date_time/microsec_time_clock.hpp:18[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/interprocess/detail/posix_time_types_wrk.hpp:31[m[K,
+[15.406s]                  from [01m[K/usr/include/boost/interprocess/detail/os_thread_functions.hpp:36[m[K,
+[15.407s]                  from [01m[K/usr/include/boost/interprocess/sync/file_lock.hpp:26[m[K,
+[15.407s]                  from [01m[K/usr/include/pcl-1.12/pcl/io/pcd_io.h:46[m[K,
+[15.407s]                  from [01m[K/opt/ros/humble/include/pcl_conversions/pcl_conversions/pcl_conversions.h:73[m[K,
+[15.407s]                  from [01m[K/home/xkai/agribot/agribot_ws/src/FAST_LIO/src/IMU_Processing.hpp:18[m[K,
+[15.407s]                  from [01m[K/home/xkai/agribot/agribot_ws/src/FAST_LIO/src/laserMapping.cpp:47[m[K:
+[15.407s] [01m[K/usr/include/boost/bind.hpp:36:1:[m[K [01;36m[Knote: [m[K‘[01m[K#pragma message: The practice of declaring the Bind placeholders (_1, _2, ...) in the global namespace is deprecated. Please use <boost/bind/bind.hpp> + using namespace boost::placeholders, or define BOOST_BIND_GLOBAL_PLACEHOLDERS to retain the current behavior.[m[K’
+[15.407s]    36 | [01;36m[KBOOST_PRAGMA_MESSAGE[m[K(
+[15.407s]       | [01;36m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[77.794s] [ 30%] [32mBuilding CXX object CMakeFiles/fastlio_mapping.dir/src/preprocess.cpp.o[0m
+[77.794s] [ 30%] [32mBuilding CXX object CMakeFiles/fastlio_mapping.dir/include/ikd-Tree/ikd_Tree.cpp.o[0m
+[85.480s] [ 33%] [32m[1mLinking CXX executable fastlio_mapping[0m
+[86.734s] [ 33%] Built target fastlio_mapping
+[86.743s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_generator_c[0m
+[86.750s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_fastrtps_cpp[0m
+[86.752s] [ 36%] [32m[1mLinking C shared library libfast_lio__rosidl_generator_c.so[0m
+[86.763s] [ 38%] [32mBuilding CXX object CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/fast_lio/msg/detail/dds_fastrtps/pose6_d__type_support.cpp.o[0m
+[86.786s] [ 44%] Built target fast_lio__rosidl_generator_c
+[86.795s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_introspection_c[0m
+[86.795s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_fastrtps_c[0m
+[86.799s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_c[0m
+[86.808s] [ 47%] [32m[1mLinking C shared library libfast_lio__rosidl_typesupport_introspection_c.so[0m
+[86.808s] [ 50%] [32mBuilding CXX object CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/fast_lio/msg/detail/pose6_d__type_support_c.cpp.o[0m
+[86.812s] [ 52%] [32m[1mLinking CXX shared library libfast_lio__rosidl_typesupport_c.so[0m
+[86.845s] [ 58%] Built target fast_lio__rosidl_typesupport_introspection_c
+[86.853s] [ 63%] Built target fast_lio__rosidl_typesupport_c
+[87.149s] [ 66%] [32m[1mLinking CXX shared library libfast_lio__rosidl_typesupport_fastrtps_c.so[0m
+[87.186s] [ 69%] [32m[1mLinking CXX shared library libfast_lio__rosidl_typesupport_fastrtps_cpp.so[0m
+[87.235s] [ 72%] Built target fast_lio__rosidl_typesupport_fastrtps_c
+[87.267s] [ 75%] Built target fast_lio__rosidl_typesupport_fastrtps_cpp
+[87.284s] [ 75%] Built target fast_lio
+[87.301s] [ 77%] Built target fast_lio__py
+[87.309s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_generator_py[0m
+[87.320s] [ 80%] [32m[1mLinking C shared library rosidl_generator_py/fast_lio/libfast_lio__rosidl_generator_py.so[0m
+[87.357s] [ 83%] Built target fast_lio__rosidl_generator_py
+[87.366s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_fastrtps_c__pyext[0m
+[87.366s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_c__pyext[0m
+[87.369s] [35m[1mConsolidate compiler generated dependencies of target fast_lio__rosidl_typesupport_introspection_c__pyext[0m
+[87.380s] [ 86%] [32m[1mLinking C shared library rosidl_generator_py/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[87.380s] [ 88%] [32mBuilding C object CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/fast_lio/_fast_lio_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[87.386s] [ 91%] [32m[1mLinking C shared library rosidl_generator_py/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[87.427s] [ 94%] Built target fast_lio__rosidl_typesupport_c__pyext
+[87.434s] [ 97%] Built target fast_lio__rosidl_typesupport_introspection_c__pyext
+[87.516s] [100%] [32m[1mLinking C shared library rosidl_generator_py/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[87.547s] [100%] Built target fast_lio__rosidl_typesupport_fastrtps_c__pyext
+[87.558s] Invoked command in '/home/xkai/agribot/agribot_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/simple_diff_test:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/fast_lio:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/home/xkai/agribot/agribot_ws/install/fast_lio/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/fast_lio -- -j8 -l8
+[87.561s] Invoking command in '/home/xkai/agribot/agribot_ws/build/fast_lio': CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/simple_diff_test:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/fast_lio:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/home/xkai/agribot/agribot_ws/install/fast_lio/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/fast_lio
+[87.568s] -- Install configuration: "Release"
+[87.568s] -- Execute custom install script
+[87.569s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/ament_index/resource_index/rosidl_interfaces/fast_lio
+[87.569s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__functions.h
+[87.569s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.h
+[87.569s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.h
+[87.569s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.h
+[87.570s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_c__visibility_control.h
+[87.570s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/environment/library_path.sh
+[87.570s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/environment/library_path.dsv
+[87.571s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_c.h
+[87.571s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[87.571s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__builder.hpp
+[87.571s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__struct.hpp
+[87.571s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__traits.hpp
+[87.572s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__type_support.hpp
+[87.572s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/pose6_d.hpp
+[87.572s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_generator_cpp__visibility_control.hpp
+[87.573s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_fastrtps_cpp.hpp
+[87.573s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[87.573s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_c.h
+[87.573s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[87.574s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/include/fast_lio/fast_lio/msg/detail/pose6_d__rosidl_typesupport_introspection_cpp.hpp
+[87.574s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/environment/pythonpath.sh
+[87.574s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/environment/pythonpath.dsv
+[87.574s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/PKG-INFO
+[87.575s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/SOURCES.txt
+[87.575s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/dependency_links.txt
+[87.575s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio-0.0.0-py3.10.egg-info/top_level.txt
+[87.576s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/__init__.py
+[87.576s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_c.c
+[87.576s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_fastrtps_c.c
+[87.576s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/_fast_lio_s.ep.rosidl_typesupport_introspection_c.c
+[87.576s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[87.576s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[87.576s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[87.576s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/libfast_lio__rosidl_generator_py.so
+[87.577s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/__init__.py
+[87.577s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d.py
+[87.577s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg/_pose6_d_s.c
+[87.577s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[87.578s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[87.578s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[87.578s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/ament_index/resource_index/rust_packages/fast_lio
+[87.579s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/Cargo.toml
+[87.579s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/build.rs
+[87.579s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/src/lib.rs
+[87.579s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/src/msg.rs
+[87.579s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/src/msg/rmw.rs
+[87.579s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/msg/Pose6D.idl
+[87.579s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/msg/Pose6D.msg
+[87.580s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/fast_lio/fastlio_mapping
+[87.580s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/config/avia.yaml
+[87.580s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/config/horizon.yaml
+[87.580s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/config/mid360.yaml
+[87.581s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/config/ouster64.yaml
+[87.581s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/config/velodyne.yaml
+[87.581s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/launch/gdb_debug_example.launch
+[87.581s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/launch/mapping.launch.py
+[87.581s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rviz/fastlio.rviz
+[87.582s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/ament_index/resource_index/package_run_dependencies/fast_lio
+[87.582s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/ament_index/resource_index/parent_prefix_path/fast_lio
+[87.582s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.sh
+[87.582s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/environment/ament_prefix_path.dsv
+[87.582s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/environment/path.sh
+[87.583s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/environment/path.dsv
+[87.583s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/local_setup.bash
+[87.583s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/local_setup.sh
+[87.583s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/local_setup.zsh
+[87.583s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/local_setup.dsv
+[87.584s] -- Symlinking: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/package.dsv
+[87.592s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/ament_index/resource_index/packages/fast_lio
+[87.592s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake-extras.cmake
+[87.592s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_include_directories-extras.cmake
+[87.592s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_libraries-extras.cmake
+[87.593s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_targets-extras.cmake
+[87.593s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[87.593s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/ament_cmake_export_dependencies-extras.cmake
+[87.593s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[87.593s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig.cmake
+[87.593s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lioConfig-version.cmake
+[87.594s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/package.xml
+[87.594s] -- Installing: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_c.so
+[87.594s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_c.so" to ""
+[87.595s] -- Installing: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_c.so
+[87.595s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_c.so" to ""
+[87.595s] -- Installing: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_cpp.so
+[87.596s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_fastrtps_cpp.so" to ""
+[87.596s] -- Installing: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_c.so
+[87.596s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_c.so" to ""
+[87.597s] -- Installing: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_c.so
+[87.597s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_c.so" to ""
+[87.597s] -- Installing: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_cpp.so
+[87.598s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_introspection_cpp.so" to ""
+[87.598s] -- Installing: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_cpp.so
+[87.598s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_typesupport_cpp.so" to ""
+[87.630s] Listing '/home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio'...
+[87.630s] Compiling '/home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/__init__.py'...
+[87.630s] Listing '/home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/msg'...
+[87.636s] -- Installing: /home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_py.so
+[87.636s] -- Set runtime path of "/home/xkai/agribot/agribot_ws/install/fast_lio/lib/libfast_lio__rosidl_generator_py.so" to ""
+[87.636s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport.cmake
+[87.636s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cExport-release.cmake
+[87.637s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport.cmake
+[87.637s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cExport-release.cmake
+[87.637s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_cppExport.cmake
+[87.637s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport.cmake
+[87.637s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[87.637s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport.cmake
+[87.637s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cExport-release.cmake
+[87.638s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport.cmake
+[87.638s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cExport-release.cmake
+[87.638s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport.cmake
+[87.638s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_introspection_cppExport-release.cmake
+[87.638s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport.cmake
+[87.638s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/fast_lio__rosidl_typesupport_cppExport-release.cmake
+[87.639s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport.cmake
+[87.639s] -- Up-to-date: /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/cmake/export_fast_lio__rosidl_generator_pyExport-release.cmake
+[87.641s] Invoked command in '/home/xkai/agribot/agribot_ws/build/fast_lio' returned '0': CMAKE_PREFIX_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/simple_diff_test:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/fast_lio:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble LD_LIBRARY_PATH=/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/home/xkai/agribot/agribot_ws/install/fast_lio/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/fast_lio

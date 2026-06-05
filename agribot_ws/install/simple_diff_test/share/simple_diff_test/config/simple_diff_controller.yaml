@@ -1,0 +1,50 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100
+    use_sim_time: true
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    simple_diff_controller:
+      type: diff_drive_controller/DiffDriveController
+
+simple_diff_controller:
+  ros__parameters:
+    # 轮子配置
+    left_wheel_names: ["lf_wheel_joint", "lb_wheel_joint"]
+    right_wheel_names: ["rf_wheel_joint", "rb_wheel_joint"]
+
+    # 几何参数 - 必须与URDF模型精确匹配
+    wheel_separation: 0.15
+    wheel_radius: 0.032
+
+    # 修正系数
+    wheel_separation_multiplier: 1.0
+    left_wheel_radius_multiplier: 1.0
+    right_wheel_radius_multiplier: 1.0
+
+    # 里程计发布
+    publish_rate: 50.0
+    odom_frame_id: odom
+    base_frame_id: base_link
+
+    # 协方差对角线元素
+    pose_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+    twist_covariance_diagonal: [0.001, 0.001, 0.001, 0.001, 0.001, 0.01]
+
+    # 控制模式
+    open_loop: false
+    enable_odom_tf: true
+
+    # 超时设置
+    cmd_vel_timeout: 0.5
+    use_stamped_vel: false
+
+    # 速度限制
+    linear.x.has_velocity_limits: true
+    linear.x.max_velocity: 0.5
+    linear.x.min_velocity: -0.5
+    angular.z.has_velocity_limits: true
+    angular.z.max_velocity: 2.0
+    angular.z.min_velocity: -2.0

@@ -433,7 +433,7 @@ liblivox_ros_driver2.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_types
 liblivox_ros_driver2.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 liblivox_ros_driver2.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 liblivox_ros_driver2.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-liblivox_ros_driver2.so: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+liblivox_ros_driver2.so: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 liblivox_ros_driver2.so: /opt/ros/humble/lib/librmw.so
 liblivox_ros_driver2.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 liblivox_ros_driver2.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so

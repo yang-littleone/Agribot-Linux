@@ -1,10 +1,13 @@
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/launch/display_robot.launch.py
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/launch/gazebo_sim.launch.py
+/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/launch/simple_4wd_test.launch.py
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.gazebo.xacro
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.ros2_control.xacro
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot.urdf.xacro
+/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/agribot_simple.urdf.xacro
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/mini_4wd_robot.urdf
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/mini_4wd_robot.urdf.xacro
+/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/mini_4wd_robot_simple.urdf.xacro
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/plugins/gazebo_control_plugin.xacro
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/plugins/gazebo_sensor_plugin.xacro
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/agribot/sensors/imu.urdf.xacro
@@ -27,6 +30,7 @@
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/sensors/r200.jpg
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/wheels/left_tire.stl
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/meshes/wheels/right_tire.stl
+/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/simple_4wd_test.urdf
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/brushless_senior_diff.urdf
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_4wd_bs_robot.urdf
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/flagship_4wd_dl_robot.urdf
@@ -60,12 +64,14 @@
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/urdf/urdf/top_omni_robot.urdf
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/agribot_ros2_controller.yaml
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/diaplay_robot_model.rviz
+/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/config/simple_4wd_controller.yaml
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/agri_room.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/corn_leaf_world.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens_angular.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/cornlinens_angular2.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/custom_room.world
+/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/empty.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/new.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/room/model.config
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/room/model.sdf

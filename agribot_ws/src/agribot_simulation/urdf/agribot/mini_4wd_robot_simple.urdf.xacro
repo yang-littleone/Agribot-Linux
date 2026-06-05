@@ -1,0 +1,226 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:property name="M_PI" value="3.1415926" />
+    
+    <!-- 声明base模块 - 简化版，使用简单几何体替代STL -->
+    <xacro:macro name="mini_4wd_robot_xacro">
+        <!-- 添加虚拟根链接以解决KDL警告 -->
+        <link name="base_footprint" />
+        
+        <joint name="base_joint" type="fixed">
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <parent link="base_footprint" />
+            <child link="base_link" />
+        </joint>
+        
+        <!-- base_link: 用长方体替代STL，尺寸约 0.25m x 0.20m x 0.08m -->
+        <link name="base_link">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <!-- 底盘质量设为 3.5kg (总目标5kg，减去轮子和控制器) -->
+                <mass value="3.5" />
+                <inertia
+                    ixx="0.00758"
+                    ixy="0"
+                    ixz="0"
+                    iyy="0.01927"
+                    iyz="0"
+                    izz="0.02521" />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.25 0.20 0.08" />
+                </geometry>
+                <material name="base_material">
+                    <color rgba="0.741176470588235 0.901960784313726 0.956862745098039 1" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.25 0.20 0.08" />
+                </geometry>
+            </collision>
+        </link>
+        
+        <!-- lf_wheel_link: 用圆柱体替代STL，半径0.032m，宽度0.02m -->
+        <link name="lf_wheel_link">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <!-- 每个轮子质量设为 0.2kg -->
+                <mass value="0.2" />
+                <inertia
+                    ixx="8.53e-05"
+                    ixy="0"
+                    ixz="0"
+                    iyy="1.024e-04"
+                    iyz="0"
+                    izz="8.53e-05" />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+                <geometry>
+                    <cylinder radius="0.032" length="0.02" />
+                </geometry>
+                <material name="wheel_material">
+                    <color rgba="0.2 0.2 0.2 1" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+                <geometry>
+                    <cylinder radius="0.032" length="0.02" />
+                </geometry>
+            </collision>
+        </link>
+        <joint name="lf_wheel_joint" type="continuous">
+            <origin xyz="0.0788866867829701 0.090902092708038 -0.0363" rpy="0 0 0" />
+            <parent link="base_link" />
+            <child link="lf_wheel_link" />
+            <axis xyz="0 1 0" />
+        </joint>
+        
+        <!-- lb_wheel_link -->
+        <link name="lb_wheel_link">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="0.2" />
+                <inertia
+                    ixx="8.53e-05"
+                    ixy="0"
+                    ixz="0"
+                    iyy="1.024e-04"
+                    iyz="0"
+                    izz="8.53e-05" />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+                <geometry>
+                    <cylinder radius="0.032" length="0.02" />
+                </geometry>
+                <material name="wheel_material" />
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+                <geometry>
+                    <cylinder radius="0.032" length="0.02" />
+                </geometry>
+            </collision>
+        </link>
+        <joint name="lb_wheel_joint" type="continuous">
+            <origin xyz="-0.0930133132170299 0.0909020927080386 -0.0363" rpy="0 0 0" />
+            <parent link="base_link" />
+            <child link="lb_wheel_link" />
+            <axis xyz="0 1 0" />
+        </joint>
+        
+        <!-- rb_wheel_link -->
+        <link name="rb_wheel_link">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="0.2" />
+                <inertia
+                    ixx="8.53e-05"
+                    ixy="0"
+                    ixz="0"
+                    iyy="1.024e-04"
+                    iyz="0"
+                    izz="8.53e-05" />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+                <geometry>
+                    <cylinder radius="0.032" length="0.02" />
+                </geometry>
+                <material name="wheel_material" />
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+                <geometry>
+                    <cylinder radius="0.032" length="0.02" />
+                </geometry>
+            </collision>
+        </link>
+        <joint name="rb_wheel_joint" type="continuous">
+            <origin xyz="-0.0930053132170305 -0.0907239072919614 -0.0363" rpy="0 0 0" />
+            <parent link="base_link" />
+            <child link="rb_wheel_link" />
+            <axis xyz="0 1 0" />
+        </joint>
+        
+        <!-- rf_wheel_link -->
+        <link name="rf_wheel_link">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <mass value="0.2" />
+                <inertia
+                    ixx="8.53e-05"
+                    ixy="0"
+                    ixz="0"
+                    iyy="1.024e-04"
+                    iyz="0"
+                    izz="8.53e-05" />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+                <geometry>
+                    <cylinder radius="0.032" length="0.02" />
+                </geometry>
+                <material name="wheel_material" />
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="${M_PI/2} 0 0" />
+                <geometry>
+                    <cylinder radius="0.032" length="0.02" />
+                </geometry>
+            </collision>
+        </link>
+        <joint name="rf_wheel_joint" type="continuous">
+            <origin xyz="0.0788946867829695 -0.090723907291962 -0.0363" rpy="0 0 0" />
+            <parent link="base_link" />
+            <child link="rf_wheel_link" />
+            <axis xyz="0 1 0" />
+        </joint>
+        
+        <!-- controller_link: 用长方体替代STL，尺寸约 0.08m x 0.05m x 0.03m -->
+        <link name="controller_link">
+            <inertial>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <!-- 控制器质量设为 0.7kg -->
+                <mass value="0.7" />
+                <inertia
+                    ixx="8.75e-05"
+                    ixy="0"
+                    ixz="0"
+                    iyy="1.46e-04"
+                    iyz="0"
+                    izz="2.04e-04" />
+            </inertial>
+            <visual>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.08 0.05 0.03" />
+                </geometry>
+                <material name="controller_material">
+                    <color rgba="0.3 0.3 0.3 1" />
+                </material>
+            </visual>
+            <collision>
+                <origin xyz="0 0 0" rpy="0 0 0" />
+                <geometry>
+                    <box size="0.08 0.05 0.03" />
+                </geometry>
+            </collision>
+        </link>
+        <joint name="controller_joint" type="fixed">
+            <origin xyz="-0.0556343132168706 -0.0407821141826353 0.0519999999999999" rpy="0 0 0" />
+            <parent link="base_link" />
+            <child link="controller_link" />
+            <axis xyz="0 0 0" />
+        </joint>
+        
+    </xacro:macro>
+
+</robot>

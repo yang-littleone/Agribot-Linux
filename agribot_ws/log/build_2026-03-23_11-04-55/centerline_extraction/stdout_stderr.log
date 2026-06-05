@@ -1,0 +1,18 @@
+[35m[1mConsolidate compiler generated dependencies of target pcl_learning[0m
+[35m[1mConsolidate compiler generated dependencies of target centerline_extract[0m
+[35m[1mConsolidate compiler generated dependencies of target corn_row_detector_projection[0m
+[35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
+[ 40%] Built target centerline_extract
+[ 40%] Built target pcl_learning
+[ 60%] Built target corn_row_detector_projection
+[ 70%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o[0m
+[ 80%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/obstacle_detector.cpp.o[0m
+[01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp: 没有那个文件或目录
+compilation terminated.
+[01m[Kcc1plus:[m[K [01;31m[Kfatal error: [m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/obstacle_detector.cpp: 没有那个文件或目录
+compilation terminated.
+gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:76：CMakeFiles/cornfield_navigation_node.dir/src/corn_row_detector.cpp.o] 错误 1
+gmake[2]: *** 正在等待未完成的任务....
+gmake[2]: *** [CMakeFiles/cornfield_navigation_node.dir/build.make:90：CMakeFiles/cornfield_navigation_node.dir/src/obstacle_detector.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:221：CMakeFiles/cornfield_navigation_node.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

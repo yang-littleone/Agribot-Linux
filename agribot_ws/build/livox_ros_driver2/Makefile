@@ -431,6 +431,19 @@ livox_interfaces2__py/fast:
 	$(MAKE) $(MAKESILENT) -f livox_interfaces2__py/CMakeFiles/livox_interfaces2__py.dir/build.make livox_interfaces2__py/CMakeFiles/livox_interfaces2__py.dir/build
 .PHONY : livox_interfaces2__py/fast
 
+#=============================================================================
+# Target rules for targets named livox_interfaces2__rs
+
+# Build rule for target.
+livox_interfaces2__rs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 livox_interfaces2__rs
+.PHONY : livox_interfaces2__rs
+
+# fast build rule for target.
+livox_interfaces2__rs/fast:
+	$(MAKE) $(MAKESILENT) -f livox_interfaces2__rs/CMakeFiles/livox_interfaces2__rs.dir/build.make livox_interfaces2__rs/CMakeFiles/livox_interfaces2__rs.dir/build
+.PHONY : livox_interfaces2__rs/fast
+
 rclcpp_components/node_main_livox_ros_driver2_node.o: rclcpp_components/node_main_livox_ros_driver2_node.cpp.o
 .PHONY : rclcpp_components/node_main_livox_ros_driver2_node.o
 
@@ -1289,6 +1302,7 @@ help:
 	@echo "... livox_interfaces2"
 	@echo "... livox_interfaces2__cpp"
 	@echo "... livox_interfaces2__py"
+	@echo "... livox_interfaces2__rs"
 	@echo "... livox_ros_driver2_uninstall"
 	@echo "... uninstall"
 	@echo "... livox_interfaces2__rosidl_generator_c"

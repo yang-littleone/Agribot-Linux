@@ -409,6 +409,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__py/cmake_install.cmake")
+  include("/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/cmake_install.cmake")
 
 endif()
 

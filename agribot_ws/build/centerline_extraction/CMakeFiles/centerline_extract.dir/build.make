@@ -204,7 +204,7 @@ centerline_extract: /opt/ros/humble/lib/libstatistics_msgs__rosidl_typesupport_c
 centerline_extract: /opt/ros/humble/lib/libstatistics_msgs__rosidl_generator_c.so
 centerline_extract: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_c.so
 centerline_extract: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-centerline_extract: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+centerline_extract: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 centerline_extract: /opt/ros/humble/lib/librmw.so
 centerline_extract: /opt/ros/humble/lib/librosidl_typesupport_introspection_cpp.so
 centerline_extract: /opt/ros/humble/lib/librosidl_typesupport_introspection_c.so

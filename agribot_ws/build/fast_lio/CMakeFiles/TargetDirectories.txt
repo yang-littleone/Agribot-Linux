@@ -31,3 +31,11 @@
 /home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__py/CMakeFiles/install.dir
 /home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__py/CMakeFiles/install/local.dir
 /home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__py/CMakeFiles/install/strip.dir
+/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/CMakeFiles/fast_lio__rs.dir
+/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/CMakeFiles/test.dir
+/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/CMakeFiles/edit_cache.dir
+/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/CMakeFiles/rebuild_cache.dir
+/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/CMakeFiles/list_install_components.dir
+/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/CMakeFiles/install.dir
+/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/CMakeFiles/install/local.dir
+/home/xkai/agribot/agribot_ws/build/fast_lio/fast_lio__rs/CMakeFiles/install/strip.dir

@@ -55,6 +55,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
         # remove trailing slash
         string(SUBSTRING "${dir}" 0 ${offset} dir)
       endif()
+      
+      # Create destination directory.
+      # This does *not* solve the problem of empty directories WITHIN the install tree,
+      # but does make sure that the top-level directory specified by the caller gets created.
+      file(MAKE_DIRECTORY "${destination}")
 
       # glob recursive files
       set(relative_files "")
@@ -357,6 +362,12 @@ include("/home/xkai/agribot/agribot_ws/build/fast_lio/ament_cmake_symlink_instal
 
 # install("TARGETS" "fast_lio__rosidl_typesupport_c__pyext" "DESTINATION" "local/lib/python3.10/dist-packages/fast_lio")
 include("/home/xkai/agribot/agribot_ws/build/fast_lio/ament_cmake_symlink_install_targets_2_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+
+# install(FILES "/home/xkai/agribot/agribot_ws/build/fast_lio/ament_cmake_index/share/ament_index/resource_index/rust_packages/fast_lio" "DESTINATION" "share/ament_index/resource_index/rust_packages")
+ament_cmake_symlink_install_files("/home/xkai/agribot/agribot_ws/src/FAST_LIO" FILES "/home/xkai/agribot/agribot_ws/build/fast_lio/ament_cmake_index/share/ament_index/resource_index/rust_packages/fast_lio" "DESTINATION" "share/ament_index/resource_index/rust_packages")
+
+# install(DIRECTORY "/home/xkai/agribot/agribot_ws/build/fast_lio/rosidl_generator_rs/fast_lio/rust" "DESTINATION" "share/fast_lio")
+ament_cmake_symlink_install_directory("/home/xkai/agribot/agribot_ws/src/FAST_LIO" DIRECTORY "/home/xkai/agribot/agribot_ws/build/fast_lio/rosidl_generator_rs/fast_lio/rust" "DESTINATION" "share/fast_lio")
 
 # install(FILES "/home/xkai/agribot/agribot_ws/build/fast_lio/rosidl_adapter/fast_lio/msg/Pose6D.idl" "DESTINATION" "share/fast_lio/msg")
 ament_cmake_symlink_install_files("/home/xkai/agribot/agribot_ws/src/FAST_LIO" FILES "/home/xkai/agribot/agribot_ws/build/fast_lio/rosidl_adapter/fast_lio/msg/Pose6D.idl" "DESTINATION" "share/fast_lio/msg")

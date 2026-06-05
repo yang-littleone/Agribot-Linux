@@ -287,7 +287,7 @@ libros2_livox.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_
 libros2_livox.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 libros2_livox.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 libros2_livox.so: /opt/ros/humble/lib/librosidl_typesupport_fastrtps_cpp.so
-libros2_livox.so: /opt/ros/humble/lib/libfastcdr.so.1.0.24
+libros2_livox.so: /opt/ros/humble/lib/libfastcdr.so.1.0.29
 libros2_livox.so: /opt/ros/humble/lib/librmw.so
 libros2_livox.so: /opt/ros/humble/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 libros2_livox.so: /opt/ros/humble/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so

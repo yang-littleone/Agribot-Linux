@@ -39,6 +39,12 @@
 /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
 /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
 /home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages/fast_lio/fast_lio_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+/home/xkai/agribot/agribot_ws/install/fast_lio/share/ament_index/resource_index/rust_packages/fast_lio
+/home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/Cargo.toml
+/home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/build.rs
+/home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/src/lib.rs
+/home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/src/msg.rs
+/home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/rust/src/msg/rmw.rs
 /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/msg/Pose6D.idl
 /home/xkai/agribot/agribot_ws/install/fast_lio/share/fast_lio/msg/Pose6D.msg
 /home/xkai/agribot/agribot_ws/install/fast_lio/lib/fast_lio/fastlio_mapping

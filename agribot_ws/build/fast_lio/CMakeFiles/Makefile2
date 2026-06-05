@@ -78,10 +78,12 @@ all: CMakeFiles/fast_lio__rosidl_typesupport_introspection_c__pyext.dir/all
 all: CMakeFiles/fast_lio__rosidl_typesupport_c__pyext.dir/all
 all: CMakeFiles/fastlio_mapping.dir/all
 all: fast_lio__py/all
+all: fast_lio__rs/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: fast_lio__py/preinstall
+preinstall: fast_lio__rs/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
@@ -104,6 +106,7 @@ clean: CMakeFiles/fast_lio__rosidl_typesupport_introspection_c__pyext.dir/clean
 clean: CMakeFiles/fast_lio__rosidl_typesupport_c__pyext.dir/clean
 clean: CMakeFiles/fastlio_mapping.dir/clean
 clean: fast_lio__py/clean
+clean: fast_lio__rs/clean
 .PHONY : clean
 
 #=============================================================================
@@ -120,6 +123,21 @@ fast_lio__py/preinstall:
 # Recursive "clean" directory target.
 fast_lio__py/clean: fast_lio__py/CMakeFiles/fast_lio__py.dir/clean
 .PHONY : fast_lio__py/clean
+
+#=============================================================================
+# Directory level rules for directory fast_lio__rs
+
+# Recursive "all" directory target.
+fast_lio__rs/all: fast_lio__rs/CMakeFiles/fast_lio__rs.dir/all
+.PHONY : fast_lio__rs/all
+
+# Recursive "preinstall" directory target.
+fast_lio__rs/preinstall:
+.PHONY : fast_lio__rs/preinstall
+
+# Recursive "clean" directory target.
+fast_lio__rs/clean: fast_lio__rs/CMakeFiles/fast_lio__rs.dir/clean
+.PHONY : fast_lio__rs/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/uninstall.dir
@@ -185,6 +203,7 @@ CMakeFiles/fast_lio.dir/all: CMakeFiles/fast_lio__rosidl_typesupport_introspecti
 CMakeFiles/fast_lio.dir/all: CMakeFiles/fast_lio__rosidl_typesupport_c.dir/all
 CMakeFiles/fast_lio.dir/all: CMakeFiles/fast_lio__rosidl_typesupport_introspection_cpp.dir/all
 CMakeFiles/fast_lio.dir/all: CMakeFiles/fast_lio__rosidl_typesupport_cpp.dir/all
+CMakeFiles/fast_lio.dir/all: fast_lio__rs/CMakeFiles/fast_lio__rs.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fast_lio.dir/build.make CMakeFiles/fast_lio.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fast_lio.dir/build.make CMakeFiles/fast_lio.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles --progress-num= "Built target fast_lio"
@@ -192,7 +211,7 @@ CMakeFiles/fast_lio.dir/all: CMakeFiles/fast_lio__rosidl_typesupport_cpp.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fast_lio.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 22
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 23
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fast_lio.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 0
 .PHONY : CMakeFiles/fast_lio.dir/rule
@@ -480,7 +499,7 @@ CMakeFiles/fast_lio__rosidl_generator_py.dir/all: fast_lio__py/CMakeFiles/fast_l
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fast_lio__rosidl_generator_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 25
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 26
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fast_lio__rosidl_generator_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 0
 .PHONY : CMakeFiles/fast_lio__rosidl_generator_py.dir/rule
@@ -510,7 +529,7 @@ CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c__pyext.dir/all: fast_lio__py/
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 0
 .PHONY : CMakeFiles/fast_lio__rosidl_typesupport_fastrtps_c__pyext.dir/rule
@@ -540,7 +559,7 @@ CMakeFiles/fast_lio__rosidl_typesupport_introspection_c__pyext.dir/all: fast_lio
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fast_lio__rosidl_typesupport_introspection_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fast_lio__rosidl_typesupport_introspection_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 0
 .PHONY : CMakeFiles/fast_lio__rosidl_typesupport_introspection_c__pyext.dir/rule
@@ -569,7 +588,7 @@ CMakeFiles/fast_lio__rosidl_typesupport_c__pyext.dir/all: fast_lio__py/CMakeFile
 
 # Build rule for subdir invocation for target.
 CMakeFiles/fast_lio__rosidl_typesupport_c__pyext.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 27
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 28
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/fast_lio__rosidl_typesupport_c__pyext.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 0
 .PHONY : CMakeFiles/fast_lio__rosidl_typesupport_c__pyext.dir/rule
@@ -591,7 +610,7 @@ CMakeFiles/fastlio_mapping.dir/all: CMakeFiles/fast_lio__cpp.dir/all
 CMakeFiles/fastlio_mapping.dir/all: CMakeFiles/fast_lio__rosidl_typesupport_cpp.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastlio_mapping.dir/build.make CMakeFiles/fastlio_mapping.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/fastlio_mapping.dir/build.make CMakeFiles/fastlio_mapping.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles --progress-num=32,33,34,35 "Built target fastlio_mapping"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles --progress-num=33,34,35,36 "Built target fastlio_mapping"
 .PHONY : CMakeFiles/fastlio_mapping.dir/all
 
 # Build rule for subdir invocation for target.
@@ -622,7 +641,7 @@ fast_lio__py/CMakeFiles/fast_lio__py.dir/all: CMakeFiles/fast_lio.dir/all
 
 # Build rule for subdir invocation for target.
 fast_lio__py/CMakeFiles/fast_lio__py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fast_lio__py/CMakeFiles/fast_lio__py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 0
 .PHONY : fast_lio__py/CMakeFiles/fast_lio__py.dir/rule
@@ -635,6 +654,32 @@ fast_lio__py: fast_lio__py/CMakeFiles/fast_lio__py.dir/rule
 fast_lio__py/CMakeFiles/fast_lio__py.dir/clean:
 	$(MAKE) $(MAKESILENT) -f fast_lio__py/CMakeFiles/fast_lio__py.dir/build.make fast_lio__py/CMakeFiles/fast_lio__py.dir/clean
 .PHONY : fast_lio__py/CMakeFiles/fast_lio__py.dir/clean
+
+#=============================================================================
+# Target rules for target fast_lio__rs/CMakeFiles/fast_lio__rs.dir
+
+# All Build rule for target.
+fast_lio__rs/CMakeFiles/fast_lio__rs.dir/all:
+	$(MAKE) $(MAKESILENT) -f fast_lio__rs/CMakeFiles/fast_lio__rs.dir/build.make fast_lio__rs/CMakeFiles/fast_lio__rs.dir/depend
+	$(MAKE) $(MAKESILENT) -f fast_lio__rs/CMakeFiles/fast_lio__rs.dir/build.make fast_lio__rs/CMakeFiles/fast_lio__rs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles --progress-num=32 "Built target fast_lio__rs"
+.PHONY : fast_lio__rs/CMakeFiles/fast_lio__rs.dir/all
+
+# Build rule for subdir invocation for target.
+fast_lio__rs/CMakeFiles/fast_lio__rs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 1
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fast_lio__rs/CMakeFiles/fast_lio__rs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/xkai/agribot/agribot_ws/build/fast_lio/CMakeFiles 0
+.PHONY : fast_lio__rs/CMakeFiles/fast_lio__rs.dir/rule
+
+# Convenience name for target.
+fast_lio__rs: fast_lio__rs/CMakeFiles/fast_lio__rs.dir/rule
+.PHONY : fast_lio__rs
+
+# clean rule for target.
+fast_lio__rs/CMakeFiles/fast_lio__rs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f fast_lio__rs/CMakeFiles/fast_lio__rs.dir/build.make fast_lio__rs/CMakeFiles/fast_lio__rs.dir/clean
+.PHONY : fast_lio__rs/CMakeFiles/fast_lio__rs.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

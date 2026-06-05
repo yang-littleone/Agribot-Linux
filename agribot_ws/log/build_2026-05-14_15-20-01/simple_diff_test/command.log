@@ -1,0 +1,6 @@
+Invoking command in '/home/xkai/agribot/agribot_ws/build/simple_diff_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/xkai/agribot/agribot_ws/src/simple_diff_test -DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/simple_diff_test
+Invoked command in '/home/xkai/agribot/agribot_ws/build/simple_diff_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/xkai/agribot/agribot_ws/src/simple_diff_test -DCMAKE_INSTALL_PREFIX=/home/xkai/agribot/agribot_ws/install/simple_diff_test
+Invoking command in '/home/xkai/agribot/agribot_ws/build/simple_diff_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/simple_diff_test -- -j8 -l8
+Invoked command in '/home/xkai/agribot/agribot_ws/build/simple_diff_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/simple_diff_test -- -j8 -l8
+Invoking command in '/home/xkai/agribot/agribot_ws/build/simple_diff_test': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/simple_diff_test
+Invoked command in '/home/xkai/agribot/agribot_ws/build/simple_diff_test' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/simple_diff_test

@@ -1,0 +1,8 @@
+[ 12%] [32mBuilding CXX object CMakeFiles/pure_pursuit_controller.dir/src/pure_pursuit_controller.cpp.o[0m
+[ 37%] Built target pcl_learning
+[ 62%] Built target centerline_extract
+[ 75%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m
+[ 87%] [32m[1mLinking CXX executable pure_pursuit_controller[0m
+[ 87%] Built target pure_pursuit_controller
+[100%] [32m[1mLinking CXX executable corn_row_detector_projection[0m
+[100%] Built target corn_row_detector_projection

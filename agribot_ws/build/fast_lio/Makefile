@@ -418,6 +418,19 @@ fast_lio__py/fast:
 	$(MAKE) $(MAKESILENT) -f fast_lio__py/CMakeFiles/fast_lio__py.dir/build.make fast_lio__py/CMakeFiles/fast_lio__py.dir/build
 .PHONY : fast_lio__py/fast
 
+#=============================================================================
+# Target rules for targets named fast_lio__rs
+
+# Build rule for target.
+fast_lio__rs: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 fast_lio__rs
+.PHONY : fast_lio__rs
+
+# fast build rule for target.
+fast_lio__rs/fast:
+	$(MAKE) $(MAKESILENT) -f fast_lio__rs/CMakeFiles/fast_lio__rs.dir/build.make fast_lio__rs/CMakeFiles/fast_lio__rs.dir/build
+.PHONY : fast_lio__rs/fast
+
 include/ikd-Tree/ikd_Tree.o: include/ikd-Tree/ikd_Tree.cpp.o
 .PHONY : include/ikd-Tree/ikd_Tree.o
 
@@ -772,6 +785,7 @@ help:
 	@echo "... fast_lio"
 	@echo "... fast_lio__cpp"
 	@echo "... fast_lio__py"
+	@echo "... fast_lio__rs"
 	@echo "... fast_lio_uninstall"
 	@echo "... uninstall"
 	@echo "... fast_lio__rosidl_generator_c"

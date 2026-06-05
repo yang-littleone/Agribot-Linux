@@ -68,6 +68,12 @@
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages/livox_ros_driver2/livox_ros_driver2_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib/liblivox_interfaces2__rosidl_generator_py.so
+/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/rust_packages/livox_ros_driver2
+/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/rust/Cargo.toml
+/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/rust/build.rs
+/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/rust/src/msg.rs
+/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/rust/src/lib.rs
+/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/rust/src/msg/rmw.rs
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.idl
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomMsg.idl
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/msg/CustomPoint.msg
@@ -96,6 +102,7 @@
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/local_setup.dsv
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/package.dsv
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/packages/livox_ros_driver2
+/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport.cmake
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_cExport-noconfig.cmake
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_typesupport_fastrtps_cExport.cmake
@@ -113,7 +120,6 @@
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/livox_interfaces2__rosidl_typesupport_cppExport-noconfig.cmake
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport.cmake
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/export_livox_interfaces2__rosidl_generator_pyExport-noconfig.cmake
-/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/ament_index/resource_index/rclcpp_components/livox_ros_driver2
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/rosidl_cmake-extras.cmake
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_dependencies-extras.cmake
 /home/xkai/agribot/agribot_ws/install/livox_ros_driver2/share/livox_ros_driver2/cmake/ament_cmake_export_include_directories-extras.cmake

@@ -1,0 +1,15 @@
+[35m[1mConsolidate compiler generated dependencies of target corn_row_detector_projection[0m
+[ 16%] Built target centerline_extract
+[ 33%] Built target pcl_learning
+[ 83%] Built target cornfield_navigation_node
+[ 91%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:[m[K In member function ‘[01m[Kstd::pair<std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> >, std::shared_ptr<pcl::PointCloud<pcl::PointXYZ> > > CornRowDetectorProjection::split_left_right_rows(PointCloudXYZPtr)[m[K’:
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:311:54:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Ksec[m[K’ in ‘[01m[K((std::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>*)(& input_cloud))->std::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::operator->()->pcl::PointCloud<pcl::PointXYZ>::header.pcl::PCLHeader::stamp[m[K’, which is of non-class type ‘[01m[Kuint64_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+  311 |             rclcpp::Time t(input_cloud->header.stamp.[01;31m[Ksec[m[K, input_cloud->header.stamp.nanosec);
+      |                                                      [01;31m[K^~~[m[K
+[01m[K/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:311:85:[m[K [01;31m[Kerror: [m[Krequest for member ‘[01m[Knanosec[m[K’ in ‘[01m[K((std::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>*)(& input_cloud))->std::__shared_ptr_access<pcl::PointCloud<pcl::PointXYZ>, __gnu_cxx::_S_atomic, false, false>::operator->()->pcl::PointCloud<pcl::PointXYZ>::header.pcl::PCLHeader::stamp[m[K’, which is of non-class type ‘[01m[Kuint64_t[m[K’ {aka ‘[01m[Klong unsigned int[m[K’}
+  311 |             rclcpp::Time t(input_cloud->header.stamp.sec, input_cloud->header.stamp.[01;31m[Knanosec[m[K);
+      |                                                                                     [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/corn_row_detector_projection.dir/build.make:76：CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:195：CMakeFiles/corn_row_detector_projection.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2
