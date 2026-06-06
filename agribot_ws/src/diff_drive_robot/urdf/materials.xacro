@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <!-- Chassis material - Blue -->
+  <material name="chassis_blue">
+    <color rgba="0.2 0.4 0.8 1.0"/>
+  </material>
+
+  <!-- Wheel material - Black -->
+  <material name="wheel_black">
+    <color rgba="0.1 0.1 0.1 1.0"/>
+  </material>
+
+</robot>

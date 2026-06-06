@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="agribot_diff_drive">
+
+  <!-- Import materials -->
+  <xacro:include filename="$(find diff_drive_robot)/urdf/materials.xacro"/>
+
+  <!-- Import Gazebo configurations -->
+  <xacro:include filename="$(find diff_drive_robot)/urdf/agribot_diff_drive.gazebo.xacro"/>
+
+  <!-- Import ROS2 Control configurations -->
+  <xacro:include filename="$(find diff_drive_robot)/urdf/agribot_diff_drive.ros2_control.xacro"/>
+
+  <!-- Import IMU sensor -->
+  <xacro:include filename="$(find agribot_simulation)/urdf/agribot/sensors/imu.urdf.xacro" />
+
+  <!-- Import mid360 lidar -->
+  <xacro:include filename="$(find ros2_livox_simulation)/urdf/mid360.xacro" />
+
+  <!-- Robot dimensions (from agribot) -->
+  <xacro:property name="chassis_length" value="0.25"/>
+  <xacro:property name="chassis_width" value="0.20"/>
+  <xacro:property name="chassis_height" value="0.08"/>
+  <xacro:property name="chassis_mass" value="2.5"/>
+
+  <xacro:property name="wheel_radius" value="0.032"/>
+  <xacro:property name="wheel_thickness" value="0.02"/>
+  <xacro:property name="wheel_mass" value="0.2"/>
+
+  <!-- Wheel positions (from agribot) -->
+  <xacro:property name="wheel_offset_x_front" value="0.0789"/>
+  <xacro:property name="wheel_offset_x_rear" value="0.0930"/>
+  <xacro:property name="wheel_offset_y_left" value="0.0909"/>
+  <xacro:property name="wheel_offset_y_right" value="0.0907"/>
+  <xacro:property name="wheel_offset_z" value="-0.0363"/>
+
+  <!-- Base footprint link (ground projection) -->
+  <link name="base_footprint"/>
+
+  <!-- Joint from base_footprint to base_link -->
+  <joint name="base_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 ${wheel_radius - wheel_offset_z}" rpy="0 0 0"/>
+  </joint>
+
+  <!-- Base link (chassis) -->
+  <link name="base_link">
+    <!-- Visual uses agribot mesh for appearance -->
+    <visual>
+      <geometry>
+        <mesh filename="file://$(find agribot_simulation)/urdf/meshes/mini_4wd_robot_meshes/base_link.STL"/>
+      </geometry>
+      <material name="chassis_blue"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+
+    <!-- Collision uses simple box geometry -->
+    <collision>
+      <geometry>
+        <box size="${chassis_length} ${chassis_width} ${chassis_height}"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+
+    <inertial>
+      <mass value="${chassis_mass}"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia
+        ixx="${chassis_mass / 12.0 * (chassis_width * chassis_width + chassis_height * chassis_height)}"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="${chassis_mass / 12.0 * (chassis_length * chassis_length + chassis_height * chassis_height)}"
+        iyz="0.0"
+        izz="${chassis_mass / 12.0 * (chassis_length * chassis_length + chassis_width * chassis_width)}"/>
+    </inertial>
+  </link>
+
+  <!-- Controller link -->
+  <link name="controller_link">
+    <!-- Visual uses agribot mesh for appearance -->
+    <visual>
+      <geometry>
+        <mesh filename="file://$(find agribot_simulation)/urdf/meshes/mini_4wd_robot_meshes/controller_link.STL"/>
+      </geometry>
+      <material name="chassis_blue"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </visual>
+
+    <!-- Collision uses simple box geometry -->
+    <collision>
+      <geometry>
+        <box size="0.08 0.05 0.03"/>
+      </geometry>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+    </collision>
+
+    <inertial>
+      <mass value="0.7"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia
+        ixx="8.75e-05"
+        ixy="0"
+        ixz="0"
+        iyy="1.46e-04"
+        iyz="0"
+        izz="2.04e-04"/>
+    </inertial>
+  </link>
+
+  <joint name="controller_joint" type="fixed">
+    <origin xyz="-0.0556343132168706 -0.0407821141826353 0.0519999999999999" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="controller_link"/>
+    <axis xyz="0 0 0"/>
+  </joint>
+
+  <!-- Macro for creating wheels -->
+  <xacro:macro name="wheel" params="prefix x_reflect y_reflect x_offset y_offset">
+    <link name="wheel_${prefix}_link">
+      <!-- Visual uses agribot mesh for appearance -->
+      <visual>
+        <geometry>
+          <mesh filename="file://$(find agribot_simulation)/urdf/meshes/mini_4wd_robot_meshes/${prefix}_wheel_link.STL"/>
+        </geometry>
+        <material name="wheel_black"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+      </visual>
+
+      <!-- Collision uses simple cylinder geometry -->
+      <collision>
+        <geometry>
+          <cylinder radius="${wheel_radius}" length="${wheel_thickness}"/>
+        </geometry>
+        <origin xyz="0 0 0" rpy="${pi / 2.0} 0 0"/>
+      </collision>
+
+      <inertial>
+        <mass value="${wheel_mass}"/>
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+        <inertia
+          ixx="${wheel_mass / 12.0 * (3 * wheel_radius * wheel_radius + wheel_thickness * wheel_thickness)}"
+          ixy="0.0"
+          ixz="0.0"
+          iyy="${wheel_mass * wheel_radius * wheel_radius / 2.0}"
+          iyz="0.0"
+          izz="${wheel_mass / 12.0 * (3 * wheel_radius * wheel_radius + wheel_thickness * wheel_thickness)}"/>
+      </inertial>
+    </link>
+
+    <joint name="wheel_${prefix}_joint" type="continuous">
+      <parent link="base_link"/>
+      <child link="wheel_${prefix}_link"/>
+      <origin xyz="${x_reflect * x_offset} ${y_reflect * y_offset} ${wheel_offset_z}" rpy="0 0 0"/>
+      <axis xyz="0 1 0"/>
+    </joint>
+  </xacro:macro>
+
+  <!-- Create four wheels -->
+  <xacro:wheel prefix="lf" x_reflect="1" y_reflect="1" x_offset="${wheel_offset_x_front}" y_offset="${wheel_offset_y_left}"/>
+  <xacro:wheel prefix="lb" x_reflect="-1" y_reflect="1" x_offset="${wheel_offset_x_rear}" y_offset="${wheel_offset_y_left}"/>
+  <xacro:wheel prefix="rf" x_reflect="1" y_reflect="-1" x_offset="${wheel_offset_x_front}" y_offset="${wheel_offset_y_right}"/>
+  <xacro:wheel prefix="rb" x_reflect="-1" y_reflect="-1" x_offset="${wheel_offset_x_rear}" y_offset="${wheel_offset_y_right}"/>
+
+  <!-- ROS2 Control -->
+  <xacro:agribot_ros2_control />
+
+  <!-- IMU sensor -->
+  <xacro:imu_xacro xyz="0 0 0" />
+
+  <!-- mid360 lidar -->
+  <xacro:mid360 name="livox" parent="base_link" topic="mid360">
+    <origin xyz="0.1 0 0.1" rpy="0 0 0" />
+  </xacro:mid360>
+
+</robot>
