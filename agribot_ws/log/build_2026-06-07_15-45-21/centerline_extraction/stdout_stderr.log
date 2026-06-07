@@ -1,0 +1,12 @@
+Consolidate compiler generated dependencies of target corn_row_detector_projection
+[ 16%] Built target pcl_learning
+[ 33%] Built target centerline_extract
+[ 83%] Built target cornfield_navigation_node
+[ 91%] Building CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp: In member function ‘std::pair<float, float> CornRowDetectorProjection::fit_line(PointCloudXYZPtr)’:
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:672:48: error: conversion from ‘vector<[...],Eigen::aligned_allocator<pcl::PointXYZ>>’ to non-scalar type ‘vector<[...],std::allocator<pcl::PointXYZ>>’ requested
+  672 |     std::vector<pcl::PointXYZ> points = cloud->points;
+      |                                         ~~~~~~~^~~~~~
+gmake[2]: *** [CMakeFiles/corn_row_detector_projection.dir/build.make:76：CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:195：CMakeFiles/corn_row_detector_projection.dir/all] 错误 2
+gmake: *** [Makefile:146：all] 错误 2

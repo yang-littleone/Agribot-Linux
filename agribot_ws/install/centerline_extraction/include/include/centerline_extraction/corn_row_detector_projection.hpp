@@ -7,6 +7,7 @@
 #include "pcl/point_cloud.h" // provide pcl point cloud type
 #include "pcl/point_types.h" // provide pcl point types
 #include <deque>
+#include <string>
 #include "nav_msgs/msg/odometry.hpp"
 #include "tf2_ros/buffer.h"
 #include "tf2_ros/transform_listener.h"
@@ -33,6 +34,19 @@ private:
     float z_min_ = 0.0;
     float z_max_ = 0.5;
     float voxel_size_ = 0.02;
+    float x_min_ = 0.0;
+    float x_max_ = 2.0;
+    float y_min_ = -1.0;
+    float y_max_ = 1.0;
+    float path_length_ = 2.0;
+    float path_step_ = 0.1;
+    float min_row_separation_ = 0.3;
+    float max_row_separation_ = 3.0;
+    float max_line_slope_ = 5.0;
+    float plants_ahead_x_ = 0.5;
+    float robust_fit_residual_threshold_ = 0.12;
+    std::string base_frame_ = "base_link";
+    std::string output_frame_ = "odom";
 
     // 多行场景下选择最内侧行的参数
     float lateral_cluster_eps_ = 0.2; // 横向聚类阈值（米）
@@ -42,11 +56,9 @@ private:
     float gap_multiplier_ = 2.0;              // 中位 gap 的乘数，作为分割阈值的放大因子
 
     // 平滑处理参数
-    int time_window_size_ = 5;          // time window size
+    int time_window_size_ = 1;          // time window size
     float spatial_smooth_weight_ = 0.7; // spatial smooth weight
     float outlier_threshold_ = 2.0;     // outlier threshold
-    float ceneterline_length_;
-    float path_step_;
     // record path history
     std::deque<nav_msgs::msg::Path> path_history_;
 
@@ -59,6 +71,9 @@ private:
 
     // preprocess point cloud
     PointCloudXYZPtr preprocess_point_cloud(PointCloudXYZPtr input_cloud);
+
+    // transform point cloud into the robot base frame before local row extraction
+    PointCloudXYZPtr transform_cloud_to_base_frame(PointCloudXYZPtr input_cloud, const std_msgs::msg::Header &header);
 
     // projection point cloud to xy plane
     PointCloudXYZPtr projection_point_cloud(PointCloudXYZPtr input_cloud);

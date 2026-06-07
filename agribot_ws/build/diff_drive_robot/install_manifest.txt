@@ -1,4 +1,3 @@
-/home/xkai/agribot/agribot_ws/install/diff_drive_robot/share/diff_drive_robot/launch/agribot_gazebo.launch.py
 /home/xkai/agribot/agribot_ws/install/diff_drive_robot/share/diff_drive_robot/launch/robot.launch.py
 /home/xkai/agribot/agribot_ws/install/diff_drive_robot/share/diff_drive_robot/urdf/agribot_diff_drive.urdf.xacro
 /home/xkai/agribot/agribot_ws/install/diff_drive_robot/share/diff_drive_robot/urdf/robot.gazebo.xacro

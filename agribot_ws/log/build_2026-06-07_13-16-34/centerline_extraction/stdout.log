@@ -1,0 +1,12 @@
+[35m[1mConsolidate compiler generated dependencies of target corn_row_detector_projection[0m
+[ 16%] Built target pcl_learning
+[ 33%] Built target corn_row_detector_projection
+[ 50%] Built target centerline_extract
+[100%] Built target cornfield_navigation_node
+-- Install configuration: ""
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/corn_row_detector_projection
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector_projection.hpp
+-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pid_controller.hpp
+-- Installing: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.dsv

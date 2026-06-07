@@ -1,0 +1,28 @@
+[0.015s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble __trae_PS1=\n(TraeAI-3) \w [$?] $ /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.090s] [ 16%] Built target pcl_learning
+[0.093s] [ 33%] Built target centerline_extract
+[0.094s] [ 41%] Building CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o
+[0.099s] [ 50%] Building CXX object CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o
+[5.929s] In file included from /opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24,
+[5.929s]                  from /opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40,
+[5.929s]                  from /opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24,
+[5.929s]                  from /opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20,
+[5.929s]                  from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25,
+[5.929s]                  from /opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18,
+[5.930s]                  from /opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20,
+[5.930s]                  from /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37,
+[5.930s]                  from /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25,
+[5.930s]                  from /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21,
+[5.930s]                  from /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155,
+[5.930s]                  from /home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:2:
+[5.930s] /home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp: In member function ‘void CornRowDetectorProjection::point_cloud_callback(sensor_msgs::msg::PointCloud2_<std::allocator<void> >::SharedPtr)’:
+[5.930s] /home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector_projection.cpp:243:58: error: ‘row_separation’ was not declared in this scope
+[5.930s]   243 |                 left_inner->size(), right_inner->size(), row_separation);
+[5.930s]       |                                                          ^~~~~~~~~~~~~~
+[11.833s] [ 58%] Linking CXX executable cornfield_navigation_node
+[12.584s] gmake[2]: *** [CMakeFiles/corn_row_detector_projection.dir/build.make:76：CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o] 错误 1
+[12.584s] gmake[1]: *** [CMakeFiles/Makefile2:195：CMakeFiles/corn_row_detector_projection.dir/all] 错误 2
+[12.584s] gmake[1]: *** 正在等待未完成的任务....
+[14.599s] [ 91%] Built target cornfield_navigation_node
+[14.600s] gmake: *** [Makefile:146：all] 错误 2
+[14.602s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble __trae_PS1=\n(TraeAI-3) \w [$?] $ /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8

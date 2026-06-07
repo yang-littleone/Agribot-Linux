@@ -26,7 +26,7 @@ PurePursuitController::PurePursuitController() : Node("pure_pursuit_controller")
     // 声明并初始化参数（适配差速小车）
     this->declare_parameter("lookahead_base", 0.4);         // 基础前视距离（米）
     this->declare_parameter("lookahead_gain", 1.5);         // 前视距离速度系数
-    this->declare_parameter("max_linear_speed", 0.4);       // 最大线速度（米/秒）
+    this->declare_parameter("max_linear_speed", 0.5);       // 最大线速度（米/秒）
     this->declare_parameter("min_linear_speed", 0.1);       // 最小线速度（米/秒）
     this->declare_parameter("max_angular_speed", 1.5);      // 最大角速度（弧度/秒）
     this->declare_parameter("wheel_base", 0.206);             // 轮距（米，需根据实际小车填写）

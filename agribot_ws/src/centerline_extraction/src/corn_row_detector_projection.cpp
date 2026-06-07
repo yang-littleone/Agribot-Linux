@@ -7,11 +7,11 @@
 #include "pcl/filters/voxel_grid.h"
 #include <tf2_geometry_msgs/tf2_geometry_msgs.hpp>
 #include <tf2/LinearMath/Quaternion.h>
+#include <tf2/LinearMath/Transform.h>
 #include <cmath>
 #include <numeric>
 #include <vector>
 #include <algorithm>
-#include <tf2/LinearMath/Quaternion.h>
 #include "centerline_extraction/corn_row_detector_projection.hpp"
 
 // define point cloud type
@@ -38,7 +38,20 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     this->declare_parameter<float>("z_min", 0.0);
     this->declare_parameter<float>("z_max", 0.5);
     this->declare_parameter<float>("voxel_size", 0.02);
-    this->declare_parameter<int>("time_window_size", 5);
+    this->declare_parameter<float>("x_min", 0.0);
+    this->declare_parameter<float>("x_max", 2.0);
+    this->declare_parameter<float>("y_min", -1.0);
+    this->declare_parameter<float>("y_max", 1.0);
+    this->declare_parameter<float>("path_length", 2.0);
+    this->declare_parameter<float>("path_step", 0.1);
+    this->declare_parameter<float>("min_row_separation", 0.3);
+    this->declare_parameter<float>("max_row_separation", 3.0);
+    this->declare_parameter<float>("max_line_slope", 5.0);
+    this->declare_parameter<float>("plants_ahead_x", 0.5);
+    this->declare_parameter<float>("robust_fit_residual_threshold", 0.12);
+    this->declare_parameter<std::string>("base_frame", "base_link");
+    this->declare_parameter<std::string>("output_frame", "odom");
+    this->declare_parameter<int>("time_window_size", 1);
     this->declare_parameter<float>("spatial_smooth_weight", 0.7);
     this->declare_parameter<float>("outlier_threshold", 2.0);
     this->declare_parameter<float>("lateral_cluster_eps", 0.1);
@@ -50,6 +63,19 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     this->get_parameter("z_min", z_min_);
     this->get_parameter("z_max", z_max_);
     this->get_parameter("voxel_size", voxel_size_);
+    this->get_parameter("x_min", x_min_);
+    this->get_parameter("x_max", x_max_);
+    this->get_parameter("y_min", y_min_);
+    this->get_parameter("y_max", y_max_);
+    this->get_parameter("path_length", path_length_);
+    this->get_parameter("path_step", path_step_);
+    this->get_parameter("min_row_separation", min_row_separation_);
+    this->get_parameter("max_row_separation", max_row_separation_);
+    this->get_parameter("max_line_slope", max_line_slope_);
+    this->get_parameter("plants_ahead_x", plants_ahead_x_);
+    this->get_parameter("robust_fit_residual_threshold", robust_fit_residual_threshold_);
+    this->get_parameter("base_frame", base_frame_);
+    this->get_parameter("output_frame", output_frame_);
     this->get_parameter("time_window_size", time_window_size_);
     this->get_parameter("spatial_smooth_weight", spatial_smooth_weight_);
     this->get_parameter("outlier_threshold", outlier_threshold_);
@@ -57,6 +83,29 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     this->get_parameter("min_cluster_size", min_cluster_size_);
     this->get_parameter("adaptive_lateral_threshold", adaptive_lateral_threshold_);
     this->get_parameter("gap_multiplier", gap_multiplier_);
+
+    if (path_step_ <= 0.0f)
+    {
+        RCLCPP_WARN(this->get_logger(), "path_step must be positive; reset to 0.1");
+        path_step_ = 0.1f;
+    }
+    if (path_length_ <= 0.0f)
+    {
+        RCLCPP_WARN(this->get_logger(), "path_length must be positive; reset to 2.0");
+        path_length_ = 2.0f;
+    }
+    if (x_max_ <= x_min_)
+    {
+        RCLCPP_WARN(this->get_logger(), "x_max must be greater than x_min; reset ROI x range to [0.0, 2.0]");
+        x_min_ = 0.0f;
+        x_max_ = 2.0f;
+    }
+    if (y_max_ <= y_min_)
+    {
+        RCLCPP_WARN(this->get_logger(), "y_max must be greater than y_min; reset ROI y range to [-1.0, 1.0]");
+        y_min_ = -1.0f;
+        y_max_ = 1.0f;
+    }
 }
 
 void CornRowDetectorProjection::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
@@ -72,8 +121,12 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     PointCloudXYZPtr cloud(new PointCloudXYZ());
     pcl::fromROSMsg(*msg, *cloud);
 
-    // preprocess point cloudS
-    PointCloudXYZPtr preprocessed_cloud = this->preprocess_point_cloud(cloud);
+    PointCloudXYZPtr base_cloud = this->transform_cloud_to_base_frame(cloud, msg->header);
+    std_msgs::msg::Header base_header = msg->header;
+    base_header.frame_id = base_frame_;
+
+    // preprocess point cloud in base frame
+    PointCloudXYZPtr preprocessed_cloud = this->preprocess_point_cloud(base_cloud);
 
     // projection point cloud
     PointCloudXYZPtr projection_cloud = this->projection_point_cloud(preprocessed_cloud);
@@ -104,7 +157,7 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
         RCLCPP_WARN(this->get_logger(), "Insufficient points for center line generation. Left points: %ld, Right points: %ld",
                     left_inner->size(), right_inner->size());
         // 发布空路径以清空显示
-        publish_empty_path(msg->header);
+        publish_empty_path(base_header);
         return;
     }
 
@@ -112,8 +165,8 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     bool has_plants_ahead = false;
     for (const auto &point : left_inner->points)
     {
-        if (point.x > 0.5)
-        { // At least 0.5 meters ahead
+        if (point.x > plants_ahead_x_)
+        {
             has_plants_ahead = true;
             break;
         }
@@ -123,8 +176,8 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     {
         for (const auto &point : right_inner->points)
         {
-            if (point.x > 0.5)
-            { // At least 0.5 meters ahead
+            if (point.x > plants_ahead_x_)
+            {
                 has_plants_ahead = true;
                 break;
             }
@@ -136,7 +189,7 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
         RCLCPP_WARN(this->get_logger(), "No plants detected ahead of the robot. Left points: %ld, Right points: %ld",
                     left_inner->size(), right_inner->size());
         // 发布空路径以清空显示
-        publish_empty_path(msg->header);
+        publish_empty_path(base_header);
         return;
     }
 
@@ -145,29 +198,29 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     auto [right_slope, right_intercept] = this->fit_line(right_inner);
 
     // Check if the lines are reasonable (not too steep)
-    if (std::abs(left_slope) > 5.0 || std::abs(right_slope) > 5.0)
+    if (std::abs(left_slope) > max_line_slope_ || std::abs(right_slope) > max_line_slope_)
     {
         RCLCPP_WARN(this->get_logger(), "Unreasonable line slopes. Left slope: %.2f, Right slope: %.2f",
                     left_slope, right_slope);
         // 发布空路径以清空显示
-        publish_empty_path(msg->header);
+        publish_empty_path(base_header);
         return;
     }
 
     // Check if the rows are properly separated
     float row_separation = std::abs(left_intercept - right_intercept);
-    if (row_separation < 0.3 || row_separation > 3.0)
+    if (row_separation < min_row_separation_ || row_separation > max_row_separation_)
     {
         RCLCPP_WARN(this->get_logger(), "Invalid row separation: %.2f meters", row_separation);
         // 发布空路径以清空显示
-        publish_empty_path(msg->header);
+        publish_empty_path(base_header);
         return;
     }
 
     // create center line path
     nav_msgs::msg::Path center_line_path = this->create_path((left_slope + right_slope) / 2.0,
                                                              (left_intercept + right_intercept) / 2.0,
-                                                             msg->header);
+                                                             base_header);
 
     // 平滑处理
     nav_msgs::msg::Path smoothed_path = this->smooth_path(center_line_path);
@@ -184,8 +237,9 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
 
     // publish point clouds
     output_cloud.header = msg->header;
-    left_output.header = msg->header;
-    right_output.header = msg->header;
+    output_cloud.header.frame_id = base_frame_;
+    left_output.header = base_header;
+    right_output.header = base_header;
 
     point_cloud_pub_->publish(output_cloud);
     left_row_pub_->publish(left_output);
@@ -222,14 +276,14 @@ PointCloudXYZPtr CornRowDetectorProjection::preprocess_point_cloud(PointCloudXYZ
     pcl::PassThrough<pcl::PointXYZ> pass_y;
     pass_y.setInputCloud(filter_cloud);
     pass_y.setFilterFieldName("y");
-    pass_y.setFilterLimits(-1.0f, 1.0f);
+    pass_y.setFilterLimits(y_min_, y_max_);
     pass_y.filter(*filter_cloud);
 
     // x filter
     pcl::PassThrough<pcl::PointXYZ> pass_x;
     pass_x.setInputCloud(filter_cloud);
     pass_x.setFilterFieldName("x");
-    pass_x.setFilterLimits(0.0f, 2.0f);
+    pass_x.setFilterLimits(x_min_, x_max_);
     pass_x.filter(*filter_cloud);
 
     // voxel grid
@@ -240,6 +294,53 @@ PointCloudXYZPtr CornRowDetectorProjection::preprocess_point_cloud(PointCloudXYZ
     voxel_grid.filter(*voxelgrid_cloud);
 
     return voxelgrid_cloud;
+}
+
+PointCloudXYZPtr CornRowDetectorProjection::transform_cloud_to_base_frame(PointCloudXYZPtr input_cloud, const std_msgs::msg::Header &header)
+{
+    PointCloudXYZPtr transformed_cloud(new PointCloudXYZ());
+
+    if (input_cloud->empty())
+    {
+        return transformed_cloud;
+    }
+
+    if (header.frame_id.empty() || header.frame_id == base_frame_)
+    {
+        *transformed_cloud = *input_cloud;
+        transformed_cloud->header = input_cloud->header;
+        return transformed_cloud;
+    }
+
+    try
+    {
+        geometry_msgs::msg::TransformStamped transform_msg =
+            tf_buffer_->lookupTransform(base_frame_, header.frame_id, tf2::TimePointZero);
+
+        tf2::Transform transform;
+        tf2::fromMsg(transform_msg.transform, transform);
+
+        transformed_cloud->points.reserve(input_cloud->points.size());
+        for (const auto &point : input_cloud->points)
+        {
+            tf2::Vector3 point_in(point.x, point.y, point.z);
+            tf2::Vector3 point_out = transform * point_in;
+            transformed_cloud->points.emplace_back(point_out.x(), point_out.y(), point_out.z());
+        }
+
+        transformed_cloud->width = transformed_cloud->points.size();
+        transformed_cloud->height = 1;
+        transformed_cloud->is_dense = input_cloud->is_dense;
+        return transformed_cloud;
+    }
+    catch (const tf2::TransformException &ex)
+    {
+        RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
+                             "Cannot transform point cloud from %s to %s: %s. Using raw cloud as fallback.",
+                             header.frame_id.c_str(), base_frame_.c_str(), ex.what());
+        *transformed_cloud = *input_cloud;
+        return transformed_cloud;
+    }
 }
 
 PointCloudXYZPtr CornRowDetectorProjection::projection_point_cloud(PointCloudXYZPtr input_cloud)
@@ -332,8 +433,8 @@ PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZP
     }
 
     // Debug: log invocation details
-    RCLCPP_INFO(this->get_logger(), "extract_innermost_row called: side=%s, cloud_size=%zu, lateral_cluster_eps=%.3f, min_cluster_size=%d",
-                left ? "left" : "right", cloud->size(), lateral_cluster_eps_, min_cluster_size_);
+    RCLCPP_DEBUG(this->get_logger(), "extract_innermost_row called: side=%s, cloud_size=%zu, lateral_cluster_eps=%.3f, min_cluster_size=%d",
+                 left ? "left" : "right", cloud->size(), lateral_cluster_eps_, min_cluster_size_);
 
     // Collect (y, index) pairs and sort by y
     std::vector<std::pair<float, size_t>> y_idx;
@@ -370,7 +471,7 @@ PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZP
         }
 
         float threshold = std::max(median_gap * gap_multiplier_, lateral_cluster_eps_);
-        RCLCPP_INFO(this->get_logger(), "Adaptive clustering enabled: median_gap=%.4f, gap_multiplier=%.2f, threshold=%.4f", median_gap, gap_multiplier_, threshold);
+        RCLCPP_DEBUG(this->get_logger(), "Adaptive clustering enabled: median_gap=%.4f, gap_multiplier=%.2f, threshold=%.4f", median_gap, gap_multiplier_, threshold);
 
         // form clusters by splitting at gaps > threshold
         clusters.emplace_back();
@@ -406,18 +507,18 @@ PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZP
                 clusters.back().push_back(y_idx[i].second);
             }
         }
-        RCLCPP_INFO(this->get_logger(), "Fixed-eps clustering used (eps=%.4f)", lateral_cluster_eps_);
+        RCLCPP_DEBUG(this->get_logger(), "Fixed-eps clustering used (eps=%.4f)", lateral_cluster_eps_);
     }
 
     // Debug: log cluster count and per-cluster stats
-    RCLCPP_INFO(this->get_logger(), "Found %zu clusters on side=%s", clusters.size(), left ? "left" : "right");
+    RCLCPP_DEBUG(this->get_logger(), "Found %zu clusters on side=%s", clusters.size(), left ? "left" : "right");
     for (size_t ci = 0; ci < clusters.size(); ++ci)
     {
         float sum_y = 0.0f;
         for (auto idx : clusters[ci])
             sum_y += cloud->points[idx].y;
         float mean_y = sum_y / clusters[ci].size();
-        RCLCPP_INFO(this->get_logger(), "  Cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+        RCLCPP_DEBUG(this->get_logger(), "  Cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
     }
 
     // Choose the cluster that is closest to the robot centerline (innermost)
@@ -443,7 +544,7 @@ PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZP
             {
                 best_metric = mean_y;
                 best_cluster_idx = ci;
-                RCLCPP_INFO(this->get_logger(), "Considered cluster %zu as current best (left): size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+                RCLCPP_DEBUG(this->get_logger(), "Considered cluster %zu as current best (left): size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
             }
         }
         else
@@ -454,7 +555,7 @@ PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZP
             {
                 best_metric = mean_y;
                 best_cluster_idx = ci;
-                RCLCPP_INFO(this->get_logger(), "Considered cluster %zu as current best (right): size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+                RCLCPP_DEBUG(this->get_logger(), "Considered cluster %zu as current best (right): size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
             }
         }
     }
@@ -480,7 +581,7 @@ PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZP
             {
                 best_dist = dist;
                 best_cluster_idx = ci;
-                RCLCPP_INFO(this->get_logger(), "Fallback1 selected cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+                RCLCPP_DEBUG(this->get_logger(), "Fallback1 selected cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
             }
         }
     }
@@ -500,7 +601,7 @@ PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZP
             {
                 best_dist = dist;
                 best_cluster_idx = ci;
-                RCLCPP_INFO(this->get_logger(), "Final fallback selected cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
+                RCLCPP_DEBUG(this->get_logger(), "Final fallback selected cluster %zu: size=%zu, mean_y=%.3f", ci, clusters[ci].size(), mean_y);
             }
         }
     }
@@ -515,7 +616,7 @@ PointCloudXYZPtr CornRowDetectorProjection::extract_innermost_row(PointCloudXYZP
         for (auto idx : clusters[best_cluster_idx])
             sum_y += cloud->points[idx].y;
         float mean_y = sum_y / clusters[best_cluster_idx].size();
-        RCLCPP_INFO(this->get_logger(), "Selected cluster %d: size=%zu, mean_y=%.3f", best_cluster_idx, clusters[best_cluster_idx].size(), mean_y);
+        RCLCPP_DEBUG(this->get_logger(), "Selected cluster %d: size=%zu, mean_y=%.3f", best_cluster_idx, clusters[best_cluster_idx].size(), mean_y);
     }
     else
     {
@@ -537,35 +638,56 @@ std::pair<float, float> CornRowDetectorProjection::fit_line(PointCloudXYZPtr clo
         return std::make_pair(0.0f, 0.0f);
     }
 
-    // Calculate line using least squares method
-    float sum_x = 0, sum_y = 0, sum_xx = 0, sum_xy = 0;
-    size_t n = cloud->points.size();
-
-    for (const auto &point : cloud->points)
+    auto least_squares = [this](const std::vector<pcl::PointXYZ> &points)
     {
-        sum_x += point.x;
-        sum_y += point.y;
-        sum_xx += point.x * point.x;
-        sum_xy += point.x * point.y;
+        float sum_x = 0.0f;
+        float sum_y = 0.0f;
+        float sum_xx = 0.0f;
+        float sum_xy = 0.0f;
+        const size_t n = points.size();
+
+        for (const auto &point : points)
+        {
+            sum_x += point.x;
+            sum_y += point.y;
+            sum_xx += point.x * point.x;
+            sum_xy += point.x * point.y;
+        }
+
+        float denominator = (n * sum_xx - sum_x * sum_x);
+        if (std::abs(denominator) < 1e-6)
+        {
+            return std::make_pair(0.0f, sum_y / n);
+        }
+
+        float slope = (n * sum_xy - sum_x * sum_y) / denominator;
+        float intercept = (sum_y - slope * sum_x) / n;
+        if (std::abs(slope) > max_line_slope_)
+        {
+            slope = (slope > 0.0f) ? max_line_slope_ : -max_line_slope_;
+        }
+        return std::make_pair(slope, intercept);
+    };
+
+    std::vector<pcl::PointXYZ> points(cloud->points.begin(), cloud->points.end());
+    auto [slope, intercept] = least_squares(points);
+
+    std::vector<pcl::PointXYZ> inliers;
+    inliers.reserve(points.size());
+    for (const auto &point : points)
+    {
+        float residual = std::abs(point.y - (slope * point.x + intercept));
+        if (residual <= robust_fit_residual_threshold_)
+        {
+            inliers.push_back(point);
+        }
     }
 
-    // Calculate slope and intercept
-    float denominator = (n * sum_xx - sum_x * sum_x);
-    if (std::abs(denominator) < 1e-6)
+    if (inliers.size() >= 5 && inliers.size() < points.size())
     {
-        // Vertical line case - return horizontal line at average y
-        RCLCPP_DEBUG(this->get_logger(), "Vertical line case, returning horizontal line at y=%.2f", sum_y / n);
-        return std::make_pair(0.0f, sum_y / n);
-    }
-
-    float slope = (n * sum_xy - sum_x * sum_y) / denominator;
-    float intercept = (sum_y - slope * sum_x) / n;
-
-    // Check if the line is reasonable
-    if (std::abs(slope) > 10.0)
-    {
-        RCLCPP_DEBUG(this->get_logger(), "Unreasonable slope %.2f, limiting to 10.0", slope);
-        slope = (slope > 0) ? 10.0 : -10.0;
+        auto refined = least_squares(inliers);
+        RCLCPP_DEBUG(this->get_logger(), "Robust fit kept %zu/%zu points", inliers.size(), points.size());
+        return refined;
     }
 
     return std::make_pair(slope, intercept);
@@ -573,91 +695,62 @@ std::pair<float, float> CornRowDetectorProjection::fit_line(PointCloudXYZPtr clo
 
 nav_msgs::msg::Path CornRowDetectorProjection::create_path(float slope, float intercept, const std_msgs::msg::Header &header)
 {
-    nav_msgs::msg::Path path_odom; // 存储odom坐标系下的路径（用于控制逻辑）
-    path_odom.header = header;     // 原header（如odom坐标系）
+    nav_msgs::msg::Path path_base_link;
+    path_base_link.header = header;
+    path_base_link.header.frame_id = base_frame_;
 
-    // 1. 生成odom坐标系下的动态路径（当前x到x+2米，同之前的逻辑）
-    float x_start;
-    float x_end;
-
-    // 在create_path函数中使用TF获取更精确的位置信息
-    try
-    {
-        geometry_msgs::msg::TransformStamped transform = tf_buffer_->lookupTransform(
-            "odom", "base_link", tf2::TimePointZero);
-        x_start = transform.transform.translation.x;
-        x_end = x_start + 2.0;
-        RCLCPP_INFO(this->get_logger(), "TF lookup successful: x_start=%.2f, x_end=%.2f", x_start, x_end);
-    }
-    catch (tf2::TransformException &ex)
-    {
-        // 如果TF获取失败，回退到使用odom数据
-        x_start = robot_current_x_;
-        x_end = robot_current_x_ + 2.0;
-    }
-
-    if (x_end <= x_start)
-    {
-        RCLCPP_WARN(this->get_logger(), "Invalid path range: x_start=%.2f, x_end=%.2f", x_start, x_end);
-        return path_odom;
-    }
+    nav_msgs::msg::Path path_output;
+    path_output.header = header;
+    path_output.header.frame_id = output_frame_;
 
     // 计算路径方向角
     float yaw = std::atan2(slope, 1.0); // 斜率对应的角度
 
-    for (float x = x_start; x <= x_end; x += 0.1)
+    for (float x = 0.0f; x <= path_length_; x += path_step_)
     {
-        geometry_msgs::msg::PoseStamped pose_odom;
-        pose_odom.header = header;
-        pose_odom.pose.position.x = x;
-        pose_odom.pose.position.y = slope * x + intercept;
-        pose_odom.pose.position.z = 0.0;
+        geometry_msgs::msg::PoseStamped pose_base_link;
+        pose_base_link.header = path_base_link.header;
+        pose_base_link.pose.position.x = x;
+        pose_base_link.pose.position.y = slope * x + intercept;
+        pose_base_link.pose.position.z = 0.0;
 
         // 计算朝向
         tf2::Quaternion q;
         q.setRPY(0, 0, yaw);
-        pose_odom.pose.orientation = tf2::toMsg(q);
+        pose_base_link.pose.orientation = tf2::toMsg(q);
 
-        path_odom.poses.push_back(pose_odom);
+        path_base_link.poses.push_back(pose_base_link);
     }
 
-    // 2. 将路径从odom坐标系转换到base_link坐标系（用于可视化）
-    nav_msgs::msg::Path path_base_link;
-    path_base_link.header.frame_id = "base_link"; // 小车本体坐标系
-    // path_base_link.header.stamp = this->now();
-    // path_base_link.header.stamp = path_odom.header.stamp;
-    // 应该使用当前时间或明确的时间戳
-    path_base_link.header.stamp = this->now();
+    center_line_viz_pub_->publish(path_base_link);
+
+    if (output_frame_ == base_frame_)
+    {
+        return path_base_link;
+    }
+
     try
     {
-        // // 获取odom到base_link的变换（小车在odom中的位姿）
-        // geometry_msgs::msg::TransformStamped transform = tf_buffer_->lookupTransform(
-        //     "base_link", "odom", tf2::TimePointZero); // 从odom到base_link
-        // 使用与路径消息相同的时间戳进行变换查找
-        rclcpp::Time path_time(header.stamp.sec, header.stamp.nanosec);
         geometry_msgs::msg::TransformStamped transform = tf_buffer_->lookupTransform(
-            "base_link", header.frame_id, path_time);
-        for (const auto &pose_odom : path_odom.poses)
+            output_frame_, base_frame_, tf2::TimePointZero);
+        for (const auto &pose_base_link : path_base_link.poses)
         {
-            geometry_msgs::msg::PoseStamped pose_base_link;
-            // 坐标转换：odom下的点 -> base_link下的点
-            tf2::doTransform(pose_odom, pose_base_link, transform);
-            path_base_link.poses.push_back(pose_base_link);
+            geometry_msgs::msg::PoseStamped pose_output;
+            tf2::doTransform(pose_base_link, pose_output, transform);
+            pose_output.header.frame_id = output_frame_;
+            pose_output.header.stamp = header.stamp;
+            path_output.poses.push_back(pose_output);
         }
     }
     catch (tf2::TransformException &ex)
     {
-        RCLCPP_WARN(this->get_logger(), "TF转换失败: %s", ex.what());
-        return path_odom; // 转换失败时返回原odom坐标系路径
+        RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
+                             "Path TF transform failed from %s to %s: %s. Publishing base-frame path.",
+                             base_frame_.c_str(), output_frame_.c_str(), ex.what());
+        return path_base_link;
     }
 
-    // 3. 发布转换后的base_link坐标系路径（用于RViz可视化）
-    // 注意：控制逻辑仍需使用odom坐标系的路径，因此需新增一个可视化专用发布者
-    // 在类中新增发布者：rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr center_line_viz_pub_;
-    center_line_viz_pub_->publish(path_base_link);
-
-    // 返回odom坐标系的路径（供PID控制器使用，不影响控制逻辑）
-    return path_odom;
+    return path_output;
 }
 
 nav_msgs::msg::Path CornRowDetectorProjection::smooth_path(const nav_msgs::msg::Path &raw_path)
@@ -846,5 +939,6 @@ void CornRowDetectorProjection::publish_empty_path(const std_msgs::msg::Header &
 {
     nav_msgs::msg::Path empty_path;
     empty_path.header = header;
+    empty_path.header.frame_id = output_frame_;
     center_line_pub_->publish(empty_path);
 }
