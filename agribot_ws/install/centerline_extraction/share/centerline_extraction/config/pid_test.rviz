@@ -1,0 +1,157 @@
+# rviz2 config file for PID controller testing
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /Marker1
+        - /Path1
+        - /Marker2
+        - /Axes1
+      Splitter Ratio: 0.5
+    Tree Height: 429
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Nav Goal1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.588679
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+  - Class: rviz_common/Time
+    Experimental: false
+    Name: Time
+    SyncMode: 0
+    SyncSource: ""
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 1
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 160
+      Enabled: true
+      Line Style:
+        Line Width: 0.029999999999999999
+        Value: Lines
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 50
+      Reference Frame: <Fixed Frame>
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/Marker
+      Enabled: true
+      Marker Topic: /test_markers
+      Name: Test Markers
+      Namespaces:
+        - path
+        - robot
+        - robot_arrow
+      Queue Size: 100
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/Path
+      Color: 255; 0; 0
+      Enabled: true
+      Head Diameter: 0.30000000000000004
+      Head Length: 0.20000000000000001
+      Length: 0.30000000000000004
+      Line Style: Lines
+      Line Width: 0.05
+      Name: Robot Trajectory
+      Path Topic: /robot_trajectory
+      Pose Color: 255; 255; 255
+      Pose Style: None
+      Queue Size: 10
+      Radius: 0.10000000000000001
+      Reference Frame: <Fixed Frame>
+      Show Arrow Heads: true
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/Marker
+      Enabled: true
+      Marker Topic: /target_point
+      Name: Target Point
+      Namespaces:
+        - target
+      Queue Size: 100
+      Value: true
+    - Class: rviz_default_plugins/Axes
+      Enabled: true
+      Length: 1
+      Name: Axes
+      Radius: 0.1
+      Reference Frame: odom
+      Value: true
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Default Light: true
+    Fixed Frame: odom
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 20
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.059999999999999998
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Value: false
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Name: Current View
+      Near Clip Distance: 0.009999999999999999
+      Pitch: 0.7853981633974483
+      Target Frame: odom
+      Yaw: 0.7853981633974483
+    Saved: []
+Window Geometry:
+  Displays:
+    collapsed: false
+  Height: 800
+  Hide Left Dock: false
+  Hide Right Dock: false
+  QMainWindow State: 000000ff00000000fd00000004000000000000016a00000320fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00ffffff00000001000000160054006f006f006c002000500072006f007000650072007400690065007302000000b000000185000000a300ffffff00000001000000280056006900650077007300200054006f006f006c00420061007200000001e10000012c000000a300ffffff000000020000012c000000320fc0200000003fb0000001e00540069006d006500000001df0000009b0000003c00ffffff00000001000000450044006900730070006c0061007900730000000000ffffffff0000000000000000
+  Selection:
+    collapsed: false
+  Time:
+    collapsed: false
+  Tool Properties:
+    collapsed: false
+  Views:
+    collapsed: false
+  Width: 1200
+  X: 1920
+  Y: 0

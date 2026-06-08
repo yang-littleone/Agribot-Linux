@@ -1,7 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target livox_interfaces2__rosidl_generator_c[0m
-[35m[1mConsolidate compiler generated dependencies of target livox_ros_driver2_node[0m
-[  1%] Built target livox_interfaces2__rs
-[  3%] Built target livox_interfaces2__cpp
-[ 10%] Built target livox_interfaces2__rosidl_generator_c
-[ 12%] [32m[1mLinking CXX executable livox_ros_driver2_node[0m
-[ 13%] Built target livox_ros_driver2_node

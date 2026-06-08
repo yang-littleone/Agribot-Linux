@@ -1,5 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target cornfield_navigation_node[0m
-[ 16%] Built target centerline_extract
-[ 33%] Built target corn_row_detector_projection
-[ 50%] Built target pcl_learning
-[ 58%] [32mBuilding CXX object CMakeFiles/cornfield_navigation_node.dir/src/pid_controller.cpp.o[0m

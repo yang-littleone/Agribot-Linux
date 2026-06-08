@@ -1,0 +1,11 @@
+[INFO] [1780822697.000497603] [LivoxPointsPlugin]: load csv file name: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid360.csv
+[INFO] [1780822698.588044441] [LivoxPointsPlugin]: ros topic name: mid360
+[INFO] [1780822698.690069198] [LivoxPointsPlugin]: scan info size: 800000
+[INFO] [1780822698.691860413] [LivoxPointsPlugin]: sample: 10000
+[INFO] [1780822698.691887633] [LivoxPointsPlugin]: downsample: 1
+[INFO] [1780822701.489412458] [diff_drive_controller]: Wheel pair 1 separation set to [0.240000m]
+[INFO] [1780822701.491674694] [diff_drive_controller]: Subscribed to [/cmd_vel]
+[INFO] [1780822701.494379915] [diff_drive_controller]: Advertise odometry on [/odom]
+[INFO] [1780822701.498095168] [diff_drive_controller]: Publishing odom transforms between [odom] and [base_footprint]
+[INFO] [1780822701.498152018] [diff_drive_controller]: Publishing wheel transforms between [base_footprint], [wheel_front_left_joint] and [wheel_front_right_joint]
+[INFO] [1780822701.498167741] [diff_drive_controller]: Publishing wheel transforms between [base_footprint], [wheel_rear_left_joint] and [wheel_rear_right_joint]

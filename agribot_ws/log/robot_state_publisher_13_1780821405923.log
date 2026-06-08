@@ -1,0 +1,8 @@
+[INFO] [1780821405.942191048] [robot_state_publisher]: got segment base_footprint
+[INFO] [1780821405.942281362] [robot_state_publisher]: got segment base_link
+[INFO] [1780821405.942289518] [robot_state_publisher]: got segment imu_link
+[INFO] [1780821405.942293960] [robot_state_publisher]: got segment livox
+[INFO] [1780821405.942298151] [robot_state_publisher]: got segment wheel_front_left_link
+[INFO] [1780821405.942306014] [robot_state_publisher]: got segment wheel_front_right_link
+[INFO] [1780821405.942312885] [robot_state_publisher]: got segment wheel_rear_left_link
+[INFO] [1780821405.942318931] [robot_state_publisher]: got segment wheel_rear_right_link

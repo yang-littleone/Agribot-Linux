@@ -1,0 +1,25 @@
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller_test.cpp: In member function ‘void PIDControllerTest::publish_odometry()’:
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller_test.cpp:172:9: error: ‘tf2’ has not been declared
+  172 |         tf2::Quaternion q;
+      |         ^~~
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller_test.cpp:173:9: error: ‘q’ was not declared in this scope
+  173 |         q.setRPY(0.0, 0.0, robot_yaw_);
+      |         ^
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller_test.cpp: In member function ‘void PIDControllerTest::publish_markers()’:
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller_test.cpp:301:9: error: ‘tf2’ has not been declared
+  301 |         tf2::Quaternion q;
+      |         ^~~
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller_test.cpp:302:9: error: ‘q’ was not declared in this scope
+  302 |         q.setRPY(0.0, 0.0, robot_yaw_);
+      |         ^
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp: In member function ‘std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > CornRowDetector::temporal_smoothing(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)’:
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:361:50: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  361 |     while (static_cast<int>(path_buffer_.size()) > time_window_size_) {  // 显式转换为int
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:367:47: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  367 |     if (static_cast<int>(path_buffer_.size()) < time_window_size_) {  // 显式转换为int
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+gmake[2]: *** [CMakeFiles/pid_controller_test.dir/build.make:76：CMakeFiles/pid_controller_test.dir/src/pid_controller_test.cpp.o] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:249：CMakeFiles/pid_controller_test.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake: *** [Makefile:146：all] 错误 2

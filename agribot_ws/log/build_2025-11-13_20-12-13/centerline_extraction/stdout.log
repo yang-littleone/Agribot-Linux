@@ -1,4 +1,0 @@
-[ 16%] Built target pcl_learning
-[ 33%] Built target centerline_extract
-[ 41%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m
-[ 91%] Built target cornfield_navigation_node

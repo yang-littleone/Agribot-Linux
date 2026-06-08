@@ -3,12 +3,12 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
+#include "std_msgs/msg/float32.hpp"
 #include "nav_msgs/msg/path.hpp"
 #include "pcl/point_cloud.h" // provide pcl point cloud type
 #include "pcl/point_types.h" // provide pcl point types
 #include <deque>
 #include <string>
-#include "nav_msgs/msg/odometry.hpp"
 #include "tf2_ros/buffer.h"
 #include "tf2_ros/transform_listener.h"
 
@@ -25,12 +25,14 @@ private:
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr left_row_pub_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr right_row_pub_;
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr center_line_pub_;
-    rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_; // 订阅小车里程计
     rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr center_line_viz_pub_;
+    rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr left_boundary_pub_;
+    rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr right_boundary_pub_;
+    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr corridor_width_pub_;
+    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr corridor_safety_margin_pub_;
+    rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr corridor_confidence_pub_;
     std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
     std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
-    double robot_current_x_ = 0.0; // 存储小车当前x坐标
-    double robot_current_y_ = 0.0; // （可选）存储y坐标，备用
     float z_min_ = 0.0;
     float z_max_ = 0.5;
     float voxel_size_ = 0.02;
@@ -45,6 +47,26 @@ private:
     float max_line_slope_ = 5.0;
     float plants_ahead_x_ = 0.5;
     float robust_fit_residual_threshold_ = 0.12;
+    float section_width_ = 0.25;
+    int min_section_points_ = 3;
+    float platform_width_ = 0.30;
+    float desired_row_separation_ = 0.8;
+    float segmented_center_weight_ = 0.0;
+    float segmented_boundary_weight_ = 0.0;
+    float innermost_bin_width_ = 0.20;
+    float innermost_row_band_width_ = 0.18;
+    float innermost_quantile_ = 0.20;
+    int min_innermost_seeds_ = 4;
+    float max_row_alignment_yaw_ = 0.75;
+    float line_filter_alpha_ = 0.25;
+    float max_line_lateral_jump_ = 0.18;
+    float max_row_width_jump_ = 0.25;
+    float max_row_yaw_jump_ = 0.45;
+    int max_line_lost_frames_ = 30;
+    float line_fit_x_min_ = 0.20;
+    bool use_simple_inner_row_mode_ = true;
+    bool use_row_yaw_estimation_ = true;
+    bool use_parallel_row_model_ = true;
     std::string base_frame_ = "base_link";
     std::string output_frame_ = "odom";
 
@@ -61,6 +83,14 @@ private:
     float outlier_threshold_ = 2.0;     // outlier threshold
     // record path history
     std::deque<nav_msgs::msg::Path> path_history_;
+    bool has_tracked_lines_ = false;
+    bool has_tracked_row_yaw_ = false;
+    bool has_tracked_global_row_yaw_ = false;
+    int line_lost_count_ = 0;
+    float tracked_row_yaw_ = 0.0;
+    float tracked_global_row_yaw_ = 0.0;
+    std::pair<float, float> tracked_left_line_{0.0f, 0.0f};
+    std::pair<float, float> tracked_right_line_{0.0f, 0.0f};
 
 public:
     CornRowDetectorProjection();
@@ -78,6 +108,16 @@ private:
     // projection point cloud to xy plane
     PointCloudXYZPtr projection_point_cloud(PointCloudXYZPtr input_cloud);
 
+    float estimate_row_yaw(PointCloudXYZPtr cloud);
+    float filter_global_row_yaw(float measured_global_row_yaw);
+    float estimate_global_row_yaw(
+        PointCloudXYZPtr cloud_base,
+        const geometry_msgs::msg::TransformStamped &output_from_base);
+    bool lookup_output_from_base_transform(geometry_msgs::msg::TransformStamped &output_from_base);
+    float normalize_angle(float angle) const;
+    PointCloudXYZPtr rotate_cloud_to_row_frame(PointCloudXYZPtr cloud, float row_yaw);
+    PointCloudXYZPtr rotate_cloud_to_base_frame(PointCloudXYZPtr cloud, float row_yaw);
+
     // split point cloud to left and right rows
     std::pair<PointCloudXYZPtr, PointCloudXYZPtr> split_left_right_rows(PointCloudXYZPtr input_cloud);
 
@@ -87,8 +127,34 @@ private:
     // fit line for point cloud
     std::pair<float, float> fit_line(PointCloudXYZPtr cloud);
 
-    // create path from line parameters
-    nav_msgs::msg::Path create_path(float slope, float intercept, const std_msgs::msg::Header &header);
+    float filter_row_yaw(float measured_row_yaw);
+    bool update_tracked_lines(
+        const std::pair<float, float> &measured_left_line,
+        const std::pair<float, float> &measured_right_line,
+        float measured_row_yaw,
+        std::pair<float, float> &tracked_left_line,
+        std::pair<float, float> &tracked_right_line,
+        float &tracked_row_yaw);
+
+    // create segmented under-canopy traversable corridor from row boundary observations
+    nav_msgs::msg::Path create_corridor_path(
+        PointCloudXYZPtr left_cloud,
+        PointCloudXYZPtr right_cloud,
+        const std::pair<float, float> &left_line,
+        const std::pair<float, float> &right_line,
+        float row_yaw,
+        const std_msgs::msg::Header &header);
+
+    nav_msgs::msg::Path transform_path_to_output_frame(const nav_msgs::msg::Path &path_base_link);
+
+    bool estimate_lateral_median(
+        PointCloudXYZPtr cloud,
+        float x,
+        float fallback_y,
+        float &estimated_y,
+        int &support_count);
+
+    void publish_corridor_metrics(float width, float safety_margin, float confidence);
 
     // 平滑处理函数
     nav_msgs::msg::Path smooth_path(const nav_msgs::msg::Path &raw_path);
@@ -104,8 +170,6 @@ private:
 
     // 发布空路径以清空显示
     void publish_empty_path(const std_msgs::msg::Header &header);
-
-    void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
 };
 
 #endif

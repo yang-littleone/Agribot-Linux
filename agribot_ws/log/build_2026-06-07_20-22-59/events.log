@@ -1,0 +1,244 @@
+[0.000000] (-) TimerEvent: {}
+[0.000648] (-) JobUnselected: {'identifier': 'agribot_simulation'}
+[0.000882] (-) JobUnselected: {'identifier': 'diff_drive_robot'}
+[0.001096] (-) JobUnselected: {'identifier': 'fast_lio'}
+[0.001145] (-) JobUnselected: {'identifier': 'livox_ros_driver2'}
+[0.001220] (-) JobUnselected: {'identifier': 'ros2_livox_simulation'}
+[0.001263] (centerline_extraction) JobQueued: {'identifier': 'centerline_extraction', 'dependencies': OrderedDict()}
+[0.001285] (centerline_extraction) JobStarted: {'identifier': 'centerline_extraction'}
+[0.009198] (centerline_extraction) JobProgress: {'identifier': 'centerline_extraction', 'progress': 'cmake'}
+[0.010314] (centerline_extraction) JobProgress: {'identifier': 'centerline_extraction', 'progress': 'build'}
+[0.011368] (centerline_extraction) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/xkai/agribot/agribot_ws/build/centerline_extraction', '--', '-j8', '-l8'], 'cwd': '/home/xkai/agribot/agribot_ws/build/centerline_extraction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/xkai'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/tcf.json","messagesFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/0958016b2af9f09bb4257e0df4a95e2f90590f9f/nls.messages.json","corruptMarkerFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"a20412af81a5d48f32dfde1261a4c487.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/tcf.json","_cacheRoot":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn","_resolvedLanguagePackCoreLocation":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/0958016b2af9f09bb4257e0df4a95e2f90590f9f","_corruptedFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('DEBUG', 'release'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/home/xkai/agribot/agribot_ws/install/fast_lio/lib:/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-15f21625-1.12-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('MANAGERPID', '1779'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2177'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '172393'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:13923'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'xkai'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/xkai/.codex/tmp/arg0/codex-arg0BMnDsT:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/xkai/.vscode/extensions/openai.chatgpt-26.5602.40724-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/2150,unix/xkai-Ubuntun:/tmp/.ICE-unix/2150'), ('INVOCATION_ID', '22c5f28aca224aa3b2b0d2be9dd5b30f'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=fcitx'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install/simple_diff_test:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/fast_lio:/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/diff_drive_robot:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019ea101-4913-7ef2-b1e5-c25c0b9eddf4'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/xkai/agribot/agribot_ws/build/centerline_extraction'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/xkai/.config/Code/CachedData/0958016b2af9f09bb4257e0df4a95e2f90590f9f'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install/simple_diff_test:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/fast_lio:/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/diff_drive_robot:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble'), ('VSCODE_PID', '172393')]), 'shell': False}
+[0.082912] (centerline_extraction) StdoutLine: {'line': b'Consolidate compiler generated dependencies of target corn_row_detector_projection\n'}
+[0.093991] (centerline_extraction) StdoutLine: {'line': b'[ 16%] Built target centerline_extract\n'}
+[0.097694] (centerline_extraction) StdoutLine: {'line': b'[ 33%] Built target pcl_learning\n'}
+[0.099653] (-) TimerEvent: {}
+[0.109705] (centerline_extraction) StdoutLine: {'line': b'[ 83%] Built target cornfield_navigation_node\n'}
+[0.116177] (centerline_extraction) StdoutLine: {'line': b'[ 91%] Building CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o\n'}
+[0.199739] (-) TimerEvent: {}
+[0.299899] (-) TimerEvent: {}
+[0.400079] (-) TimerEvent: {}
+[0.500258] (-) TimerEvent: {}
+[0.600438] (-) TimerEvent: {}
+[0.700605] (-) TimerEvent: {}
+[0.800771] (-) TimerEvent: {}
+[0.900940] (-) TimerEvent: {}
+[1.001107] (-) TimerEvent: {}
+[1.101243] (-) TimerEvent: {}
+[1.201404] (-) TimerEvent: {}
+[1.301562] (-) TimerEvent: {}
+[1.401747] (-) TimerEvent: {}
+[1.501895] (-) TimerEvent: {}
+[1.602086] (-) TimerEvent: {}
+[1.702265] (-) TimerEvent: {}
+[1.802453] (-) TimerEvent: {}
+[1.902633] (-) TimerEvent: {}
+[2.002799] (-) TimerEvent: {}
+[2.102983] (-) TimerEvent: {}
+[2.203981] (-) TimerEvent: {}
+[2.304166] (-) TimerEvent: {}
+[2.404339] (-) TimerEvent: {}
+[2.504495] (-) TimerEvent: {}
+[2.604663] (-) TimerEvent: {}
+[2.704860] (-) TimerEvent: {}
+[2.805020] (-) TimerEvent: {}
+[2.905201] (-) TimerEvent: {}
+[3.005382] (-) TimerEvent: {}
+[3.105557] (-) TimerEvent: {}
+[3.205753] (-) TimerEvent: {}
+[3.305887] (-) TimerEvent: {}
+[3.406071] (-) TimerEvent: {}
+[3.506265] (-) TimerEvent: {}
+[3.606462] (-) TimerEvent: {}
+[3.706656] (-) TimerEvent: {}
+[3.806861] (-) TimerEvent: {}
+[3.907075] (-) TimerEvent: {}
+[4.007374] (-) TimerEvent: {}
+[4.107583] (-) TimerEvent: {}
+[4.207774] (-) TimerEvent: {}
+[4.307967] (-) TimerEvent: {}
+[4.408171] (-) TimerEvent: {}
+[4.508488] (-) TimerEvent: {}
+[4.608696] (-) TimerEvent: {}
+[4.708886] (-) TimerEvent: {}
+[4.809043] (-) TimerEvent: {}
+[4.909213] (-) TimerEvent: {}
+[5.009374] (-) TimerEvent: {}
+[5.109540] (-) TimerEvent: {}
+[5.209809] (-) TimerEvent: {}
+[5.310022] (-) TimerEvent: {}
+[5.410193] (-) TimerEvent: {}
+[5.510374] (-) TimerEvent: {}
+[5.610699] (-) TimerEvent: {}
+[5.710878] (-) TimerEvent: {}
+[5.811052] (-) TimerEvent: {}
+[5.911212] (-) TimerEvent: {}
+[6.011412] (-) TimerEvent: {}
+[6.111610] (-) TimerEvent: {}
+[6.211804] (-) TimerEvent: {}
+[6.311994] (-) TimerEvent: {}
+[6.412169] (-) TimerEvent: {}
+[6.512334] (-) TimerEvent: {}
+[6.612500] (-) TimerEvent: {}
+[6.712683] (-) TimerEvent: {}
+[6.812896] (-) TimerEvent: {}
+[6.913096] (-) TimerEvent: {}
+[7.013274] (-) TimerEvent: {}
+[7.113445] (-) TimerEvent: {}
+[7.213613] (-) TimerEvent: {}
+[7.313779] (-) TimerEvent: {}
+[7.413953] (-) TimerEvent: {}
+[7.514135] (-) TimerEvent: {}
+[7.614319] (-) TimerEvent: {}
+[7.714475] (-) TimerEvent: {}
+[7.814637] (-) TimerEvent: {}
+[7.914806] (-) TimerEvent: {}
+[8.014983] (-) TimerEvent: {}
+[8.115162] (-) TimerEvent: {}
+[8.215315] (-) TimerEvent: {}
+[8.315465] (-) TimerEvent: {}
+[8.415638] (-) TimerEvent: {}
+[8.515809] (-) TimerEvent: {}
+[8.615972] (-) TimerEvent: {}
+[8.716156] (-) TimerEvent: {}
+[8.816362] (-) TimerEvent: {}
+[8.916532] (-) TimerEvent: {}
+[9.016702] (-) TimerEvent: {}
+[9.116896] (-) TimerEvent: {}
+[9.217083] (-) TimerEvent: {}
+[9.317254] (-) TimerEvent: {}
+[9.417442] (-) TimerEvent: {}
+[9.517627] (-) TimerEvent: {}
+[9.617787] (-) TimerEvent: {}
+[9.717961] (-) TimerEvent: {}
+[9.818138] (-) TimerEvent: {}
+[9.918332] (-) TimerEvent: {}
+[10.018524] (-) TimerEvent: {}
+[10.118735] (-) TimerEvent: {}
+[10.218897] (-) TimerEvent: {}
+[10.319088] (-) TimerEvent: {}
+[10.419274] (-) TimerEvent: {}
+[10.519463] (-) TimerEvent: {}
+[10.619650] (-) TimerEvent: {}
+[10.719855] (-) TimerEvent: {}
+[10.820059] (-) TimerEvent: {}
+[10.920255] (-) TimerEvent: {}
+[11.020441] (-) TimerEvent: {}
+[11.120634] (-) TimerEvent: {}
+[11.220850] (-) TimerEvent: {}
+[11.321007] (-) TimerEvent: {}
+[11.421157] (-) TimerEvent: {}
+[11.521337] (-) TimerEvent: {}
+[11.621485] (-) TimerEvent: {}
+[11.721658] (-) TimerEvent: {}
+[11.821837] (-) TimerEvent: {}
+[11.922024] (-) TimerEvent: {}
+[12.022202] (-) TimerEvent: {}
+[12.122374] (-) TimerEvent: {}
+[12.222565] (-) TimerEvent: {}
+[12.322747] (-) TimerEvent: {}
+[12.422901] (-) TimerEvent: {}
+[12.523086] (-) TimerEvent: {}
+[12.623271] (-) TimerEvent: {}
+[12.723463] (-) TimerEvent: {}
+[12.823645] (-) TimerEvent: {}
+[12.923822] (-) TimerEvent: {}
+[13.024005] (-) TimerEvent: {}
+[13.124172] (-) TimerEvent: {}
+[13.224334] (-) TimerEvent: {}
+[13.324502] (-) TimerEvent: {}
+[13.424688] (-) TimerEvent: {}
+[13.524873] (-) TimerEvent: {}
+[13.625065] (-) TimerEvent: {}
+[13.725255] (-) TimerEvent: {}
+[13.825441] (-) TimerEvent: {}
+[13.925623] (-) TimerEvent: {}
+[14.025788] (-) TimerEvent: {}
+[14.125942] (-) TimerEvent: {}
+[14.226091] (-) TimerEvent: {}
+[14.326250] (-) TimerEvent: {}
+[14.426416] (-) TimerEvent: {}
+[14.526568] (-) TimerEvent: {}
+[14.626757] (-) TimerEvent: {}
+[14.726956] (-) TimerEvent: {}
+[14.827135] (-) TimerEvent: {}
+[14.927316] (-) TimerEvent: {}
+[15.027524] (-) TimerEvent: {}
+[15.127720] (-) TimerEvent: {}
+[15.227905] (-) TimerEvent: {}
+[15.328097] (-) TimerEvent: {}
+[15.428262] (-) TimerEvent: {}
+[15.528424] (-) TimerEvent: {}
+[15.628581] (-) TimerEvent: {}
+[15.728734] (-) TimerEvent: {}
+[15.828892] (-) TimerEvent: {}
+[15.929061] (-) TimerEvent: {}
+[16.029224] (-) TimerEvent: {}
+[16.129390] (-) TimerEvent: {}
+[16.229555] (-) TimerEvent: {}
+[16.329732] (-) TimerEvent: {}
+[16.429897] (-) TimerEvent: {}
+[16.530092] (-) TimerEvent: {}
+[16.630286] (-) TimerEvent: {}
+[16.730469] (-) TimerEvent: {}
+[16.830621] (-) TimerEvent: {}
+[16.930803] (-) TimerEvent: {}
+[17.030972] (-) TimerEvent: {}
+[17.131146] (-) TimerEvent: {}
+[17.189358] (centerline_extraction) StdoutLine: {'line': b'[100%] Linking CXX executable corn_row_detector_projection\n'}
+[17.231264] (-) TimerEvent: {}
+[17.331456] (-) TimerEvent: {}
+[17.431672] (-) TimerEvent: {}
+[17.531888] (-) TimerEvent: {}
+[17.632069] (-) TimerEvent: {}
+[17.732251] (-) TimerEvent: {}
+[17.832435] (-) TimerEvent: {}
+[17.932629] (-) TimerEvent: {}
+[18.032817] (-) TimerEvent: {}
+[18.132998] (-) TimerEvent: {}
+[18.233173] (-) TimerEvent: {}
+[18.333365] (-) TimerEvent: {}
+[18.433571] (-) TimerEvent: {}
+[18.533757] (-) TimerEvent: {}
+[18.633884] (-) TimerEvent: {}
+[18.734066] (-) TimerEvent: {}
+[18.795248] (centerline_extraction) StdoutLine: {'line': b'[100%] Built target corn_row_detector_projection\n'}
+[18.805165] (centerline_extraction) CommandEnded: {'returncode': 0}
+[18.805826] (centerline_extraction) JobProgress: {'identifier': 'centerline_extraction', 'progress': 'install'}
+[18.816288] (centerline_extraction) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/xkai/agribot/agribot_ws/build/centerline_extraction'], 'cwd': '/home/xkai/agribot/agribot_ws/build/centerline_extraction', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('VSCODE_CWD', '/home/xkai'), ('VSCODE_ESM_ENTRYPOINT', 'vs/workbench/api/node/extensionHostProcess'), ('CODEX_CI', '1'), ('LANGUAGE', 'zh_CN:zh'), ('USER', 'xkai'), ('CODEX_INTERNAL_ORIGINATOR_OVERRIDE', 'codex_vscode'), ('VSCODE_NLS_CONFIG', '{"userLocale":"zh-cn","osLocale":"zh-cn","resolvedLanguage":"zh-cn","defaultMessagesFile":"/usr/share/code/resources/app/out/nls.messages.json","languagePack":{"translationsConfigFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/tcf.json","messagesFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/0958016b2af9f09bb4257e0df4a95e2f90590f9f/nls.messages.json","corruptMarkerFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/corrupted.info"},"locale":"zh-cn","availableLanguages":{"*":"zh-cn"},"_languagePackId":"a20412af81a5d48f32dfde1261a4c487.zh-cn","_languagePackSupport":true,"_translationsConfigFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/tcf.json","_cacheRoot":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn","_resolvedLanguagePackCoreLocation":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/0958016b2af9f09bb4257e0df4a95e2f90590f9f","_corruptedFile":"/home/xkai/.config/Code/clp/a20412af81a5d48f32dfde1261a4c487.zh-cn/corrupted.info"}'), ('VSCODE_HANDLES_UNCAUGHT_ERRORS', 'true'), ('XDG_SESSION_TYPE', 'x11'), ('DEBUG', 'release'), ('SHLVL', '0'), ('LD_LIBRARY_PATH', '/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/lib:/home/xkai/agribot/agribot_ws/install/fast_lio/lib:/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/lib:/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/xkai'), ('CHROME_DESKTOP', 'code.desktop'), ('DESKTOP_SESSION', 'ubuntu-xorg'), ('VSCODE_IPC_HOOK', '/run/user/1000/vscode-15f21625-1.12-main.sock'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/code.desktop'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('PAGER', 'cat'), ('MANAGERPID', '1779'), ('LC_CTYPE', 'C.UTF-8'), ('SYSTEMD_EXEC_PID', '2177'), ('NO_COLOR', '1'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', ''), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '172393'), ('VSCODE_CRASH_REPORTER_PROCESS_TYPE', 'extensionHost'), ('IM_CONFIG_PHASE', '1'), ('COLCON_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'fcitx'), ('LOGNAME', 'xkai'), ('JOURNAL_STREAM', '8:13923'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('RUST_LOG', 'warn'), ('USERNAME', 'xkai'), ('TERM', 'dumb'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('FC_FONTATIONS', '1'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/home/xkai/.codex/tmp/arg0/codex-arg0BMnDsT:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/xkai/.vscode/extensions/openai.chatgpt-26.5602.40724-linux-x64/bin/linux-x86_64'), ('SESSION_MANAGER', 'local/xkai-Ubuntun:@/tmp/.ICE-unix/2150,unix/xkai-Ubuntun:/tmp/.ICE-unix/2150'), ('INVOCATION_ID', '22c5f28aca224aa3b2b0d2be9dd5b30f'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('GDK_BACKEND', 'x11'), ('DISPLAY', ':1'), ('LANG', 'zh_CN.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('XMODIFIERS', '@im=fcitx'), ('GH_PAGER', 'cat'), ('XDG_SESSION_DESKTOP', 'ubuntu-xorg'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install/simple_diff_test:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/fast_lio:/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/diff_drive_robot:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('QT_ACCESSIBILITY', '1'), ('ELECTRON_RUN_AS_NODE', '1'), ('GDMSESSION', 'ubuntu-xorg'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('CODEX_THREAD_ID', '019ea101-4913-7ef2-b1e5-c25c0b9eddf4'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GIT_PAGER', 'cat'), ('QT_IM_MODULE', 'fcitx'), ('PWD', '/home/xkai/agribot/agribot_ws/build/centerline_extraction'), ('LC_ALL', 'C.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu-xorg:/etc/xdg'), ('VSCODE_CODE_CACHE_PATH', '/home/xkai/.config/Code/CachedData/0958016b2af9f09bb4257e0df4a95e2f90590f9f'), ('CLUTTER_IM_MODULE', 'fcitx'), ('XDG_DATA_DIRS', '/usr/share/ubuntu-xorg:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/xkai/agribot/agribot_ws/install/fast_lio/local/lib/python3.10/dist-packages:/home/xkai/agribot/agribot_ws/install/livox_ros_driver2/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('CMAKE_PREFIX_PATH', '/home/xkai/agribot/agribot_ws/install/simple_diff_test:/home/xkai/agribot/agribot_ws/install/ros2_livox_simulation:/home/xkai/agribot/agribot_ws/install/fast_lio:/home/xkai/agribot/agribot_ws/install/livox_ros_driver2:/home/xkai/agribot/agribot_ws/install/diff_drive_robot:/home/xkai/agribot/agribot_ws/install/centerline_extraction:/home/xkai/agribot/agribot_ws/install/agribot_simulation:/opt/ros/humble'), ('VSCODE_PID', '172393')]), 'shell': False}
+[18.824238] (centerline_extraction) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[18.824509] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/pcl_learning\n'}
+[18.824701] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/centerline_extract\n'}
+[18.825042] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/cornfield_navigation_node\n'}
+[18.825259] (centerline_extraction) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/corn_row_detector_projection\n'}
+[18.830273] (centerline_extraction) StdoutLine: {'line': b'-- Set runtime path of "/home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/corn_row_detector_projection" to ""\n'}
+[18.830756] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include\n'}
+[18.831134] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction\n'}
+[18.831426] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/obstacle_detector.hpp\n'}
+[18.831523] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pure_pursuit_controller copy.hpp\n'}
+[18.831616] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pure_pursuit_controller.hpp\n'}
+[18.831711] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pure_pursuit_controller copy 2.hpp\n'}
+[18.831805] (centerline_extraction) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector_projection.hpp\n'}
+[18.831883] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector.hpp\n'}
+[18.831937] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector1.hpp\n'}
+[18.831989] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector copy.hpp\n'}
+[18.832064] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pid_controller.hpp\n'}
+[18.832143] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/ament_index/resource_index/package_run_dependencies/centerline_extraction\n'}
+[18.832229] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/ament_index/resource_index/parent_prefix_path/centerline_extraction\n'}
+[18.832317] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/environment/ament_prefix_path.sh\n'}
+[18.832565] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/environment/ament_prefix_path.dsv\n'}
+[18.833122] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/environment/path.sh\n'}
+[18.833372] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/environment/path.dsv\n'}
+[18.833539] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/local_setup.bash\n'}
+[18.833653] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/local_setup.sh\n'}
+[18.833796] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/local_setup.zsh\n'}
+[18.833949] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/local_setup.dsv\n'}
+[18.834090] (-) TimerEvent: {}
+[18.834115] (centerline_extraction) StdoutLine: {'line': b'-- Installing: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.dsv\n'}
+[18.834331] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/ament_index/resource_index/packages/centerline_extraction\n'}
+[18.834481] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/cmake/centerline_extractionConfig.cmake\n'}
+[18.834892] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/cmake/centerline_extractionConfig-version.cmake\n'}
+[18.835139] (centerline_extraction) StdoutLine: {'line': b'-- Up-to-date: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.xml\n'}
+[18.835241] (centerline_extraction) CommandEnded: {'returncode': 0}
+[18.851398] (centerline_extraction) JobEnded: {'identifier': 'centerline_extraction', 'rc': 0}
+[18.852058] (-) EventReactorShutdown: {}

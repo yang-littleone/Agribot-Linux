@@ -1,0 +1,21 @@
+[INFO] [1780822118.010033677] [simple_test]: Simple test node started
+[INFO] [1780822119.010134907] [simple_test]: Published marker, count: 10
+[INFO] [1780822120.010148655] [simple_test]: Published marker, count: 20
+[INFO] [1780822121.010175788] [simple_test]: Published marker, count: 30
+[INFO] [1780822122.010147580] [simple_test]: Published marker, count: 40
+[INFO] [1780822123.010129064] [simple_test]: Published marker, count: 50
+[INFO] [1780822124.010155511] [simple_test]: Published marker, count: 60
+[INFO] [1780822125.010166880] [simple_test]: Published marker, count: 70
+[INFO] [1780822126.010156796] [simple_test]: Published marker, count: 80
+[INFO] [1780822127.010177573] [simple_test]: Published marker, count: 90
+[INFO] [1780822128.010158996] [simple_test]: Published marker, count: 100
+[INFO] [1780822129.010168650] [simple_test]: Published marker, count: 110
+[INFO] [1780822130.010159336] [simple_test]: Published marker, count: 120
+[INFO] [1780822131.010162270] [simple_test]: Published marker, count: 130
+[INFO] [1780822132.010167714] [simple_test]: Published marker, count: 140
+[INFO] [1780822133.010170433] [simple_test]: Published marker, count: 150
+[INFO] [1780822134.010217348] [simple_test]: Published marker, count: 160
+[INFO] [1780822135.010180218] [simple_test]: Published marker, count: 170
+[INFO] [1780822136.010177537] [simple_test]: Published marker, count: 180
+[INFO] [1780822137.010176739] [simple_test]: Published marker, count: 190
+[INFO] [1780822137.705206994] [rclcpp]: signal_handler(SIGINT/SIGTERM)

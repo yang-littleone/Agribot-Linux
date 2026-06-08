@@ -1,2 +1,0 @@
-Invoking command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation': __trae_PS1=\n(TraeAI-3) \w [$?] $ /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/agribot_simulation -- -j8 -l8
-Invoked command in '/home/xkai/agribot/agribot_ws/build/agribot_simulation' returned '2': __trae_PS1=\n(TraeAI-3) \w [$?] $ /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/agribot_simulation -- -j8 -l8

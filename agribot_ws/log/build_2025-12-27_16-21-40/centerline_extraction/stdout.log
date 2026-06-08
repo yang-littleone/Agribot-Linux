@@ -1,5 +1,0 @@
-[35m[1mConsolidate compiler generated dependencies of target corn_row_detector_projection[0m
-[ 16%] Built target centerline_extract
-[ 33%] Built target pcl_learning
-[ 83%] Built target cornfield_navigation_node
-[ 91%] [32mBuilding CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o[0m

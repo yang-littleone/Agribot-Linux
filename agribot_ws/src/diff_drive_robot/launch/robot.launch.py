@@ -43,6 +43,7 @@ def generate_launch_description():
         get_package_share_directory('agribot_simulation'),
         'world',
         'twoworld.world'
+        # towrow.world-两行圆柱稀疏 twoworld.world-两行圆柱紧密 corn_leaf_world.world cornlinens_angular2.world-带弯曲单行 corn_leaf_world.world-两行稀疏真实
     )
 
     gazebo_launch = IncludeLaunchDescription(

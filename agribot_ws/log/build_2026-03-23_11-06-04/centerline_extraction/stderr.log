@@ -1,6 +1,0 @@
-[31mCMake Error at CMakeLists.txt:97 (install):
-  install TARGETS given target "cornfield_navigation_node" which does not
-  exist.
-
-[0m
-gmake: *** [Makefile:444：cmake_check_build_system] 错误 1

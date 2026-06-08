@@ -1,5 +1,0 @@
-[0.015s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
-[0.082s] [ 25%] Built target pure_pursuit_controller
-[0.083s] [ 50%] Built target centerline_extract
-[0.091s] [ 75%] Built target pcl_learning
-[0.094s] [100%] Built target corn_row_detector_projection
