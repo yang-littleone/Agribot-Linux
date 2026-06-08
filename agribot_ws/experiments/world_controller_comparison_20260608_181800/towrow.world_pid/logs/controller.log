@@ -1,0 +1,4 @@
+[INFO] [1780913889.575539782] [obstacle_detector]: Obstacle detector initialized
+[INFO] [1780913889.584300438] [pid_controller]: PID控制器初始化完成（目标距离: 0.40米）
+[INFO] [1780913889.584357458] [main]: Cornfield navigation system started with pid controller
+[INFO] [1780913931.580582897] [rclcpp]: signal_handler(SIGINT/SIGTERM)

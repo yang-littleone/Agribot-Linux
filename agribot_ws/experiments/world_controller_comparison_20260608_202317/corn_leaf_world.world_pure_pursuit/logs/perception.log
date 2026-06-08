@@ -1,0 +1,38 @@
+[WARN] [1780922030.241986971] [corn_row_detector_projection]: Reject row jump: left=0.19 right=0.01 width=0.20
+[WARN] [1780922030.242139996] [corn_row_detector_projection]: Use previous row model during unstable detection (1/30)
+[WARN] [1780922030.408949716] [corn_row_detector_projection]: Reject row jump: left=0.19 right=0.01 width=0.21
+[WARN] [1780922030.581910893] [corn_row_detector_projection]: Reject row jump: left=0.20 right=0.01 width=0.20
+[WARN] [1780922030.751505623] [corn_row_detector_projection]: Reject row jump: left=0.20 right=0.01 width=0.21
+[WARN] [1780922030.922033482] [corn_row_detector_projection]: Reject row jump: left=0.21 right=0.01 width=0.22
+[WARN] [1780922031.100235601] [corn_row_detector_projection]: Reject row jump: left=0.21 right=0.01 width=0.22
+[WARN] [1780922031.267228965] [corn_row_detector_projection]: Reject row jump: left=0.19 right=0.01 width=0.20
+[WARN] [1780922031.267283468] [corn_row_detector_projection]: Use previous row model during unstable detection (7/30)
+[WARN] [1780922031.437146753] [corn_row_detector_projection]: Reject row jump: left=0.21 right=0.01 width=0.22
+[WARN] [1780922031.605544173] [corn_row_detector_projection]: Reject row jump: left=0.21 right=0.01 width=0.22
+[WARN] [1780922031.772981206] [corn_row_detector_projection]: Reject row jump: left=0.19 right=0.01 width=0.20
+[WARN] [1780922091.052419229] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.01 width=0.26
+[WARN] [1780922091.052487994] [corn_row_detector_projection]: Use previous row model during unstable detection (1/30)
+[WARN] [1780922091.222036263] [corn_row_detector_projection]: Reject row jump: left=0.23 right=0.01 width=0.24
+[WARN] [1780922091.394495275] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.00 width=0.25
+[WARN] [1780922091.564243676] [corn_row_detector_projection]: Reject row jump: left=0.24 right=0.00 width=0.25
+[WARN] [1780922091.739714424] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.01 width=0.26
+[WARN] [1780922091.907545910] [corn_row_detector_projection]: Reject row jump: left=0.26 right=0.01 width=0.27
+[WARN] [1780922092.074976316] [corn_row_detector_projection]: Reject row jump: left=0.24 right=0.01 width=0.24
+[WARN] [1780922092.075033373] [corn_row_detector_projection]: Use previous row model during unstable detection (7/30)
+[WARN] [1780922092.248910931] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.01 width=0.26
+[WARN] [1780922092.415552517] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.01 width=0.26
+[WARN] [1780922092.586980326] [corn_row_detector_projection]: Reject row jump: left=0.23 right=0.01 width=0.24
+[WARN] [1780922092.755119330] [corn_row_detector_projection]: Reject row jump: left=0.20 right=0.01 width=0.21
+[WARN] [1780922151.923074910] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.00 width=0.25
+[WARN] [1780922151.923138634] [corn_row_detector_projection]: Use previous row model during unstable detection (1/30)
+[WARN] [1780922152.094342060] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.01 width=0.24
+[WARN] [1780922152.261572940] [corn_row_detector_projection]: Reject row jump: left=0.24 right=0.01 width=0.23
+[WARN] [1780922152.438459598] [corn_row_detector_projection]: Reject row jump: left=0.23 right=0.00 width=0.23
+[WARN] [1780922152.605995759] [corn_row_detector_projection]: Reject row jump: left=0.26 right=0.01 width=0.26
+[WARN] [1780922152.768924852] [corn_row_detector_projection]: Reject row jump: left=0.26 right=0.00 width=0.26
+[WARN] [1780922152.936318934] [corn_row_detector_projection]: Reject row jump: left=0.24 right=0.01 width=0.25
+[WARN] [1780922152.936372877] [corn_row_detector_projection]: Use previous row model during unstable detection (7/30)
+[WARN] [1780922153.109101248] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.01 width=0.26
+[WARN] [1780922153.275680460] [corn_row_detector_projection]: Reject row jump: left=0.24 right=0.01 width=0.25
+[WARN] [1780922153.443629905] [corn_row_detector_projection]: Reject row jump: left=0.20 right=0.01 width=0.21
+[INFO] [1780922213.468705761] [rclcpp]: signal_handler(SIGINT/SIGTERM)

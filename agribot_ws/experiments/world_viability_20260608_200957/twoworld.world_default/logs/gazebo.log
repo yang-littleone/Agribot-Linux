@@ -1,0 +1,357 @@
+[INFO] [launch]: All log files can be found below /home/xkai/.ros/log/2026-06-08-20-12-20-265053-xkai-Ubuntun-281510
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [281555]
+[INFO] [gzserver-2]: process started with pid [281557]
+[INFO] [gzclient-3]: process started with pid [281559]
+[INFO] [spawn_entity.py-4]: process started with pid [281561]
+[robot_state_publisher-1] [INFO] [1780920740.913787175] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1780920740.913905788] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1780920740.913919158] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1780920740.913926205] [robot_state_publisher]: got segment livox
+[robot_state_publisher-1] [INFO] [1780920740.913932829] [robot_state_publisher]: got segment wheel_front_left_link
+[robot_state_publisher-1] [INFO] [1780920740.913939590] [robot_state_publisher]: got segment wheel_front_right_link
+[robot_state_publisher-1] [INFO] [1780920740.913945291] [robot_state_publisher]: got segment wheel_rear_left_link
+[robot_state_publisher-1] [INFO] [1780920740.913950776] [robot_state_publisher]: got segment wheel_rear_right_link
+[spawn_entity.py-4] [INFO] [1780920741.103395331] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-4] [INFO] [1780920741.103745648] [spawn_entity]: Loading entity published on topic robot_description
+[spawn_entity.py-4] [INFO] [1780920741.105403321] [spawn_entity]: Waiting for entity xml on robot_description
+[gzclient-3] Gazebo multi-robot simulator, version 11.10.2
+[gzclient-3] Copyright (C) 2012 Open Source Robotics Foundation.
+[gzclient-3] Released under the Apache 2 License.
+[gzclient-3] http://gazebosim.org
+[gzclient-3] 
+[spawn_entity.py-4] [INFO] [1780920741.116231210] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-4] [INFO] [1780920741.116506732] [spawn_entity]: Waiting for service /spawn_entity
+[gzserver-2] Gazebo multi-robot simulator, version 11.10.2
+[gzserver-2] Copyright (C) 2012 Open Source Robotics Foundation.
+[gzserver-2] Released under the Apache 2 License.
+[gzserver-2] http://gazebosim.org
+[gzserver-2] 
+[gzserver-2] [1;33m[Wrn] [gazebo_ros_init.cpp:178] [0m[1;33m
+[gzserver-2] #     # ####### ####### ###  #####  #######
+[gzserver-2] ##    # #     #    #     #  #     # #
+[gzserver-2] # #   # #     #    #     #  #       #
+[gzserver-2] #  #  # #     #    #     #  #       #####
+[gzserver-2] #   # # #     #    #     #  #       #
+[gzserver-2] #    ## #     #    #     #  #     # #
+[gzserver-2] #     # #######    #    ###  #####  #######
+[gzserver-2] 
+[gzserver-2] This version of Gazebo, now called Gazebo classic, reaches end-of-life
+[gzserver-2] in January 2025. Users are highly encouraged to migrate to the new Gazebo
+[gzserver-2] using our migration guides (https://gazebosim.org/docs/latest/gazebo_classic_migration?utm_source=gazebo_ros_pkgs&utm_medium=cli)
+[gzserver-2] 
+[gzserver-2] [0m[1;33m
+[spawn_entity.py-4] [INFO] [1780920742.620564646] [spawn_entity]: Calling service /spawn_entity
+[gzclient-3] [1;32m[Msg] [0m[1;32mWaiting for master.[0m[1;32m
+[gzclient-3] [0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mConnected to gazebo master @ [0m[1;32mhttp://127.0.0.1:11345[0m[1;32m
+[gzclient-3] [0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mPublicized address: [0m[1;32m192.168.3.182[0m[1;32m
+[gzclient-3] [1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.ai_completion"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.cache"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.cargo"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.codex"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.config"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.copilot"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.dbus"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.designer"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.dotnet"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.espressif"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.gazebo"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.gnupg"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.icube-remote-ssh"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.ignition"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.lingma"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.local"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.marscode"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.npm"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.nvm"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.pki"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.presage"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.ros"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.rviz2"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.sdformat"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.sogouinput"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.ssh"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.trae-cn"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.vnc"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.vscode"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.vscode-shared"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/.xwechat"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/4wd-robot-test"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/4wd-robot-test（复件）"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/CH341SER_LINUX"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/H30_ws"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/LivoxViewer2 for Ubuntu v2.3.0"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/TurnONAgriBot"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/Yporaject"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/agribot"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/agribot-test"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/agribot2"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/ch343ser_linux-main"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/esp"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/model_editor_models"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/ros2_learning"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/snap"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/testenv"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/tmp"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/wheeltec_ros2"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/wheeltec_ros2（复件）"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/下载"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/公共的"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/图片"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/文档"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/桌面"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/模板"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/视频"[0m[1;31m
+[gzclient-3] [0m[1;31m[Err] [InsertModelWidget.cc:403] [0m[1;31mMissing [0m[1;31mmodel.config[0m[1;31m for model [0m[1;31m"/home/xkai/音乐"[0m[1;31m
+[spawn_entity.py-4] [INFO] [1780920743.134967534] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [diff_drive_robot]
+[gzserver-2] [0m[1;33m[0m[1;33m[0m[INFO] [1780920743.146305635] [LivoxPointsPlugin]: load csv file name: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid360.csv
+[gzclient-3] [0m[1;33m[Wrn] [Event.cc:61] [0m[1;33mWarning: Deleting a connection right after creation. [0m[1;33mMake sure to save the ConnectionPtr from a Connect call
+[INFO] [spawn_entity.py-4]: process has finished cleanly [pid 281561]
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_0::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_0::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_1::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_1::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_2::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_2::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_3::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_3::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_4::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_4::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_5::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_5::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_6::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_6::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_7::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_7::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_8::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_8::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_9::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_9::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_10::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_10::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_11::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_11::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_12::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_12::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_13::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_13::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_14::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_14::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_15::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_15::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_16::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_16::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_17::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_17::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_18::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_18::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_19::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_19::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_20::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_20::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_21::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_21::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_23::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_23::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_0::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_0::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_1::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_1::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_2::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_2::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_3::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_3::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_4::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_clone_4::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_0::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_0::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_1::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_1::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_2::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_2::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_3::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_3::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_4::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_4::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_5::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_5::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_6::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_6::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_7::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_7::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_8::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_8::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_9::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_9::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_10::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_10::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_11::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_11::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_12::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_12::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_13::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_13::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_14::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_14::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_15::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_15::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_16::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_16::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_17::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_17::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_18::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_18::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_19::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_19::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_20::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_20::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_21::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_21::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_22::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_22::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_23::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_23::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_24::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_24::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_25::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_25::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_26::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_26::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_27::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_27::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_28::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_28::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_29::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_29::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_30::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_30::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_31::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_31::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_32::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_32::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_33::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_33::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_34::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_34::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_35::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_35::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_36::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_36::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_37::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_37::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_38::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_38::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_39::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_39::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_40::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_40::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_41::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_41::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_42::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_42::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_43::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_43::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_44::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_44::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_45::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_45::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_46::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_46::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_47::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_47::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_48::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_48::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_49::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_49::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_50::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_50::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_51::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_51::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_52::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_52::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_53::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_53::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_54::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_54::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_55::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_55::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_56::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_56::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_57::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_57::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_58::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_58::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_59::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_59::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_60::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_60::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_61::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_61::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_62::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_62::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_63::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_63::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_64::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_64::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_65::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_65::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_66::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_66::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_67::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_67::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_68::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_68::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_69::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_69::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_70::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_70::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_71::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_71::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_72::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_72::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_73::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_73::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_74::link::visual[0m[1;33m. Object will appear white
+[gzclient-3] [0m[1;33m[Wrn] [Visual.cc:1056] [0m[1;33mUnable to get Material[[0m[1;33mCornPlant/Material[0m[1;33m] for Geometry[[0m[1;33mCornPlant_clone_22_clone_74::link::visual[0m[1;33m. Object will appear white
+[gzserver-2] [1;32m[Msg] [0m[1;32mWaiting for master.[0m[1;32m
+[gzserver-2] [0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mConnected to gazebo master @ [0m[1;32mhttp://127.0.0.1:11345[0m[1;32m
+[gzserver-2] [0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mPublicized address: [0m[1;32m192.168.3.182[0m[1;32m
+[gzserver-2] [0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mLoading world file [[0m[1;32m/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/twoworld.world[0m[1;32m][0m[1;32m
+[gzserver-2] cannot convert str:
+[gzserver-2] data size:800000
+[gzserver-2] [INFO] [1780920744.629051349] [LivoxPointsPlugin]: ros topic name: mid360
+[gzserver-2] [INFO] [1780920744.733267738] [LivoxPointsPlugin]: scan info size: 800000
+[gzserver-2] [INFO] [1780920744.734844996] [LivoxPointsPlugin]: sample: 10000
+[gzserver-2] [INFO] [1780920744.734862757] [LivoxPointsPlugin]: downsample: 1
+[gzserver-2] [INFO] [1780920747.338185954] [diff_drive_controller]: Wheel pair 1 separation set to [0.240000m]
+[gzserver-2] [1;31mError [Element.cc:914][0m Missing element description for [wheel_diameter]
+[gzserver-2] [INFO] [1780920747.339405079] [diff_drive_controller]: Subscribed to [/cmd_vel]
+[gzserver-2] [INFO] [1780920747.341287940] [diff_drive_controller]: Advertise odometry on [/odom]
+[gzserver-2] [INFO] [1780920747.343463627] [diff_drive_controller]: Publishing odom transforms between [odom] and [base_footprint]
+[gzserver-2] [INFO] [1780920747.343493354] [diff_drive_controller]: Publishing wheel transforms between [base_footprint], [wheel_front_left_joint] and [wheel_front_right_joint]
+[gzserver-2] [INFO] [1780920747.343504640] [diff_drive_controller]: Publishing wheel transforms between [base_footprint], [wheel_rear_left_joint] and [wheel_rear_right_joint]
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [gzclient-3]: sending signal 'SIGINT' to process[gzclient-3]
+[INFO] [gzserver-2]: sending signal 'SIGINT' to process[gzserver-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[gzclient-3] [0m[1;33m[Wrn] [Event.cc:61] [0m[1;33mWarning: Deleting a connection right after creation. [0m[1;33mMake sure to save the ConnectionPtr from a Connect call
+[robot_state_publisher-1] [INFO] [1780920750.845452126] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[ERROR] [robot_state_publisher-1]: process has died [pid 281555, exit code -2, cmd '/opt/ros/humble/lib/robot_state_publisher/robot_state_publisher --ros-args -r __node:=robot_state_publisher --params-file /tmp/launch_params_639idd_k --params-file /tmp/launch_params_ig75si9n'].
+[INFO] [gzserver-2]: process has finished cleanly [pid 281557]
+[gzserver-2] [0m[1;32m[0m[1;32m[0m[1;36m[0m[1;32m[0m
+[gzserver-2] [1;33m[0m[1;31m[0m
+[ERROR] [gzclient-3]: process[gzclient-3] failed to terminate '5' seconds after receiving 'SIGINT', escalating to 'SIGTERM'
+[INFO] [gzclient-3]: sending signal 'SIGTERM' to process[gzclient-3]
+[ERROR] [gzclient-3]: process has died [pid 281559, exit code -15, cmd 'gzclient --gui-client-plugin=libgazebo_ros_eol_gui.so --verbose'].
+[gzclient-3] [0m[1;32m[0m[1;32m[0m
+[gzclient-3] [0m

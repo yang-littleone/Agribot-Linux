@@ -1,0 +1,3 @@
+[WARN] [1780921408.777519844] [corn_row_detector_projection]: Cannot lookup odom <- base_link for global row yaw: "odom" passed to lookupTransform argument target_frame does not exist. 
+[WARN] [1780921408.779933385] [corn_row_detector_projection]: Path TF transform failed from base_link to odom: "odom" passed to lookupTransform argument target_frame does not exist. . Publishing base-frame path.
+[INFO] [1780921596.590906233] [rclcpp]: signal_handler(SIGINT/SIGTERM)

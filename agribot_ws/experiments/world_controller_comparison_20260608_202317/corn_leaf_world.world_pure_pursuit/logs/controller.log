@@ -1,0 +1,20 @@
+[INFO] [1780922027.026634741] [obstacle_detector]: Obstacle detector initialized
+[INFO] [1780922027.033239869] [pure_pursuit_controller]: 纯追踪控制器初始化完成（轮距: 0.21米）
+[INFO] [1780922027.033291097] [main]: Cornfield navigation system started with pure_pursuit controller
+[WARN] [1780922027.128542127] [pure_pursuit_controller]: 未收到中心线，发布停止指令
+[WARN] [1780922032.272860517] [obstacle_detector]: Obstacle detected! Points: 32
+[WARN] [1780922032.439830424] [obstacle_detector]: Obstacle detected! Points: 52
+[WARN] [1780922032.607939761] [obstacle_detector]: Obstacle detected! Points: 66
+[WARN] [1780922032.779011320] [obstacle_detector]: Obstacle detected! Points: 74
+[WARN] [1780922032.948519153] [obstacle_detector]: Obstacle detected! Points: 32
+[WARN] [1780922093.076952678] [obstacle_detector]: Obstacle detected! Points: 30
+[WARN] [1780922093.246616125] [obstacle_detector]: Obstacle detected! Points: 52
+[WARN] [1780922093.421651300] [obstacle_detector]: Obstacle detected! Points: 66
+[WARN] [1780922093.588451584] [obstacle_detector]: Obstacle detected! Points: 74
+[WARN] [1780922093.760253610] [obstacle_detector]: Obstacle detected! Points: 44
+[WARN] [1780922153.769392269] [obstacle_detector]: Obstacle detected! Points: 14
+[WARN] [1780922153.940878264] [obstacle_detector]: Obstacle detected! Points: 44
+[WARN] [1780922154.110890986] [obstacle_detector]: Obstacle detected! Points: 68
+[WARN] [1780922154.282647994] [obstacle_detector]: Obstacle detected! Points: 72
+[WARN] [1780922154.455640009] [obstacle_detector]: Obstacle detected! Points: 60
+[INFO] [1780922213.304968778] [rclcpp]: signal_handler(SIGINT/SIGTERM)

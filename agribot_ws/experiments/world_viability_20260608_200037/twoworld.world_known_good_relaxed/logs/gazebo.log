@@ -1,0 +1,67 @@
+[INFO] [launch]: All log files can be found below /home/xkai/.ros/log/2026-06-08-20-04-36-477904-xkai-Ubuntun-273986
+[INFO] [launch]: Default logging verbosity is set to INFO
+[INFO] [robot_state_publisher-1]: process started with pid [274032]
+[INFO] [gzserver-2]: process started with pid [274034]
+[INFO] [spawn_entity.py-3]: process started with pid [274036]
+[robot_state_publisher-1] [INFO] [1780920276.925068725] [robot_state_publisher]: got segment base_footprint
+[robot_state_publisher-1] [INFO] [1780920276.925155010] [robot_state_publisher]: got segment base_link
+[robot_state_publisher-1] [INFO] [1780920276.925164140] [robot_state_publisher]: got segment imu_link
+[robot_state_publisher-1] [INFO] [1780920276.925168659] [robot_state_publisher]: got segment livox
+[robot_state_publisher-1] [INFO] [1780920276.925172650] [robot_state_publisher]: got segment wheel_front_left_link
+[robot_state_publisher-1] [INFO] [1780920276.925176514] [robot_state_publisher]: got segment wheel_front_right_link
+[robot_state_publisher-1] [INFO] [1780920276.925180119] [robot_state_publisher]: got segment wheel_rear_left_link
+[robot_state_publisher-1] [INFO] [1780920276.925183728] [robot_state_publisher]: got segment wheel_rear_right_link
+[spawn_entity.py-3] [INFO] [1780920277.122639957] [spawn_entity]: Spawn Entity started
+[spawn_entity.py-3] [INFO] [1780920277.122986886] [spawn_entity]: Loading entity published on topic robot_description
+[spawn_entity.py-3] [INFO] [1780920277.125289279] [spawn_entity]: Waiting for entity xml on robot_description
+[spawn_entity.py-3] [INFO] [1780920277.136231383] [spawn_entity]: Waiting for service /spawn_entity, timeout = 30
+[spawn_entity.py-3] [INFO] [1780920277.136507749] [spawn_entity]: Waiting for service /spawn_entity
+[gzserver-2] Gazebo multi-robot simulator, version 11.10.2
+[gzserver-2] Copyright (C) 2012 Open Source Robotics Foundation.
+[gzserver-2] Released under the Apache 2 License.
+[gzserver-2] http://gazebosim.org
+[gzserver-2] 
+[gzserver-2] [1;33m[Wrn] [gazebo_ros_init.cpp:178] [0m[1;33m
+[gzserver-2] #     # ####### ####### ###  #####  #######
+[gzserver-2] ##    # #     #    #     #  #     # #
+[gzserver-2] # #   # #     #    #     #  #       #
+[gzserver-2] #  #  # #     #    #     #  #       #####
+[gzserver-2] #   # # #     #    #     #  #       #
+[gzserver-2] #    ## #     #    #     #  #     # #
+[gzserver-2] #     # #######    #    ###  #####  #######
+[gzserver-2] 
+[gzserver-2] This version of Gazebo, now called Gazebo classic, reaches end-of-life
+[gzserver-2] in January 2025. Users are highly encouraged to migrate to the new Gazebo
+[gzserver-2] using our migration guides (https://gazebosim.org/docs/latest/gazebo_classic_migration?utm_source=gazebo_ros_pkgs&utm_medium=cli)
+[gzserver-2] 
+[gzserver-2] [0m[1;33m
+[spawn_entity.py-3] [INFO] [1780920278.641621842] [spawn_entity]: Calling service /spawn_entity
+[spawn_entity.py-3] [INFO] [1780920278.900646783] [spawn_entity]: Spawn status: SpawnEntity: Successfully spawned entity [diff_drive_robot]
+[gzserver-2] [0m[1;33m[0m[1;33m[0m[INFO] [1780920278.913911422] [LivoxPointsPlugin]: load csv file name: /home/xkai/agribot/agribot_ws/install/ros2_livox_simulation/share/ros2_livox_simulation/scan_mode/mid360.csv
+[INFO] [spawn_entity.py-3]: process has finished cleanly [pid 274036]
+[gzserver-2] [1;32m[Msg] [0m[1;32mWaiting for master.[0m[1;32m
+[gzserver-2] [0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mConnected to gazebo master @ [0m[1;32mhttp://127.0.0.1:11345[0m[1;32m
+[gzserver-2] [0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mPublicized address: [0m[1;32m192.168.3.182[0m[1;32m
+[gzserver-2] [0m[1;32m[0m[1;32m[0m[1;32m[Msg] [0m[1;32mLoading world file [[0m[1;32m/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/twoworld.world[0m[1;32m][0m[1;32m
+[gzserver-2] cannot convert str:
+[gzserver-2] data size:800000
+[gzserver-2] [INFO] [1780920280.272974152] [LivoxPointsPlugin]: ros topic name: mid360
+[gzserver-2] [INFO] [1780920280.361398571] [LivoxPointsPlugin]: scan info size: 800000
+[gzserver-2] [INFO] [1780920280.362947245] [LivoxPointsPlugin]: sample: 10000
+[gzserver-2] [INFO] [1780920280.362969583] [LivoxPointsPlugin]: downsample: 1
+[gzserver-2] [INFO] [1780920282.754260502] [diff_drive_controller]: Wheel pair 1 separation set to [0.240000m]
+[gzserver-2] [1;31mError [Element.cc:914][0m Missing element description for [wheel_diameter]
+[gzserver-2] [INFO] [1780920282.755660908] [diff_drive_controller]: Subscribed to [/cmd_vel]
+[gzserver-2] [INFO] [1780920282.757847931] [diff_drive_controller]: Advertise odometry on [/odom]
+[gzserver-2] [INFO] [1780920282.760238482] [diff_drive_controller]: Publishing odom transforms between [odom] and [base_footprint]
+[gzserver-2] [INFO] [1780920282.760273320] [diff_drive_controller]: Publishing wheel transforms between [base_footprint], [wheel_front_left_joint] and [wheel_front_right_joint]
+[gzserver-2] [INFO] [1780920282.760283847] [diff_drive_controller]: Publishing wheel transforms between [base_footprint], [wheel_rear_left_joint] and [wheel_rear_right_joint]
+[WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
+[INFO] [gzserver-2]: sending signal 'SIGINT' to process[gzserver-2]
+[INFO] [robot_state_publisher-1]: sending signal 'SIGINT' to process[robot_state_publisher-1]
+[robot_state_publisher-1] [INFO] [1780920294.695058479] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[robot_state_publisher-1] [INFO] [1780920294.697238415] [rclcpp]: signal_handler(SIGINT/SIGTERM)
+[INFO] [robot_state_publisher-1]: process has finished cleanly [pid 274032]
+[INFO] [gzserver-2]: process has finished cleanly [pid 274034]
+[gzserver-2] [0m[1;32m[0m[1;32m[0m[1;36m[0m[1;32m[0m
+[gzserver-2] [1;33m[0m[1;31m[0m

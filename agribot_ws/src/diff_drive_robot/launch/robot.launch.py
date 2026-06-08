@@ -3,7 +3,8 @@ from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
 from launch.launch_description_sources import PythonLaunchDescriptionSource
-from launch.substitutions import LaunchConfiguration, Command
+from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution
+from launch_ros.substitutions import FindPackageShare
 from launch_ros.actions import Node
 
 
@@ -14,6 +15,7 @@ def generate_launch_description():
     # Declare launch arguments
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
     gui = LaunchConfiguration('gui', default='true')
+    world = LaunchConfiguration('world', default='corn_leaf_world.world')
 
     # URDF file path
     urdf_file = os.path.join(pkg_share, 'urdf', 'robot.urdf.xacro')
@@ -39,12 +41,11 @@ def generate_launch_description():
         'launch'
     )
 
-    default_gazebo_world_path = os.path.join(
-        get_package_share_directory('agribot_simulation'),
+    gazebo_world_path = PathJoinSubstitution([
+        FindPackageShare('agribot_simulation'),
         'world',
-        'twoworld.world'
-        # towrow.world-两行圆柱稀疏 twoworld.world-两行圆柱紧密 corn_leaf_world.world cornlinens_angular2.world-带弯曲单行 corn_leaf_world.world-两行稀疏真实
-    )
+        world,
+    ])
 
     gazebo_launch = IncludeLaunchDescription(
         PythonLaunchDescriptionSource(
@@ -52,7 +53,7 @@ def generate_launch_description():
         ),
         launch_arguments={
             'gui': gui,
-            'world': default_gazebo_world_path,
+            'world': gazebo_world_path,
             'verbose': 'true',
         }.items()
     )
@@ -83,6 +84,11 @@ def generate_launch_description():
             'gui',
             default_value='true',
             description='Flag to enable Gazebo GUI'
+        ),
+        DeclareLaunchArgument(
+            'world',
+            default_value='corn_leaf_world.world',
+            description='Gazebo world file under agribot_simulation/world'
         ),
         robot_state_publisher_node,
         gazebo_launch,

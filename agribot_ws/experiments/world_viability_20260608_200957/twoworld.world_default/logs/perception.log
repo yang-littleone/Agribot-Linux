@@ -1,0 +1,4 @@
+[WARN] [1780920750.613455589] [corn_row_detector_projection]: Cannot transform point cloud from livox to base_link: "base_link" passed to lookupTransform argument target_frame does not exist. . Using raw cloud as fallback.
+[WARN] [1780920750.616360976] [corn_row_detector_projection]: Cannot lookup odom <- base_link for global row yaw: "base_link" passed to lookupTransform argument source_frame does not exist. 
+[WARN] [1780920750.626584043] [corn_row_detector_projection]: Path TF transform failed from base_link to odom: "base_link" passed to lookupTransform argument source_frame does not exist. . Publishing base-frame path.
+[INFO] [1780920750.631656743] [rclcpp]: signal_handler(SIGINT/SIGTERM)

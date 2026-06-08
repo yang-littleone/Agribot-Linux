@@ -62,7 +62,10 @@ void PurePursuitController::get_parameters()
 void PurePursuitController::center_line_callback(const nav_msgs::msg::Path::SharedPtr msg)
 {
     if (msg->poses.empty()) {
-        RCLCPP_WARN(this->get_logger(), "收到空的中心线，忽略");
+        has_center_line_ = false;
+        geometry_msgs::msg::Twist stop_cmd;
+        cmd_vel_pub_->publish(stop_cmd);
+        RCLCPP_WARN(this->get_logger(), "收到空的中心线，发布停止指令");
         return;
     }
     
@@ -93,7 +96,9 @@ void PurePursuitController::odom_callback(const nav_msgs::msg::Odometry::SharedP
         auto cmd_vel = calculate_control_command();
         cmd_vel_pub_->publish(cmd_vel);
     } else if (!has_center_line_) {
-        RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000, "未收到中心线，不发布控制指令");
+        geometry_msgs::msg::Twist stop_cmd;
+        cmd_vel_pub_->publish(stop_cmd);
+        RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000, "未收到中心线，发布停止指令");
     }
 }
 

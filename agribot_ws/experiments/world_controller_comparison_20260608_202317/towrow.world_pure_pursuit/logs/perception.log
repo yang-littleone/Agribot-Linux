@@ -1,0 +1,14 @@
+[WARN] [1780921678.530712190] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.05 width=0.20
+[WARN] [1780921678.530893156] [corn_row_detector_projection]: Use previous row model during unstable detection (1/30)
+[WARN] [1780921678.754720384] [corn_row_detector_projection]: Reject row jump: left=0.24 right=0.04 width=0.20
+[WARN] [1780921678.978845798] [corn_row_detector_projection]: Reject row jump: left=0.23 right=0.04 width=0.19
+[WARN] [1780921739.342052161] [corn_row_detector_projection]: Reject row jump: left=0.25 right=0.05 width=0.20
+[WARN] [1780921739.342116157] [corn_row_detector_projection]: Use previous row model during unstable detection (1/30)
+[WARN] [1780921739.529812044] [corn_row_detector_projection]: Reject row jump: left=0.24 right=0.05 width=0.19
+[WARN] [1780921739.731680706] [corn_row_detector_projection]: Reject row jump: left=0.24 right=0.05 width=0.20
+[WARN] [1780921799.866868847] [corn_row_detector_projection]: No plants detected ahead of the robot. Left points: 97, Right points: 98
+[WARN] [1780921800.097766967] [corn_row_detector_projection]: No plants detected ahead of the robot. Left points: 88, Right points: 112
+[WARN] [1780921800.325512280] [corn_row_detector_projection]: No plants detected ahead of the robot. Left points: 109, Right points: 97
+[WARN] [1780921800.559840267] [corn_row_detector_projection]: No plants detected ahead of the robot. Left points: 78, Right points: 109
+[WARN] [1780921800.756512744] [corn_row_detector_projection]: No plants detected ahead of the robot. Left points: 98, Right points: 97
+[INFO] [1780921800.813585930] [rclcpp]: signal_handler(SIGINT/SIGTERM)

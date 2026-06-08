@@ -1,0 +1,15 @@
+[INFO] [1780921614.955652907] [obstacle_detector]: Obstacle detector initialized
+[INFO] [1780921614.961568938] [pure_pursuit_controller]: 纯追踪控制器初始化完成（轮距: 0.21米）
+[INFO] [1780921614.961616643] [main]: Cornfield navigation system started with pure_pursuit controller
+[WARN] [1780921614.985828766] [pure_pursuit_controller]: 未收到中心线，发布停止指令
+[WARN] [1780921799.666081530] [obstacle_detector]: Obstacle detected! Points: 12
+[WARN] [1780921799.859348840] [obstacle_detector]: Obstacle detected! Points: 42
+[WARN] [1780921799.867123458] [pure_pursuit_controller]: 收到空的中心线，发布停止指令
+[WARN] [1780921799.891336148] [pure_pursuit_controller]: 未收到中心线，发布停止指令
+[WARN] [1780921800.089269282] [obstacle_detector]: Obstacle detected! Points: 66
+[WARN] [1780921800.098021439] [pure_pursuit_controller]: 收到空的中心线，发布停止指令
+[WARN] [1780921800.318537105] [obstacle_detector]: Obstacle detected! Points: 78
+[WARN] [1780921800.325704934] [pure_pursuit_controller]: 收到空的中心线，发布停止指令
+[WARN] [1780921800.554374820] [obstacle_detector]: Obstacle detected! Points: 58
+[WARN] [1780921800.560029425] [pure_pursuit_controller]: 收到空的中心线，发布停止指令
+[INFO] [1780921800.649894435] [rclcpp]: signal_handler(SIGINT/SIGTERM)

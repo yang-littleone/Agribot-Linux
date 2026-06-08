@@ -1,0 +1,4 @@
+[INFO] [1780913944.859649315] [obstacle_detector]: Obstacle detector initialized
+[INFO] [1780913944.867710121] [pure_pursuit_controller]: 纯追踪控制器初始化完成（轮距: 0.21米）
+[INFO] [1780913944.867765112] [main]: Cornfield navigation system started with pure_pursuit controller
+[INFO] [1780913986.964088102] [rclcpp]: signal_handler(SIGINT/SIGTERM)

@@ -1,18 +1,1 @@
-gazebo:
-  ros_parameters:
-    publish_rate: 30.0
-    max_update_rate: 30.0
-
-diff_drive_controller:
-  ros_parameters:
-    update_rate: 30
-    wheel_separation: 0.24
-    wheel_radius: 0.05
-    max_wheel_torque: 10
-    max_wheel_acceleration: 1.0
-    odom_frame_id: "odom"
-    base_frame_id: "base_footprint"
-    publish_odom: true
-    publish_odom_tf: true
-    publish_wheel_tf: true
-    timeout: 0.5
+/home/xkai/agribot/agribot_ws/src/diff_drive_robot/config/gazebo_params.yaml
