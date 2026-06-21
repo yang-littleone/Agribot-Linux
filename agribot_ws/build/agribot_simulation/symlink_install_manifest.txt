@@ -77,6 +77,7 @@
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/room/model.sdf
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/towrow.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/twoworld.world
+/home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/world/yumidiliuhang.world
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/ament_index/resource_index/package_run_dependencies/agribot_simulation
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/ament_index/resource_index/parent_prefix_path/agribot_simulation
 /home/xkai/agribot/agribot_ws/install/agribot_simulation/share/agribot_simulation/environment/ament_prefix_path.sh
