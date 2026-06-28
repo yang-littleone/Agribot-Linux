@@ -6,6 +6,7 @@
 #include "nav_msgs/msg/odometry.hpp"
 #include "geometry_msgs/msg/twist.hpp"
 #include "geometry_msgs/msg/point_stamped.hpp"
+#include "std_msgs/msg/float32.hpp"
 #include "visualization_msgs/msg/marker.hpp"
 
 class PIDController : public rclcpp::Node
@@ -17,6 +18,8 @@ private:
     // 回调函数
     void center_line_callback(const nav_msgs::msg::Path::SharedPtr msg);
     void odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg);
+    void confidence_callback(const std_msgs::msg::Float32::SharedPtr msg);
+    void safety_margin_callback(const std_msgs::msg::Float32::SharedPtr msg);
 
     // 核心控制函数
     geometry_msgs::msg::PointStamped find_target_point();
@@ -29,10 +32,15 @@ private:
     // 辅助函数
     void get_parameters();
     void publish_target_marker(const geometry_msgs::msg::PointStamped& point);
+    double compute_confidence_factor() const;
+    double compute_safety_factor() const;
+    bool should_stop_for_safety() const;
 
     // 订阅者和发布者
     rclcpp::Subscription<nav_msgs::msg::Path>::SharedPtr center_line_sub_;
     rclcpp::Subscription<nav_msgs::msg::Odometry>::SharedPtr odom_sub_;
+    rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr confidence_sub_;
+    rclcpp::Subscription<std_msgs::msg::Float32>::SharedPtr safety_margin_sub_;
     rclcpp::Publisher<geometry_msgs::msg::Twist>::SharedPtr cmd_vel_pub_;
     rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr target_marker_pub_;
 
@@ -41,6 +49,15 @@ private:
     double max_linear_speed_;       // 最大线速度
     double min_linear_speed_;       // 最小线速度
     double max_angular_speed_;      // 最大角速度
+    double confidence_high_threshold_;
+    double confidence_low_threshold_;
+    double confidence_stop_threshold_;
+    double confidence_min_speed_factor_;
+    double safety_margin_high_;
+    double safety_margin_mid_;
+    double safety_margin_stop_;
+    int max_low_confidence_frames_;
+    bool use_quality_aware_control_;
     
     // PID参数
     double lateral_kp_;             // 横向控制比例系数
@@ -55,7 +72,15 @@ private:
 
     // 状态变量
     nav_msgs::msg::Path center_line_;  // 中心线路径
+    nav_msgs::msg::Path last_valid_center_line_;
     bool has_center_line_;             // 是否收到中心线
+    bool has_last_valid_center_line_;
+    bool use_recovery_path_;
+    int low_confidence_count_;
+    double corridor_confidence_;
+    double corridor_safety_margin_;
+    bool has_corridor_confidence_;
+    bool has_corridor_safety_margin_;
     double current_x_;                 // 当前x坐标
     double current_y_;                 // 当前y坐标
     double current_yaw_;               // 当前偏航角

@@ -825,3 +825,151 @@ src/centerline_extraction/src/corn_row_detector copy.cpp
 5. 感知中心线如何接入路径跟踪。
 
 后续如果用户要求检查当前工程，优先查看这些文件以及当前 `CMakeLists.txt` 中实际编译了哪些节点，避免误以为运行的是已经修改过的 `corn_row_detector_projection.cpp`，但实际启动的是另一个旧节点。
+
+## 18. 置信度与安全裕度接入 PID 控制器方案
+
+用户确认当前测试启动链路为：
+
+```bash
+ros2 launch diff_drive_robot robot.launch.py world:=yumidiliuhang.world
+ros2 run centerline_extraction corn_row_detector_projection
+ros2 run centerline_extraction cornfield_navigation_node
+```
+
+实际闭环链路为：
+
+```text
+Gazebo / mid360 点云
+  ↓
+/mid360_PointCloud2
+  ↓
+corn_row_detector_projection
+  ↓
+/corn_row_center_line
+/corridor_confidence
+/corridor_safety_margin
+  ↓
+cornfield_navigation_node 中的 PIDController
+  ↓
+/cmd_vel
+  ↓
+Gazebo 差速驱动插件
+```
+
+用户要求先梳理如何将 `corridor_confidence` 和 `corridor_safety_margin` 接入 PID，再按该思路修改代码。
+
+### 18.1 控制思想
+
+中心线负责决定车辆如何转向：
+
+```text
+/corn_row_center_line -> lateral_error / heading_error -> PID angular velocity
+```
+
+置信度和安全裕度负责决定：
+
+```text
+能不能走
+走多快
+是否需要限制角速度
+是否需要短时保持历史路径
+是否需要停车
+```
+
+其中：
+
+```text
+corridor_confidence：表示当前中心线是否可信
+corridor_safety_margin：表示当前通道空间是否足够安全
+```
+
+### 18.2 建议状态
+
+建议控制器形成四种状态：
+
+```text
+NORMAL   高置信度且安全裕度足够，正常速度跟踪
+CAUTION  中等置信度或安全裕度偏小，降速跟踪
+RECOVERY 低置信度但仍有历史中心线，短时保持历史路径并低速
+STOP     置信度太低太久或安全裕度不足，停车
+```
+
+### 18.3 速度调节公式
+
+建议线速度由三部分共同决定：
+
+```text
+linear_speed = max_linear_speed
+             * confidence_factor
+             * safety_factor
+             * turning_factor
+```
+
+其中：
+
+```text
+confidence_factor = clamp(confidence, confidence_min_factor, 1.0)
+```
+
+安全裕度因子可采用分段形式：
+
+```text
+margin >= safety_margin_high:      safety_factor = 1.0
+safety_margin_mid <= margin < high: safety_factor = 0.6
+safety_margin_stop <= margin < mid: safety_factor = 0.3
+margin < safety_margin_stop:        safety_factor = 0.0
+```
+
+转向因子沿用原有逻辑：
+
+```text
+turning_factor = 1 - 0.5 * abs(angular_vel) / max_angular_speed
+```
+
+### 18.4 角速度限制
+
+安全裕度越小，最大角速度越小：
+
+```text
+current_max_angular_speed = max_angular_speed * safety_factor
+```
+
+这可以避免窄通道中急转导致车体扫到作物。
+
+### 18.5 低置信度历史路径保持
+
+当当前中心线置信度低时，不应立即停车。应保存：
+
+```text
+last_valid_center_line
+low_confidence_count
+max_low_confidence_frames
+```
+
+逻辑：
+
+```text
+高/中置信度：
+    使用当前中心线，并保存为 last_valid_center_line
+
+低置信度但未超过 max_low_confidence_frames：
+    使用 last_valid_center_line，低速前进
+
+低置信度连续超过 max_low_confidence_frames：
+    停车
+```
+
+### 18.6 对小论文的意义
+
+接入后可以把论文从“中心线提取算法”提升为：
+
+```text
+置信度与安全裕度感知的冠下行间路径跟踪控制方法
+```
+
+对应实验可以增加：
+
+1. 固定速度 PID vs 置信度感知 PID；
+2. 普通中心线跟踪 vs 低置信度历史路径保持；
+3. 无安全裕度限制 vs 安全裕度限制；
+4. 对比横向误差、最大偏差、最小作物安全距离、成功率和平均速度。

@@ -1,7 +1,7 @@
 import os
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
-from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription
+from launch.actions import DeclareLaunchArgument, IncludeLaunchDescription, TimerAction
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution
 from launch_ros.substitutions import FindPackageShare
@@ -65,6 +65,7 @@ def generate_launch_description():
         arguments=[
             '-topic', 'robot_description',
             '-entity', 'diff_drive_robot',
+            '-timeout', '120.0',
             '-x', '0',
             '-y', '0',
             '-z', '0.1',
@@ -92,7 +93,10 @@ def generate_launch_description():
         ),
         robot_state_publisher_node,
         gazebo_launch,
-        spawn_entity_node,
+        TimerAction(
+            period=5.0,
+            actions=[spawn_entity_node],
+        ),
     ])
 
     return ld
