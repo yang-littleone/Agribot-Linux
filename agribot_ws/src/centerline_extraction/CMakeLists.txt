@@ -55,6 +55,7 @@ add_executable(corn_row_detector_projection  src/corn_row_detector_projection.cp
 ament_target_dependencies(corn_row_detector_projection 
   rclcpp 
   nav_msgs
+  std_msgs
   sensor_msgs 
   pcl_conversions 
   visualization_msgs

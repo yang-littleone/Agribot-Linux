@@ -1,0 +1,19 @@
+digraph G {
+  graph [rankdir=TB, bgcolor="white", nodesep=0.55, ranksep=0.55];
+  node [shape=box, style="rounded", fontname="Noto Sans CJK SC", fontsize=12, margin="0.12,0.08"];
+  edge [fontname="Noto Sans CJK SC", fontsize=11, arrowsize=0.8];
+
+  a [label="S1 获取冠下传感器数据\n激光雷达点云 / 里程计"];
+  b [label="S2 点云预处理\n高度滤波 / ROI滤波 / 地面投影"];
+  c [label="S3 作物行内侧边界提取\n左右行点云聚类与选择"];
+  d [label="S4 生成通行走廊中心线\n/corn_row_center_line"];
+  e [label="S5 感知质量评估\n走廊置信度 C / 安全裕度 M"];
+  f [label="S6 目标路径点选择\n前视距离 Ld"];
+  g [label="S7 误差计算\ney 横向误差 / eψ 航向误差"];
+  h [label="S8 质量约束路径跟踪控制\n正常跟踪 / 降级跟踪 / 安全停车"];
+  i [label="S9 输出运动控制指令\nv, ω -> /cmd_vel"];
+
+  a -> b -> c -> d -> e -> f -> g -> h -> i;
+  d -> f [label="参考路径"];
+  e -> h [label="质量约束"];
+}

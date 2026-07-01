@@ -1,0 +1,22 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", nodesep=0.5, ranksep=0.7];
+  node [shape=box, style="rounded", fontname="Noto Sans CJK SC", fontsize=12, margin="0.12,0.08"];
+  edge [fontname="Noto Sans CJK SC", fontsize=11, arrowsize=0.8];
+
+  subgraph cluster_sensors {
+    label="车载传感器";
+    fontname="Noto Sans CJK SC";
+    lidar [label="激光雷达\n冠下点云"];
+    odom [label="里程计/惯导\n车辆位姿"];
+  }
+
+  preprocess [label="点云预处理模块\n滤波 / 投影 / ROI"];
+  centerline [label="中心线提取模块\n左右内侧行 / 通行走廊"];
+  quality [label="感知质量评估模块\nC: 走廊置信度\nM: 安全裕度"];
+  controller [label="质量感知路径跟踪控制模块\ney, eψ -> ω\nC, M -> v / 限幅 / 停车"];
+  actuator [label="执行模块\n差速/四轮平台\n/cmd_vel"];
+
+  lidar -> preprocess -> centerline -> quality -> controller -> actuator;
+  centerline -> controller [label="中心线"];
+  odom -> controller [label="当前位姿"];
+}

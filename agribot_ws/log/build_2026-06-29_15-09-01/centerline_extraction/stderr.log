@@ -1,0 +1,7 @@
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp: In member function ‘std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > > CornRowDetector::temporal_smoothing(const std::vector<geometry_msgs::msg::PoseStamped_<std::allocator<void> >, std::allocator<geometry_msgs::msg::PoseStamped_<std::allocator<void> > > >&)’:
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:361:50: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  361 |     while (static_cast<int>(path_buffer_.size()) > time_window_size_) {  // 显式转换为int
+      |            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+/home/xkai/agribot/agribot_ws/src/centerline_extraction/src/corn_row_detector.cpp:367:47: warning: comparison of integer expressions of different signedness: ‘int’ and ‘size_t’ {aka ‘long unsigned int’} [-Wsign-compare]
+  367 |     if (static_cast<int>(path_buffer_.size()) < time_window_size_) {  // 显式转换为int
+      |         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~

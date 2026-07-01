@@ -11,10 +11,11 @@ BAG_DIR="$TRIAL_DIR/bag"
 GAZEBO_WAIT_SEC="${GAZEBO_WAIT_SEC:-12}"
 DETECTOR_WAIT_SEC="${DETECTOR_WAIT_SEC:-4}"
 BAG_WAIT_SEC="${BAG_WAIT_SEC:-2}"
-RUN_DURATION_SEC="${RUN_DURATION_SEC:-300}"
+RUN_DURATION_SEC="${RUN_DURATION_SEC:-200}"
 FORCE_CLEANUP_BEFORE_START="${FORCE_CLEANUP_BEFORE_START:-true}"
 FORCE_CLEANUP_AFTER_EXIT="${FORCE_CLEANUP_AFTER_EXIT:-true}"
 PID_EXTRA_ARGS="${PID_EXTRA_ARGS:-}"
+OVERWRITE_TRIAL="${OVERWRITE_TRIAL:-false}"
 
 TOPICS=(
   /clock
@@ -31,10 +32,22 @@ TOPICS=(
   /corridor_width
   /corridor_safety_margin
   /corridor_confidence
+  /centerline_detection_diagnostics
   /point_cloud_projected
   /left_row_points
   /right_row_points
 )
+
+if [[ -e "$BAG_DIR" && "$OVERWRITE_TRIAL" != "true" ]]; then
+  echo "[ERROR] Bag directory already exists: $BAG_DIR"
+  echo "[ERROR] Use a new trial name/OUT_ROOT, or set OVERWRITE_TRIAL=true to remove the old trial directory."
+  exit 2
+fi
+
+if [[ -e "$TRIAL_DIR" && "$OVERWRITE_TRIAL" == "true" ]]; then
+  echo "[WARN] OVERWRITE_TRIAL=true, removing existing trial directory: $TRIAL_DIR"
+  rm -rf "$TRIAL_DIR"
+fi
 
 mkdir -p "$TRIAL_DIR"
 
@@ -146,6 +159,7 @@ cat > "$SUMMARY" <<EOF
 - Gazebo wait: ${GAZEBO_WAIT_SEC}s
 - Detector wait: ${DETECTOR_WAIT_SEC}s
 - Bag wait: ${BAG_WAIT_SEC}s
+- Overwrite trial: ${OVERWRITE_TRIAL}
 
 ## Commands
 
@@ -213,6 +227,7 @@ echo "[INFO] Trial duration reached."
 echo "[INFO] Saving final snapshots..."
 ros2 topic echo /corridor_confidence --once > "$TRIAL_DIR/final_corridor_confidence.txt" 2>/dev/null || true
 ros2 topic echo /corridor_safety_margin --once > "$TRIAL_DIR/final_corridor_safety_margin.txt" 2>/dev/null || true
+ros2 topic echo /centerline_detection_diagnostics --once > "$TRIAL_DIR/final_centerline_detection_diagnostics.txt" 2>/dev/null || true
 ros2 topic echo /cmd_vel --once > "$TRIAL_DIR/final_cmd_vel.txt" 2>/dev/null || true
 ros2 topic echo /odom --once > "$TRIAL_DIR/final_odom.txt" 2>/dev/null || true
 

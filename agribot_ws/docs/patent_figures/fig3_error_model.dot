@@ -1,0 +1,18 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", nodesep=0.5, ranksep=0.6];
+  node [shape=box, style="rounded", fontname="Noto Sans CJK SC", fontsize=12, margin="0.12,0.08"];
+  edge [fontname="Noto Sans CJK SC", fontsize=11, arrowsize=0.8];
+
+  pose [label="车辆位姿\nPr=(xr, yr, ψ)"];
+  path [label="参考中心线\nP(s)"];
+  target [label="目标路径点\nPt=(xt, yt)\n沿路径前视 Ld"];
+  transform [label="坐标变换到车体系\nxv, yv"];
+  error [label="误差计算\ney = yv\neψ = atan2(yv, xv)"];
+  pid [label="双误差反馈\nuy = PID(ey)\nuψ = PID(eψ)"];
+  omega [label="角速度控制\nω = sat(uy + uψ)"];
+
+  path -> target;
+  pose -> transform;
+  target -> transform;
+  transform -> error -> pid -> omega;
+}

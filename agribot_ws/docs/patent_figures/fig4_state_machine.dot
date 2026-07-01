@@ -1,0 +1,15 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", nodesep=0.7, ranksep=0.8];
+  node [shape=ellipse, style="solid", fontname="Noto Sans CJK SC", fontsize=12, margin="0.12,0.08"];
+  edge [fontname="Noto Sans CJK SC", fontsize=10, arrowsize=0.8];
+
+  normal [label="正常跟踪\nC ≥ Clow\nM ≥ Mmid"];
+  degraded [label="降级跟踪\nCstop ≤ C < Clow\n或 M 偏低"];
+  stop [label="安全停车\nC < Cstop\n或 M < Mstop"];
+
+  normal -> degraded [label="置信度下降\n或安全裕度降低"];
+  degraded -> normal [label="C 恢复且 M 充足"];
+  degraded -> stop [label="低质量持续超限\n或安全裕度不足"];
+  stop -> normal [label="人工/系统复位\n且感知恢复"];
+  normal -> stop [label="突发危险\nM < Mstop"];
+}

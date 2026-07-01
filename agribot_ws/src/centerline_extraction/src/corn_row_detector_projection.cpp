@@ -34,6 +34,7 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     corridor_width_pub_ = this->create_publisher<std_msgs::msg::Float32>("corridor_width", 10);
     corridor_safety_margin_pub_ = this->create_publisher<std_msgs::msg::Float32>("corridor_safety_margin", 10);
     corridor_confidence_pub_ = this->create_publisher<std_msgs::msg::Float32>("corridor_confidence", 10);
+    detection_diagnostics_pub_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("centerline_detection_diagnostics", 10);
 
     tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
     tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
@@ -387,6 +388,18 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
     left_row_pub_->publish(left_output);
     right_row_pub_->publish(right_output);
     center_line_pub_->publish(smoothed_path);
+    const float association_x = std::clamp(path_length_ * 0.5f, 0.3f, path_length_);
+    const float center_offset = 0.5f * ((stable_left_line.first * association_x + stable_left_line.second) +
+                                        (stable_right_line.first * association_x + stable_right_line.second));
+    publish_detection_diagnostics(
+        true,
+        static_cast<int>(left_inner->size()),
+        static_cast<int>(right_inner->size()),
+        stable_row_yaw,
+        center_offset,
+        stable_left_line,
+        stable_right_line,
+        static_cast<int>(smoothed_path.poses.size()));
 
     RCLCPP_DEBUG_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
                           "Published center line. Left points: %ld, Right points: %ld, Row separation: %.2f",
@@ -1536,6 +1549,10 @@ nav_msgs::msg::Path CornRowDetectorProjection::transform_path_to_output_frame(co
 
 void CornRowDetectorProjection::publish_corridor_metrics(float width, float safety_margin, float confidence)
 {
+    last_corridor_width_ = width;
+    last_corridor_safety_margin_ = safety_margin;
+    last_corridor_confidence_ = confidence;
+
     std_msgs::msg::Float32 width_msg;
     width_msg.data = width;
     corridor_width_pub_->publish(width_msg);
@@ -1547,6 +1564,35 @@ void CornRowDetectorProjection::publish_corridor_metrics(float width, float safe
     std_msgs::msg::Float32 confidence_msg;
     confidence_msg.data = confidence;
     corridor_confidence_pub_->publish(confidence_msg);
+}
+
+void CornRowDetectorProjection::publish_detection_diagnostics(
+    bool valid,
+    int left_points,
+    int right_points,
+    float row_yaw,
+    float center_offset,
+    const std::pair<float, float> &left_line,
+    const std::pair<float, float> &right_line,
+    int path_points)
+{
+    std_msgs::msg::Float32MultiArray msg;
+    msg.data = {
+        valid ? 1.0f : 0.0f,
+        static_cast<float>(left_points),
+        static_cast<float>(right_points),
+        last_corridor_width_,
+        last_corridor_safety_margin_,
+        last_corridor_confidence_,
+        row_yaw,
+        center_offset,
+        left_line.first,
+        left_line.second,
+        right_line.first,
+        right_line.second,
+        static_cast<float>(line_lost_count_),
+        static_cast<float>(path_points)};
+    detection_diagnostics_pub_->publish(msg);
 }
 
 nav_msgs::msg::Path CornRowDetectorProjection::create_corridor_path(
@@ -1884,4 +1930,5 @@ void CornRowDetectorProjection::publish_empty_path(const std_msgs::msg::Header &
 
     path_history_.clear();
     publish_corridor_metrics(0.0f, 0.0f, 0.0f);
+    publish_detection_diagnostics(false, 0, 0, 0.0f, 0.0f, {0.0f, 0.0f}, {0.0f, 0.0f}, 0);
 }

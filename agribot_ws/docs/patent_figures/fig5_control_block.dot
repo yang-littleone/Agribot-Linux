@@ -1,0 +1,28 @@
+digraph G {
+  graph [rankdir=LR, bgcolor="white", nodesep=0.45, ranksep=0.6];
+  node [shape=box, style="rounded", fontname="Noto Sans CJK SC", fontsize=12, margin="0.12,0.08"];
+  edge [fontname="Noto Sans CJK SC", fontsize=11, arrowsize=0.8];
+
+  ey [label="横向误差 ey"];
+  epsi [label="航向误差 eψ"];
+  pidy [label="PIDy"];
+  pidpsi [label="PIDψ"];
+  sum [shape=circle, label="+"];
+  sat [label="角速度限幅\nω"];
+
+  c [label="走廊置信度 C"];
+  m [label="安全裕度 M"];
+  fc [label="置信度因子\nfc(C)"];
+  fm [label="安全裕度因子\nfm(M)"];
+  ft [label="转向衰减因子\nft(ω)"];
+  v [label="线速度\nv = vmax·fc·fm·ft"];
+  cmd [label="最终控制指令\n/cmd_vel = (v, ω)"];
+
+  ey -> pidy -> sum;
+  epsi -> pidpsi -> sum;
+  sum -> sat -> ft -> v -> cmd;
+  sat -> cmd;
+  c -> fc -> v;
+  m -> fm -> v;
+  m -> sat [label="安全限幅"];
+}

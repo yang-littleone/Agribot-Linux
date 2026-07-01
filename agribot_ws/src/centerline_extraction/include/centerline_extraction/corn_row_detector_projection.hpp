@@ -4,6 +4,7 @@
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
 #include "std_msgs/msg/float32.hpp"
+#include "std_msgs/msg/float32_multi_array.hpp"
 #include "nav_msgs/msg/path.hpp"
 #include "pcl/point_cloud.h" // provide pcl point cloud type
 #include "pcl/point_types.h" // provide pcl point types
@@ -31,6 +32,7 @@ private:
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr corridor_width_pub_;
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr corridor_safety_margin_pub_;
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr corridor_confidence_pub_;
+    rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr detection_diagnostics_pub_;
     std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
     std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
     float z_min_ = 0.0;
@@ -91,6 +93,9 @@ private:
     float tracked_global_row_yaw_ = 0.0;
     std::pair<float, float> tracked_left_line_{0.0f, 0.0f};
     std::pair<float, float> tracked_right_line_{0.0f, 0.0f};
+    float last_corridor_width_ = 0.0f;
+    float last_corridor_safety_margin_ = 0.0f;
+    float last_corridor_confidence_ = 0.0f;
 
 public:
     CornRowDetectorProjection();
@@ -155,6 +160,15 @@ private:
         int &support_count);
 
     void publish_corridor_metrics(float width, float safety_margin, float confidence);
+    void publish_detection_diagnostics(
+        bool valid,
+        int left_points,
+        int right_points,
+        float row_yaw,
+        float center_offset,
+        const std::pair<float, float> &left_line,
+        const std::pair<float, float> &right_line,
+        int path_points);
 
     // 平滑处理函数
     nav_msgs::msg::Path smooth_path(const nav_msgs::msg::Path &raw_path);
