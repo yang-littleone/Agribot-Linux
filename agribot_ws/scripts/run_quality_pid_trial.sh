@@ -24,6 +24,9 @@ TOPICS=(
   /odom
   /cmd_vel
   /target_point
+  /navigation_mode
+  /headland_turn_path
+  /headland_detected
   /mid360_PointCloud2
   /corn_row_center_line
   /corn_row_center_line_viz

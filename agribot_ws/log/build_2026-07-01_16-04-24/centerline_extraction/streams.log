@@ -1,0 +1,42 @@
+[0.010s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[0.068s] Consolidate compiler generated dependencies of target corn_row_detector_projection
+[0.073s] [ 16%] Built target pcl_learning
+[0.076s] [ 33%] Built target centerline_extract
+[0.094s] Consolidate compiler generated dependencies of target cornfield_navigation_node
+[0.095s] [ 41%] Building CXX object CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp.o
+[0.121s] [ 91%] Built target cornfield_navigation_node
+[14.296s] [100%] Linking CXX executable corn_row_detector_projection
+[15.596s] [100%] Built target corn_row_detector_projection
+[15.606s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /home/xkai/agribot/agribot_ws/build/centerline_extraction -- -j8 -l8
+[15.613s] Invoking command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/centerline_extraction
+[15.619s] -- Install configuration: ""
+[15.620s] -- Execute custom install script
+[15.620s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/pcl_learning
+[15.620s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/centerline_extract
+[15.620s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/cornfield_navigation_node
+[15.620s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/lib/centerline_extraction/corn_row_detector_projection
+[15.621s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector copy.hpp
+[15.621s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector.hpp
+[15.621s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector1.hpp
+[15.621s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/corn_row_detector_projection.hpp
+[15.621s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/obstacle_detector.hpp
+[15.622s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pid_controller.hpp
+[15.622s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pure_pursuit_controller copy 2.hpp
+[15.622s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pure_pursuit_controller copy.hpp
+[15.622s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/include//include/centerline_extraction/pure_pursuit_controller.hpp
+[15.622s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/ament_index/resource_index/package_run_dependencies/centerline_extraction
+[15.622s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/ament_index/resource_index/parent_prefix_path/centerline_extraction
+[15.623s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/environment/ament_prefix_path.sh
+[15.623s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/environment/ament_prefix_path.dsv
+[15.623s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/environment/path.sh
+[15.623s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/environment/path.dsv
+[15.623s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/local_setup.bash
+[15.623s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/local_setup.sh
+[15.624s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/local_setup.zsh
+[15.624s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/local_setup.dsv
+[15.624s] -- Symlinking: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.dsv
+[15.631s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/ament_index/resource_index/packages/centerline_extraction
+[15.631s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/cmake/centerline_extractionConfig.cmake
+[15.632s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/cmake/centerline_extractionConfig-version.cmake
+[15.632s] -- Up-to-date symlink: /home/xkai/agribot/agribot_ws/install/centerline_extraction/share/centerline_extraction/package.xml
+[15.633s] Invoked command in '/home/xkai/agribot/agribot_ws/build/centerline_extraction' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /home/xkai/agribot/agribot_ws/build/centerline_extraction

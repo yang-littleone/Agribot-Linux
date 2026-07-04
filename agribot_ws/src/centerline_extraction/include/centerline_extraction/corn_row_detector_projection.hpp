@@ -3,8 +3,10 @@
 
 #include "rclcpp/rclcpp.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
+#include "std_msgs/msg/bool.hpp"
 #include "std_msgs/msg/float32.hpp"
 #include "std_msgs/msg/float32_multi_array.hpp"
+#include "std_msgs/msg/string.hpp"
 #include "nav_msgs/msg/path.hpp"
 #include "pcl/point_cloud.h" // provide pcl point cloud type
 #include "pcl/point_types.h" // provide pcl point types
@@ -22,6 +24,7 @@ class CornRowDetectorProjection : public rclcpp::Node
 private:
     // define subscriber and publisher
     rclcpp::Subscription<sensor_msgs::msg::PointCloud2>::SharedPtr point_cloud_sub_;
+    rclcpp::Subscription<std_msgs::msg::String>::SharedPtr navigation_mode_sub_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr point_cloud_pub_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr left_row_pub_;
     rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr right_row_pub_;
@@ -33,6 +36,7 @@ private:
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr corridor_safety_margin_pub_;
     rclcpp::Publisher<std_msgs::msg::Float32>::SharedPtr corridor_confidence_pub_;
     rclcpp::Publisher<std_msgs::msg::Float32MultiArray>::SharedPtr detection_diagnostics_pub_;
+    rclcpp::Publisher<std_msgs::msg::Bool>::SharedPtr headland_detected_pub_;
     std::shared_ptr<tf2_ros::Buffer> tf_buffer_;
     std::shared_ptr<tf2_ros::TransformListener> tf_listener_;
     float z_min_ = 0.0;
@@ -78,6 +82,12 @@ private:
     // 自适应阈值参数：若启用，将根据点列间距的中位 gap 自适应分簇
     bool adaptive_lateral_threshold_ = false; // 是否启用自适应阈值（median-gap）
     float gap_multiplier_ = 2.0;              // 中位 gap 的乘数，作为分割阈值的放大因子
+    bool enable_headland_detection_ = true;
+    float headland_low_confidence_threshold_ = 0.35;
+    int headland_min_side_points_ = 80;
+    int headland_min_path_points_ = 5;
+    int headland_candidate_frames_ = 6;
+    int headland_candidate_count_ = 0;
 
     // 平滑处理参数
     int time_window_size_ = 1;          // time window size
@@ -88,9 +98,11 @@ private:
     bool has_tracked_lines_ = false;
     bool has_tracked_row_yaw_ = false;
     bool has_tracked_global_row_yaw_ = false;
+    bool has_navigation_mode_ = false;
     int line_lost_count_ = 0;
     float tracked_row_yaw_ = 0.0;
     float tracked_global_row_yaw_ = 0.0;
+    std::string last_navigation_mode_;
     std::pair<float, float> tracked_left_line_{0.0f, 0.0f};
     std::pair<float, float> tracked_right_line_{0.0f, 0.0f};
     float last_corridor_width_ = 0.0f;
@@ -103,6 +115,7 @@ public:
 private:
     // the callback of point cloud subscriber
     void point_cloud_callback(const sensor_msgs::msg::PointCloud2::SharedPtr msg);
+    void navigation_mode_callback(const std_msgs::msg::String::SharedPtr msg);
 
     // preprocess point cloud
     PointCloudXYZPtr preprocess_point_cloud(PointCloudXYZPtr input_cloud);
@@ -120,6 +133,8 @@ private:
         const geometry_msgs::msg::TransformStamped &output_from_base);
     bool lookup_output_from_base_transform(geometry_msgs::msg::TransformStamped &output_from_base);
     float normalize_angle(float angle) const;
+    float normalize_axis_angle(float angle) const;
+    void reset_tracking_state(const std::string &reason);
     PointCloudXYZPtr rotate_cloud_to_row_frame(PointCloudXYZPtr cloud, float row_yaw);
     PointCloudXYZPtr rotate_cloud_to_base_frame(PointCloudXYZPtr cloud, float row_yaw);
 
@@ -168,6 +183,11 @@ private:
         float center_offset,
         const std::pair<float, float> &left_line,
         const std::pair<float, float> &right_line,
+        int path_points);
+    void publish_headland_detection(
+        bool valid,
+        int left_points,
+        int right_points,
         int path_points);
 
     // 平滑处理函数

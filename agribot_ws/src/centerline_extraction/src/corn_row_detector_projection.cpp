@@ -24,6 +24,9 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     // create subscribers and publishers
     point_cloud_sub_ = this->create_subscription<sensor_msgs::msg::PointCloud2>(
         "/mid360_PointCloud2", 10, std::bind(&CornRowDetectorProjection::point_cloud_callback, this, std::placeholders::_1));
+    navigation_mode_sub_ = this->create_subscription<std_msgs::msg::String>(
+        "/navigation_mode", 10,
+        std::bind(&CornRowDetectorProjection::navigation_mode_callback, this, std::placeholders::_1));
     point_cloud_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("point_cloud_projected", 10);
     left_row_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("left_row_points", 10);
     right_row_pub_ = this->create_publisher<sensor_msgs::msg::PointCloud2>("right_row_points", 10);
@@ -35,6 +38,7 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     corridor_safety_margin_pub_ = this->create_publisher<std_msgs::msg::Float32>("corridor_safety_margin", 10);
     corridor_confidence_pub_ = this->create_publisher<std_msgs::msg::Float32>("corridor_confidence", 10);
     detection_diagnostics_pub_ = this->create_publisher<std_msgs::msg::Float32MultiArray>("centerline_detection_diagnostics", 10);
+    headland_detected_pub_ = this->create_publisher<std_msgs::msg::Bool>("headland_detected", 10);
 
     tf_buffer_ = std::make_shared<tf2_ros::Buffer>(this->get_clock());
     tf_listener_ = std::make_shared<tf2_ros::TransformListener>(*tf_buffer_);
@@ -83,6 +87,11 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     this->declare_parameter<int>("min_cluster_size", 10);
     this->declare_parameter<bool>("adaptive_lateral_threshold", false);
     this->declare_parameter<float>("gap_multiplier", 2.0);
+    this->declare_parameter<bool>("enable_headland_detection", true);
+    this->declare_parameter<float>("headland_low_confidence_threshold", 0.35);
+    this->declare_parameter<int>("headland_min_side_points", 80);
+    this->declare_parameter<int>("headland_min_path_points", 5);
+    this->declare_parameter<int>("headland_candidate_frames", 6);
 
     // get parameters
     this->get_parameter("z_min", z_min_);
@@ -128,6 +137,11 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     this->get_parameter("min_cluster_size", min_cluster_size_);
     this->get_parameter("adaptive_lateral_threshold", adaptive_lateral_threshold_);
     this->get_parameter("gap_multiplier", gap_multiplier_);
+    this->get_parameter("enable_headland_detection", enable_headland_detection_);
+    this->get_parameter("headland_low_confidence_threshold", headland_low_confidence_threshold_);
+    this->get_parameter("headland_min_side_points", headland_min_side_points_);
+    this->get_parameter("headland_min_path_points", headland_min_path_points_);
+    this->get_parameter("headland_candidate_frames", headland_candidate_frames_);
 
     if (path_step_ <= 0.0f)
     {
@@ -207,6 +221,19 @@ CornRowDetectorProjection::CornRowDetectorProjection() : Node("corn_row_detector
     {
         line_fit_x_min_ = 0.0f;
     }
+    headland_low_confidence_threshold_ = std::clamp(headland_low_confidence_threshold_, 0.0f, 1.0f);
+    if (headland_min_side_points_ < 0)
+    {
+        headland_min_side_points_ = 0;
+    }
+    if (headland_min_path_points_ < 0)
+    {
+        headland_min_path_points_ = 0;
+    }
+    if (headland_candidate_frames_ < 1)
+    {
+        headland_candidate_frames_ = 1;
+    }
 }
 
 // callback function
@@ -242,7 +269,7 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
             double pitch = 0.0;
             double robot_yaw = 0.0;
             tf2::Matrix3x3(q).getRPY(roll, pitch, robot_yaw);
-            row_yaw = this->normalize_angle(global_row_yaw - static_cast<float>(robot_yaw));
+            row_yaw = this->normalize_axis_angle(global_row_yaw - static_cast<float>(robot_yaw));
         }
         else
         {
@@ -406,6 +433,19 @@ void CornRowDetectorProjection::point_cloud_callback(const sensor_msgs::msg::Poi
                           left_inner->size(), right_inner->size(), row_separation);
 }
 
+void CornRowDetectorProjection::navigation_mode_callback(const std_msgs::msg::String::SharedPtr msg)
+{
+    if (!has_navigation_mode_ || msg->data != last_navigation_mode_)
+    {
+        if (msg->data == "U_TURN" || msg->data == "NEXT_ROW_REACQUIRE")
+        {
+            reset_tracking_state("navigation mode changed to " + msg->data);
+        }
+        last_navigation_mode_ = msg->data;
+        has_navigation_mode_ = true;
+    }
+}
+
 // this function will filter and downsample the point cloud
 PointCloudXYZPtr CornRowDetectorProjection::preprocess_point_cloud(PointCloudXYZPtr input_cloud)
 {
@@ -554,6 +594,32 @@ float CornRowDetectorProjection::normalize_angle(float angle) const
     return angle;
 }
 
+float CornRowDetectorProjection::normalize_axis_angle(float angle) const
+{
+    angle = normalize_angle(angle);
+    const float half_pi = 0.5f * static_cast<float>(M_PI);
+    while (angle > half_pi)
+    {
+        angle -= static_cast<float>(M_PI);
+    }
+    while (angle < -half_pi)
+    {
+        angle += static_cast<float>(M_PI);
+    }
+    return angle;
+}
+
+void CornRowDetectorProjection::reset_tracking_state(const std::string &reason)
+{
+    has_tracked_lines_ = false;
+    has_tracked_row_yaw_ = false;
+    has_tracked_global_row_yaw_ = false;
+    line_lost_count_ = 0;
+    headland_candidate_count_ = 0;
+    path_history_.clear();
+    RCLCPP_WARN(this->get_logger(), "Reset centerline tracking state: %s", reason.c_str());
+}
+
 bool CornRowDetectorProjection::lookup_output_from_base_transform(
     geometry_msgs::msg::TransformStamped &output_from_base)
 {
@@ -608,7 +674,7 @@ float CornRowDetectorProjection::estimate_global_row_yaw(
     relative_output_cloud->width = relative_output_cloud->points.size();
     relative_output_cloud->height = 1;
     relative_output_cloud->is_dense = cloud_base->is_dense;
-    return this->estimate_row_yaw(relative_output_cloud);
+    return this->normalize_axis_angle(this->estimate_row_yaw(relative_output_cloud));
 }
 
 float CornRowDetectorProjection::estimate_row_yaw(PointCloudXYZPtr cloud)
@@ -757,12 +823,14 @@ float CornRowDetectorProjection::estimate_row_yaw(PointCloudXYZPtr cloud)
         return 0.0f;
     }
 
+    best_yaw = this->normalize_axis_angle(best_yaw);
     RCLCPP_DEBUG(this->get_logger(), "Estimated row yaw in base frame: %.3f rad, score=%.2f", best_yaw, best_score);
     return best_yaw;
 }
 
 float CornRowDetectorProjection::filter_global_row_yaw(float measured_global_row_yaw)
 {
+    measured_global_row_yaw = this->normalize_axis_angle(measured_global_row_yaw);
     if (!has_tracked_global_row_yaw_)
     {
         tracked_global_row_yaw_ = measured_global_row_yaw;
@@ -770,7 +838,7 @@ float CornRowDetectorProjection::filter_global_row_yaw(float measured_global_row
         return tracked_global_row_yaw_;
     }
 
-    const float yaw_delta = this->normalize_angle(measured_global_row_yaw - tracked_global_row_yaw_);
+    const float yaw_delta = this->normalize_axis_angle(measured_global_row_yaw - tracked_global_row_yaw_);
     if (std::abs(yaw_delta) > max_row_yaw_jump_)
     {
         RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
@@ -779,7 +847,7 @@ float CornRowDetectorProjection::filter_global_row_yaw(float measured_global_row
         return tracked_global_row_yaw_;
     }
 
-    tracked_global_row_yaw_ = this->normalize_angle(
+    tracked_global_row_yaw_ = this->normalize_axis_angle(
         tracked_global_row_yaw_ + line_filter_alpha_ * yaw_delta);
     return tracked_global_row_yaw_;
 }
@@ -1350,6 +1418,7 @@ std::pair<float, float> CornRowDetectorProjection::fit_line(PointCloudXYZPtr clo
 
 float CornRowDetectorProjection::filter_row_yaw(float measured_row_yaw)
 {
+    measured_row_yaw = this->normalize_axis_angle(measured_row_yaw);
     if (!has_tracked_row_yaw_)
     {
         tracked_row_yaw_ = measured_row_yaw;
@@ -1357,14 +1426,15 @@ float CornRowDetectorProjection::filter_row_yaw(float measured_row_yaw)
         return tracked_row_yaw_;
     }
 
-    const float yaw_delta = measured_row_yaw - tracked_row_yaw_;
+    const float yaw_delta = this->normalize_axis_angle(measured_row_yaw - tracked_row_yaw_);
     if (std::abs(yaw_delta) > max_row_yaw_jump_)
     {
         RCLCPP_DEBUG(this->get_logger(), "Reject row yaw jump: measured=%.3f tracked=%.3f", measured_row_yaw, tracked_row_yaw_);
         return tracked_row_yaw_;
     }
 
-    tracked_row_yaw_ = line_filter_alpha_ * measured_row_yaw + (1.0f - line_filter_alpha_) * tracked_row_yaw_;
+    tracked_row_yaw_ = this->normalize_axis_angle(
+        tracked_row_yaw_ + line_filter_alpha_ * yaw_delta);
     return tracked_row_yaw_;
 }
 
@@ -1593,6 +1663,39 @@ void CornRowDetectorProjection::publish_detection_diagnostics(
         static_cast<float>(line_lost_count_),
         static_cast<float>(path_points)};
     detection_diagnostics_pub_->publish(msg);
+    publish_headland_detection(valid, left_points, right_points, path_points);
+}
+
+void CornRowDetectorProjection::publish_headland_detection(
+    bool valid,
+    int left_points,
+    int right_points,
+    int path_points)
+{
+    const bool invalid_or_short_path =
+        !valid ||
+        path_points < headland_min_path_points_;
+    const bool weak_side_support =
+        std::min(left_points, right_points) < headland_min_side_points_;
+    const bool low_confidence =
+        last_corridor_confidence_ < headland_low_confidence_threshold_;
+    const bool candidate =
+        enable_headland_detection_ &&
+        (invalid_or_short_path || weak_side_support || low_confidence);
+
+    if (candidate)
+    {
+        headland_candidate_count_++;
+    }
+    else
+    {
+        headland_candidate_count_ = 0;
+    }
+
+    std_msgs::msg::Bool msg;
+    msg.data = enable_headland_detection_ &&
+               headland_candidate_count_ >= headland_candidate_frames_;
+    headland_detected_pub_->publish(msg);
 }
 
 nav_msgs::msg::Path CornRowDetectorProjection::create_corridor_path(
@@ -1909,6 +2012,15 @@ int main(int argc, char **argv)
 
 void CornRowDetectorProjection::publish_empty_path(const std_msgs::msg::Header &header)
 {
+    if (has_tracked_lines_ || has_tracked_row_yaw_ || has_tracked_global_row_yaw_)
+    {
+        line_lost_count_++;
+        if (line_lost_count_ > max_line_lost_frames_)
+        {
+            reset_tracking_state("empty detection exceeded max_line_lost_frames");
+        }
+    }
+
     nav_msgs::msg::Path empty_output_path;
     empty_output_path.header = header;
     empty_output_path.header.frame_id = output_frame_;

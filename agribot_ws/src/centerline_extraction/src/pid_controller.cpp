@@ -23,6 +23,9 @@ PIDController::PIDController() : Node("pid_controller"), has_center_line_(false)
     safety_margin_sub_ = this->create_subscription<std_msgs::msg::Float32>(
         "/corridor_safety_margin", 10,
         std::bind(&PIDController::safety_margin_callback, this, std::placeholders::_1));
+    headland_detected_sub_ = this->create_subscription<std_msgs::msg::Bool>(
+        "/headland_detected", 10,
+        std::bind(&PIDController::headland_detected_callback, this, std::placeholders::_1));
 
     // 发布速度控制指令
     cmd_vel_pub_ = this->create_publisher<geometry_msgs::msg::Twist>(
@@ -31,6 +34,12 @@ PIDController::PIDController() : Node("pid_controller"), has_center_line_(false)
     // 发布目标点可视化标记（调试用）
     target_marker_pub_ = this->create_publisher<visualization_msgs::msg::Marker>(
         "/target_point", 10);
+    headland_turn_path_pub_ = this->create_publisher<nav_msgs::msg::Path>(
+        "/headland_turn_path", 10);
+    reacquire_reference_path_pub_ = this->create_publisher<nav_msgs::msg::Path>(
+        "/reacquire_reference_path", 10);
+    navigation_mode_pub_ = this->create_publisher<std_msgs::msg::String>(
+        "/navigation_mode", 10);
 
     // 声明并初始化参数
     this->declare_parameter("target_distance", 0.4);   // 目标跟随距离（米）
@@ -46,6 +55,27 @@ PIDController::PIDController() : Node("pid_controller"), has_center_line_(false)
     this->declare_parameter("safety_margin_stop", 0.05);
     this->declare_parameter("max_low_confidence_frames", 10);
     this->declare_parameter("use_quality_aware_control", true);
+    this->declare_parameter("enable_headland_turn", false);
+    this->declare_parameter("headland_min_follow_distance", 1.5);
+    this->declare_parameter("headland_row_spacing", 1.00);
+    this->declare_parameter("headland_turn_radius", 0.0);
+    this->declare_parameter("headland_exit_distance", 0.4);
+    this->declare_parameter("headland_settle_distance", 0.6);
+    this->declare_parameter("headland_path_step", 0.08);
+    this->declare_parameter("headland_turn_goal_tolerance", 0.25);
+    this->declare_parameter("headland_turn_heading_tolerance", 0.6);
+    this->declare_parameter("headland_reacquire_confidence", 0.75);
+    this->declare_parameter("headland_reacquire_track_confidence", 0.35);
+    this->declare_parameter("headland_reacquire_search_speed", 0.08);
+    this->declare_parameter("headland_reacquire_search_angular_speed", 0.0);
+    this->declare_parameter("headland_reacquire_max_distance", 1.5);
+    this->declare_parameter("headland_reacquire_max_time", 8.0);
+    this->declare_parameter("headland_reacquire_prediction_length", 1.5);
+    this->declare_parameter("headland_reacquire_frames", 5);
+    this->declare_parameter("max_headland_turns", 0);
+    this->declare_parameter("headland_turn_direction", "left");
+    this->declare_parameter("headland_turn_linear_speed", 0.22);
+    this->declare_parameter("headland_turn_target_distance", 0.35);
 
     // 横向PID参数
     this->declare_parameter("lateral_kp", 20.0); // 比例系数
@@ -75,6 +105,22 @@ PIDController::PIDController() : Node("pid_controller"), has_center_line_(false)
     corridor_safety_margin_ = safety_margin_high_;
     has_corridor_confidence_ = false;
     has_corridor_safety_margin_ = false;
+    navigation_mode_ = NavigationMode::ROW_FOLLOW;
+    distance_since_last_turn_ = 0.0;
+    previous_odom_x_ = 0.0;
+    previous_odom_y_ = 0.0;
+    reacquire_start_x_ = 0.0;
+    reacquire_start_y_ = 0.0;
+    has_previous_odom_ = false;
+    completed_headland_turns_ = 0;
+    reacquire_count_ = 0;
+    headland_turn_goal_yaw_ = 0.0;
+    has_headland_detected_ = false;
+    headland_detected_ = false;
+    has_predicted_reacquire_path_ = false;
+    has_measured_reacquire_path_ = false;
+    reacquire_failed_ = false;
+    reacquire_start_time_ = this->now();
 
     // 初始化PID控制器状态变量
     lateral_integral_ = 0.0;
@@ -85,6 +131,9 @@ PIDController::PIDController() : Node("pid_controller"), has_center_line_(false)
     RCLCPP_INFO(this->get_logger(), "PID控制器初始化完成（目标距离: %.2f米）", target_distance_);
     RCLCPP_INFO(this->get_logger(), "置信度/安全裕度控制: %s",
                 use_quality_aware_control_ ? "启用" : "关闭");
+    RCLCPP_INFO(this->get_logger(), "地头U形换行: %s",
+                enable_headland_turn_ ? "启用" : "关闭");
+    publish_navigation_mode();
 }
 
 void PIDController::get_parameters()
@@ -102,6 +151,65 @@ void PIDController::get_parameters()
     this->get_parameter("safety_margin_stop", safety_margin_stop_);
     this->get_parameter("max_low_confidence_frames", max_low_confidence_frames_);
     this->get_parameter("use_quality_aware_control", use_quality_aware_control_);
+    this->get_parameter("enable_headland_turn", enable_headland_turn_);
+    this->get_parameter("headland_min_follow_distance", headland_min_follow_distance_);
+    this->get_parameter("headland_row_spacing", headland_row_spacing_);
+    this->get_parameter("headland_turn_radius", headland_turn_radius_);
+    this->get_parameter("headland_exit_distance", headland_exit_distance_);
+    this->get_parameter("headland_settle_distance", headland_settle_distance_);
+    this->get_parameter("headland_path_step", headland_path_step_);
+    this->get_parameter("headland_turn_goal_tolerance", headland_turn_goal_tolerance_);
+    this->get_parameter("headland_turn_heading_tolerance", headland_turn_heading_tolerance_);
+    this->get_parameter("headland_reacquire_confidence", headland_reacquire_confidence_);
+    this->get_parameter("headland_reacquire_track_confidence", headland_reacquire_track_confidence_);
+    this->get_parameter("headland_reacquire_search_speed", headland_reacquire_search_speed_);
+    this->get_parameter("headland_reacquire_search_angular_speed", headland_reacquire_search_angular_speed_);
+    this->get_parameter("headland_reacquire_max_distance", headland_reacquire_max_distance_);
+    this->get_parameter("headland_reacquire_max_time", headland_reacquire_max_time_);
+    this->get_parameter("headland_reacquire_prediction_length", headland_reacquire_prediction_length_);
+    this->get_parameter("headland_reacquire_frames", headland_reacquire_frames_);
+    this->get_parameter("max_headland_turns", max_headland_turns_);
+    this->get_parameter("headland_turn_linear_speed", headland_turn_linear_speed_);
+    this->get_parameter("headland_turn_target_distance", headland_turn_target_distance_);
+
+    std::string turn_direction = "left";
+    this->get_parameter("headland_turn_direction", turn_direction);
+    headland_turn_direction_ = (turn_direction == "right") ? -1 : 1;
+    if (headland_row_spacing_ <= 0.0)
+    {
+        headland_row_spacing_ = 0.87;
+    }
+    if (headland_turn_radius_ <= 0.0)
+    {
+        headland_turn_radius_ = headland_row_spacing_ * 0.5;
+    }
+    if (headland_path_step_ <= 0.0)
+    {
+        headland_path_step_ = 0.08;
+    }
+    if (headland_reacquire_frames_ < 1)
+    {
+        headland_reacquire_frames_ = 1;
+    }
+    headland_turn_linear_speed_ = std::clamp(headland_turn_linear_speed_, 0.05, max_linear_speed_);
+    headland_turn_target_distance_ = std::clamp(headland_turn_target_distance_, 0.1, 1.0);
+    headland_reacquire_confidence_ = std::clamp(headland_reacquire_confidence_, 0.0, 1.0);
+    headland_reacquire_track_confidence_ = std::clamp(
+        headland_reacquire_track_confidence_, 0.0, headland_reacquire_confidence_);
+    headland_reacquire_search_speed_ = std::clamp(
+        headland_reacquire_search_speed_, 0.0, max_linear_speed_);
+    headland_reacquire_search_angular_speed_ = std::clamp(
+        headland_reacquire_search_angular_speed_, -max_angular_speed_, max_angular_speed_);
+    if (headland_reacquire_max_distance_ <= 0.0)
+    {
+        headland_reacquire_max_distance_ = 1.5;
+    }
+    if (headland_reacquire_max_time_ <= 0.0)
+    {
+        headland_reacquire_max_time_ = 8.0;
+    }
+    headland_reacquire_prediction_length_ = std::max(
+        headland_reacquire_prediction_length_, target_distance_ + headland_path_step_);
 
     this->get_parameter("lateral_kp", lateral_kp_);
     this->get_parameter("lateral_ki", lateral_ki_);
@@ -116,14 +224,48 @@ void PIDController::get_parameters()
 
 void PIDController::center_line_callback(const nav_msgs::msg::Path::SharedPtr msg)
 {
-    if (msg->poses.empty())
+    if (navigation_mode_ == NavigationMode::U_TURN)
     {
-        RCLCPP_WARN(this->get_logger(), "收到空的中心线，当前帧不更新中心线");
-        has_center_line_ = false;
         return;
     }
 
-    center_line_ = *msg;
+    if (msg->poses.empty())
+    {
+        RCLCPP_WARN(this->get_logger(), "收到空的中心线，当前帧不更新中心线");
+        if (navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE &&
+            has_predicted_reacquire_path_)
+        {
+            center_line_ = predicted_reacquire_path_;
+            has_center_line_ = true;
+            has_measured_reacquire_path_ = false;
+        }
+        else
+        {
+            has_center_line_ = false;
+        }
+        return;
+    }
+
+    if (navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
+    {
+        measured_reacquire_path_ = *msg;
+        has_measured_reacquire_path_ = true;
+        if (has_predicted_reacquire_path_)
+        {
+            center_line_ = blend_reacquire_paths(
+                predicted_reacquire_path_,
+                measured_reacquire_path_,
+                compute_reacquire_measured_weight());
+        }
+        else
+        {
+            center_line_ = measured_reacquire_path_;
+        }
+    }
+    else
+    {
+        center_line_ = *msg;
+    }
     has_center_line_ = true;
     if (!use_quality_aware_control_ ||
         !has_corridor_confidence_ ||
@@ -148,6 +290,12 @@ void PIDController::safety_margin_callback(const std_msgs::msg::Float32::SharedP
     has_corridor_safety_margin_ = true;
 }
 
+void PIDController::headland_detected_callback(const std_msgs::msg::Bool::SharedPtr msg)
+{
+    has_headland_detected_ = true;
+    headland_detected_ = msg->data;
+}
+
 void PIDController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
 {
     // 更新当前位姿
@@ -165,6 +313,134 @@ void PIDController::odom_callback(const nav_msgs::msg::Odometry::SharedPtr msg)
     tf2::Matrix3x3 m(q);
     double roll, pitch;
     m.getRPY(roll, pitch, current_yaw_);
+    update_travel_distance(current_x_, current_y_);
+    publish_navigation_mode();
+
+    if (enable_headland_turn_ &&
+        navigation_mode_ == NavigationMode::ROW_FOLLOW &&
+        should_start_headland_turn())
+    {
+        start_headland_turn();
+    }
+
+    if (navigation_mode_ == NavigationMode::U_TURN)
+    {
+        publish_headland_turn_path();
+        if (is_headland_turn_complete())
+        {
+            start_next_row_reacquire();
+            geometry_msgs::msg::Twist stop_cmd;
+            cmd_vel_pub_->publish(stop_cmd);
+            return;
+        }
+
+        if (has_center_line_ && !center_line_.poses.empty())
+        {
+            auto cmd_vel = calculate_control_command();
+            cmd_vel_pub_->publish(cmd_vel);
+        }
+        return;
+    }
+
+    if (navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
+    {
+        const bool reacquired =
+            has_measured_reacquire_path_ &&
+            !measured_reacquire_path_.poses.empty() &&
+            has_corridor_confidence_ &&
+            corridor_confidence_ >= headland_reacquire_confidence_;
+        reacquire_count_ = reacquired ? reacquire_count_ + 1 : 0;
+        if (reacquire_count_ >= headland_reacquire_frames_)
+        {
+            navigation_mode_ = NavigationMode::ROW_FOLLOW;
+            distance_since_last_turn_ = 0.0;
+            reacquire_count_ = 0;
+            if (has_measured_reacquire_path_)
+            {
+                center_line_ = measured_reacquire_path_;
+                last_valid_center_line_ = measured_reacquire_path_;
+                has_center_line_ = true;
+                has_last_valid_center_line_ = true;
+            }
+            predicted_reacquire_path_.poses.clear();
+            measured_reacquire_path_.poses.clear();
+            has_predicted_reacquire_path_ = false;
+            has_measured_reacquire_path_ = false;
+            reacquire_failed_ = false;
+            reset_pid_state();
+            RCLCPP_INFO(this->get_logger(), "相邻行中心线重捕获完成，恢复行间跟踪");
+        }
+        else
+        {
+            const double search_distance = reacquire_distance();
+            const double search_time = std::max(0.0, (this->now() - reacquire_start_time_).seconds());
+            if (!reacquire_failed_ &&
+                (search_distance >= headland_reacquire_max_distance_ ||
+                 search_time >= headland_reacquire_max_time_))
+            {
+                reacquire_failed_ = true;
+                RCLCPP_ERROR(this->get_logger(),
+                             "相邻行中心线重捕获失败，停车: distance=%.2f/%.2f m, time=%.2f/%.2f s",
+                             search_distance, headland_reacquire_max_distance_,
+                             search_time, headland_reacquire_max_time_);
+            }
+
+            if (reacquire_failed_)
+            {
+                geometry_msgs::msg::Twist stop_cmd;
+                cmd_vel_pub_->publish(stop_cmd);
+                return;
+            }
+
+            const bool can_track_measured =
+                has_measured_reacquire_path_ &&
+                !measured_reacquire_path_.poses.empty() &&
+                (!has_corridor_confidence_ ||
+                 corridor_confidence_ >= headland_reacquire_track_confidence_);
+            const double measured_weight = compute_reacquire_measured_weight();
+
+            geometry_msgs::msg::Twist cmd_vel;
+            if (can_track_measured && has_predicted_reacquire_path_)
+            {
+                center_line_ = blend_reacquire_paths(
+                    predicted_reacquire_path_,
+                    measured_reacquire_path_,
+                    measured_weight);
+                has_center_line_ = !center_line_.poses.empty();
+            }
+            else if (can_track_measured)
+            {
+                center_line_ = measured_reacquire_path_;
+                has_center_line_ = true;
+            }
+            else if (has_predicted_reacquire_path_)
+            {
+                center_line_ = predicted_reacquire_path_;
+                has_center_line_ = true;
+            }
+
+            if (has_center_line_ && !center_line_.poses.empty())
+            {
+                publish_reacquire_reference_path(center_line_);
+                cmd_vel = calculate_control_command();
+                cmd_vel.linear.x = std::clamp(
+                    cmd_vel.linear.x, 0.0, headland_reacquire_search_speed_);
+            }
+            else
+            {
+                cmd_vel.linear.x = headland_reacquire_search_speed_;
+                cmd_vel.angular.z = headland_reacquire_search_angular_speed_;
+            }
+            cmd_vel_pub_->publish(cmd_vel);
+            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 1000,
+                                 "重获相邻行: confidence=%.2f, stable_frames=%d/%d, measured=%s, blend=%.2f, distance=%.2f/%.2f, time=%.2f/%.2f",
+                                 corridor_confidence_, reacquire_count_, headland_reacquire_frames_,
+                                 can_track_measured ? "true" : "false", measured_weight,
+                                 search_distance, headland_reacquire_max_distance_,
+                                 search_time, headland_reacquire_max_time_);
+            return;
+        }
+    }
 
     if (should_stop_for_safety())
     {
@@ -229,6 +505,8 @@ geometry_msgs::msg::PointStamped PIDController::find_target_point()
     geometry_msgs::msg::PointStamped target_point;
     target_point.header.frame_id = center_line_.header.frame_id;
     target_point.header.stamp = this->now();
+    const double active_target_distance =
+        (navigation_mode_ == NavigationMode::U_TURN) ? headland_turn_target_distance_ : target_distance_;
 
     // 1. 找到路径上离小车最近的点
     size_t closest_idx = 0;
@@ -257,9 +535,9 @@ geometry_msgs::msg::PointStamped PIDController::find_target_point()
         double segment_length = std::hypot(p2.x - p1.x, p2.y - p1.y);
 
         // 如果加上这一段超过了目标距离，则在该段上插值
-        if (accumulated_dist + segment_length >= target_distance_)
+        if (accumulated_dist + segment_length >= active_target_distance)
         {
-            double remaining_dist = target_distance_ - accumulated_dist;
+            double remaining_dist = active_target_distance - accumulated_dist;
             double t = remaining_dist / segment_length;
 
             target_point.point.x = p1.x + t * (p2.x - p1.x);
@@ -272,20 +550,19 @@ geometry_msgs::msg::PointStamped PIDController::find_target_point()
         accumulated_dist += segment_length;
     }
 
-    // 如果路径不够长，取最后一个点
-    // target_point.point = center_line_.poses.back().pose.position;
-
-    // 原逻辑：target_point.point = center_line_.poses.back().pose.position;
-    // 新逻辑：若最后一个点落后于小车，强制设为小车前方0.4米（避免目标点在小车后方）
     auto last_point = center_line_.poses.back().pose.position;
-    if (last_point.x < current_x_)
-    {                                                         // 若中心线最后一个点在小车后方
-        target_point.point.x = current_x_ + target_distance_; // 强制设为前方目标距离米
-        target_point.point.y = current_y_;                    // 临时用小车y坐标（后续会被中心线更新覆盖）
+    const double dx = last_point.x - current_x_;
+    const double dy = last_point.y - current_y_;
+    const double x_veh = dx * std::cos(current_yaw_) + dy * std::sin(current_yaw_);
+    if (navigation_mode_ == NavigationMode::ROW_FOLLOW && x_veh < 0.0)
+    {
+        target_point.point.x = current_x_ + active_target_distance * std::cos(current_yaw_);
+        target_point.point.y = current_y_ + active_target_distance * std::sin(current_yaw_);
+        target_point.point.z = 0.0;
     }
     else
     {
-        target_point.point = last_point; // 正常取最后一个点
+        target_point.point = last_point;
     }
 
     return target_point;
@@ -317,6 +594,12 @@ double PIDController::compute_pid(double error, double dt, double &integral, dou
 
 double PIDController::compute_confidence_factor() const
 {
+    if (navigation_mode_ == NavigationMode::U_TURN ||
+        navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
+    {
+        return 1.0;
+    }
+
     if (!use_quality_aware_control_)
     {
         return 1.0;
@@ -337,6 +620,12 @@ double PIDController::compute_confidence_factor() const
 
 double PIDController::compute_safety_factor() const
 {
+    if (navigation_mode_ == NavigationMode::U_TURN ||
+        navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
+    {
+        return 1.0;
+    }
+
     if (!use_quality_aware_control_)
     {
         return 1.0;
@@ -364,9 +653,367 @@ double PIDController::compute_safety_factor() const
 
 bool PIDController::should_stop_for_safety() const
 {
+    if (navigation_mode_ == NavigationMode::U_TURN ||
+        navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
+    {
+        return false;
+    }
+
     return use_quality_aware_control_ &&
            has_corridor_safety_margin_ &&
            corridor_safety_margin_ < safety_margin_stop_;
+}
+
+double PIDController::normalize_angle(double angle) const
+{
+    while (angle > M_PI)
+    {
+        angle -= 2.0 * M_PI;
+    }
+    while (angle < -M_PI)
+    {
+        angle += 2.0 * M_PI;
+    }
+    return angle;
+}
+
+void PIDController::reset_pid_state()
+{
+    lateral_integral_ = 0.0;
+    lateral_previous_error_ = 0.0;
+    heading_integral_ = 0.0;
+    heading_previous_error_ = 0.0;
+    first_run_ = true;
+}
+
+void PIDController::update_travel_distance(double x, double y)
+{
+    if (!has_previous_odom_)
+    {
+        previous_odom_x_ = x;
+        previous_odom_y_ = y;
+        has_previous_odom_ = true;
+        return;
+    }
+
+    const double step = std::hypot(x - previous_odom_x_, y - previous_odom_y_);
+    if (step < 1.0)
+    {
+        distance_since_last_turn_ += step;
+    }
+    previous_odom_x_ = x;
+    previous_odom_y_ = y;
+}
+
+bool PIDController::should_start_headland_turn() const
+{
+    const bool turn_limit_ok =
+        max_headland_turns_ <= 0 || completed_headland_turns_ < max_headland_turns_;
+    if (!turn_limit_ok)
+    {
+        return false;
+    }
+
+    return has_headland_detected_ &&
+           headland_detected_ &&
+           distance_since_last_turn_ >= headland_min_follow_distance_;
+}
+
+void PIDController::start_headland_turn()
+{
+    const int active_turn_direction = headland_turn_direction_;
+    headland_turn_goal_yaw_ = normalize_angle(
+        current_yaw_ + static_cast<double>(active_turn_direction) * M_PI);
+    headland_turn_path_ = generate_headland_turn_path();
+    if (headland_turn_path_.poses.empty())
+    {
+        RCLCPP_WARN(this->get_logger(), "无法生成地头U形路径，保持行间跟踪");
+        return;
+    }
+
+    navigation_mode_ = NavigationMode::U_TURN;
+    center_line_ = headland_turn_path_;
+    has_center_line_ = true;
+    completed_headland_turns_++;
+    headland_detected_ = false;
+    headland_turn_direction_ *= -1;
+    reset_pid_state();
+    publish_headland_turn_path();
+    publish_navigation_mode();
+    RCLCPP_WARN(this->get_logger(), "触发地头U形换行，当前第 %d 次，方向: %s，下一次方向: %s，路径点数: %zu",
+                completed_headland_turns_,
+                active_turn_direction > 0 ? "left" : "right",
+                headland_turn_direction_ > 0 ? "left" : "right",
+                headland_turn_path_.poses.size());
+}
+
+void PIDController::start_next_row_reacquire()
+{
+    navigation_mode_ = NavigationMode::NEXT_ROW_REACQUIRE;
+    predicted_reacquire_path_ = generate_reacquire_prediction_path();
+    measured_reacquire_path_.poses.clear();
+    has_predicted_reacquire_path_ = !predicted_reacquire_path_.poses.empty();
+    has_measured_reacquire_path_ = false;
+    if (has_predicted_reacquire_path_)
+    {
+        center_line_ = predicted_reacquire_path_;
+        has_center_line_ = true;
+        publish_reacquire_reference_path(center_line_);
+    }
+    else
+    {
+        has_center_line_ = false;
+    }
+    has_last_valid_center_line_ = false;
+    use_recovery_path_ = false;
+    low_confidence_count_ = 0;
+    reacquire_count_ = 0;
+    reacquire_failed_ = false;
+    reacquire_start_x_ = current_x_;
+    reacquire_start_y_ = current_y_;
+    reacquire_start_time_ = this->now();
+    has_headland_detected_ = false;
+    headland_detected_ = false;
+    reset_pid_state();
+    publish_navigation_mode();
+    RCLCPP_WARN(this->get_logger(),
+                "地头U形换行完成，跟踪预测中心线并重获相邻行: predicted_points=%zu, max_distance=%.2f m, max_time=%.2f s",
+                predicted_reacquire_path_.poses.size(),
+                headland_reacquire_max_distance_,
+                headland_reacquire_max_time_);
+}
+
+bool PIDController::is_headland_turn_complete() const
+{
+    if (headland_turn_path_.poses.empty())
+    {
+        return false;
+    }
+
+    const auto &goal = headland_turn_path_.poses.back().pose.position;
+    const double goal_dist = std::hypot(goal.x - current_x_, goal.y - current_y_);
+    const double heading_error = std::abs(normalize_angle(current_yaw_ - headland_turn_goal_yaw_));
+    return goal_dist <= headland_turn_goal_tolerance_ &&
+           heading_error <= headland_turn_heading_tolerance_;
+}
+
+nav_msgs::msg::Path PIDController::generate_headland_turn_path() const
+{
+    nav_msgs::msg::Path path;
+    path.header.frame_id = "odom";
+    path.header.stamp = this->now();
+
+    const double dir = static_cast<double>(headland_turn_direction_);
+    const double radius = std::max(0.1, headland_turn_radius_);
+    const double step = std::max(0.03, headland_path_step_);
+    const double tx = std::cos(current_yaw_);
+    const double ty = std::sin(current_yaw_);
+    const double lx = -std::sin(current_yaw_);
+    const double ly = std::cos(current_yaw_);
+
+    auto push_pose = [&path](double x, double y, double yaw)
+    {
+        geometry_msgs::msg::PoseStamped pose;
+        pose.header = path.header;
+        pose.pose.position.x = x;
+        pose.pose.position.y = y;
+        pose.pose.position.z = 0.0;
+        tf2::Quaternion q;
+        q.setRPY(0.0, 0.0, yaw);
+        pose.pose.orientation = tf2::toMsg(q);
+        path.poses.push_back(pose);
+    };
+
+    for (double d = 0.0; d <= headland_exit_distance_ + 1e-6; d += step)
+    {
+        push_pose(current_x_ + tx * d, current_y_ + ty * d, current_yaw_);
+    }
+
+    const double sx = current_x_ + tx * headland_exit_distance_;
+    const double sy = current_y_ + ty * headland_exit_distance_;
+    const double cx = sx + dir * lx * radius;
+    const double cy = sy + dir * ly * radius;
+    const double arc_step = std::max(0.03, step / radius);
+    for (double phi = arc_step; phi <= M_PI + 1e-6; phi += arc_step)
+    {
+        const double offset_x = -dir * lx * radius * std::cos(phi) + tx * radius * std::sin(phi);
+        const double offset_y = -dir * ly * radius * std::cos(phi) + ty * radius * std::sin(phi);
+        push_pose(cx + offset_x, cy + offset_y, normalize_angle(current_yaw_ + dir * phi));
+    }
+
+    const double end_x = sx + 2.0 * dir * lx * radius;
+    const double end_y = sy + 2.0 * dir * ly * radius;
+    const double end_yaw = normalize_angle(current_yaw_ + dir * M_PI);
+    for (double d = step; d <= headland_settle_distance_ + 1e-6; d += step)
+    {
+        push_pose(end_x - tx * d, end_y - ty * d, end_yaw);
+    }
+
+    return path;
+}
+
+nav_msgs::msg::Path PIDController::generate_reacquire_prediction_path() const
+{
+    nav_msgs::msg::Path path;
+    path.header.frame_id = "odom";
+    path.header.stamp = this->now();
+
+    const double step = std::max(0.03, headland_path_step_);
+    const double length = std::max(
+        headland_reacquire_prediction_length_,
+        target_distance_ + step);
+    const double tx = std::cos(current_yaw_);
+    const double ty = std::sin(current_yaw_);
+
+    for (double d = 0.0; d <= length + 1e-6; d += step)
+    {
+        geometry_msgs::msg::PoseStamped pose;
+        pose.header = path.header;
+        pose.pose.position.x = current_x_ + tx * d;
+        pose.pose.position.y = current_y_ + ty * d;
+        pose.pose.position.z = 0.0;
+        tf2::Quaternion q;
+        q.setRPY(0.0, 0.0, current_yaw_);
+        pose.pose.orientation = tf2::toMsg(q);
+        path.poses.push_back(pose);
+    }
+
+    return path;
+}
+
+nav_msgs::msg::Path PIDController::blend_reacquire_paths(
+    const nav_msgs::msg::Path &predicted_path,
+    const nav_msgs::msg::Path &measured_path,
+    double measured_weight) const
+{
+    if (predicted_path.poses.empty())
+    {
+        return measured_path;
+    }
+    if (measured_path.poses.empty())
+    {
+        return predicted_path;
+    }
+    if (!predicted_path.header.frame_id.empty() &&
+        !measured_path.header.frame_id.empty() &&
+        predicted_path.header.frame_id != measured_path.header.frame_id)
+    {
+        return measured_path;
+    }
+
+    const double alpha = std::clamp(measured_weight, 0.0, 1.0);
+    if (alpha <= 1e-3)
+    {
+        return predicted_path;
+    }
+    if (alpha >= 1.0 - 1e-3)
+    {
+        return measured_path;
+    }
+
+    nav_msgs::msg::Path blended_path;
+    blended_path.header = measured_path.header;
+    if (blended_path.header.frame_id.empty())
+    {
+        blended_path.header = predicted_path.header;
+    }
+    blended_path.header.stamp = this->now();
+
+    const size_t point_count = std::min(predicted_path.poses.size(), measured_path.poses.size());
+    blended_path.poses.reserve(point_count);
+    for (size_t i = 0; i < point_count; ++i)
+    {
+        geometry_msgs::msg::PoseStamped pose = measured_path.poses[i];
+        pose.header = blended_path.header;
+        const auto &predicted = predicted_path.poses[i].pose.position;
+        const auto &measured = measured_path.poses[i].pose.position;
+        pose.pose.position.x = (1.0 - alpha) * predicted.x + alpha * measured.x;
+        pose.pose.position.y = (1.0 - alpha) * predicted.y + alpha * measured.y;
+        pose.pose.position.z = 0.0;
+        blended_path.poses.push_back(pose);
+    }
+
+    for (size_t i = 0; i + 1 < blended_path.poses.size(); ++i)
+    {
+        const auto &p1 = blended_path.poses[i].pose.position;
+        const auto &p2 = blended_path.poses[i + 1].pose.position;
+        tf2::Quaternion q;
+        q.setRPY(0.0, 0.0, std::atan2(p2.y - p1.y, p2.x - p1.x));
+        blended_path.poses[i].pose.orientation = tf2::toMsg(q);
+    }
+    if (blended_path.poses.size() >= 2)
+    {
+        blended_path.poses.back().pose.orientation =
+            blended_path.poses[blended_path.poses.size() - 2].pose.orientation;
+    }
+
+    return blended_path;
+}
+
+double PIDController::compute_reacquire_measured_weight() const
+{
+    if (!has_corridor_confidence_)
+    {
+        return 0.0;
+    }
+
+    const double denominator = headland_reacquire_confidence_ - headland_reacquire_track_confidence_;
+    if (denominator <= 1e-6)
+    {
+        return corridor_confidence_ >= headland_reacquire_confidence_ ? 1.0 : 0.0;
+    }
+
+    return std::clamp(
+        (corridor_confidence_ - headland_reacquire_track_confidence_) / denominator,
+        0.0,
+        1.0);
+}
+
+double PIDController::reacquire_distance() const
+{
+    return std::hypot(current_x_ - reacquire_start_x_, current_y_ - reacquire_start_y_);
+}
+
+void PIDController::publish_headland_turn_path()
+{
+    if (!headland_turn_path_.poses.empty())
+    {
+        headland_turn_path_.header.stamp = this->now();
+        headland_turn_path_pub_->publish(headland_turn_path_);
+    }
+}
+
+void PIDController::publish_reacquire_reference_path(const nav_msgs::msg::Path &path)
+{
+    if (path.poses.empty())
+    {
+        return;
+    }
+
+    nav_msgs::msg::Path output_path = path;
+    output_path.header.stamp = this->now();
+    reacquire_reference_path_pub_->publish(output_path);
+}
+
+void PIDController::publish_navigation_mode()
+{
+    std_msgs::msg::String msg;
+    msg.data = navigation_mode_name();
+    navigation_mode_pub_->publish(msg);
+}
+
+std::string PIDController::navigation_mode_name() const
+{
+    switch (navigation_mode_)
+    {
+    case NavigationMode::ROW_FOLLOW:
+        return "ROW_FOLLOW";
+    case NavigationMode::U_TURN:
+        return "U_TURN";
+    case NavigationMode::NEXT_ROW_REACQUIRE:
+        return "NEXT_ROW_REACQUIRE";
+    }
+    return "UNKNOWN";
 }
 
 void PIDController::publish_target_marker(const geometry_msgs::msg::PointStamped &point)
@@ -464,10 +1111,21 @@ geometry_msgs::msg::Twist PIDController::calculate_control_command()
         0.2,
         1.0);
     double linear_speed = max_linear_speed_ * confidence_factor * safety_factor * turning_factor;
+    double mode_speed_limit = max_linear_speed_;
+    if (navigation_mode_ == NavigationMode::U_TURN)
+    {
+        mode_speed_limit = headland_turn_linear_speed_;
+    }
+    else if (navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
+    {
+        mode_speed_limit = headland_reacquire_search_speed_;
+    }
+    linear_speed = std::min(linear_speed, mode_speed_limit);
     if (linear_speed > 1e-6)
     {
         const double quality_min_speed = min_linear_speed_ * std::min(confidence_factor, safety_factor);
         linear_speed = std::max(linear_speed, quality_min_speed);
+        linear_speed = std::min(linear_speed, mode_speed_limit);
     }
 
     // 9. 赋值控制指令

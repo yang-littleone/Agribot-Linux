@@ -1581,6 +1581,11 @@ CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp
  /opt/ros/humble/include/tf2/tf2/LinearMath/Quaternion.h \
  /opt/ros/humble/include/tf2/tf2/LinearMath/Transform.h \
  /home/xkai/agribot/agribot_ws/src/centerline_extraction/include/centerline_extraction/corn_row_detector_projection.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/float32.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \
@@ -1595,6 +1600,11 @@ CMakeFiles/corn_row_detector_projection.dir/src/corn_row_detector_projection.cpp
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/path.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__struct.hpp \
  /opt/ros/humble/include/nav_msgs/nav_msgs/msg/detail/path__builder.hpp \

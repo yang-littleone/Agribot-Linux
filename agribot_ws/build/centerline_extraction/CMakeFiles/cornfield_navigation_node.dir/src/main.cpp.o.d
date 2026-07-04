@@ -1150,4 +1150,9 @@ CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o: \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
+ /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp

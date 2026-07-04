@@ -3221,7 +3221,12 @@ CMakeFiles/cornfield_navigation_node.dir/src/main.cpp.o: /home/xkai/agribot/agri
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp
 
 CMakeFiles/cornfield_navigation_node.dir/src/obstacle_detector.cpp.o: /home/xkai/agribot/agribot_ws/src/centerline_extraction/src/obstacle_detector.cpp \
   /usr/include/stdc-predef.h \
@@ -5535,12 +5540,22 @@ CMakeFiles/cornfield_navigation_node.dir/src/pid_controller.cpp.o: /home/xkai/ag
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__builder.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__traits.hpp \
   /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/point_stamped__type_support.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/bool.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/bool__type_support.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/float32.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__builder.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp \
-  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp \
+  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/marker.hpp \
   /opt/ros/humble/include/visualization_msgs/visualization_msgs/msg/detail/marker__struct.hpp \
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/color_rgba__struct.hpp \
@@ -6483,6 +6498,8 @@ CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o: /hom
 
 /home/xkai/agribot/agribot_ws/src/centerline_extraction/src/pid_controller.cpp:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__struct.hpp:
+
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__type_support.hpp:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32__traits.hpp:
@@ -6750,6 +6767,8 @@ CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o: /hom
 /usr/include/boost/numeric/conversion/detail/conversion_traits.hpp:
 
 /usr/include/boost/numeric/conversion/converter.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/string.hpp:
 
 /usr/include/pcl-1.12/pcl/io/file_io.h:
 
@@ -7759,6 +7778,8 @@ CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o: /hom
 
 /usr/include/signal.h:
 
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__traits.hpp:
+
 /opt/ros/humble/include/geometry_msgs/geometry_msgs/msg/detail/vector3_stamped__type_support.hpp:
 
 /opt/ros/humble/include/rmw/rmw/network_flow_endpoint_array.h:
@@ -8042,6 +8063,8 @@ CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o: /hom
 /opt/ros/humble/include/rmw/rmw/events_statuses/liveliness_changed.h:
 
 /usr/include/c++/11/bit:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__builder.hpp:
 
 /usr/include/linux/stddef.h:
 
@@ -10314,6 +10337,8 @@ CMakeFiles/cornfield_navigation_node.dir/src/pure_pursuit_controller.cpp.o: /hom
 /usr/include/boost/mpl/aux_/config/use_preprocessed.hpp:
 
 /usr/include/boost/preprocessor/list/detail/fold_left.hpp:
+
+/opt/ros/humble/include/std_msgs/std_msgs/msg/detail/string__type_support.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/allocator/allocator_deleter.hpp:
 
