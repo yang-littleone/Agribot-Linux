@@ -16,7 +16,7 @@ ROW_FOLLOW
 含义：
 
 1. `ROW_FOLLOW`：正常跟踪 `/corn_row_center_line`。
-2. `U_TURN`：检测到当前行前方中心线持续变弱或消失后，生成并跟踪一条几何 U 形路径。
+2. `U_TURN`：检测到当前行前方中心线持续变弱或消失后，生成并跟踪一条 U 形换行路径；默认使用曲率渐变路径，也可切换为传统半圆路径做对照实验。
 3. `NEXT_ROW_REACQUIRE`：掉头完成后先跟踪短预测中心线；若检测到候选中心线，则按置信度融合预测中心线与检测中心线；连续高置信重捕获后恢复正常跟踪。
 4. 重捕获成功后恢复正常行间跟踪。
 
@@ -90,11 +90,14 @@ centerline_extraction cornfield_navigation_node
 |---|---:|---|
 | `enable_headland_turn` | `false` | 是否启用地头 U 形换行 |
 | `headland_min_follow_distance` | `1.5` | 至少先正常行驶一小段距离后才允许感知触发，避免刚启动误判 |
-| `headland_row_spacing` | `0.87` | 相邻行中心距，主要用于默认掉头半径 |
-| `headland_turn_radius` | `0.0` | U 形半圆半径；为 0 时使用 `headland_row_spacing / 2` |
-| `headland_exit_distance` | `0.4` | 掉头前继续向前驶出的距离 |
+| `headland_row_spacing` | `1.00` | 相邻行中心距，主要用于默认掉头半径 |
+| `headland_turn_radius` | `0.0` | U 形换行半径；为 0 时使用 `headland_row_spacing / 2`，曲率渐变路径会保持横向换行位移为 `2 * headland_turn_radius` |
+| `headland_exit_distance` | `0.15` | 掉头前继续向前驶出的距离 |
 | `headland_settle_distance` | `0.6` | 掉头后沿新行方向对齐的距离 |
 | `headland_path_step` | `0.08` | U 形路径采样间距 |
+| `headland_turn_forward_extension` | `0.25` | 曲率渐变掉头曲线相对转弯起点允许向前鼓出的最大距离 |
+| `headland_use_continuous_curvature_turn` | `true` | 是否使用曲率渐变 U 形路径；设为 `false` 时恢复传统半圆路径 |
+| `headland_turn_use_safety_margin_speed` | `true` | 掉头阶段是否仅根据 `/corridor_safety_margin` 进行安全降速 |
 | `headland_turn_goal_tolerance` | `0.25` | 到达掉头终点的位置容差 |
 | `headland_turn_heading_tolerance` | `0.6` | 到达掉头终点的航向容差，单位 rad |
 | `headland_reacquire_confidence` | `0.75` | 相邻行重捕获要求的最低中心线置信度 |
@@ -178,8 +181,8 @@ ros2 topic echo /headland_detected
 ## 6. 第一版限制
 
 1. 地头触发基于中心线诊断话题，包括中心线有效性、左右行点数、路径点数和置信度；不是固定行长触发。
-2. U 形路径是几何固定路径，不会主动避障。
-3. 掉头阶段默认不使用中心线置信度停车，避免地头无中心线时立刻停车。
+2. U 形路径仍是基于给定行距/半径的规划路径，不会主动避障；当前改进只让曲率过渡更平滑，并用点云安全裕度约束速度。
+3. 掉头阶段不使用 `/corridor_confidence` 降速，只参考 `/corridor_safety_margin`；中心线短时消失不会直接中断换行。
 4. 掉头完成后会先沿预测中心线低速行驶，不再原地停车等待；检测中心线出现后通过置信度加权融合，只有连续满足高置信阈值后才恢复正常行间跟踪。
 5. 若重获阶段超过最大距离或最大时间仍未稳定重获中心线，则停车等待人工处理或后续策略接管。
 6. 地头空间不足或行距参数不准确时，可能无法顺利进入下一行。

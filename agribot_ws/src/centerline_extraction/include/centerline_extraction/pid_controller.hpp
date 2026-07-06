@@ -98,6 +98,9 @@ private:
     double headland_exit_distance_;
     double headland_settle_distance_;
     double headland_path_step_;
+    double headland_turn_forward_extension_;
+    bool headland_use_continuous_curvature_turn_;
+    bool headland_turn_use_safety_margin_speed_;
     double headland_turn_goal_tolerance_;
     double headland_turn_heading_tolerance_;
     double headland_reacquire_confidence_;

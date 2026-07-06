@@ -57,11 +57,14 @@ PIDController::PIDController() : Node("pid_controller"), has_center_line_(false)
     this->declare_parameter("use_quality_aware_control", true);
     this->declare_parameter("enable_headland_turn", false);
     this->declare_parameter("headland_min_follow_distance", 1.5);
-    this->declare_parameter("headland_row_spacing", 1.00);
+    this->declare_parameter("headland_row_spacing", 1.00); // 行间距，默认1.00米
     this->declare_parameter("headland_turn_radius", 0.0);
-    this->declare_parameter("headland_exit_distance", 0.4);
+    this->declare_parameter("headland_exit_distance", 0.15); // 转弯后退出距离，默认0.15米
     this->declare_parameter("headland_settle_distance", 0.6);
     this->declare_parameter("headland_path_step", 0.08);
+    this->declare_parameter("headland_turn_forward_extension", 0.40);        // 转弯前向延伸距离，默认0.25米
+    this->declare_parameter("headland_use_continuous_curvature_turn", true); // 是否使用连续曲率转弯，默认true
+    this->declare_parameter("headland_turn_use_safety_margin_speed", true);
     this->declare_parameter("headland_turn_goal_tolerance", 0.25);
     this->declare_parameter("headland_turn_heading_tolerance", 0.6);
     this->declare_parameter("headland_reacquire_confidence", 0.75);
@@ -79,12 +82,12 @@ PIDController::PIDController() : Node("pid_controller"), has_center_line_(false)
 
     // 横向PID参数
     this->declare_parameter("lateral_kp", 20.0); // 比例系数
-    this->declare_parameter("lateral_ki", 1.0); // 积分系数
+    this->declare_parameter("lateral_ki", 1.0);  // 积分系数
     this->declare_parameter("lateral_kd", 10.0); // 微分系数
 
     // 航向PID参数
     this->declare_parameter("heading_kp", 20.0); // 比例系数
-    this->declare_parameter("heading_ki", 1.0); // 积分系数
+    this->declare_parameter("heading_ki", 1.0);  // 积分系数
     this->declare_parameter("heading_kd", 10.0); // 微分系数
 
     this->declare_parameter("debug_mode", false); // 调试模式开关
@@ -158,6 +161,9 @@ void PIDController::get_parameters()
     this->get_parameter("headland_exit_distance", headland_exit_distance_);
     this->get_parameter("headland_settle_distance", headland_settle_distance_);
     this->get_parameter("headland_path_step", headland_path_step_);
+    this->get_parameter("headland_turn_forward_extension", headland_turn_forward_extension_);
+    this->get_parameter("headland_use_continuous_curvature_turn", headland_use_continuous_curvature_turn_);
+    this->get_parameter("headland_turn_use_safety_margin_speed", headland_turn_use_safety_margin_speed_);
     this->get_parameter("headland_turn_goal_tolerance", headland_turn_goal_tolerance_);
     this->get_parameter("headland_turn_heading_tolerance", headland_turn_heading_tolerance_);
     this->get_parameter("headland_reacquire_confidence", headland_reacquire_confidence_);
@@ -187,6 +193,14 @@ void PIDController::get_parameters()
     {
         headland_path_step_ = 0.08;
     }
+    headland_exit_distance_ = std::max(0.0, headland_exit_distance_);
+    headland_settle_distance_ = std::max(0.0, headland_settle_distance_);
+    if (headland_turn_forward_extension_ <= 0.0)
+    {
+        headland_turn_forward_extension_ = std::min(headland_turn_radius_, 0.25);
+    }
+    headland_turn_forward_extension_ = std::clamp(
+        headland_turn_forward_extension_, 0.05, std::max(0.05, headland_turn_radius_));
     if (headland_reacquire_frames_ < 1)
     {
         headland_reacquire_frames_ = 1;
@@ -594,8 +608,12 @@ double PIDController::compute_pid(double error, double dt, double &integral, dou
 
 double PIDController::compute_confidence_factor() const
 {
-    if (navigation_mode_ == NavigationMode::U_TURN ||
-        navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
+    if (navigation_mode_ == NavigationMode::U_TURN)
+    {
+        return 1.0;
+    }
+
+    if (navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
     {
         return 1.0;
     }
@@ -620,8 +638,30 @@ double PIDController::compute_confidence_factor() const
 
 double PIDController::compute_safety_factor() const
 {
-    if (navigation_mode_ == NavigationMode::U_TURN ||
-        navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
+    if (navigation_mode_ == NavigationMode::U_TURN)
+    {
+        if (!use_quality_aware_control_ ||
+            !headland_turn_use_safety_margin_speed_ ||
+            !has_corridor_safety_margin_)
+        {
+            return 1.0;
+        }
+        if (corridor_safety_margin_ < safety_margin_stop_)
+        {
+            return 0.35;
+        }
+        if (corridor_safety_margin_ < safety_margin_mid_)
+        {
+            return 0.5;
+        }
+        if (corridor_safety_margin_ < safety_margin_high_)
+        {
+            return 0.75;
+        }
+        return 1.0;
+    }
+
+    if (navigation_mode_ == NavigationMode::NEXT_ROW_REACQUIRE)
     {
         return 1.0;
     }
@@ -831,19 +871,68 @@ nav_msgs::msg::Path PIDController::generate_headland_turn_path() const
 
     const double sx = current_x_ + tx * headland_exit_distance_;
     const double sy = current_y_ + ty * headland_exit_distance_;
-    const double cx = sx + dir * lx * radius;
-    const double cy = sy + dir * ly * radius;
-    const double arc_step = std::max(0.03, step / radius);
-    for (double phi = arc_step; phi <= M_PI + 1e-6; phi += arc_step)
+
+    double end_x = sx;
+    double end_y = sy;
+    const double end_yaw = normalize_angle(current_yaw_ + dir * M_PI);
+
+    if (headland_use_continuous_curvature_turn_)
     {
-        const double offset_x = -dir * lx * radius * std::cos(phi) + tx * radius * std::sin(phi);
-        const double offset_y = -dir * ly * radius * std::cos(phi) + ty * radius * std::sin(phi);
-        push_pose(cx + offset_x, cy + offset_y, normalize_angle(current_yaw_ + dir * phi));
+        auto smoother_step = [](double u)
+        {
+            u = std::clamp(u, 0.0, 1.0);
+            return u * u * u * (10.0 + u * (-15.0 + 6.0 * u));
+        };
+
+        auto smoother_step_derivative = [](double u)
+        {
+            u = std::clamp(u, 0.0, 1.0);
+            return 30.0 * u * u * (1.0 - u) * (1.0 - u);
+        };
+
+        const double lateral_shift = 2.0 * radius;
+        const double forward_extension = headland_turn_forward_extension_;
+        const double estimated_length = M_PI * forward_extension + lateral_shift;
+        const int samples = std::max(12, static_cast<int>(std::ceil(estimated_length / step)));
+
+        for (int i = 1; i <= samples; ++i)
+        {
+            const double u = static_cast<double>(i) / static_cast<double>(samples);
+            const double local_forward = forward_extension * std::sin(M_PI * u);
+            const double local_lateral = lateral_shift * smoother_step(u);
+            const double x = sx + tx * local_forward + dir * lx * local_lateral;
+            const double y = sy + ty * local_forward + dir * ly * local_lateral;
+
+            const double dx_du = forward_extension * M_PI * std::cos(M_PI * u);
+            const double dy_du = lateral_shift * smoother_step_derivative(u);
+            double yaw = end_yaw;
+            if (i < samples)
+            {
+                yaw = normalize_angle(current_yaw_ + std::atan2(dir * dy_du, dx_du));
+            }
+            push_pose(x, y, yaw);
+        }
+
+        end_x = sx + 2.0 * dir * lx * radius;
+        end_y = sy + 2.0 * dir * ly * radius;
+    }
+    else
+    {
+        const double cx = sx + dir * lx * radius;
+        const double cy = sy + dir * ly * radius;
+        const int samples = std::max(8, static_cast<int>(std::ceil(M_PI * radius / step)));
+        for (int i = 1; i <= samples; ++i)
+        {
+            const double phi = M_PI * static_cast<double>(i) / static_cast<double>(samples);
+            const double offset_x = -dir * lx * radius * std::cos(phi) + tx * radius * std::sin(phi);
+            const double offset_y = -dir * ly * radius * std::cos(phi) + ty * radius * std::sin(phi);
+            push_pose(cx + offset_x, cy + offset_y, normalize_angle(current_yaw_ + dir * phi));
+        }
+
+        end_x = sx + 2.0 * dir * lx * radius;
+        end_y = sy + 2.0 * dir * ly * radius;
     }
 
-    const double end_x = sx + 2.0 * dir * lx * radius;
-    const double end_y = sy + 2.0 * dir * ly * radius;
-    const double end_yaw = normalize_angle(current_yaw_ + dir * M_PI);
     for (double d = step; d <= headland_settle_distance_ + 1e-6; d += step)
     {
         push_pose(end_x - tx * d, end_y - ty * d, end_yaw);
